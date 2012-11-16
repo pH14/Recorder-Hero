@@ -10,6 +10,10 @@ xc2v6000-bf957-4 lab3.ngc lab3.ngd
 Reading NGO file
 "/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vid
 eo_display/lab3.ngc" ...
+Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vid
+eo_display/_ngo/font_rom.ngo"...
 Reading in constraint information from 'labkit.ucf'...
 Gathering constraint information from source properties...
 Done.
@@ -314,7 +318,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 277
 
-Total memory usage is 227004 kilobytes
+Total memory usage is 227632 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

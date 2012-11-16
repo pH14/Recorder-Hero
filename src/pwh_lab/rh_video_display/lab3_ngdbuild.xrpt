@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Mon Nov 12 18:19:29 2012">
+  <application stringID="NgdBuild" timeStamp="Fri Nov 16 16:56:06 2012">
     <task stringID="NGDBUILD_REPORT">
       <section stringID="NGDBUILD_DESIGN_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
@@ -13,6 +13,9 @@
         <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="277"/>
         <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="1"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_SUMMARY">
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="blkmemsp_v6_1, Coregen 7.1.03i"/>
       </section>
     </task>
   </application>

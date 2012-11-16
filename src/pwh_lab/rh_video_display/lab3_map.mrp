@@ -11,29 +11,31 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Mon Nov 12 18:19:31 2012
+Mapped Date    : Fri Nov 16 16:56:09 2012
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  333
 Logic Utilization:
-  Number of Slice Flip Flops:            99 out of  67,584    1%
-  Number of 4 input LUTs:               128 out of  67,584    1%
+  Number of Slice Flip Flops:            98 out of  67,584    1%
+  Number of 4 input LUTs:               147 out of  67,584    1%
 Logic Distribution:
-  Number of occupied Slices:            117 out of  33,792    1%
-    Number of Slices containing only related logic:     117 out of     117 100%
-    Number of Slices containing unrelated logic:          0 out of     117   0%
+  Number of occupied Slices:            137 out of  33,792    1%
+    Number of Slices containing only related logic:     137 out of     137 100%
+    Number of Slices containing unrelated logic:          0 out of     137   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         204 out of  67,584    1%
-    Number used as logic:               127
-    Number used as a route-thru:         76
+  Total Number of 4 input LUTs:         241 out of  67,584    1%
+    Number used as logic:               146
+    Number used as a route-thru:         94
     Number used as Shift registers:       1
   Number of bonded IOBs:                576 out of     684   84%
+  Number of RAMB16s:                      2 out of     144    1%
+  Number of MULT18X18s:                   2 out of     144    1%
   Number of BUFGMUXs:                     1 out of      16    6%
   Number of DCMs:                         1 out of      12    8%
 
-Peak Memory Usage:  478 MB
+Peak Memory Usage:  480 MB
 Total REAL time to MAP completion:  3 secs 
 Total CPU time to MAP completion:   2 secs 
 
@@ -762,7 +764,7 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   3 block(s) optimized away
+   7 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -771,6 +773,10 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+GND 		rh_disp/cd1/f/GND
+VCC 		rh_disp/cd1/f/VCC
+GND 		rh_disp/cd2/f/GND
+VCC 		rh_disp/cd2/f/VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.

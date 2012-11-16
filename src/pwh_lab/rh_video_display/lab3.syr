@@ -5,14 +5,14 @@ Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: lab3.prj
@@ -109,7 +109,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling verilog file "font_rom.v" in library work
+Compiling verilog file "cstringdisp.v" in library work
+Module <font_rom> compiled
 Compiling verilog file "blob.v" in library work
+Module <char_string_display> compiled
 Compiling verilog file "rh_video_display.v" in library work
 Module <blob> compiled
 Module <debounce> compiled
@@ -147,6 +151,10 @@ Analyzing hierarchy for module <blob> in library <work> with parameters.
 Analyzing hierarchy for module <blob> in library <work> with parameters.
 	HEIGHT = "00000000000000000000000001000000"
 	WIDTH = "00000000000000000000000001000000"
+
+Analyzing hierarchy for module <char_string_display> in library <work> with parameters.
+	NCHAR = "00000000000000000000000000000001"
+	NCHAR_BITS = "00000000000000000000000000000011"
 
 WARNING:Xst:2591 - "rh_video_display.v" line 331: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 WARNING:Xst:2591 - "rh_video_display.v" line 331: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
@@ -206,6 +214,13 @@ Analyzing module <blob.3> in library <work>.
 	WIDTH = 32'sb00000000000000000000000001000000
 Module <blob.3> is correct for synthesis.
  
+Analyzing module <char_string_display> in library <work>.
+	NCHAR = 32'sb00000000000000000000000000000001
+	NCHAR_BITS = 32'sb00000000000000000000000000000011
+Module <char_string_display> is correct for synthesis.
+ 
+    Set user-defined property "FPGA_DONT_TOUCH =  true" for instance <f> in unit <char_string_display>.
+WARNING:Xst:37 - Detected unknown constraint/property "FPGA_DONT_TOUCH". This constraint/property is not supported by the current software release and will be ignored.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -283,12 +298,39 @@ Synthesizing Unit <blob_3>.
 Unit <blob_3> synthesized.
 
 
+Synthesizing Unit <char_string_display>.
+    Related source file is "cstringdisp.v".
+WARNING:Xst:646 - Signal <voff<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <voff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hoff<10:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hoff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 80.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 80.
+    Found 3-bit adder for signal <column>.
+    Found 1-bit xor2 for signal <cpixel$xor0000> created at line 79.
+    Found 10-bit comparator greatequal for signal <dispflag$cmp_ge0000> created at line 80.
+    Found 11-bit comparator greater for signal <dispflag$cmp_gt0000> created at line 80.
+    Found 12-bit comparator lessequal for signal <dispflag$cmp_le0000> created at line 80.
+    Found 11-bit comparator less for signal <dispflag$cmp_lt0000> created at line 80.
+    Found 11-bit adder for signal <font_addr>.
+    Found 7x4-bit multiplier for signal <font_addr$mult0000> created at line 74.
+    Found 11-bit subtractor for signal <hoff>.
+    Found 11-bit subtractor for signal <hoff$addsub0000> created at line 59.
+    Found 10-bit subtractor for signal <voff>.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <char_string_display> synthesized.
+
+
 Synthesizing Unit <rh_display>.
     Related source file is "rh_video_display.v".
-WARNING:Xst:647 - Input <vclock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <notes> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <note_pixels<15:3>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cdpixel<5:0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <rh_display> synthesized.
 
 
@@ -618,6 +660,15 @@ Unit <lab3> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# Multipliers                                          : 2
+ 7x4-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 14
+ 10-bit adder carry out                                : 2
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 2
+ 11-bit adder carry out                                : 2
+ 11-bit subtractor                                     : 4
+ 3-bit adder                                           : 2
 # Counters                                             : 5
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
@@ -625,16 +676,23 @@ Macro Statistics
 # Registers                                            : 15
  1-bit register                                        : 14
  24-bit register                                       : 1
-# Comparators                                          : 12
- 10-bit comparator greatequal                          : 3
+# Comparators                                          : 20
+ 10-bit comparator greatequal                          : 5
  11-bit comparator greatequal                          : 3
- 11-bit comparator less                                : 3
+ 11-bit comparator greater                             : 2
+ 11-bit comparator less                                : 5
  12-bit comparator less                                : 3
-# Multiplexers                                         : 4
- 1-bit 4-to-1 multiplexer                              : 3
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 18
+ 1-bit 3-to-1 multiplexer                              : 2
+ 1-bit 4-to-1 multiplexer                              : 5
+ 1-bit 5-to-1 multiplexer                              : 2
+ 1-bit 6-to-1 multiplexer                              : 2
+ 1-bit 7-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 4
  24-bit 4-to-1 multiplexer                             : 1
-# Xors                                                 : 3
- 1-bit xor2                                            : 3
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
 
 =========================================================================
 
@@ -643,27 +701,49 @@ Macro Statistics
 =========================================================================
 
 Loading device for application Rf_Device from file '2v6000.nph' in environment /afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE.
+Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
+Loading core <font_rom> for timing and area information for instance <f>.
+
+Synthesizing (advanced) Unit <char_string_display>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
+Unit <char_string_display> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# Multipliers                                          : 2
+ 7x4-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 10
+ 10-bit adder carry out                                : 2
+ 11-bit adder                                          : 2
+ 11-bit adder carry out                                : 2
+ 4-bit subtractor borrow in                            : 2
+ 5-bit subtractor                                      : 2
 # Counters                                             : 5
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
  20-bit up counter                                     : 3
 # Registers                                            : 38
  Flip-Flops                                            : 38
-# Comparators                                          : 12
- 10-bit comparator greatequal                          : 3
+# Comparators                                          : 20
+ 10-bit comparator greatequal                          : 5
  11-bit comparator greatequal                          : 3
- 11-bit comparator less                                : 3
+ 11-bit comparator greater                             : 2
+ 11-bit comparator less                                : 5
  12-bit comparator less                                : 3
-# Multiplexers                                         : 4
- 1-bit 4-to-1 multiplexer                              : 3
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 18
+ 1-bit 3-to-1 multiplexer                              : 2
+ 1-bit 4-to-1 multiplexer                              : 5
+ 1-bit 5-to-1 multiplexer                              : 2
+ 1-bit 6-to-1 multiplexer                              : 2
+ 1-bit 7-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 4
  24-bit 4-to-1 multiplexer                             : 1
-# Xors                                                 : 3
- 1-bit xor2                                            : 3
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
 
 =========================================================================
 
@@ -683,7 +763,6 @@ INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <lab3> is equivalent to the followi
 INFO:Xst:2261 - The FF/Latch <rgb_16> in Unit <lab3> is equivalent to the following 7 FFs/Latches, which will be removed : <rgb_17> <rgb_18> <rgb_19> <rgb_20> <rgb_21> <rgb_22> <rgb_23> 
 INFO:Xst:2261 - The FF/Latch <rgb_8> in Unit <lab3> is equivalent to the following 7 FFs/Latches, which will be removed : <rgb_9> <rgb_10> <rgb_11> <rgb_12> <rgb_13> <rgb_14> <rgb_15> 
 Found area constraint ratio of 100 (+ 5) on block lab3, actual ratio is 0.
-FlipFlop xvga1/hcount_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -691,8 +770,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 99
- Flip-Flops                                            : 99
+# Registers                                            : 98
+ Flip-Flops                                            : 98
 
 =========================================================================
 
@@ -721,28 +800,31 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 391
-#      GND                         : 1
-#      INV                         : 17
-#      LUT1                        : 76
-#      LUT2                        : 13
+# BELS                             : 499
+#      GND                         : 3
+#      INV                         : 21
+#      LUT1                        : 92
+#      LUT2                        : 19
 #      LUT2_D                      : 1
-#      LUT3                        : 19
-#      LUT3_D                      : 4
-#      LUT3_L                      : 2
-#      LUT4                        : 63
-#      LUT4_D                      : 3
-#      LUT4_L                      : 16
-#      MUXCY                       : 91
-#      MUXF5                       : 3
-#      VCC                         : 1
-#      XORCY                       : 81
-# FlipFlops/Latches                : 99
+#      LUT3                        : 22
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 73
+#      LUT4_D                      : 4
+#      LUT4_L                      : 11
+#      MUXCY                       : 131
+#      MUXF5                       : 10
+#      MUXF6                       : 2
+#      VCC                         : 3
+#      XORCY                       : 103
+# FlipFlops/Latches                : 98
 #      FD                          : 5
 #      FDE                         : 6
-#      FDR                         : 12
+#      FDR                         : 11
 #      FDRE                        : 72
 #      FDS                         : 4
+# RAMS                             : 2
+#      RAMB16_S9                   : 2
 # Shift Registers                  : 1
 #      SRL16                       : 1
 # Clock Buffers                    : 1
@@ -753,6 +835,8 @@ Cell Usage :
 #      OBUF                        : 240
 # DCMs                             : 1
 #      DCM                         : 1
+# MULTs                            : 2
+#      MULT18X18                   : 2
 =========================================================================
 
 Device utilization summary:
@@ -760,13 +844,15 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                      107  out of  33792     0%  
- Number of Slice Flip Flops:             99  out of  67584     0%  
- Number of 4 input LUTs:                215  out of  67584     0%  
-    Number used as logic:               214
+ Number of Slices:                      126  out of  33792     0%  
+ Number of Slice Flip Flops:             98  out of  67584     0%  
+ Number of 4 input LUTs:                248  out of  67584     0%  
+    Number used as logic:               247
     Number used as Shift registers:       1
  Number of IOs:                         576
  Number of bonded IOBs:                 246  out of    684    35%  
+ Number of BRAMs:                         2  out of    144     1%  
+ Number of MULT18X18s:                    2  out of    144     1%  
  Number of GCLKs:                         1  out of     16     6%  
  Number of DCMs:                          1  out of     12     8%  
 
@@ -791,7 +877,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX            | 100   |
+clock_27mhz                        | vclk1:CLKFX            | 99    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -802,10 +888,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 16.487ns (Maximum Frequency: 60.655MHz)
-   Minimum input arrival time before clock: 5.579ns
-   Maximum output required time after clock: 9.312ns
-   Maximum combinational path delay: 6.936ns
+   Minimum period: 17.324ns (Maximum Frequency: 57.722MHz)
+   Minimum input arrival time before clock: 5.602ns
+   Maximum output required time after clock: 9.289ns
+   Maximum combinational path delay: 6.959ns
 
 Timing Detail:
 --------------
@@ -813,35 +899,36 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
-  Clock period: 16.487ns (frequency: 60.655MHz)
-  Total number of paths / destination ports: 3458 / 260
+  Clock period: 17.324ns (frequency: 57.722MHz)
+  Total number of paths / destination ports: 3746 / 258
 -------------------------------------------------------------------------
-Delay:               6.870ns (Levels of Logic = 5)
-  Source:            xvga1/vcount_4 (FF)
+Delay:               7.219ns (Levels of Logic = 6)
+  Source:            xvga1/hcount_2 (FF)
   Destination:       rgb_0 (FF)
   Source Clock:      clock_27mhz rising 2.4X
   Destination Clock: clock_27mhz rising 2.4X
 
-  Data Path: xvga1/vcount_4 to rgb_0
+  Data Path: xvga1/hcount_2 to rgb_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            11   0.568   1.194  xvga1/vcount_4 (xvga1/vcount_4)
-     LUT2:I0->O            1   0.439   0.803  Mmux_rgb_mux000011033 (Mmux_rgb_mux000011033)
-     LUT4:I0->O            1   0.439   0.000  Mmux_rgb_mux000011069_F (N56)
-     MUXF5:I0->O           1   0.436   0.557  Mmux_rgb_mux000011069 (Mmux_rgb_mux000011069)
-     LUT4:I3->O            3   0.439   0.758  Mmux_rgb_mux0000110213 (N1)
-     LUT4:I2->O            1   0.439   0.518  Mmux_rgb_mux0000251 (N4)
-     FDS:S                     0.280          rgb_8
+     FDR:C->Q             15   0.568   1.274  xvga1/hcount_2 (xvga1/hcount_2)
+     LUT3:I0->O            4   0.439   0.747  rh_disp/cd1/hoff<2>1 (rh_disp/cd1/hoff<2>)
+     MUXF5:S->O            1   0.699   0.000  rh_disp/cd2/Mmux__COND_27_3_f5 (rh_disp/cd2/Mmux__COND_27_3_f5)
+     MUXF6:I1->O           1   0.447   0.803  rh_disp/cd2/Mmux__COND_27_2_f6 (rh_disp/cd2/_COND_27)
+     LUT4:I0->O            1   0.439   0.000  rh_disp/pixel<0>157_G (N52)
+     MUXF5:I1->O           1   0.436   0.558  rh_disp/pixel<0>157 (rh_disp/pixel<0>157)
+     LUT4:I3->O            3   0.439   0.000  Mmux_rgb_mux0000112 (Mmux_rgb_mux0000101)
+     FDS:D                     0.370          rgb_0
     ----------------------------------------
-    Total                      6.870ns (3.040ns logic, 3.829ns route)
-                                       (44.3% logic, 55.7% route)
+    Total                      7.219ns (3.837ns logic, 3.382ns route)
+                                       (53.2% logic, 46.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 90 / 78
+  Total number of paths / destination ports: 96 / 78
 -------------------------------------------------------------------------
-Offset:              5.579ns (Levels of Logic = 4)
+Offset:              5.602ns (Levels of Logic = 4)
   Source:            switch<0> (PAD)
   Destination:       rgb_0 (FF)
   Destination Clock: clock_27mhz rising 2.4X
@@ -850,20 +937,20 @@ Offset:              5.579ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.825   1.078  switch_0_IBUF (switch_0_IBUF)
+     IBUF:I->O             7   0.825   1.102  switch_0_IBUF (switch_0_IBUF)
      LUT2:I0->O            1   0.439   0.803  Mmux_rgb_mux0000110209 (Mmux_rgb_mux0000110209)
      LUT4:I0->O            3   0.439   0.758  Mmux_rgb_mux0000110213 (N1)
      LUT4:I2->O            1   0.439   0.518  Mmux_rgb_mux0000251 (N4)
      FDS:S                     0.280          rgb_8
     ----------------------------------------
-    Total                      5.579ns (2.422ns logic, 3.157ns route)
-                                       (43.4% logic, 56.6% route)
+    Total                      5.602ns (2.422ns logic, 3.180ns route)
+                                       (43.2% logic, 56.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
   Total number of paths / destination ports: 31 / 30
 -------------------------------------------------------------------------
-Offset:              9.312ns (Levels of Logic = 2)
+Offset:              9.289ns (Levels of Logic = 2)
   Source:            reset_sr (FF)
   Destination:       led<2> (PAD)
   Source Clock:      clock_27mhz rising 2.4X
@@ -872,18 +959,18 @@ Offset:              9.312ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRL16:CLK->Q         10   2.901   1.094  reset_sr (power_on_reset)
+     SRL16:CLK->Q          9   2.901   1.070  reset_sr (power_on_reset)
      LUT2:I1->O            1   0.439   0.517  led<2>1 (led_2_OBUF)
      OBUF:I->O                 4.361          led_2_OBUF (led<2>)
     ----------------------------------------
-    Total                      9.312ns (7.701ns logic, 1.611ns route)
-                                       (82.7% logic, 17.3% route)
+    Total                      9.289ns (7.701ns logic, 1.588ns route)
+                                       (82.9% logic, 17.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               6.936ns (Levels of Logic = 3)
+Delay:               6.959ns (Levels of Logic = 3)
   Source:            switch<1> (PAD)
   Destination:       led<1> (PAD)
 
@@ -891,25 +978,27 @@ Delay:               6.936ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.825   0.793  switch_1_IBUF (switch_1_IBUF)
+     IBUF:I->O             7   0.825   0.816  switch_1_IBUF (switch_1_IBUF)
      INV:I->O              1   0.439   0.517  led<1>1_INV_0 (led_1_OBUF)
      OBUF:I->O                 4.361          led_1_OBUF (led<1>)
     ----------------------------------------
-    Total                      6.936ns (5.625ns logic, 1.311ns route)
-                                       (81.1% logic, 18.9% route)
+    Total                      6.959ns (5.625ns logic, 1.334ns route)
+                                       (80.8% logic, 19.2% route)
 
 =========================================================================
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/cd1/f.
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/cd2/f.
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.42 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.40 secs
  
 --> 
 
 
-Total memory usage is 461076 kilobytes
+Total memory usage is 465364 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  321 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of warnings :  329 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
 

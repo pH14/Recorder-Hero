@@ -1,5 +1,7 @@
-MO xvga NULL rh_video_display.v vlg02/xvga.bin 1352762346
-MO lab3 NULL rh_video_display.v vlg52/lab3.bin 1352762346
-MO debounce NULL rh_video_display.v vlg1D/debounce.bin 1352762346
-MO blob NULL blob.v vlg73/blob.bin 1352762346
-MO rh_display NULL rh_video_display.v vlg33/rh__display.bin 1352762346
+MO xvga NULL rh_video_display.v vlg02/xvga.bin 1353102943
+MO lab3 NULL rh_video_display.v vlg52/lab3.bin 1353102943
+MO debounce NULL rh_video_display.v vlg1D/debounce.bin 1353102943
+MO font_rom NULL font_rom.v vlg6C/font__rom.bin 1353102943
+MO char_string_display NULL cstringdisp.v vlg41/char__string__display.bin 1353102943
+MO blob NULL blob.v vlg73/blob.bin 1353102943
+MO rh_display NULL rh_video_display.v vlg33/rh__display.bin 1353102943

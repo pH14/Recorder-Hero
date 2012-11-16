@@ -514,6 +514,51 @@ module rh_display (
 				  .vcount(vcount),
 				  .color(24'hFF_FF_FF),
 				  .pixel(note_pixels[2]));
-				  
-	assign pixel = note_pixels[0] | note_pixels[1] | note_pixels[2];
+	
+	// character display module: sample string in middle of screen
+	// char height = 24px
+   wire [55:0] cstring = "DEFGABC";
+   wire [2:0] cdpixel[6:0];
+
+	char_string_display cd1(vclock, hcount, vcount,
+								cdpixel[6], cstring[55:48],
+								11'd24, 10'd256);
+	char_string_display cd2(vclock, hcount, vcount,
+								cdpixel[5], cstring[47:40],
+								11'd24, 10'd256+32);
+	char_string_display cd3(vclock, hcount, vcount,
+								cdpixel[4], cstring[39:32],
+								11'd24, 10'd256+64);
+	char_string_display cd4(vclock, hcount, vcount,
+								cdpixel[3], cstring[31:24],
+								11'd24, 10'd256+96);
+	char_string_display cd5(vclock, hcount, vcount,
+								cdpixel[2], cstring[23:16],
+								11'd24, 10'd256+128);
+	char_string_display cd6(vclock, hcount, vcount,
+								cdpixel[1], cstring[15:8],
+								11'd24, 10'd256+128+32);
+	char_string_display cd7(vclock, hcount, vcount,
+								cdpixel[0], cstring[7:0],
+								11'd24, 10'd256+128+64);
+								
+	defparam cd1.NCHAR = 1;
+	defparam cd2.NCHAR = 1;
+	defparam cd3.NCHAR = 1;
+	defparam cd4.NCHAR = 1;
+	defparam cd5.NCHAR = 1;
+	defparam cd6.NCHAR = 1;
+	defparam cd7.NCHAR = 1;
+	
+	assign pixel = note_pixels[0] 
+						| note_pixels[1] 
+						| note_pixels[2] 
+						| {8{cdpixel[7]}} 
+						| {8{cdpixel[6]}}
+						| {8{cdpixel[5]}} 
+						| {8{cdpixel[4]}}
+						| {8{cdpixel[3]}} 
+						| {8{cdpixel[2]}}
+						| {8{cdpixel[1]}} 
+						| {8{cdpixel[0]}};
 endmodule

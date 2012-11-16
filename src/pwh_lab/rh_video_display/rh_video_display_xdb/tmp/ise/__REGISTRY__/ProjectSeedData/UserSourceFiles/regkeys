@@ -1,5 +1,5 @@
 NUM_USER_FILES
-3
+5
 s
 user_file_1
 labkit.ucf
@@ -9,4 +9,10 @@ rh_video_display.v
 s
 user_file_3
 blob.v
+s
+user_file_4
+cstringdisp.v
+s
+user_file_5
+font_rom.xco
 s
