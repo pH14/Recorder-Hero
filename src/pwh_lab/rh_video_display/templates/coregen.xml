@@ -3,9 +3,13 @@
 	<Folder label="VERILOG Component Instantiation" treetype="folder">
 		<Template label="font_rom" treetype="template">
 		</Template>
+		<Template label="font" treetype="template">
+		</Template>
 	</Folder>
 	<Folder label="VHDL Component Instantiation" treetype="folder">
 		<Template label="font_rom" treetype="template">
+		</Template>
+		<Template label="font" treetype="template">
 		</Template>
 	</Folder>
 </RootFolder>

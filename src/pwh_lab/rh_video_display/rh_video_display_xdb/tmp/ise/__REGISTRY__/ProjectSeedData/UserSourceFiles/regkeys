@@ -1,5 +1,5 @@
 NUM_USER_FILES
-5
+6
 s
 user_file_1
 labkit.ucf
@@ -15,4 +15,10 @@ cstringdisp.v
 s
 user_file_5
 font_rom.xco
+s
+user_file_6
+display_16hex.v
+s
+user_file_7
+note_y_table.v
 s

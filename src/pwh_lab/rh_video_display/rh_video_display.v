@@ -362,6 +362,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    wire [23:0] pixel;
    wire phsync,pvsync,pblank;
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
+		.up(up), .down(down),
 		.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),
 		.blank(blank),.phsync(phsync),
@@ -461,6 +462,8 @@ endmodule
 module rh_display (
 	input vclock,
 	input reset,
+	input up,
+	input down,
 	
 	input [63:0] next_notes,
 	
@@ -482,9 +485,12 @@ module rh_display (
 	parameter [9:0] SCREEN_HEIGHT = 767;
 	parameter NOTE_WIDTH = 64;
 	parameter NOTE_HEIGHT = 24;
+	parameter FIRST_LETTER = 550;
+	parameter ACTION_LINE_X = 72;
 	
 	wire [3:0] notes[15:0];
 	wire [23:0] note_pixels[15:0];
+	reg [10:0] lead_note_x = 512;
 	
 	parameter [23:0] COLOR = 24'hFF_FF_FF;
 	
@@ -492,73 +498,107 @@ module rh_display (
 			  notes[11], notes[10], notes[9], notes[8],
 			  notes [7], notes[6], notes[5], notes[4],
 			  notes [3], notes[2], notes[1], notes[0] } = next_notes;
+
+	reg [9:0] note_y_pos[15:0];
 	
-	blob #(.WIDTH(NOTE_WIDTH),
-			 .HEIGHT(NOTE_HEIGHT))
-		   note1(.x(500), .y(500), 
-				  .hcount(hcount),
-				  .vcount(vcount), 
-				  .color(COLOR),
-				  .pixel(note_pixels[0]));
+	integer k;
+	always @(posedge vclock) begin
+		for (k=0; k<7; k=k+1) begin
+			case(notes[k])
+				4'b0000: note_y_pos[k] = 0;
+				4'b0001: note_y_pos[k] = FIRST_LETTER + 6*32;
+				4'b0010: note_y_pos[k] = FIRST_LETTER + 5*32;
+				4'b0011: note_y_pos[k] = FIRST_LETTER + 4*32;
+				4'b0100: note_y_pos[k] = FIRST_LETTER + 3*32;
+				4'b0101: note_y_pos[k] = FIRST_LETTER + 2*32;
+				4'b0110: note_y_pos[k] = FIRST_LETTER + 1*32;
+				4'b0111: note_y_pos[k] = FIRST_LETTER + 0*32;
+				default: note_y_pos[k] = FIRST_LETTER;
+			endcase
+		end
+	end
 	
-	blob #(.WIDTH(64),
-			 .HEIGHT(40))
-			 note2(.x(300), .y(300), 
-				  .hcount(hcount),
-				  .vcount(vcount),
-				  .color(COLOR),
-				  .pixel(note_pixels[1]));
-				  
-	blob note3(.x(100), .y(100), 
-				  .hcount(hcount),
-				  .vcount(vcount),
-				  .color(24'hFF_FF_FF),
-				  .pixel(note_pixels[2]));
+	genvar j;
+	generate
+		for(j=0; j<7; j=j+1) begin:generate_note_blobs
+		  blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+				note(.x(lead_note_x + NOTE_WIDTH * j),
+					  .y(note_y_pos[j]),
+					  .hcount(hcount),
+					  .vcount(vcount),
+					  .color(COLOR),
+					  .pixel(note_pixels[j]));
+		end
+	endgenerate
+	
+	always @(posedge vclock) begin
+		if (reset) begin
+			lead_note_x <= 512;
+		end
+		// Debug single note
+		if (hcount == 1 && vcount == 1) begin
+			if (up) lead_note_x <= lead_note_x - 4;
+			if (down) lead_note_x <= lead_note_x + 4;
+		end
+	end
 	
 	// character display module: sample string in middle of screen
 	// char height = 24px
-   wire [55:0] cstring = "DEFGABC";
+   wire [55:0] cstring = "BAGFEDC";
    wire [2:0] cdpixel[6:0];
-
-	char_string_display cd1(vclock, hcount, vcount,
-								cdpixel[6], cstring[55:48],
-								11'd24, 10'd256);
-	char_string_display cd2(vclock, hcount, vcount,
-								cdpixel[5], cstring[47:40],
-								11'd24, 10'd256+32);
-	char_string_display cd3(vclock, hcount, vcount,
-								cdpixel[4], cstring[39:32],
-								11'd24, 10'd256+64);
-	char_string_display cd4(vclock, hcount, vcount,
-								cdpixel[3], cstring[31:24],
-								11'd24, 10'd256+96);
-	char_string_display cd5(vclock, hcount, vcount,
-								cdpixel[2], cstring[23:16],
-								11'd24, 10'd256+128);
-	char_string_display cd6(vclock, hcount, vcount,
-								cdpixel[1], cstring[15:8],
-								11'd24, 10'd256+128+32);
-	char_string_display cd7(vclock, hcount, vcount,
-								cdpixel[0], cstring[7:0],
-								11'd24, 10'd256+128+64);
-								
-	defparam cd1.NCHAR = 1;
-	defparam cd2.NCHAR = 1;
-	defparam cd3.NCHAR = 1;
-	defparam cd4.NCHAR = 1;
-	defparam cd5.NCHAR = 1;
-	defparam cd6.NCHAR = 1;
-	defparam cd7.NCHAR = 1;
 	
-	assign pixel = note_pixels[0] 
-						| note_pixels[1] 
-						| note_pixels[2] 
-						| {8{cdpixel[7]}} 
+	genvar i;
+	generate
+		for(i=0; i<7; i=i+1) begin:generate_characters
+		  char_string_display csd(.vclock(vclock), 
+										  .hcount(hcount), 
+										  .vcount(vcount),
+										  .pixel(cdpixel[i]),
+										  .cstring(cstring[8*(i+1)-1 : 8*i]),
+										  .cx(11'd24),
+										  .cy(FIRST_LETTER + 192 - 32*i));
+			defparam csd.NCHAR = 1;
+		end
+	endgenerate
+	
+	wire action_line = hcount == ACTION_LINE_X & vcount >= 550;
+   
+	reg [23:0] onscreen_notes[15:0];
+	
+	integer n;
+	always @(posedge vclock) begin
+		for (n=0; n<15; n=n+1) begin
+			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
+		end
+	end
+	
+	assign pixel = onscreen_notes[0]
+						| onscreen_notes[1]
+						| onscreen_notes[2]
+						| onscreen_notes[3]
+						| onscreen_notes[4]
+						| onscreen_notes[5]
+						| onscreen_notes[6]
+						| onscreen_notes[7]
+						| onscreen_notes[8]
+						| onscreen_notes[9]
+						| onscreen_notes[10]
+						| onscreen_notes[11]
+						| onscreen_notes[12]
+						| onscreen_notes[13]
+						| onscreen_notes[14]
+						| onscreen_notes[15]
 						| {8{cdpixel[6]}}
 						| {8{cdpixel[5]}} 
 						| {8{cdpixel[4]}}
 						| {8{cdpixel[3]}} 
 						| {8{cdpixel[2]}}
 						| {8{cdpixel[1]}} 
-						| {8{cdpixel[0]}};
+						| {8{cdpixel[0]}}
+						| {24{action_line}};
+						
+   wire [63:0] dispdata = 15;
+   display_16hex hexdisp1(reset, vclock, dispdata,
+		disp_blank, disp_clock, disp_rs, disp_ce_b,
+		disp_reset_b, disp_data_out);
 endmodule
