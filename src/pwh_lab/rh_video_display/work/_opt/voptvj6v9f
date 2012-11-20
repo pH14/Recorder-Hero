@@ -1,0 +1,51 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display
+T_opt
+Z1 VgQ]NMfG3c`zfXI4Q<lAm<1
+Z2 04 10 4 work counter_tb fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-f04da20f0fdf-50abd653-ed187-48ab
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver
+Z6 OE;O;6.4a;39
+vcounter
+Z7 I9`[RBI[GG]b_I0i[J2kDY1
+Z8 V^_4@SGOYMO06o<fz<[>h`3
+Z9 w1353438707
+Z10 8counter.v
+Z11 Fcounter.v
+L0 21
+Z12 OE;L;6.4a;39
+r1
+31
+Z13 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
+Z14 !s100 hY]^o8iEX;VV4mQ[Qja0P0
+!s85 0
+vcounter_tb
+Z15 Ib6OAD7S4ZMKn9<M^Kg^eb2
+Z16 VN6X[[7nWg]oz4[ZCKXDXe0
+Z17 w1353438798
+Z18 8counter_tb.v
+Z19 Fcounter_tb.v
+L0 25
+R12
+r1
+31
+R13
+Z20 !s100 XV`mTVmCjfzZ;ZYHMdTe]1
+!s85 0
+vglbl
+Z21 IB;@1jEXmEfQXL`;Kf0IBZ3
+Z22 VnN]4Gon>inod6>M^M2[SV1
+Z23 w1202685744
+Z24 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z25 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+L0 5
+R12
+r1
+31
+R13
+Z26 !s100 T?5S;>bN`@zG_25]R_4A33
+!s85 0

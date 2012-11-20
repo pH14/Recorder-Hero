@@ -279,12 +279,12 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // mouse_clock, mouse_data, keyboard_clock, and keyboard_data are inputs
 
    // LED Displays
-   assign disp_blank = 1'b1;
-   assign disp_clock = 1'b0;
-   assign disp_rs = 1'b0;
-   assign disp_ce_b = 1'b1;
-   assign disp_reset_b = 1'b0;
-   assign disp_data_out = 1'b0;
+//   assign disp_blank = 1'b1;
+//   assign disp_clock = 1'b0;
+//   assign disp_rs = 1'b0;
+//   assign disp_ce_b = 1'b1;
+//   assign disp_reset_b = 1'b0;
+//   assign disp_data_out = 1'b0;
    // disp_data_in is an input
 
    // Buttons, Switches, and Individual LEDs
@@ -360,14 +360,59 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
    // feed XVGA signals to user's pong game
    wire [23:0] pixel;
+	wire [63:0] dispdata;
    wire phsync,pvsync,pblank;
+	
+	wire debug_rh_display = 1;
+	
+	reg [31:0] count = 0;
+	reg [3:0] notes[15:0];
+	
+	always @(posedge clock_65mhz) begin
+		count <= count + 1;
+		
+		if (reset) begin
+			count <= 0;
+		end
+		
+		if (debug_rh_display) begin
+			if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 2) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {1, 2, 3, 4,
+																					 5, 6, 5, 4,
+																					 3, 2, 1, 2,
+																					 3, 4, 5, 3 };
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {5, 2, 3, 4,
+																					 5, 6, 5, 4,
+																					 3, 2, 1, 2,
+																					 3, 4, 5, 3 };
+			end
+		end
+	end
+	
+	wire [63:0] nn = {notes[15], notes[14], notes[13], notes[12], notes[11], notes[10],
+							 notes[9], notes[8], notes[7], notes[6], notes[5], notes[4], notes[3],
+							 notes[2], notes[1], notes[0]};
+	
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
+		.next_notes(nn), 
+		.tempo(26'b1111_0111_1111_0100_1001_0000_0),
 		.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),
 		.blank(blank),.phsync(phsync),
 		.pvsync(pvsync),.pblank(pblank),
-		.pixel(pixel));
+		.pixel(pixel), .debug(dispdata));
+		
+   display_16hex hexdisp1(reset, vclock, dispdata,
+		disp_blank, disp_clock, disp_rs, disp_ce_b,
+		disp_reset_b, disp_data_out);
 
    // switch[1:0] selects which video generator to use:
    //  00: user's pong game
@@ -466,6 +511,7 @@ module rh_display (
 	input down,
 	
 	input [63:0] next_notes,
+	input [25:0] tempo,
 	
 	input [10:0] hcount,
 	input [9:0] vcount,
@@ -475,8 +521,10 @@ module rh_display (
 	output phsync,
 	output pvsync,
 	output pblank,
-	output [23:0] pixel
+	output [23:0] pixel,
+	output [63:0] debug
 	);
+	
 	assign phsync = hsync;
 	assign pvsync = vsync;
 	assign pblank = blank;
@@ -490,7 +538,7 @@ module rh_display (
 	
 	wire [3:0] notes[15:0];
 	wire [23:0] note_pixels[15:0];
-	reg [10:0] lead_note_x = 512;
+	reg [10:0] lead_note_x = 1023;
 	
 	parameter [23:0] COLOR = 24'hFF_FF_FF;
 	
@@ -505,7 +553,7 @@ module rh_display (
 	always @(posedge vclock) begin
 		for (k=0; k<7; k=k+1) begin
 			case(notes[k])
-				4'b0000: note_y_pos[k] = 0;
+				4'b0000: note_y_pos[k] = FIRST_LETTER; // Update once notes work
 				4'b0001: note_y_pos[k] = FIRST_LETTER + 6*32;
 				4'b0010: note_y_pos[k] = FIRST_LETTER + 5*32;
 				4'b0011: note_y_pos[k] = FIRST_LETTER + 4*32;
@@ -524,22 +572,52 @@ module rh_display (
 		  blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
 				note(.x(lead_note_x + NOTE_WIDTH * j),
 					  .y(note_y_pos[j]),
+					  //.y(FIRST_LETTER + j*32),
 					  .hcount(hcount),
 					  .vcount(vcount),
 					  .color(COLOR),
 					  .pixel(note_pixels[j]));
 		end
 	endgenerate
+
+	reg load_tempo = 0;
+	
+	// Temporary tempo is 1/2 vclock, .5s per eighth note
+	reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
+	wire tempo_beat;
+	wire tempo_beat_move;
+	
+	counter c(.clk(vclock),
+				 .reset(load_tempo),
+				 .count_to(temp_tempo),
+				 .ready(tempo_beat));
+	
+	// The width of one note is 64, break the tempo up by 64
+	// to know the interval we need to move the notes by 1px
+	counter c2(.clk(vclock),
+				 .reset(load_tempo),
+				 .count_to(temp_tempo/64),
+				 .ready(tempo_beat_move));
 	
 	always @(posedge vclock) begin
 		if (reset) begin
-			lead_note_x <= 512;
+			lead_note_x <= 1023;
+			load_tempo = 1;
+		end else begin
+			load_tempo = 0;
 		end
+		
 		// Debug single note
 		if (hcount == 1 && vcount == 1) begin
-			if (up) lead_note_x <= lead_note_x - 4;
-			if (down) lead_note_x <= lead_note_x + 4;
+			if (up) begin
+				lead_note_x <= lead_note_x - 4;
+			end else if (down) begin
+				lead_note_x <= lead_note_x + 4;
+			end 
 		end
+		
+		if (tempo_beat_move) lead_note_x <= lead_note_x - 1;
+		
 	end
 	
 	// character display module: sample string in middle of screen
@@ -597,8 +675,5 @@ module rh_display (
 						| {8{cdpixel[0]}}
 						| {24{action_line}};
 						
-   wire [63:0] dispdata = 15;
-   display_16hex hexdisp1(reset, vclock, dispdata,
-		disp_blank, disp_clock, disp_rs, disp_ce_b,
-		disp_reset_b, disp_data_out);
+	assign debug = {temp_tempo, 15};
 endmodule
