@@ -364,6 +364,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    wire phsync,pvsync,pblank;
 	
 	wire debug_rh_display = 1;
+	reg right_note;
 	
 	reg [31:0] count = 0;
 	reg [3:0] notes[15:0];
@@ -384,6 +385,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd2, 4'd3, 4'd4, 4'd5,
 																					 4'd4, 4'd3, 4'd2, 4'd1,
 																					 4'd2, 4'd3, 4'd4, 4'd5};
+				right_note <= 1;
 			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 6) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -392,6 +394,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd1, 4'd2, 4'd3, 4'd4,
 																					 4'd5, 4'd4, 4'd3, 4'd2,
 																					 4'd1, 4'd2, 4'd3, 4'd4};
+				right_note <= 0;
 			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 5) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -400,6 +403,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd2, 4'd1, 4'd2, 4'd3,
 																					 4'd4, 4'd5, 4'd4, 4'd3,
 																					 4'd2, 4'd1, 4'd2, 4'd3};
+				right_note <= 1;
 			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 4) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -408,6 +412,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd3, 4'd2, 4'd1, 4'd2,
 																					 4'd3, 4'd4, 4'd5, 4'd4,
 																					 4'd3, 4'd2, 4'd1, 4'd2};
+				right_note <= 0;
 			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 3) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -416,6 +421,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd4, 4'd3, 4'd2, 4'd1,
 																					 4'd2, 4'd3, 4'd4, 4'd5,
 																					 4'd4, 4'd3, 4'd2, 4'd1};
+				right_note <= 1;
 			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 2) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -424,6 +430,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd5, 4'd4, 4'd3, 4'd2,
 																					 4'd1, 4'd2, 4'd3, 4'd4,
 																					 4'd5, 4'd4, 4'd3, 4'd2};
+				right_note <= 0;
 			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 1) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -432,6 +439,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd6, 4'd5, 4'd4, 4'd3,
 																					 4'd2, 4'd1, 4'd2, 4'd3,
 																					 4'd4, 4'd5, 4'd4, 4'd3 };
+				right_note <= 1;
 			end else if (count <= 26'b1111_0111_1111_0100_1001_0000_0 * 1) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
@@ -440,16 +448,22 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 																					 4'd5, 4'd6, 4'd5, 4'd4,
 																					 4'd3, 4'd2, 4'd1, 4'd2,
 																					 4'd3, 4'd4, 4'd5, 4'd4 };
+				right_note <= 0;
 			end
 		end
 	end
 	
-	wire [63:0] nn = {notes[15], notes[14], notes[13], notes[12], notes[11], notes[10],
-							 notes[9], notes[8], notes[7], notes[6], notes[5], notes[4], notes[3],
-							 notes[2], notes[1], notes[0]};
+//	wire [63:0] nn = {notes[15], notes[14], notes[13], notes[12], notes[11], notes[10],
+//							 notes[9], notes[8], notes[7], notes[6], notes[5], notes[4], notes[3],
+//							 notes[2], notes[1], notes[0]};
+	wire [63:0] nn;
+
+	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
+								    .song_id(0), .next_notes_out(nn));
 	
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
+		.playing_correct(right_note),
 		.next_notes(nn), 
 		.tempo(26'b1111_0111_1111_0100_1001_0000_0),
 		.hcount(hcount),.vcount(vcount),
@@ -457,7 +471,11 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		.blank(blank),.phsync(phsync),
 		.pvsync(pvsync),.pblank(pblank),
 		.pixel(pixel), .debug(dispdata));
-		
+	
+	reg [6:0] read_addr = 0;
+	wire [3:0] next_note;
+	lotr_song lotr(.clka(clock_65mhz), .addra(read_addr), .douta(next_note));
+	
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clock_65mhz), 
 		.data(nn),
@@ -564,6 +582,7 @@ module rh_display (
 	input up,
 	input down,
 	
+	input playing_correct,
 	input [63:0] next_notes,
 	input [25:0] tempo,
 	
@@ -602,21 +621,60 @@ module rh_display (
 			  notes [3], notes[2], notes[1], notes[0] } = next_notes;
 
 	reg [9:0] note_y_pos[15:0];
+	reg [23:0] note_color[15:0];
 	
 	integer k;
 	always @(posedge vclock) begin
 		for (k=0; k<16; k=k+1) begin
 			case(notes[k])
-				4'd0: note_y_pos[k] = FIRST_LETTER; // Update once notes work
-				4'd1: note_y_pos[k] = FIRST_LETTER + 6*32;
-				4'd2: note_y_pos[k] = FIRST_LETTER + 5*32;
-				4'd3: note_y_pos[k] = FIRST_LETTER + 4*32;
-				4'd4: note_y_pos[k] = FIRST_LETTER + 3*32;
-				4'd5: note_y_pos[k] = FIRST_LETTER + 2*32;
-				4'd6: note_y_pos[k] = FIRST_LETTER + 1*32;
-				4'd7: note_y_pos[k] = FIRST_LETTER + 0*32;
-				default: note_y_pos[k] = FIRST_LETTER;
+				4'd0: note_y_pos[k] <= FIRST_LETTER;
+				// C, C#
+				4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*32;
+				4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*32;
+				// D, D#
+				4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*32;
+				4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*32;
+				// E
+				4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*32;
+				// F, F#
+				4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*32;
+				4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*32;
+				// G, G#
+				4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*32;
+				4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*32;
+				// A, A#
+				4'd10: note_y_pos[k] <= FIRST_LETTER + 1*32;
+				4'd11: note_y_pos[k] <= FIRST_LETTER + 1*32;
+				// B
+				4'd12: note_y_pos[k] <= FIRST_LETTER + 0*32;
+				// C high
+				4'd13: note_y_pos[k] <= FIRST_LETTER + 6*32;
+				default: note_y_pos[k] <= FIRST_LETTER;
 			endcase
+			
+			case(notes[k])
+				// Don't display rests
+				4'd0: note_color[k] <= 24'h00_00_00;
+				// C#
+				4'd2:  note_color[k] <= 24'h55_55_FF;
+				// D#
+				4'd4:  note_color[k] <= 24'h55_55_FF;
+				// F#
+				4'd7:  note_color[k] <= 24'h55_55_FF;
+				// G#
+				4'd9:  note_color[k] <= 24'h55_55_FF;
+				// A#
+				4'd11: note_color[k] <= 24'h55_55_FF;
+				// C high
+				4'd13: note_color[k] <= 24'h00_DD_00;
+				default: note_color[k] <= 24'hFF_FF_FF;
+			endcase
+			
+			if (playing_correct && notes[k] > 0) begin
+				note_color[0] <= 24'hFF_FF_00;
+			end else begin
+				note_color[0] <= 24'hFF_45_00;
+			end
 		end
 	end
 	
@@ -629,7 +687,7 @@ module rh_display (
 					  //.y(FIRST_LETTER + j*32),
 					  .hcount(hcount),
 					  .vcount(vcount),
-					  .color(COLOR),
+					  .color(note_color[j]),
 					  .pixel(note_pixels[j]));
 		end
 	endgenerate

@@ -1,0 +1,10 @@
+NEWPROJECT "/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/"
+SETPROJECT "/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/"
+SET BusFormat = BusFormatAngleBracketNotRipped
+SET devicefamily = virtex2
+SET device = xc2v6000
+SET package = bf957
+SET speedgrade = -4
+SET FlowVendor = Foundation_iSE
+SET VerilogSim = True
+SET VHDLSim = True

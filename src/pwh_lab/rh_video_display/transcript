@@ -8,29 +8,86 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# do {counter_tb.fdo} 
+# do {musical_score_loader_tb.fdo} 
 # ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
+# -- Compiling module lotr_song
+# 
+# Top level modules:
+# 	lotr_song
 # Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
 # -- Compiling module counter
 # 
 # Top level modules:
 # 	counter
 # Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
-# -- Compiling module counter_tb
+# -- Compiling module musical_score_loader
 # 
 # Top level modules:
-# 	counter_tb
+# 	musical_score_loader
+# Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
+# -- Compiling module musical_score_loader_tb
+# 
+# Top level modules:
+# 	musical_score_loader_tb
 # Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps counter_tb glbl 
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps musical_score_loader_tb glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.counter_tb(fast)
+# ** Warning: musical_score_loader.v(31): (vopt-2241) Connection width does not match width of port 'addra'.
+# ** Warning: musical_score_loader.v(39): (vopt-2241) Connection width does not match width of port 'count_to'.
+# Loading work.musical_score_loader_tb(fast)
+# Loading work.musical_score_loader(fast)
+# Loading work.lotr_song(fast)
 # Loading work.counter(fast)
 # Loading work.glbl(fast)
+# ** Warning: (vsim-3017) musical_score_loader_tb.v(39): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /musical_score_loader_tb/uut
+# ** Warning: (vsim-3722) musical_score_loader_tb.v(39): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3015) musical_score_loader.v(31): [PCDPC] - Port size (8 or 8) does not match connection size (7) for port 'addra'.
+#         Region: /musical_score_loader_tb/uut/lotr
+# ** Warning: (vsim-3015) musical_score_loader.v(39): [PCDPC] - Port size (27 or 27) does not match connection size (26) for port 'count_to'.
+#         Region: /musical_score_loader_tb/uut/c
 # .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
 # .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
 # .main_pane.signals.interior.cs
-quit
+#  Block Memory Generator CORE Generator module loading initial data...
+#  Block Memory Generator data initialization complete.
+# Block Memory Generator CORE Generator module musical_score_loader_tb.uut.lotr.inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+restart -f
+# Loading work.musical_score_loader_tb(fast)
+# Loading work.musical_score_loader(fast)
+# Loading work.lotr_song(fast)
+# Loading work.counter(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-3017) musical_score_loader_tb.v(39): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /musical_score_loader_tb/uut
+# ** Warning: (vsim-3722) musical_score_loader_tb.v(39): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3015) musical_score_loader.v(31): [PCDPC] - Port size (8 or 8) does not match connection size (7) for port 'addra'.
+#         Region: /musical_score_loader_tb/uut/lotr
+# ** Warning: (vsim-3015) musical_score_loader.v(39): [PCDPC] - Port size (27 or 27) does not match connection size (26) for port 'count_to'.
+#         Region: /musical_score_loader_tb/uut/c
+run 500ns;
+#  Block Memory Generator CORE Generator module loading initial data...
+#  Block Memory Generator data initialization complete.
+# Block Memory Generator CORE Generator module musical_score_loader_tb.uut.lotr.inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+restart -f
+# Loading work.musical_score_loader_tb(fast)
+# Loading work.musical_score_loader(fast)
+# Loading work.lotr_song(fast)
+# Loading work.counter(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-3017) musical_score_loader_tb.v(39): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /musical_score_loader_tb/uut
+# ** Warning: (vsim-3722) musical_score_loader_tb.v(39): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3015) musical_score_loader.v(31): [PCDPC] - Port size (8 or 8) does not match connection size (7) for port 'addra'.
+#         Region: /musical_score_loader_tb/uut/lotr
+# ** Warning: (vsim-3015) musical_score_loader.v(39): [PCDPC] - Port size (27 or 27) does not match connection size (26) for port 'count_to'.
+#         Region: /musical_score_loader_tb/uut/c
+run 500ns;
+#  Block Memory Generator CORE Generator module loading initial data...
+#  Block Memory Generator data initialization complete.
+# Block Memory Generator CORE Generator module musical_score_loader_tb.uut.lotr.inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
