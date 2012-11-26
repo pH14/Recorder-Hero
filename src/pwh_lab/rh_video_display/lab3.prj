@@ -1,4 +1,5 @@
 verilog work "font_rom.v"
+verilog work "picture_blob.v"
 verilog work "display_16hex.v"
 verilog work "cstringdisp.v"
 verilog work "counter.v"

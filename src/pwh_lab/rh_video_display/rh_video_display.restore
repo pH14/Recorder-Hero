@@ -843,6 +843,8 @@ proc restore { { project_dir "" } } {
       "display_16hex.v" 
       "font_rom.xco" 
       "labkit.ucf" 
+      "note_letters.xco" 
+      "picture_blob.v" 
       "rh_video_display.v"}
 
   HandleException {
@@ -853,7 +855,14 @@ proc restore { { project_dir "" } } {
       "font_rom.edn" 
       "font_rom.mif" 
       "font_rom.v" 
-      "lab3_guide.ncd"}
+      "lab3_guide.ncd" 
+      "note_letters.asy" 
+      "note_letters.ngc" 
+      "note_letters.sym" 
+      "note_letters.v" 
+      "note_letters.veo" 
+      "note_letters.vhd" 
+      "note_letters.vho"}
 
   set origination 2
 

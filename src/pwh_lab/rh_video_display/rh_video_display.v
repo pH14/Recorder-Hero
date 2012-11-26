@@ -707,6 +707,14 @@ module rh_display (
 		end
 	end
 	
+	wire [23:0] bmp_pixel;
+	picture_blob pb(.pixel_clk(vclock),
+					    .x(15),
+						 .hcount(hcount),
+						 .y(15),
+						 .vcount(vcount),
+						 .pixel(bmp_pixel));
+	
 	assign pixel = onscreen_notes[0]
 						| onscreen_notes[1]
 						| onscreen_notes[2]
@@ -730,7 +738,8 @@ module rh_display (
 						| {8{cdpixel[2]}}
 						| {8{cdpixel[1]}} 
 						| {8{cdpixel[0]}}
-						| {24{action_line}};
+						| {24{action_line}}
+						| bmp_pixel;
 						
 	assign debug = {next_notes[63:60], 15};
 endmodule
