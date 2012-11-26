@@ -291,3 +291,30 @@ INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      6 sec.
+Customizing IP...
+10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+Finished Customizing.
+Generating IP...
+Generating Implementation files.
+Generating ISE symbol file...
+Generating NGC file.
+Finished Generating.
+Successfully generated note_letters.
+Recustomizing IP...
+10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+WARNING:coreutil - UtilitiesC:159 - Message file "usenglish/ip.msg" wasn't   found.
+   ERROR:ip - build_algo_return: For the configured RAM size, the number of   block
+      RAMs used exceeds the maximum number of block RAMs in all available
+      architectures (550)
+   ERROR:ip - build_algo_return: For the configured RAM size, the number of   block
+      RAMs used exceeds the maximum number of block RAMs in all available
+      architectures (550)
+   ERROR:ip - build_algo_return: For the configured RAM size, the number of   block
+      RAMs used exceeds the maximum number of block RAMs in all available
+      architectures (550)
+   ERROR:ip - build_algo_return: For the configured RAM size, the number of   block
+      RAMs used exceeds the maximum number of block RAMs in all available
+      architectures (550)
+Finished Recustomizing.
