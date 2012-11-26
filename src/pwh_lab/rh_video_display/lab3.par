@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-eecs-digital-33::  Sun Nov 25 21:40:57 2012
+eecs-digital-33::  Mon Nov 26 17:43:19 2012
 
 par -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf 
 
@@ -36,8 +36,8 @@ Device Utilization Summary:
       Number of LOCed IOBs                 576 out of 576   100%
 
    Number of MULT18X18s                      7 out of 144     4%
-   Number of RAMB16s                         7 out of 144     4%
-   Number of SLICEs                        899 out of 33792   2%
+   Number of RAMB16s                        57 out of 144    39%
+   Number of SLICEs                       1114 out of 33792   3%
 
 
 Overall effort level (-ol):   Standard 
@@ -379,87 +379,87 @@ WARNING:Par:288 - The signal user4<9>_IBUF has no load.  PAR will not attempt to
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:15345af) REAL time: 4 secs 
+Phase 1.1 (Checksum:159d6c7) REAL time: 5 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:15345af) REAL time: 4 secs 
+Phase 2.7 (Checksum:159d6c7) REAL time: 5 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:15345af) REAL time: 4 secs 
+Phase 3.31 (Checksum:159d6c7) REAL time: 5 secs 
 
 Phase 4.2
 
 ......
 .......
-Phase 4.2 (Checksum:154f2ff) REAL time: 5 secs 
+Phase 4.2 (Checksum:15b8417) REAL time: 5 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:154f2ff) REAL time: 5 secs 
+Phase 5.30 (Checksum:15b8417) REAL time: 5 secs 
 
 Phase 6.3
-Phase 6.3 (Checksum:154f2ff) REAL time: 5 secs 
+Phase 6.3 (Checksum:15b8417) REAL time: 5 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:154f2ff) REAL time: 5 secs 
+Phase 7.5 (Checksum:15b8417) REAL time: 5 secs 
 
 Phase 8.8
 ........................................
-...
-.....
 .
-.....
+.......
+.
+..........
 .
 .
-Phase 8.8 (Checksum:387ff57) REAL time: 13 secs 
+Phase 8.8 (Checksum:4305233) REAL time: 18 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:387ff57) REAL time: 13 secs 
+Phase 9.5 (Checksum:4305233) REAL time: 18 secs 
 
 Phase 10.18
-Phase 10.18 (Checksum:38b90e4) REAL time: 16 secs 
+Phase 10.18 (Checksum:432a300) REAL time: 23 secs 
 
 Phase 11.5
-Phase 11.5 (Checksum:38b90e4) REAL time: 16 secs 
+Phase 11.5 (Checksum:432a300) REAL time: 23 secs 
 
 Phase 12.27
-Phase 12.27 (Checksum:38b90e4) REAL time: 16 secs 
+Phase 12.27 (Checksum:432a300) REAL time: 23 secs 
 
 Phase 13.24
-Phase 13.24 (Checksum:38b90e4) REAL time: 16 secs 
+Phase 13.24 (Checksum:432a300) REAL time: 23 secs 
 
-REAL time consumed by placer: 17 secs 
-CPU  time consumed by placer: 16 secs 
+REAL time consumed by placer: 23 secs 
+CPU  time consumed by placer: 23 secs 
 Writing design to file lab3.ncd
 
 
-Total REAL time to Placer completion: 17 secs 
-Total CPU time to Placer completion: 17 secs 
+Total REAL time to Placer completion: 24 secs 
+Total CPU time to Placer completion: 23 secs 
 
 Starting Router
 
-Phase 1: 5544 unrouted;       REAL time: 27 secs 
+Phase 1: 8938 unrouted;       REAL time: 33 secs 
 
-Phase 2: 4764 unrouted;       REAL time: 27 secs 
+Phase 2: 7418 unrouted;       REAL time: 34 secs 
 
-Phase 3: 855 unrouted;       REAL time: 28 secs 
+Phase 3: 1405 unrouted;       REAL time: 36 secs 
 
-Phase 4: 855 unrouted; (91485)      REAL time: 28 secs 
+Phase 4: 1405 unrouted; (116728)      REAL time: 36 secs 
 
-Phase 5: 883 unrouted; (0)      REAL time: 28 secs 
+Phase 5: 1394 unrouted; (0)      REAL time: 36 secs 
 
-Phase 6: 0 unrouted; (0)      REAL time: 29 secs 
+Phase 6: 0 unrouted; (0)      REAL time: 37 secs 
 
-Phase 7: 0 unrouted; (0)      REAL time: 30 secs 
+Phase 7: 0 unrouted; (0)      REAL time: 38 secs 
 
-Phase 8: 0 unrouted; (0)      REAL time: 30 secs 
+Phase 8: 0 unrouted; (0)      REAL time: 38 secs 
 
-Phase 9: 0 unrouted; (0)      REAL time: 30 secs 
+Phase 9: 0 unrouted; (0)      REAL time: 38 secs 
 
-Phase 10: 0 unrouted; (0)      REAL time: 30 secs 
+Phase 10: 0 unrouted; (0)      REAL time: 39 secs 
 
 
-Total REAL time to Router completion: 30 secs 
-Total CPU time to Router completion: 30 secs 
+Total REAL time to Router completion: 39 secs 
+Total CPU time to Router completion: 38 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -477,9 +477,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         clock_65mhz |     BUFGMUX5P| No   |  226 |  0.491     |  2.374      |
+|         clock_65mhz |     BUFGMUX5P| No   |  352 |  0.540     |  2.518      |
 +---------------------+--------------+------+------+------------+-------------+
-|   hex_display/clock |     BUFGMUX3S| No   |   31 |  0.122     |  2.310      |
+|   hex_display/clock |     BUFGMUX3S| No   |   30 |  0.092     |  2.298      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -498,11 +498,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP   |         N/A|    10.028ns|     N/A|           0
-  ck_65mhz                                  | HOLD    |     1.391ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|     9.682ns|     N/A|           0
+  ck_65mhz                                  | HOLD    |     1.262ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net hex | SETUP   |         N/A|     8.361ns|     N/A|           0
-  _display/clock                            | HOLD    |     1.330ns|            |       0|           0
+  Autotimespec constraint for clock net hex | SETUP   |         N/A|    11.948ns|     N/A|           0
+  _display/clock                            | HOLD    |     1.402ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -517,10 +517,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 330 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 39 secs 
-Total CPU time to PAR completion: 35 secs 
+Total REAL time to PAR completion: 49 secs 
+Total CPU time to PAR completion: 44 secs 
 
-Peak Memory Usage:  743 MB
+Peak Memory Usage:  757 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

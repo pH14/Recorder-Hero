@@ -11,33 +11,33 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Sun Nov 25 21:40:39 2012
+Mapped Date    : Mon Nov 26 17:42:49 2012
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  333
+Number of warnings:  363
 Logic Utilization:
-  Number of Slice Flip Flops:           372 out of  67,584    1%
-  Number of 4 input LUTs:             1,239 out of  67,584    1%
+  Number of Slice Flip Flops:           590 out of  67,584    1%
+  Number of 4 input LUTs:             1,569 out of  67,584    2%
 Logic Distribution:
-  Number of occupied Slices:            899 out of  33,792    2%
-    Number of Slices containing only related logic:     899 out of     899 100%
-    Number of Slices containing unrelated logic:          0 out of     899   0%
+  Number of occupied Slices:          1,114 out of  33,792    3%
+    Number of Slices containing only related logic:   1,114 out of   1,114 100%
+    Number of Slices containing unrelated logic:          0 out of   1,114   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,610 out of  67,584    2%
-    Number used as logic:             1,234
-    Number used as a route-thru:        371
+  Total Number of 4 input LUTs:       1,974 out of  67,584    2%
+    Number used as logic:             1,564
+    Number used as a route-thru:        405
     Number used as Shift registers:       5
   Number of bonded IOBs:                576 out of     684   84%
-  Number of RAMB16s:                      7 out of     144    4%
+  Number of RAMB16s:                     57 out of     144   39%
   Number of MULT18X18s:                   7 out of     144    4%
   Number of BUFGMUXs:                     2 out of      16   12%
   Number of DCMs:                         1 out of      12    8%
 
-Peak Memory Usage:  502 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  515 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
@@ -80,7 +80,7 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network user3<28>_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 329
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 333
    more times for the following (max. 5 shown):
    user3<4>_IBUF,
    user3<29>_IBUF,
@@ -751,6 +751,96 @@ WARNING:PhysDesignRules:367 - The signal <tv_in_line_clock2_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user4<9>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+   ram/spram.ram.B>:<RAMB16_RAMB16B>.
 
 Section 3 - Informational
 -------------------------
@@ -764,15 +854,52 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  17 block(s) optimized away
+  10 block(s) removed
+  27 block(s) optimized away
+   8 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "lotr/douta<3>" is sourceless and has been removed.
+The signal "lotr/douta<2>" is sourceless and has been removed.
+The signal "lotr/douta<1>" is sourceless and has been removed.
+The signal "lotr/douta<0>" is sourceless and has been removed.
+The signal "lotr/BU2/doutb<0>" is sourceless and has been removed.
+The signal "lotr/BU2/N1" is sourceless and has been removed.
+The signal "rh_disp/pb/nl/BU2/N1" is sourceless and has been removed.
+The signal "rh_disp/pb/nl/BU2/N2" is sourceless and has been removed.
+Unused block
+"lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.ram
+" () removed.
+Unused block "lotr/BU2/XST_GND" (ZERO) removed.
+Unused block "lotr/BU2/XST_VCC" (ONE) removed.
+Unused block "lotr/GND" (ZERO) removed.
+Unused block "lotr/VCC" (ONE) removed.
+Unused block "msl/lotr/GND" (ZERO) removed.
+Unused block "msl/lotr/VCC" (ONE) removed.
+Unused block
+"rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/enout_
+48_mux0000_SW0" (ROM) removed.
+Unused block "rh_disp/pb/nl/GND" (ZERO) removed.
+Unused block "rh_disp/pb/nl/VCC" (ONE) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+GND 		msl/lotr/BU2/XST_GND
+VCC 		msl/lotr/BU2/XST_VCC
 GND 		rh_disp/generate_characters[0].csd/f/GND
 VCC 		rh_disp/generate_characters[0].csd/f/VCC
 GND 		rh_disp/generate_characters[1].csd/f/GND
@@ -787,6 +914,16 @@ GND 		rh_disp/generate_characters[5].csd/f/GND
 VCC 		rh_disp/generate_characters[5].csd/f/VCC
 GND 		rh_disp/generate_characters[6].csd/f/GND
 VCC 		rh_disp/generate_characters[6].csd/f/VCC
+LUT4
+		rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/enout
+_48_mux0000
+LUT3 		rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/ram_ena01
+LUT3 		rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/ram_ena101
+LUT3 		rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/ram_ena11
+LUT3 		rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/ram_ena111
+LUT3 		rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/ram_ena151
+GND 		rh_disp/pb/nl/BU2/XST_GND
+VCC 		rh_disp/pb/nl/BU2/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
