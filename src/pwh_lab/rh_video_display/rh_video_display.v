@@ -376,22 +376,70 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		end
 		
 		if (debug_rh_display) begin
-			if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 2) begin
+			if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 7) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
 				 notes[8], notes[9], notes[10], notes[11],
-				 notes[12], notes[13], notes[14], notes[15]} <= {1, 2, 3, 4,
-																					 5, 6, 5, 4,
-																					 3, 2, 1, 2,
-																					 3, 4, 5, 3 };
-			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0) begin
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd4, 4'd3, 4'd2, 4'd1,
+																					 4'd2, 4'd3, 4'd4, 4'd5,
+																					 4'd4, 4'd3, 4'd2, 4'd1,
+																					 4'd2, 4'd3, 4'd4, 4'd5};
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 6) begin
 				{notes[0], notes[1], notes[2], notes[3],
 				 notes[4], notes[5], notes[6], notes[7],
 				 notes[8], notes[9], notes[10], notes[11],
-				 notes[12], notes[13], notes[14], notes[15]} <= {5, 2, 3, 4,
-																					 5, 6, 5, 4,
-																					 3, 2, 1, 2,
-																					 3, 4, 5, 3 };
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd5, 4'd4, 4'd3, 4'd2,
+																					 4'd1, 4'd2, 4'd3, 4'd4,
+																					 4'd5, 4'd4, 4'd3, 4'd2,
+																					 4'd1, 4'd2, 4'd3, 4'd4};
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 5) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd6, 4'd5, 4'd4, 4'd3,
+																					 4'd2, 4'd1, 4'd2, 4'd3,
+																					 4'd4, 4'd5, 4'd4, 4'd3,
+																					 4'd2, 4'd1, 4'd2, 4'd3};
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 4) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd5, 4'd6, 4'd5, 4'd4,
+																					 4'd3, 4'd2, 4'd1, 4'd2,
+																					 4'd3, 4'd4, 4'd5, 4'd4,
+																					 4'd3, 4'd2, 4'd1, 4'd2};
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 3) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd4, 4'd5, 4'd6, 4'd5,
+																					 4'd4, 4'd3, 4'd2, 4'd1,
+																					 4'd2, 4'd3, 4'd4, 4'd5,
+																					 4'd4, 4'd3, 4'd2, 4'd1};
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 2) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd3, 4'd4, 4'd5, 4'd6,
+																					 4'd5, 4'd4, 4'd3, 4'd2,
+																					 4'd1, 4'd2, 4'd3, 4'd4,
+																					 4'd5, 4'd4, 4'd3, 4'd2};
+			end else if (count > 26'b1111_0111_1111_0100_1001_0000_0 * 1) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd2, 4'd3, 4'd4, 4'd5,
+																					 4'd6, 4'd5, 4'd4, 4'd3,
+																					 4'd2, 4'd1, 4'd2, 4'd3,
+																					 4'd4, 4'd5, 4'd4, 4'd3 };
+			end else if (count <= 26'b1111_0111_1111_0100_1001_0000_0 * 1) begin
+				{notes[0], notes[1], notes[2], notes[3],
+				 notes[4], notes[5], notes[6], notes[7],
+				 notes[8], notes[9], notes[10], notes[11],
+				 notes[12], notes[13], notes[14], notes[15]} <= {4'd1, 4'd2, 4'd3, 4'd4,
+																					 4'd5, 4'd6, 4'd5, 4'd4,
+																					 4'd3, 4'd2, 4'd1, 4'd2,
+																					 4'd3, 4'd4, 4'd5, 4'd4 };
 			end
 		end
 	end
@@ -410,9 +458,15 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		.pvsync(pvsync),.pblank(pblank),
 		.pixel(pixel), .debug(dispdata));
 		
-   display_16hex hexdisp1(reset, vclock, dispdata,
-		disp_blank, disp_clock, disp_rs, disp_ce_b,
-		disp_reset_b, disp_data_out);
+	display_16hex hex_display(.reset(reset), 
+		.clock_27mhz(clock_65mhz), 
+		.data(nn),
+		.disp_blank(disp_blank), 
+		.disp_clock(disp_clock), 
+		.disp_rs(disp_rs), 
+		.disp_ce_b(disp_ce_b),
+		.disp_reset_b(disp_reset_b),
+		.disp_data_out(disp_data_out));
 
    // switch[1:0] selects which video generator to use:
    //  00: user's pong game
@@ -551,16 +605,16 @@ module rh_display (
 	
 	integer k;
 	always @(posedge vclock) begin
-		for (k=0; k<7; k=k+1) begin
+		for (k=0; k<16; k=k+1) begin
 			case(notes[k])
-				4'b0000: note_y_pos[k] = FIRST_LETTER; // Update once notes work
-				4'b0001: note_y_pos[k] = FIRST_LETTER + 6*32;
-				4'b0010: note_y_pos[k] = FIRST_LETTER + 5*32;
-				4'b0011: note_y_pos[k] = FIRST_LETTER + 4*32;
-				4'b0100: note_y_pos[k] = FIRST_LETTER + 3*32;
-				4'b0101: note_y_pos[k] = FIRST_LETTER + 2*32;
-				4'b0110: note_y_pos[k] = FIRST_LETTER + 1*32;
-				4'b0111: note_y_pos[k] = FIRST_LETTER + 0*32;
+				4'd0: note_y_pos[k] = FIRST_LETTER; // Update once notes work
+				4'd1: note_y_pos[k] = FIRST_LETTER + 6*32;
+				4'd2: note_y_pos[k] = FIRST_LETTER + 5*32;
+				4'd3: note_y_pos[k] = FIRST_LETTER + 4*32;
+				4'd4: note_y_pos[k] = FIRST_LETTER + 3*32;
+				4'd5: note_y_pos[k] = FIRST_LETTER + 2*32;
+				4'd6: note_y_pos[k] = FIRST_LETTER + 1*32;
+				4'd7: note_y_pos[k] = FIRST_LETTER + 0*32;
 				default: note_y_pos[k] = FIRST_LETTER;
 			endcase
 		end
@@ -568,7 +622,7 @@ module rh_display (
 	
 	genvar j;
 	generate
-		for(j=0; j<7; j=j+1) begin:generate_note_blobs
+		for(j=0; j<16; j=j+1) begin:generate_note_blobs
 		  blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
 				note(.x(lead_note_x + NOTE_WIDTH * j),
 					  .y(note_y_pos[j]),
@@ -601,7 +655,7 @@ module rh_display (
 	
 	always @(posedge vclock) begin
 		if (reset) begin
-			lead_note_x <= 1023;
+			lead_note_x <= ACTION_LINE_X;
 			load_tempo = 1;
 		end else begin
 			load_tempo = 0;
@@ -616,8 +670,11 @@ module rh_display (
 			end 
 		end
 		
-		if (tempo_beat_move) lead_note_x <= lead_note_x - 1;
-		
+		if (tempo_beat_move) begin
+			lead_note_x <= lead_note_x - 1;
+		end else if (tempo_beat) begin
+			lead_note_x <= ACTION_LINE_X;
+		end
 	end
 	
 	// character display module: sample string in middle of screen
@@ -645,7 +702,7 @@ module rh_display (
 	
 	integer n;
 	always @(posedge vclock) begin
-		for (n=0; n<15; n=n+1) begin
+		for (n=0; n<16; n=n+1) begin
 			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
 		end
 	end
@@ -675,5 +732,5 @@ module rh_display (
 						| {8{cdpixel[0]}}
 						| {24{action_line}};
 						
-	assign debug = {temp_tempo, 15};
+	assign debug = {next_notes[63:60], 15};
 endmodule

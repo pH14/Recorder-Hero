@@ -1,6 +1,6 @@
 iMPACT Version: 10.1.03
 
-iMPACT log file Started on Tue Nov 20 14:00:53 2012
+iMPACT log file Started on Sun Nov 25 20:42:16 2012
 
 // *** BATCH CMD : loadProjectFile -file"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/rh_video_display.ipf"
 Reusing A0010001 key.
@@ -87,27 +87,6 @@ INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      6 sec.
-Customizing IP...
-10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
-Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
-Finished Customizing.
-Generating IP...
-WARNING:sim:216 - The chosen IP does not support a VHDL behavioral model,   generating a VHDL structural model instead.WARNING:sim:217 - The chosen IP does not support a Verilog behavioral model,   generating a Verilog structural model instead.Generating Implementation files.
-Generating the VHDL wrapper.
-Generating ISE symbol file...
-Generating NGC file.
-Generating VHDL structural model.
-Generating Verilog structural model.
-Finished Generating.
-Successfully generated divider.
-Customizing IP...
-10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
-Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
-Cancelled Customization.
-Recustomizing IP...
-10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
-Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
-Finished Recustomizing.
 Updating config file/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/lab3.bit...
 // *** BATCH CMD : Program -p 2 
 Maximum TCK operating frequency for this device chain: 15000000.
@@ -278,18 +257,37 @@ INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      6 sec.
-// *** BATCH CMD : saveProjectFile -file"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/rh_video_display.ipf"
-// *** BATCH CMD : setMode -bs
-// *** BATCH CMD : deleteDevice -position 1
-----------------------------------------------------------------------
-// *** BATCH CMD : deleteDevice -position 1
-----------------------------------------------------------------------
-// *** BATCH CMD : deleteDevice -position 1
-// *** BATCH CMD : setMode -ss
-// *** BATCH CMD : setMode -sm
-// *** BATCH CMD : setMode -hw140
-// *** BATCH CMD : setMode -spi
-// *** BATCH CMD : setMode -acecf
-// *** BATCH CMD : setMode -acempm
-// *** BATCH CMD : setMode -pff
-// *** BATCH CMD : setMode -bs
+Updating config file/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/lab3.bit...
+// *** BATCH CMD : Program -p 2 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = 2.
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+ Match_cycle = 2.
+INFO:iMPACT - '2': Checking done pin....done.
+'2': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
