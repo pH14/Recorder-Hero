@@ -1,0 +1,13 @@
+# Output products list for <note_letters>
+note_letters.asy
+note_letters.mif
+note_letters.ngc
+note_letters.sym
+note_letters.v
+note_letters.veo
+note_letters.vhd
+note_letters.vho
+note_letters.xco
+note_letters_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+note_letters_flist.txt
+note_letters_xmdf.tcl
