@@ -459,7 +459,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [63:0] nn;
 
 	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
-								    .song_id(0), .next_notes_out(nn));
+								    .song_id(switch[7]), .next_notes_out(nn));
 	
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
@@ -667,9 +667,13 @@ module rh_display (
 			endcase
 		end
 		
-		if ((playing_correct) && (notes[0] > 4'b0000)) begin
+		// Change color of to-be-played note based on whether
+		// the player is playing the right now
+		if (notes[0] == 4'd0) begin
+			note_color[0] <= 24'h00_00_00;
+		end else if ((playing_correct) && (notes[0] > 4'd0)) begin
 			note_color[0] <= 24'hFF_FF_00;
-		end else begin
+		end else if ((!playing_correct) && (notes[0] > 4'd0)) begin
 			note_color[0] <= 24'hFF_45_00;
 		end
 	end

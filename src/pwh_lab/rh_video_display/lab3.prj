@@ -1,3 +1,4 @@
+verilog work "./song_scales.v"
 verilog work "note_letters.v"
 verilog work "./lotr_song.v"
 verilog work "font_rom.v"

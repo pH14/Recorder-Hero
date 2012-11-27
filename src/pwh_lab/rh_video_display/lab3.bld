@@ -14,6 +14,9 @@ Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/lot
 r_song.ngc"...
 Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/son
+g_scales.ngc"...
+Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/not
 e_letters.ngc"...
 Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
@@ -324,7 +327,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 277
 
-Total memory usage is 239708 kilobytes
+Total memory usage is 239784 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

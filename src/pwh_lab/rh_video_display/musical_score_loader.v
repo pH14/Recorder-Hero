@@ -26,11 +26,11 @@ module musical_score_loader(
     );
 	reg [6:0] read_addr;
 	reg [3:0] next_notes[15:0];
-	wire [3:0] next_note;
+	wire [3:0] next_note_lotr;
 	wire [3:0] next_note_ss;
 	
 	song_scales ss(.clka(clk), .addra(read_addr), .douta(next_note_ss));
-	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note));
+	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
 	
 	reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
 	wire tempo_beat;
@@ -52,7 +52,7 @@ module musical_score_loader(
 				next_notes[i] <= next_notes[i+1];
 			end
 			
-			next_notes[15] <= (song_id == 0) ? next_note : next_note_ss;
+			next_notes[15] <= (song_id == 0) ? next_note_lotr : next_note_ss;
 			read_addr <= read_addr + 1;
 		end
 	end

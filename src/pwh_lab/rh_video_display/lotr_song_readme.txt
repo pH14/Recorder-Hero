@@ -1,5 +1,5 @@
 The following files were generated for 'lotr_song' in directory 
-/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display:
+/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display:
 
 lotr_song.asy:
    Graphical symbol information file. Used by the ISE tools and some

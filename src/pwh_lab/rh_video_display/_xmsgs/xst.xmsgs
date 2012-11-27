@@ -5,100 +5,97 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 462 </arg>Connection to input port &apos;<arg fmt="%s" index="2">song_id</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 32 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 31 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 33 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 38 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 40 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 704 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 702 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 711 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 709 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 770 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 768 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 772 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 770 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
 <msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;picture_blob.v&quot; line 30 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 685 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 683 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 752 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
-</msg>
-
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 477 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 750 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
 <msg type="warning" file="Xst" num="2591" delta="unknown" ><arg fmt="%s" index="1">&quot;rh_video_display.v&quot; line 331:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">CLKFX_DIVIDE</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
@@ -150,9 +147,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">enable</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="unknown" >Input &lt;<arg fmt="%s" index="1">song_id</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">temp_tempo</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">01111011111110100100100000</arg>.
@@ -554,7 +548,7 @@
 <msg type="warning" file="Xst" num="2565" delta="unknown" >Inout &lt;<arg fmt="%s" index="1">daughtercard&lt;1&gt;</arg>&gt; is never assigned.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="unknown" >Input &lt;<arg fmt="%s" index="1">switch&lt;7:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="unknown" >Input &lt;<arg fmt="%s" index="1">switch&lt;6:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="2565" delta="unknown" >Inout &lt;<arg fmt="%s" index="1">user4&lt;11&gt;</arg>&gt; is never assigned.
@@ -1112,13 +1106,7 @@
 <msg type="warning" file="Xst" num="2565" delta="unknown" >Inout &lt;<arg fmt="%s" index="1">user3&lt;3&gt;</arg>&gt; is never assigned.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">read_addr</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000</arg>.
-</msg>
-
 <msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">notes</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">next_note</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">dispdata</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1223,61 +1211,7 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">pixel_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">picture_blob</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pixel_15&gt; &lt;pixel_23&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_23</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_15&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_6_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_6_13&gt; &lt;note_color_6_17&gt; &lt;note_color_6_19&gt; &lt;note_color_6_21&gt; &lt;note_color_6_23&gt; </arg>
@@ -1340,6 +1274,9 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_9_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_9_13&gt; &lt;note_color_9_17&gt; &lt;note_color_9_19&gt; &lt;note_color_9_21&gt; &lt;note_color_9_23&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_18&gt; &lt;note_color_0_20&gt; &lt;note_color_0_22&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_4_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_4_13&gt; &lt;note_color_4_17&gt; &lt;note_color_4_19&gt; &lt;note_color_4_21&gt; &lt;note_color_4_23&gt; </arg>
 </msg>
 
@@ -1382,9 +1319,6 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_3_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_3_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_11&gt; &lt;note_color_0_12&gt; &lt;note_color_0_13&gt; &lt;note_color_0_15&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_14_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_14_1&gt; &lt;note_color_14_2&gt; &lt;note_color_14_3&gt; &lt;note_color_14_4&gt; &lt;note_color_14_5&gt; &lt;note_color_14_6&gt; &lt;note_color_14_7&gt; &lt;note_color_14_16&gt; &lt;note_color_14_18&gt; &lt;note_color_14_20&gt; &lt;note_color_14_22&gt; </arg>
 </msg>
 
@@ -1403,16 +1337,28 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_8_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_8_13&gt; &lt;note_color_8_17&gt; &lt;note_color_8_19&gt; &lt;note_color_8_21&gt; &lt;note_color_8_23&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_1&gt; &lt;note_color_0_2&gt; &lt;note_color_0_3&gt; &lt;note_color_0_4&gt; &lt;note_color_0_5&gt; &lt;note_color_0_6&gt; &lt;note_color_0_7&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_3_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_3_13&gt; &lt;note_color_3_17&gt; &lt;note_color_3_19&gt; &lt;note_color_3_21&gt; &lt;note_color_3_23&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_14_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_14_13&gt; &lt;note_color_14_17&gt; &lt;note_color_14_19&gt; &lt;note_color_14_21&gt; &lt;note_color_14_23&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_10&gt; &lt;note_color_0_14&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_2_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_2_10&gt; &lt;note_color_2_12&gt; &lt;note_color_2_14&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_13&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_2_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_2_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_0_19&gt; &lt;note_color_0_21&gt; &lt;note_color_0_23&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_15_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_15_10&gt; &lt;note_color_15_12&gt; &lt;note_color_15_14&gt; </arg>
@@ -1461,6 +1407,12 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">note_color_4_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rh_display</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;note_color_4_1&gt; &lt;note_color_4_2&gt; &lt;note_color_4_3&gt; &lt;note_color_4_4&gt; &lt;note_color_4_5&gt; &lt;note_color_4_6&gt; &lt;note_color_4_7&gt; &lt;note_color_4_16&gt; &lt;note_color_4_18&gt; &lt;note_color_4_20&gt; &lt;note_color_4_22&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -1515,18 +1467,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -1589,18 +1529,6 @@
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -1661,6 +1589,18 @@
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -1691,30 +1631,6 @@
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">onscreen_notes_0_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_disp</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_26</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -1728,6 +1644,12 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">goal_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">note_y_pos_11_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -2066,6 +1988,9 @@
 <msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">note_y_pos_4_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">note_color_0_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/c2/goal_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">lab3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -2390,6 +2315,12 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_8_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_8_21&gt; &lt;rh_disp/onscreen_notes_8_19&gt; &lt;rh_disp/onscreen_notes_8_17&gt; &lt;rh_disp/onscreen_notes_8_13&gt; &lt;rh_disp/onscreen_notes_8_9&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/note_color_0_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/note_color_0_11&gt; &lt;rh_disp/note_color_0_9&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_10_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_10_11&gt; </arg>
 </msg>
 
@@ -2423,6 +2354,9 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_6_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_6_20&gt; &lt;rh_disp/onscreen_notes_6_18&gt; &lt;rh_disp/onscreen_notes_6_16&gt; &lt;rh_disp/onscreen_notes_6_7&gt; &lt;rh_disp/onscreen_notes_6_6&gt; &lt;rh_disp/onscreen_notes_6_5&gt; &lt;rh_disp/onscreen_notes_6_4&gt; &lt;rh_disp/onscreen_notes_6_3&gt; &lt;rh_disp/onscreen_notes_6_2&gt; &lt;rh_disp/onscreen_notes_6_1&gt; &lt;rh_disp/onscreen_notes_6_0&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/note_color_0_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/note_color_0_16&gt; &lt;rh_disp/note_color_0_8&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_10_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_10_12&gt; &lt;rh_disp/onscreen_notes_10_10&gt; &lt;rh_disp/onscreen_notes_10_8&gt; </arg>
 </msg>
 
@@ -2447,7 +2381,7 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_9_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_9_21&gt; &lt;rh_disp/onscreen_notes_9_19&gt; &lt;rh_disp/onscreen_notes_9_17&gt; &lt;rh_disp/onscreen_notes_9_13&gt; &lt;rh_disp/onscreen_notes_9_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_13&gt; &lt;rh_disp/onscreen_notes_0_12&gt; &lt;rh_disp/onscreen_notes_0_11&gt; &lt;rh_disp/onscreen_notes_0_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_11&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_1_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_1_21&gt; &lt;rh_disp/onscreen_notes_1_19&gt; &lt;rh_disp/onscreen_notes_1_17&gt; &lt;rh_disp/onscreen_notes_1_13&gt; &lt;rh_disp/onscreen_notes_1_9&gt; </arg>
@@ -2471,7 +2405,10 @@
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_8_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_8_12&gt; &lt;rh_disp/onscreen_notes_8_10&gt; &lt;rh_disp/onscreen_notes_8_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">10 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_22&gt; &lt;rh_disp/onscreen_notes_0_21&gt; &lt;rh_disp/onscreen_notes_0_20&gt; &lt;rh_disp/onscreen_notes_0_19&gt; &lt;rh_disp/onscreen_notes_0_18&gt; &lt;rh_disp/onscreen_notes_0_17&gt; &lt;rh_disp/onscreen_notes_0_16&gt; &lt;rh_disp/onscreen_notes_0_14&gt; &lt;rh_disp/onscreen_notes_0_10&gt; &lt;rh_disp/onscreen_notes_0_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_21&gt; &lt;rh_disp/onscreen_notes_0_19&gt; &lt;rh_disp/onscreen_notes_0_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_10&gt; &lt;rh_disp/onscreen_notes_0_8&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_11_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_11_12&gt; &lt;rh_disp/onscreen_notes_11_10&gt; &lt;rh_disp/onscreen_notes_11_8&gt; </arg>
@@ -2487,6 +2424,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_9_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_9_20&gt; &lt;rh_disp/onscreen_notes_9_18&gt; &lt;rh_disp/onscreen_notes_9_16&gt; &lt;rh_disp/onscreen_notes_9_7&gt; &lt;rh_disp/onscreen_notes_9_6&gt; &lt;rh_disp/onscreen_notes_9_5&gt; &lt;rh_disp/onscreen_notes_9_4&gt; &lt;rh_disp/onscreen_notes_9_3&gt; &lt;rh_disp/onscreen_notes_9_2&gt; &lt;rh_disp/onscreen_notes_9_1&gt; &lt;rh_disp/onscreen_notes_9_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_20&gt; &lt;rh_disp/onscreen_notes_0_18&gt; &lt;rh_disp/onscreen_notes_0_16&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_1_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_1_11&gt; </arg>
@@ -2517,6 +2457,12 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_15_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_15_12&gt; &lt;rh_disp/onscreen_notes_15_10&gt; &lt;rh_disp/onscreen_notes_15_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_13&gt; &lt;rh_disp/onscreen_notes_0_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_22&gt; &lt;rh_disp/onscreen_notes_0_14&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
