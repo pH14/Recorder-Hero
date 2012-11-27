@@ -471,11 +471,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		.blank(blank),.phsync(phsync),
 		.pvsync(pvsync),.pblank(pblank),
 		.pixel(pixel), .debug(dispdata));
-	
-	reg [6:0] read_addr = 0;
-	wire [3:0] next_note;
-	lotr_song lotr(.clka(clock_65mhz), .addra(read_addr), .douta(next_note));
-	
+
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clock_65mhz), 
 		.data(nn),
@@ -669,12 +665,12 @@ module rh_display (
 				4'd13: note_color[k] <= 24'h00_DD_00;
 				default: note_color[k] <= 24'hFF_FF_FF;
 			endcase
-			
-			if (playing_correct && notes[k] > 0) begin
-				note_color[0] <= 24'hFF_FF_00;
-			end else begin
-				note_color[0] <= 24'hFF_45_00;
-			end
+		end
+		
+		if ((playing_correct) && (notes[0] > 4'b0000)) begin
+			note_color[0] <= 24'hFF_FF_00;
+		end else begin
+			note_color[0] <= 24'hFF_45_00;
 		end
 	end
 	

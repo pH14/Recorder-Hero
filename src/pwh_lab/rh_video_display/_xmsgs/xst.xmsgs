@@ -1157,13 +1157,13 @@
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_1_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
-<msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_3_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_2_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_4_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+</msg>
+
+<msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_3_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_5_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
@@ -1178,22 +1178,22 @@
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_8_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
-<msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_10_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_9_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_11_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
-<msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_13_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+<msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_10_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_12_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_14_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+</msg>
+
+<msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_13_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="0" delta="unknown" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_note_y_pos_15_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.

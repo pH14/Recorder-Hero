@@ -1,18 +1,18 @@
 Release 10.1.03 - xst K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/xst/projnav.tmp
+Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
-Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/xst
+Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: lab3.prj
@@ -110,7 +110,7 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling verilog file "note_letters.v" in library work
-Compiling verilog file "lotr_song.v" in library work
+Compiling verilog file "./lotr_song.v" in library work
 Module <note_letters> compiled
 Compiling verilog file "font_rom.v" in library work
 Module <lotr_song> compiled
@@ -441,6 +441,7 @@ WARNING:Xst:653 - Signal <temp_tempo> is used but never assigned. This sourceles
     Found 11-bit addsub for signal <lead_note_x$share0000>.
     Found 1-bit register for signal <load_tempo>.
     Found 384-bit register for signal <note_color>.
+    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 673.
     Found 160-bit register for signal <note_y_pos>.
     Found 384-bit register for signal <onscreen_notes>.
     Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 764.
@@ -450,7 +451,7 @@ INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <onscreen_n
 	inferred  16 ROM(s).
 	inferred 940 D-type flip-flop(s).
 	inferred  16 Adder/Subtractor(s).
-	inferred   2 Comparator(s).
+	inferred   3 Comparator(s).
 Unit <rh_display> synthesized.
 
 
@@ -831,7 +832,7 @@ Macro Statistics
  27-bit register                                       : 3
  32-bit register                                       : 1
  4-bit register                                        : 17
-# Comparators                                          : 108
+# Comparators                                          : 109
  10-bit comparator greatequal                          : 25
  11-bit comparator greatequal                          : 17
  11-bit comparator greater                             : 8
@@ -840,6 +841,7 @@ Macro Statistics
  12-bit comparator lessequal                           : 7
  27-bit comparator equal                               : 3
  32-bit comparator greater                             : 7
+ 4-bit comparator greater                              : 1
 # Multiplexers                                         : 55
  1-bit 3-to-1 multiplexer                              : 7
  1-bit 4-to-1 multiplexer                              : 10
@@ -898,19 +900,19 @@ Unit <picture_blob> synthesized (advanced).
 Synthesizing (advanced) Unit <rh_display>.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_0_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_1_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_3_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_2_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_4_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_3_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_5_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_6_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_7_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_8_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_10_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_9_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_11_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_13_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_10_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_12_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_14_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_13_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_15_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 Unit <rh_display> synthesized (advanced).
 INFO:Xst:2261 - The FF/Latch <pixel_0> in Unit <picture_blob> is equivalent to the following 2 FFs/Latches, which will be removed : <pixel_8> <pixel_16> 
@@ -1124,7 +1126,7 @@ Macro Statistics
  8-bit down counter                                    : 1
 # Registers                                            : 863
  Flip-Flops                                            : 863
-# Comparators                                          : 108
+# Comparators                                          : 109
  10-bit comparator greatequal                          : 25
  11-bit comparator greatequal                          : 17
  11-bit comparator greater                             : 8
@@ -1133,6 +1135,7 @@ Macro Statistics
  12-bit comparator lessequal                           : 7
  27-bit comparator equal                               : 3
  32-bit comparator greater                             : 7
+ 4-bit comparator greater                              : 1
 # Multiplexers                                         : 55
  1-bit 3-to-1 multiplexer                              : 7
  1-bit 4-to-1 multiplexer                              : 10
@@ -1498,15 +1501,15 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 3632
+# BELS                             : 3633
 #      GND                         : 11
 #      INV                         : 175
 #      LUT1                        : 398
-#      LUT2                        : 570
-#      LUT3                        : 241
+#      LUT2                        : 571
+#      LUT3                        : 240
 #      LUT3_D                      : 8
 #      LUT3_L                      : 6
-#      LUT4                        : 495
+#      LUT4                        : 496
 #      LUT4_D                      : 25
 #      LUT4_L                      : 60
 #      MUXCY                       : 1226
@@ -1516,12 +1519,12 @@ Cell Usage :
 #      VCC                         : 11
 #      XORCY                       : 297
 # FlipFlops/Latches                : 590
-#      FD                          : 84
+#      FD                          : 85
 #      FDE                         : 24
 #      FDR                         : 231
 #      FDRE                        : 169
 #      FDRS                        : 14
-#      FDS                         : 56
+#      FDS                         : 55
 #      FDSE                        : 12
 # RAMS                             : 58
 #      RAMB16_S1_S1                : 48
@@ -1550,8 +1553,8 @@ Selected Device : 2v6000bf957-4
 
  Number of Slices:                     1099  out of  33792     3%  
  Number of Slice Flip Flops:            590  out of  67584     0%  
- Number of 4 input LUTs:               1983  out of  67584     2%  
-    Number used as logic:              1978
+ Number of 4 input LUTs:               1984  out of  67584     2%  
+    Number used as logic:              1979
     Number used as Shift registers:       5
  Number of IOs:                         576
  Number of bonded IOBs:                 246  out of    684    35%  
@@ -1608,7 +1611,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
   Clock period: 24.770ns (frequency: 40.371MHz)
-  Total number of paths / destination ports: 37330 / 1176
+  Total number of paths / destination ports: 37334 / 1175
 -------------------------------------------------------------------------
 Delay:               10.321ns (Levels of Logic = 29)
   Source:            rh_disp/c2/count_0 (FF)
@@ -1781,13 +1784,13 @@ WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/generate_characters[6].csd/f.
 
 
-Total REAL time to Xst completion: 33.00 secs
-Total CPU time to Xst completion: 30.72 secs
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.32 secs
  
 --> 
 
 
-Total memory usage is 513368 kilobytes
+Total memory usage is 513816 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  676 (   0 filtered)

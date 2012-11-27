@@ -1,5 +1,5 @@
 verilog work "note_letters.v"
-verilog work "lotr_song.v"
+verilog work "./lotr_song.v"
 verilog work "font_rom.v"
 verilog work "counter.v"
 verilog work "picture_blob.v"

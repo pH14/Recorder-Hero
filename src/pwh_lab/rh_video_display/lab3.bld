@@ -3,23 +3,23 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 Command Line:
 /afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/bin/lin64/unwrapped/ngdbuild -ise
-/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vide
-o_display/rh_video_display.ise -intstyle ise -dd _ngo -aul -nt timestamp -i -p
+/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/rh_v
+ideo_display.ise -intstyle ise -dd _ngo -aul -nt timestamp -i -p
 xc2v6000-bf957-4 lab3.ngc lab3.ngd
 
 Reading NGO file
-"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vid
-eo_display/lab3.ngc" ...
+"/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/lab
+3.ngc" ...
 Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vid
-eo_display/lotr_song.ngc"...
+"/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/lot
+r_song.ngc"...
 Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vid
-eo_display/note_letters.ngc"...
+"/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/not
+e_letters.ngc"...
 Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
 Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_vid
-eo_display/_ngo/font_rom.ngo"...
+"/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/_ng
+o/font_rom.ngo"...
 Reading in constraint information from 'labkit.ucf'...
 Gathering constraint information from source properties...
 Done.
@@ -324,7 +324,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 277
 
-Total memory usage is 239584 kilobytes
+Total memory usage is 239708 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

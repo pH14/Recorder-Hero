@@ -1,5 +1,5 @@
 CommandLine
-/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/bin/lin64/unwrapped/xst -ise /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/rh_video_display.ise -intstyle ise -ifn /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/lab3.xst -ofn /afs/athena.mit.edu/user/p/w/pwh/Desktop/6.111/Recorder-Hero/src/pwh_lab/rh_video_display/lab3.syr -finalclean 1
+/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/bin/lin64/unwrapped/xst -ise /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/rh_video_display.ise -intstyle ise -ifn /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/lab3.xst -ofn /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/lab3.syr -finalclean 1
 s
 FormatString
 xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
