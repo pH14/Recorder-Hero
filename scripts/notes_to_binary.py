@@ -29,8 +29,11 @@ for music_file in os.listdir('music'):
 
                 song_output.extend([note_to_binary[note] for x in range(int(time_duration * 8.0))])
 
-    f_w = open('binary_music/%s' % music_file, 'w')
-    f_w.write(''.join(song_output))
+    f_w = open('binary_music/%s.coe' % music_file, 'w')
+    f_w.write('memory_initialization_radix=2;\n')
+    f_w.write('memory_initialization_vector=\n')
+    f_w.write(',\n'.join(song_output[:-1]))
+    f_w.write(',\n'+song_output[-1]+';')
 
     print 'Song: %s' % music_file
-    print ''.join(song_output)
+    print '\n'.join(song_output)
