@@ -1,0 +1,457 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>imageRGB</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2012-11-29"><meta name="DC.source" content="imageRGB.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">How to use this file</a></li><li><a href="#3">Getting 24 bit data</a></li><li><a href="#4">View the image</a></li><li><a href="#5">Manipulate the data in the image</a></li><li><a href="#6">Getting 8 bit data</a></li><li><a href="#7">Displaying without the color table</a></li><li><a href="#8">Displaying WITH the color table</a></li><li><a href="#9">More about the color table</a></li><li><a href="#10">Even smaller bitmaps</a></li><li><a href="#11">Writing data to coe files for putting them on the fpga</a></li><li><a href="#12">Turning a 2D image into a 1D memory array</a></li></ul></div><pre class="codeinput"><span class="comment">%6.111 Image Color Table MATLAB deme</span>
+<span class="comment">%Edgar Twigg bwayr@mit.edu</span>
+<span class="comment">%4/1/2008 (But I swear this file isn't a joke)</span>
+</pre><h2>How to use this file<a name="2"></a></h2><pre class="codeinput"><span class="comment">%Notice how %% divides up sections?  If you hit ctrl+enter, then MATLAB</span>
+<span class="comment">%will execute all the lines within that section, but nothing else.  You can</span>
+<span class="comment">%also navigate quickly through the file using ctrl+arrow_key</span>
+</pre><h2>Getting 24 bit data<a name="3"></a></h2><pre class="codeinput"><span class="comment">%So when you look at a 24 bit bitmap file, the file specifies three 8 bit</span>
+<span class="comment">%values for each color, 8 each for red, green, and blue.</span>
+[picture] = imread(<span class="string">'tiger24.bmp'</span>);
+</pre><h2>View the image<a name="4"></a></h2><pre class="codeinput"><span class="comment">%This command image will draw the picture you just loaded</span>
+figure                  <span class="comment">%opens a new window</span>
+image(picture)          <span class="comment">%draws your picture</span>
+title(<span class="string">'24 bit bitmap'</span>)  <span class="comment">%gives it a title so you don't forget what it is</span>
+</pre><img vspace="5" hspace="5" src="imageRGB_01.png" alt=""> <h2>Manipulate the data in the image<a name="5"></a></h2><pre class="codeinput"><span class="comment">%So now you have a matrix of values that represent the image.  You can</span>
+<span class="comment">%access them in the following way:</span>
+<span class="comment">%</span>
+<span class="comment">%picture(row,column,color)</span>
+<span class="comment">%</span>
+<span class="comment">%Remember that MATLAB uses 1-based indexes, and Verilog uses 0!</span>
+<span class="comment">%</span>
+<span class="comment">%Also, you can use MATLAB's slice operator to do nifty things.</span>
+<span class="comment">%picture(:,:,1) would return a 2D matrix with the red value for every row and</span>
+<span class="comment">%column.</span>
+<span class="comment">%</span>
+<span class="comment">%picture(:,1,2) would return a 1D matrix with the green value for every row</span>
+<span class="comment">%in the first column.</span>
+
+<span class="comment">%This is how MATLAB indexes the colors</span>
+RED = 1;
+GREEN = 2;
+BLUE = 3;
+
+<span class="comment">%So if we wanted to see the red values of the image only, we could say</span>
+figure
+image(picture(:,:,RED))
+title(<span class="string">'Red values in 24 bit bitmap'</span>)
+
+<span class="comment">%Because the image we gave matlab above specifies only one value per pixel</span>
+<span class="comment">%rather than usual three (red,blue,green), MATLAB colors each pixel from</span>
+<span class="comment">%blue to red based on the value at that pixel.</span>
+</pre><img vspace="5" hspace="5" src="imageRGB_02.png" alt=""> <h2>Getting 8 bit data<a name="6"></a></h2><pre class="codeinput"><span class="comment">%When you store an 8 bit bitmap, things get a little more complicated.  Now</span>
+<span class="comment">%each pixel in the image only gets one 8 bit value.  But, you need to send</span>
+<span class="comment">%the monitor an r,g, and b!  How can this work?</span>
+<span class="comment">%</span>
+<span class="comment">%8 bit bitmaps include a table which specifies the rgb values for each of</span>
+<span class="comment">%the 8 bits in the image.</span>
+<span class="comment">%</span>
+<span class="comment">%So each pixel is represented by one byte, and that byte is an index into a</span>
+<span class="comment">%table where each index specifies an r, g, and b value separately.</span>
+<span class="comment">%</span>
+<span class="comment">%Because of this, now we need to load both the image and it's colormap.</span>
+[picture color_table] = imread(<span class="string">'letter_notes_converted.bmp'</span>);
+</pre><h2>Displaying without the color table<a name="7"></a></h2><pre class="codeinput"><span class="comment">%If we try to display the picture without the colormap, the image does not</span>
+<span class="comment">%make sense</span>
+figure
+image(picture)
+title(<span class="string">'Per pixel values in 8 bit bitmap'</span>)
+</pre><img vspace="5" hspace="5" src="imageRGB_03.png" alt=""> <h2>Displaying WITH the color table<a name="8"></a></h2><pre class="codeinput"><span class="comment">%So to display the picture with the proper color table, we need to tell</span>
+<span class="comment">%MATLAB to set its colormap to be in line with our colorbar.  The image</span>
+<span class="comment">%quality is somewhat reduced compared to the 24 bit image, but not too bad.</span>
+figure
+image(picture)
+colormap(color_table)   <span class="comment">%This command tells MATLAB to use the image's color table</span>
+colorbar                <span class="comment">%This command tells MATLAB to draw the color table it is using</span>
+title(<span class="string">'8 bit bitmap displayed using color table'</span>)
+</pre><img vspace="5" hspace="5" src="imageRGB_04.png" alt=""> <h2>More about the color table<a name="9"></a></h2><pre class="codeinput"><span class="comment">%The color table is in the format:</span>
+<span class="comment">%</span>
+<span class="comment">%color_table(color_index,1=r 2=g 3=b)</span>
+<span class="comment">%</span>
+<span class="comment">%So to get the r g b values for color index 3, we only need to say:</span>
+disp(<span class="string">'         r    g              b    for color 3 is:'</span>)
+disp(color_table(3,:))      <span class="comment">%disp = print to console</span>
+
+<span class="comment">%Although in the bitmap file the colors are indexed as 0-255 and each rgb</span>
+<span class="comment">%value is an integer between 0-255, MATLAB images don't work like that, so</span>
+<span class="comment">%MATLAB has automatically scaled them to be indexed 1-256 and to have a</span>
+<span class="comment">%floating point value between 0 and 1.  To turn the floats into integer</span>
+<span class="comment">%values between 0 and 256:</span>
+
+color_table_8bit = uint8(round(256*color_table));
+
+disp(<span class="string">'    r    g    b    for color 3 in integers is:'</span>)
+disp(color_table_8bit(3,:))
+
+<span class="comment">%Note that this doesn't fix the indexing (and it can't, since MATLAB won't</span>
+<span class="comment">%let you have indexes below 1)</span>
+
+<span class="comment">%another way to look at the color table is like this (don't worry about how</span>
+<span class="comment">%to make this graph)</span>
+figure
+stem3(color_table_8bit)
+set(gca,<span class="string">'XTick'</span>,1:3);
+set(gca,<span class="string">'YTick'</span>,[1,65,129,193,256]);
+set(gca,<span class="string">'YTickLabel'</span>,[<span class="string">'  0'</span>;<span class="string">' 64'</span>;<span class="string">'128'</span>;<span class="string">'192'</span>;<span class="string">'255'</span>]);
+set(gca,<span class="string">'ZTick'</span>,[0,64,128,192,255]);
+
+xlabel(<span class="string">'red = 1, green = 2, blue = 3'</span>)
+ylabel(<span class="string">'color index'</span>)
+zlabel(<span class="string">'value'</span>)
+title(<span class="string">'Another way to see the color table'</span>)
+</pre><pre class="codeoutput">         r    g              b    for color 3 is:
+    0.0039    0.0039         0
+
+    r    g    b    for color 3 in integers is:
+    1    1    0
+
+</pre><img vspace="5" hspace="5" src="imageRGB_05.png" alt=""> <h2>Even smaller bitmaps<a name="10"></a></h2><pre class="codeinput"><span class="comment">%You can extend what we did for 8-bit bitmaps to even more compressed</span>
+<span class="comment">%forms, such as this 4-bit bitmap.  Now we only have 16 colors to work with</span>
+<span class="comment">%though, and our image quality is significantly reduced:</span>
+[picture color_table] = imread(<span class="string">'tiger4.bmp'</span>);
+
+figure
+image(picture)
+colormap(color_table)
+colorbar
+title(<span class="string">'4 bit bitmap displayed using color table'</span>)
+</pre><img vspace="5" hspace="5" src="imageRGB_06.png" alt=""> <h2>Writing data to coe files for putting them on the fpga<a name="11"></a></h2><pre class="codeinput"><span class="comment">%You can instantiate BRAMs to take their values from a file you feed them</span>
+<span class="comment">%when you flash the FPGA.  You can use this technique to send them</span>
+<span class="comment">%colortables, image data, anything.  Here's how to send the red component</span>
+<span class="comment">%of the color table of the last example</span>
+
+red = color_table(:,2);             <span class="comment">%grabs the red part of the colortable</span>
+scaled_data = red*255;              <span class="comment">%scales the floats back to 0-255</span>
+rounded_data = round(scaled_data);  <span class="comment">%rounds them down</span>
+data = dec2bin(rounded_data,8);     <span class="comment">%convert the binary data to 8 bit binary #s</span>
+
+<span class="comment">%open a file</span>
+output_name = <span class="string">'color_table_red_note_text.coe'</span>;
+file = fopen(output_name,<span class="string">'w'</span>);
+
+<span class="comment">%write the header info</span>
+fprintf(file,<span class="string">'memory_initialization_radix=2;\n'</span>);
+fprintf(file,<span class="string">'memory_initialization_vector=\n'</span>);
+fclose(file);
+
+<span class="comment">%put commas in the data</span>
+rowxcolumn = size(data);
+rows = rowxcolumn(1);
+columns = rowxcolumn(2);
+output = data;
+<span class="keyword">for</span> i = 1:(rows-1)
+    output(i,(columns+1)) = <span class="string">','</span>;
+<span class="keyword">end</span>
+output(rows,(columns+1)) = <span class="string">';'</span>;
+
+<span class="comment">%append the numeric values to the file</span>
+dlmwrite(output_name,output,<span class="string">'-append'</span>,<span class="string">'delimiter'</span>,<span class="string">''</span>, <span class="string">'newline'</span>, <span class="string">'pc'</span>);
+
+<span class="comment">%You're done!</span>
+</pre><h2>Turning a 2D image into a 1D memory array<a name="12"></a></h2><pre class="codeinput"><span class="comment">%The code above is all well and good for the color table, since it's 1-D</span>
+<span class="comment">%(well, at least you can break it into 3 1-D arrays).  But what about a 2D</span>
+<span class="comment">%array?  We need to turn it into a 1-D array:</span>
+
+picture_size = size(picture);       <span class="comment">%figure out how big the image is</span>
+num_rows = picture_size(1);
+num_columns = picture_size(2);
+
+pixel_columns = zeros(picture_size(1)*picture_size(2),1,<span class="string">'uint8'</span>);  <span class="comment">%pre-allocate a space for a new column vector</span>
+
+<span class="keyword">for</span> r = 1:num_rows
+    <span class="keyword">for</span> c = 1:num_columns
+        pixel_columns((r-1)*num_columns+c) = picture(r,c);    <span class="comment">%pixel# = (y*numColumns)+x</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="comment">%so now pixel_columns is a column vector of the pixel values in the image</span>
+
+<span class="comment">%just to make sure that we're doing things correctly</span>
+regen_picture = zeros(num_rows,num_columns,<span class="string">'uint8'</span>);
+<span class="keyword">for</span> r = 1:num_rows
+    <span class="keyword">for</span> c = 1:num_columns
+        regen_picture(r,c) = pixel_columns((r-1)*num_columns+c,1);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+figure
+subplot(121)
+image(picture)
+axis <span class="string">square</span>
+colormap(color_table)
+colorbar
+title(<span class="string">'Original Picture'</span>)
+
+subplot(122)
+image(regen_picture)
+axis <span class="string">square</span>
+colormap(color_table)
+colorbar
+title(<span class="string">'Regenerated Picture'</span>)
+</pre><img vspace="5" hspace="5" src="imageRGB_07.png" alt=""> <p class="footer"><br>
+      Published with MATLAB&reg; 7.14<br></p></div><!--
+##### SOURCE BEGIN #####
+%6.111 Image Color Table MATLAB deme
+%Edgar Twigg bwayr@mit.edu
+%4/1/2008 (But I swear this file isn't a joke)
+
+%% How to use this file
+%Notice how %% divides up sections?  If you hit ctrl+enter, then MATLAB 
+%will execute all the lines within that section, but nothing else.  You can
+%also navigate quickly through the file using ctrl+arrow_key
+
+%% Getting 24 bit data
+%So when you look at a 24 bit bitmap file, the file specifies three 8 bit 
+%values for each color, 8 each for red, green, and blue.
+[picture] = imread('tiger24.bmp');
+
+%% View the image
+%This command image will draw the picture you just loaded
+figure                  %opens a new window
+image(picture)          %draws your picture
+title('24 bit bitmap')  %gives it a title so you don't forget what it is
+
+%% Manipulate the data in the image
+%So now you have a matrix of values that represent the image.  You can
+%access them in the following way:
+%
+%picture(row,column,color)
+%
+%Remember that MATLAB uses 1-based indexes, and Verilog uses 0!
+%
+%Also, you can use MATLAB's slice operator to do nifty things.
+%picture(:,:,1) would return a 2D matrix with the red value for every row and
+%column.
+%
+%picture(:,1,2) would return a 1D matrix with the green value for every row
+%in the first column.
+
+%This is how MATLAB indexes the colors
+RED = 1;
+GREEN = 2;
+BLUE = 3;
+
+%So if we wanted to see the red values of the image only, we could say
+figure
+image(picture(:,:,RED))
+title('Red values in 24 bit bitmap')
+
+%Because the image we gave matlab above specifies only one value per pixel
+%rather than usual three (red,blue,green), MATLAB colors each pixel from
+%blue to red based on the value at that pixel.
+
+%% Getting 8 bit data
+%When you store an 8 bit bitmap, things get a little more complicated.  Now
+%each pixel in the image only gets one 8 bit value.  But, you need to send
+%the monitor an r,g, and b!  How can this work?
+%
+%8 bit bitmaps include a table which specifies the rgb values for each of
+%the 8 bits in the image.
+%
+%So each pixel is represented by one byte, and that byte is an index into a
+%table where each index specifies an r, g, and b value separately.
+%
+%Because of this, now we need to load both the image and it's colormap.
+[picture color_table] = imread('letter_notes_converted.bmp');
+
+%% Displaying without the color table
+%If we try to display the picture without the colormap, the image does not
+%make sense
+figure
+image(picture)
+title('Per pixel values in 8 bit bitmap')
+
+%% Displaying WITH the color table
+%So to display the picture with the proper color table, we need to tell 
+%MATLAB to set its colormap to be in line with our colorbar.  The image
+%quality is somewhat reduced compared to the 24 bit image, but not too bad.
+figure
+image(picture)
+colormap(color_table)   %This command tells MATLAB to use the image's color table
+colorbar                %This command tells MATLAB to draw the color table it is using
+title('8 bit bitmap displayed using color table')
+
+%% More about the color table
+%The color table is in the format:
+%
+%color_table(color_index,1=r 2=g 3=b)
+%
+%So to get the r g b values for color index 3, we only need to say:
+disp('         r    g              b    for color 3 is:')
+disp(color_table(3,:))      %disp = print to console
+
+%Although in the bitmap file the colors are indexed as 0-255 and each rgb
+%value is an integer between 0-255, MATLAB images don't work like that, so
+%MATLAB has automatically scaled them to be indexed 1-256 and to have a
+%floating point value between 0 and 1.  To turn the floats into integer 
+%values between 0 and 256:
+
+color_table_8bit = uint8(round(256*color_table));
+
+disp('    r    g    b    for color 3 in integers is:')
+disp(color_table_8bit(3,:)) 
+
+%Note that this doesn't fix the indexing (and it can't, since MATLAB won't
+%let you have indexes below 1)
+
+%another way to look at the color table is like this (don't worry about how
+%to make this graph)
+figure
+stem3(color_table_8bit)
+set(gca,'XTick',1:3);
+set(gca,'YTick',[1,65,129,193,256]);
+set(gca,'YTickLabel',['  0';' 64';'128';'192';'255']);
+set(gca,'ZTick',[0,64,128,192,255]);
+
+xlabel('red = 1, green = 2, blue = 3')
+ylabel('color index')
+zlabel('value')
+title('Another way to see the color table')
+
+%% Even smaller bitmaps
+%You can extend what we did for 8-bit bitmaps to even more compressed 
+%forms, such as this 4-bit bitmap.  Now we only have 16 colors to work with
+%though, and our image quality is significantly reduced:
+[picture color_table] = imread('tiger4.bmp');
+
+figure
+image(picture)
+colormap(color_table)
+colorbar                                  
+title('4 bit bitmap displayed using color table')
+
+%% Writing data to coe files for putting them on the fpga
+%You can instantiate BRAMs to take their values from a file you feed them
+%when you flash the FPGA.  You can use this technique to send them
+%colortables, image data, anything.  Here's how to send the red component
+%of the color table of the last example
+
+red = color_table(:,2);             %grabs the red part of the colortable
+scaled_data = red*255;              %scales the floats back to 0-255
+rounded_data = round(scaled_data);  %rounds them down
+data = dec2bin(rounded_data,8);     %convert the binary data to 8 bit binary #s
+
+%open a file
+output_name = 'color_table_red_note_text.coe';
+file = fopen(output_name,'w');
+
+%write the header info
+fprintf(file,'memory_initialization_radix=2;\n');
+fprintf(file,'memory_initialization_vector=\n');
+fclose(file);
+
+%put commas in the data
+rowxcolumn = size(data);
+rows = rowxcolumn(1);
+columns = rowxcolumn(2);
+output = data;
+for i = 1:(rows-1)
+    output(i,(columns+1)) = ',';
+end
+output(rows,(columns+1)) = ';';
+
+%append the numeric values to the file
+dlmwrite(output_name,output,'-append','delimiter','', 'newline', 'pc');
+
+%You're done!
+
+%% Turning a 2D image into a 1D memory array
+%The code above is all well and good for the color table, since it's 1-D
+%(well, at least you can break it into 3 1-D arrays).  But what about a 2D
+%array?  We need to turn it into a 1-D array:
+
+picture_size = size(picture);       %figure out how big the image is
+num_rows = picture_size(1);
+num_columns = picture_size(2);
+
+pixel_columns = zeros(picture_size(1)*picture_size(2),1,'uint8');  %pre-allocate a space for a new column vector
+
+for r = 1:num_rows
+    for c = 1:num_columns
+        pixel_columns((r-1)*num_columns+c) = picture(r,c);    %pixel# = (y*numColumns)+x
+    end
+end
+
+%so now pixel_columns is a column vector of the pixel values in the image
+
+%just to make sure that we're doing things correctly
+regen_picture = zeros(num_rows,num_columns,'uint8');
+for r = 1:num_rows
+    for c = 1:num_columns
+        regen_picture(r,c) = pixel_columns((r-1)*num_columns+c,1);
+    end
+end
+
+figure
+subplot(121)
+image(picture)
+axis square
+colormap(color_table)
+colorbar                            
+title('Original Picture')
+
+subplot(122)
+image(regen_picture)
+axis square
+colormap(color_table)
+colorbar                            
+title('Regenerated Picture')
+
+##### SOURCE END #####
+--></body></html>

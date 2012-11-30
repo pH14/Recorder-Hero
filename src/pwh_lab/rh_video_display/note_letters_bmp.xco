@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version K.39
-# Date: Fri Nov 30 02:10:32 2012
+# Date: Fri Nov 30 02:48:13 2012
 #
 ##############################################################
 #
@@ -38,7 +38,7 @@ SELECT Block_Memory_Generator family Xilinx,_Inc. 2.8
 CSET algorithm=Minimum_Area
 CSET assume_synchronous_clk=false
 CSET byte_size=9
-CSET coe_file=/afs/athena.mit.edu/user/p/w/pwh/matlab/note_text_pixels.coe
+CSET coe_file=/afs/athena.mit.edu/user/p/w/pwh/matlab/note_text_pixels_2.coe
 CSET collision_warnings=ALL
 CSET component_name=note_letters_bmp
 CSET disable_collision_warnings=false
@@ -74,5 +74,5 @@ CSET write_width_a=8
 CSET write_width_b=8
 # END Parameters
 GENERATE
-# CRC: e7537685
+# CRC: 354418e7
 

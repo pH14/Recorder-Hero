@@ -601,8 +601,9 @@ module rh_display (
 	parameter [10:0] SCREEN_WIDTH = 1023;
 	parameter [9:0] SCREEN_HEIGHT = 767;
 	parameter NOTE_WIDTH = 64;
-	parameter NOTE_HEIGHT = 24;
-	parameter FIRST_LETTER = 550;
+	parameter NOTE_HEIGHT = 35;
+	parameter FIRST_LETTER = 128 + 16;
+	parameter NOTE_STEP = 75;
 	parameter ACTION_LINE_X = 72;
 	
 	wire [3:0] notes[15:0];
@@ -677,28 +678,28 @@ module rh_display (
 			
 			for (k=0; k<16; k=k+1) begin
 				case(notes[k])
-					4'd0: note_y_pos[k] <= FIRST_LETTER + 7*32;
+					4'd0: note_y_pos[k] <= FIRST_LETTER + 7*NOTE_STEP;
 					// C, C#
-					4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*32;
-					4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*32;
+					4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
+					4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
 					// D, D#
-					4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*32;
-					4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*32;
+					4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*NOTE_STEP;
+					4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*NOTE_STEP;
 					// E
-					4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*32;
+					4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*NOTE_STEP;
 					// F, F#
-					4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*32;
-					4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*32;
+					4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*NOTE_STEP;
+					4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*NOTE_STEP;
 					// G, G#
-					4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*32;
-					4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*32;
+					4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*NOTE_STEP;
+					4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*NOTE_STEP;
 					// A, A#
-					4'd10: note_y_pos[k] <= FIRST_LETTER + 1*32;
-					4'd11: note_y_pos[k] <= FIRST_LETTER + 1*32;
+					4'd10: note_y_pos[k] <= FIRST_LETTER + 1*NOTE_STEP;
+					4'd11: note_y_pos[k] <= FIRST_LETTER + 1*NOTE_STEP;
 					// B
-					4'd12: note_y_pos[k] <= FIRST_LETTER + 0*32;
+					4'd12: note_y_pos[k] <= FIRST_LETTER + 0*NOTE_STEP;
 					// C high
-					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*32;
+					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
 					default: note_y_pos[k] <= FIRST_LETTER;
 				endcase
 				
@@ -735,24 +736,24 @@ module rh_display (
 	
 	// character display module: sample string in middle of screen
 	// char height = 24px
-   wire [55:0] cstring = "BAGFEDC";
-   wire [2:0] cdpixel[6:0];
+//   wire [55:0] cstring = "BAGFEDC";
+//   wire [2:0] cdpixel[6:0];
 	
-	genvar i;
-	generate
-		for(i=0; i<7; i=i+1) begin:generate_characters
-		  char_string_display csd(.vclock(vclock), 
-										  .hcount(hcount), 
-										  .vcount(vcount),
-										  .pixel(cdpixel[i]),
-										  .cstring(cstring[8*(i+1)-1 : 8*i]),
-										  .cx(11'd24),
-										  .cy(FIRST_LETTER + 192 - 32*i));
-			defparam csd.NCHAR = 1;
-		end
-	endgenerate
+//	genvar i;
+//	generate
+//		for(i=0; i<7; i=i+1) begin:generate_characters
+//		  char_string_display csd(.vclock(vclock), 
+//										  .hcount(hcount), 
+//										  .vcount(vcount),
+//										  .pixel(cdpixel[i]),
+//										  .cstring(cstring[8*(i+1)-1 : 8*i]),
+//										  .cx(11'd24),
+//										  .cy(FIRST_LETTER + 192 - 32*i));
+//			defparam csd.NCHAR = 1;
+//		end
+//	endgenerate
 	
-	wire action_line = hcount == ACTION_LINE_X & vcount >= 550;
+	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 640;
    
 	reg [23:0] onscreen_notes[15:0];
 	
@@ -765,9 +766,9 @@ module rh_display (
 	
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
-					    .x(15),
+					    .x(4),
 						 .hcount(hcount),
-						 .y(15),
+						 .y(128),
 						 .vcount(vcount),
 						 .pixel(bmp_pixel));
 	
@@ -787,13 +788,6 @@ module rh_display (
 						| onscreen_notes[13]
 						| onscreen_notes[14]
 						| onscreen_notes[15]
-						| {8{cdpixel[6]}}
-						| {8{cdpixel[5]}} 
-						| {8{cdpixel[4]}}
-						| {8{cdpixel[3]}} 
-						| {8{cdpixel[2]}}
-						| {8{cdpixel[1]}} 
-						| {8{cdpixel[0]}}
 						| {24{action_line}}
 						| bmp_pixel;
 						
