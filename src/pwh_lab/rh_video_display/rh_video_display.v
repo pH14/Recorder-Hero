@@ -457,15 +457,17 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 //							 notes[9], notes[8], notes[7], notes[6], notes[5], notes[4], notes[3],
 //							 notes[2], notes[1], notes[0]};
 	wire [63:0] nn;
-
+	wire [25:0] tempo;
+	
 	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
-								    .song_id(switch[7]), .next_notes_out(nn));
+								    .song_id(switch[7]), .next_notes_out(nn),
+									 .tempo_out(tempo));
 	
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
 		.playing_correct(right_note),
 		.next_notes(nn), 
-		.tempo(26'b1111_0111_1111_0100_1001_0000_0),
+		.tempo(tempo),
 		.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),
 		.blank(blank),.phsync(phsync),
@@ -474,7 +476,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clock_65mhz), 
-		.data(nn),
+		.data(dispdata),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
 		.disp_rs(disp_rs), 
@@ -603,7 +605,7 @@ module rh_display (
 	parameter NOTE_WIDTH = 64;
 	parameter NOTE_HEIGHT = 35;
 	parameter FIRST_LETTER = 128 + 16;
-	parameter NOTE_STEP = 75;
+	parameter NOTE_STEP = 73;
 	parameter ACTION_LINE_X = 72;
 	
 	wire [3:0] notes[15:0];
@@ -638,25 +640,27 @@ module rh_display (
 	reg load_tempo = 0;
 	
 	// Temporary tempo is 1/2 vclock, .5s per eighth note
-	reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
+	//reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
+	reg [25:0] song_tempo;
 	wire tempo_beat;
 	wire tempo_beat_move;
 	
 	counter c(.clk(vclock),
 				 .reset(load_tempo),
-				 .count_to(temp_tempo),
+				 .count_to(song_tempo),
 				 .ready(tempo_beat));
 	
 	// The width of one note is 64, break the tempo up by 64
 	// to know the interval we need to move the notes by 1px
 	counter c2(.clk(vclock),
 				 .reset(load_tempo),
-				 .count_to(temp_tempo/64),
+				 .count_to(song_tempo/64),
 				 .ready(tempo_beat_move));
 	
 	always @(posedge vclock) begin
 		if (reset) begin
-			lead_note_x <= 1023;
+			song_tempo <= tempo;
+			lead_note_x <= 512; // TODO: Revert back to 1023
 			load_tempo <= 1;
 		end else begin
 			load_tempo <= 0;
@@ -678,7 +682,7 @@ module rh_display (
 			
 			for (k=0; k<16; k=k+1) begin
 				case(notes[k])
-					4'd0: note_y_pos[k] <= FIRST_LETTER + 7*NOTE_STEP;
+					4'd0: note_y_pos[k] <= FIRST_LETTER + 768;
 					// C, C#
 					4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
 					4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
@@ -791,5 +795,5 @@ module rh_display (
 						| {24{action_line}}
 						| bmp_pixel;
 						
-	assign debug = {next_notes[63:60], 15};
+	assign debug = {song_tempo, {3'b000, tempo_beat_move}};
 endmodule

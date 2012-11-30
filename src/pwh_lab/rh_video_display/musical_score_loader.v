@@ -22,22 +22,26 @@ module musical_score_loader(
     input clk,
 	 input reset,
     input song_id,
+	 output [25:0] tempo_out,
     output [63:0] next_notes_out
     );
+	
+	reg load_tempo;
 	reg [6:0] read_addr;
 	reg [3:0] next_notes[15:0];
 	wire [3:0] next_note_lotr;
 	wire [3:0] next_note_ss;
 	
+	reg [25:0] tempo = 26'b0;
+	
 	song_scales ss(.clka(clk), .addra(read_addr), .douta(next_note_ss));
 	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
 	
-	reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
 	wire tempo_beat;
 	
 	counter c(.clk(clk),
 				 .reset(load_tempo),
-				 .count_to(temp_tempo),
+				 .count_to(tempo),
 				 .ready(tempo_beat));
 	
 	integer i;
@@ -47,7 +51,13 @@ module musical_score_loader(
 			for (i=0; i < 16; i=i+1) begin
 				next_notes[i] <= 4'b0;
 			end
+			
+			tempo <= (song_id == 0) ? 26'b1111_0111_1111_0100_1001_0000_0 : 26'b00_1111_0111_1111_0100_1001_0000;
+			
+			load_tempo <= 1;
 		end else if (tempo_beat) begin
+			load_tempo <= 0;
+			
 			for (i=0; i < 15; i=i+1) begin
 				next_notes[i] <= next_notes[i+1];
 			end
@@ -63,5 +73,7 @@ module musical_score_loader(
 									  next_notes[6], next_notes[5], next_notes[4],
 									  next_notes[3], next_notes[2], next_notes[1],
 									  next_notes[0]};
+									  
+	assign tempo_out = tempo;
 
 endmodule
