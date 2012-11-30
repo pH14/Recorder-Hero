@@ -16,14 +16,18 @@ Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/song_scales.n
 gc"...
 Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/note_letters.
-ngc"...
-Executing edif2ngd -noa -aul "font_rom.edn" "_ngo/font_rom.ngo"
-Release 10.1.03 - edif2ngd K.39 (lin64)
-Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
-INFO:NgdBuild - Release 10.1.03 edif2ngd K.39 (lin64)
-INFO:NgdBuild - Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
-Writing module to "_ngo/font_rom.ngo"...
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/note_letters_
+bmp.ngc"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/notes_red_map
+.ngc"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/notes_green_m
+ap.ngc"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/notes_blue_ma
+p.ngc"...
+Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/_ngo/font_rom
 .ngo"...
@@ -331,7 +335,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 277
 
-Total memory usage is 239928 kilobytes
+Total memory usage is 239836 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

@@ -1,5 +1,5 @@
 NUM_USER_FILES
-16
+20
 s
 user_file_1
 labkit.ucf
@@ -25,8 +25,20 @@ s
 user_file_16
 song_scales.xco
 s
+user_file_17
+notes_red_map.xco
+s
+user_file_18
+notes_blue_map.xco
+s
+user_file_19
+notes_green_map.xco
+s
 user_file_2
 rh_video_display.v
+s
+user_file_20
+note_letters_bmp.xco
 s
 user_file_3
 blob.v
