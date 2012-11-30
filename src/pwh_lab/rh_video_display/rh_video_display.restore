@@ -849,6 +849,7 @@ proc restore { { project_dir "" } } {
       "musical_score_loader_tb.v" 
       "note_letters.xco" 
       "picture_blob.v" 
+      "rh_display.v" 
       "rh_video_display.v" 
       "song_scales.xco"}
 

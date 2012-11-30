@@ -1,5 +1,5 @@
-set -tmpdir "/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/xst/projnav.tmp"
-set -xsthdpdir "/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/xst"
+set -tmpdir "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst/projnav.tmp"
+set -xsthdpdir "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst"
 run
 -ifn lab3.prj
 -ifmt mixed

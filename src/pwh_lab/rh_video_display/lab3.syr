@@ -1,18 +1,18 @@
 Release 10.1.03 - xst K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/xst/projnav.tmp
+Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
-Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display/xst
+Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: lab3.prj
@@ -261,6 +261,7 @@ INFO:Xst:2561 - Always blocking tristate driving signal <ram1_data> in unit <lab
 INFO:Xst:2561 - Always blocking tristate driving signal <daughtercard> in unit <lab3> is removed.
 INFO:Xst:2561 - Always blocking tristate driving signal <systemace_data> in unit <lab3> is removed.
 INFO:Xst:2561 - Always blocking tristate driving signal <tv_in_i2c_data> in unit <lab3> is removed.
+INFO:Xst:2679 - Register <k> in unit <rh_display> has a constant value of 10000 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <debounce>.
     Related source file is "rh_video_display.v".
@@ -421,28 +422,28 @@ Synthesizing Unit <rh_display>.
     Related source file is "rh_video_display.v".
 WARNING:Xst:647 - Input <tempo> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <temp_tempo> is used but never assigned. This sourceless signal will be automatically connected to value 01111011111110100100100000.
-    Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_1$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_2$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_3$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_4$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_5$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_6$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_7$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_8$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_9$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_10$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_11$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_12$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_13$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_14$mux0000> created at line 625.
-    Found 16x10-bit ROM for signal <note_y_pos_15$mux0000> created at line 625.
+    Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_1$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_2$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_3$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_4$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_5$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_6$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_7$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_8$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_9$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_10$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_11$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_12$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_13$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_14$mux0000> created at line 679.
+    Found 16x10-bit ROM for signal <note_y_pos_15$mux0000> created at line 679.
     Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 755.
     Found 11-bit register for signal <lead_note_x>.
     Found 11-bit addsub for signal <lead_note_x$share0000>.
     Found 1-bit register for signal <load_tempo>.
     Found 384-bit register for signal <note_color>.
-    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 672.
+    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 729.
     Found 160-bit register for signal <note_y_pos>.
     Found 384-bit register for signal <onscreen_notes>.
     Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 762.
@@ -923,72 +924,72 @@ INFO:Xst:2261 - The FF/Latch <pixel_1> in Unit <picture_blob> is equivalent to t
 INFO:Xst:2261 - The FF/Latch <pixel_3> in Unit <picture_blob> is equivalent to the following 2 FFs/Latches, which will be removed : <pixel_11> <pixel_19> 
 INFO:Xst:2261 - The FF/Latch <pixel_5> in Unit <picture_blob> is equivalent to the following 2 FFs/Latches, which will be removed : <pixel_13> <pixel_21> 
 INFO:Xst:2261 - The FF/Latch <pixel_7> in Unit <picture_blob> is equivalent to the following 2 FFs/Latches, which will be removed : <pixel_15> <pixel_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_9> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_0_13> 
+INFO:Xst:2261 - The FF/Latch <note_color_15_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_15_1> <note_color_15_2> <note_color_15_3> <note_color_15_4> <note_color_15_5> <note_color_15_6> <note_color_15_7> <note_color_15_16> <note_color_15_18> <note_color_15_20> <note_color_15_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_9_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_9_1> <note_color_9_2> <note_color_9_3> <note_color_9_4> <note_color_9_5> <note_color_9_6> <note_color_9_7> <note_color_9_16> <note_color_9_18> <note_color_9_20> <note_color_9_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_6_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_6_1> <note_color_6_2> <note_color_6_3> <note_color_6_4> <note_color_6_5> <note_color_6_6> <note_color_6_7> <note_color_6_16> <note_color_6_18> <note_color_6_20> <note_color_6_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_12_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_12_1> <note_color_12_2> <note_color_12_3> <note_color_12_4> <note_color_12_5> <note_color_12_6> <note_color_12_7> <note_color_12_16> <note_color_12_18> <note_color_12_20> <note_color_12_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_3_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_3_1> <note_color_3_2> <note_color_3_3> <note_color_3_4> <note_color_3_5> <note_color_3_6> <note_color_3_7> <note_color_3_16> <note_color_3_18> <note_color_3_20> <note_color_3_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_8_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_8_13> <note_color_8_17> <note_color_8_19> <note_color_8_21> <note_color_8_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_3_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_3_13> <note_color_3_17> <note_color_3_19> <note_color_3_21> <note_color_3_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_13_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_13_13> <note_color_13_17> <note_color_13_19> <note_color_13_21> <note_color_13_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_7_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_7_10> <note_color_7_12> <note_color_7_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_13_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_13_10> <note_color_13_12> <note_color_13_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_4_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_4_10> <note_color_4_12> <note_color_4_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_10_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_10_10> <note_color_10_12> <note_color_10_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_7_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_7_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_13_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_13_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_4_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_4_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_10_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_10_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_8> in Unit <rh_display> is equivalent to the following 2 FFs/Latches, which will be removed : <note_color_0_10> <note_color_0_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_7_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_7_13> <note_color_7_17> <note_color_7_19> <note_color_7_21> <note_color_7_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_2_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_2_13> <note_color_2_17> <note_color_2_19> <note_color_2_21> <note_color_2_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_16> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_0_18> <note_color_0_20> <note_color_0_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_7_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_7_1> <note_color_7_2> <note_color_7_3> <note_color_7_4> <note_color_7_5> <note_color_7_6> <note_color_7_7> <note_color_7_16> <note_color_7_18> <note_color_7_20> <note_color_7_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_13_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_13_1> <note_color_13_2> <note_color_13_3> <note_color_13_4> <note_color_13_5> <note_color_13_6> <note_color_13_7> <note_color_13_16> <note_color_13_18> <note_color_13_20> <note_color_13_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_4_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_4_1> <note_color_4_2> <note_color_4_3> <note_color_4_4> <note_color_4_5> <note_color_4_6> <note_color_4_7> <note_color_4_16> <note_color_4_18> <note_color_4_20> <note_color_4_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_10_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_10_1> <note_color_10_2> <note_color_10_3> <note_color_10_4> <note_color_10_5> <note_color_10_6> <note_color_10_7> <note_color_10_16> <note_color_10_18> <note_color_10_20> <note_color_10_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_12_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_12_13> <note_color_12_17> <note_color_12_19> <note_color_12_21> <note_color_12_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_0_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_0_15> 
 INFO:Xst:2261 - The FF/Latch <note_color_6_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_6_13> <note_color_6_17> <note_color_6_19> <note_color_6_21> <note_color_6_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_1_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_1_13> <note_color_1_17> <note_color_1_19> <note_color_1_21> <note_color_1_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_12_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_12_13> <note_color_12_17> <note_color_12_19> <note_color_12_21> <note_color_12_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_13_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_13_10> <note_color_13_12> <note_color_13_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_10_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_10_10> <note_color_10_12> <note_color_10_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_17> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_0_19> <note_color_0_21> <note_color_0_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_8_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_8_10> <note_color_8_12> <note_color_8_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_14_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_14_10> <note_color_14_12> <note_color_14_14> 
 INFO:Xst:2261 - The FF/Latch <note_color_5_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_5_10> <note_color_5_12> <note_color_5_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_13_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_13_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_10_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_10_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_8_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_8_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_5_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_5_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_5_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_5_13> <note_color_5_17> <note_color_5_19> <note_color_5_21> <note_color_5_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_13_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_13_1> <note_color_13_2> <note_color_13_3> <note_color_13_4> <note_color_13_5> <note_color_13_6> <note_color_13_7> <note_color_13_16> <note_color_13_18> <note_color_13_20> <note_color_13_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_10_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_10_1> <note_color_10_2> <note_color_10_3> <note_color_10_4> <note_color_10_5> <note_color_10_6> <note_color_10_7> <note_color_10_16> <note_color_10_18> <note_color_10_20> <note_color_10_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_8_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_8_1> <note_color_8_2> <note_color_8_3> <note_color_8_4> <note_color_8_5> <note_color_8_6> <note_color_8_7> <note_color_8_16> <note_color_8_18> <note_color_8_20> <note_color_8_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_5_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_5_1> <note_color_5_2> <note_color_5_3> <note_color_5_4> <note_color_5_5> <note_color_5_6> <note_color_5_7> <note_color_5_16> <note_color_5_18> <note_color_5_20> <note_color_5_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_11_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_11_10> <note_color_11_12> <note_color_11_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_2_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_2_10> <note_color_2_12> <note_color_2_14> 
 INFO:Xst:2261 - The FF/Latch <note_color_11_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_11_13> <note_color_11_17> <note_color_11_19> <note_color_11_21> <note_color_11_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_8_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_8_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_14_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_14_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_5_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_5_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_11_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_11_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_2_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_2_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_8_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_8_1> <note_color_8_2> <note_color_8_3> <note_color_8_4> <note_color_8_5> <note_color_8_6> <note_color_8_7> <note_color_8_16> <note_color_8_18> <note_color_8_20> <note_color_8_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_14_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_14_1> <note_color_14_2> <note_color_14_3> <note_color_14_4> <note_color_14_5> <note_color_14_6> <note_color_14_7> <note_color_14_16> <note_color_14_18> <note_color_14_20> <note_color_14_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_5_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_5_1> <note_color_5_2> <note_color_5_3> <note_color_5_4> <note_color_5_5> <note_color_5_6> <note_color_5_7> <note_color_5_16> <note_color_5_18> <note_color_5_20> <note_color_5_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_11_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_11_1> <note_color_11_2> <note_color_11_3> <note_color_11_4> <note_color_11_5> <note_color_11_6> <note_color_11_7> <note_color_11_16> <note_color_11_18> <note_color_11_20> <note_color_11_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_2_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_2_1> <note_color_2_2> <note_color_2_3> <note_color_2_4> <note_color_2_5> <note_color_2_6> <note_color_2_7> <note_color_2_16> <note_color_2_18> <note_color_2_20> <note_color_2_22> 
+INFO:Xst:2261 - The FF/Latch <note_color_5_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_5_13> <note_color_5_17> <note_color_5_19> <note_color_5_21> <note_color_5_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_0> in Unit <rh_display> is equivalent to the following 7 FFs/Latches, which will be removed : <note_color_0_1> <note_color_0_2> <note_color_0_3> <note_color_0_4> <note_color_0_5> <note_color_0_6> <note_color_0_7> 
+INFO:Xst:2261 - The FF/Latch <note_color_15_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_15_13> <note_color_15_17> <note_color_15_19> <note_color_15_21> <note_color_15_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_10_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_10_13> <note_color_10_17> <note_color_10_19> <note_color_10_21> <note_color_10_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_1_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_1_10> <note_color_1_12> <note_color_1_14> 
 INFO:Xst:2261 - The FF/Latch <note_color_1_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_1_15> 
 INFO:Xst:2261 - The FF/Latch <note_color_9_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_9_13> <note_color_9_17> <note_color_9_19> <note_color_9_21> <note_color_9_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_0_16> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_0_18> <note_color_0_20> <note_color_0_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_4_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_4_13> <note_color_4_17> <note_color_4_19> <note_color_4_21> <note_color_4_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_14_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_14_10> <note_color_14_12> <note_color_14_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_11_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_11_10> <note_color_11_12> <note_color_11_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_15_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_15_13> <note_color_15_17> <note_color_15_19> <note_color_15_21> <note_color_15_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_9_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_9_10> <note_color_9_12> <note_color_9_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_15_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_15_10> <note_color_15_12> <note_color_15_14> 
 INFO:Xst:2261 - The FF/Latch <note_color_6_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_6_10> <note_color_6_12> <note_color_6_14> 
+INFO:Xst:2261 - The FF/Latch <note_color_12_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_12_10> <note_color_12_12> <note_color_12_14> 
 INFO:Xst:2261 - The FF/Latch <note_color_3_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_3_10> <note_color_3_12> <note_color_3_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_14_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_14_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_11_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_11_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_4_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_4_13> <note_color_4_17> <note_color_4_19> <note_color_4_21> <note_color_4_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_9_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_9_15> 
+INFO:Xst:2261 - The FF/Latch <note_color_15_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_15_15> 
 INFO:Xst:2261 - The FF/Latch <note_color_6_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_6_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_10_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_10_13> <note_color_10_17> <note_color_10_19> <note_color_10_21> <note_color_10_23> 
+INFO:Xst:2261 - The FF/Latch <note_color_12_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_12_15> 
 INFO:Xst:2261 - The FF/Latch <note_color_1_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_1_1> <note_color_1_2> <note_color_1_3> <note_color_1_4> <note_color_1_5> <note_color_1_6> <note_color_1_7> <note_color_1_16> <note_color_1_18> <note_color_1_20> <note_color_1_22> 
 INFO:Xst:2261 - The FF/Latch <note_color_3_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_3_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_14_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_14_1> <note_color_14_2> <note_color_14_3> <note_color_14_4> <note_color_14_5> <note_color_14_6> <note_color_14_7> <note_color_14_16> <note_color_14_18> <note_color_14_20> <note_color_14_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_11_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_11_1> <note_color_11_2> <note_color_11_3> <note_color_11_4> <note_color_11_5> <note_color_11_6> <note_color_11_7> <note_color_11_16> <note_color_11_18> <note_color_11_20> <note_color_11_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_9_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_9_1> <note_color_9_2> <note_color_9_3> <note_color_9_4> <note_color_9_5> <note_color_9_6> <note_color_9_7> <note_color_9_16> <note_color_9_18> <note_color_9_20> <note_color_9_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_6_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_6_1> <note_color_6_2> <note_color_6_3> <note_color_6_4> <note_color_6_5> <note_color_6_6> <note_color_6_7> <note_color_6_16> <note_color_6_18> <note_color_6_20> <note_color_6_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_3_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_3_1> <note_color_3_2> <note_color_3_3> <note_color_3_4> <note_color_3_5> <note_color_3_6> <note_color_3_7> <note_color_3_16> <note_color_3_18> <note_color_3_20> <note_color_3_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_8_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_8_13> <note_color_8_17> <note_color_8_19> <note_color_8_21> <note_color_8_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_0_0> in Unit <rh_display> is equivalent to the following 7 FFs/Latches, which will be removed : <note_color_0_1> <note_color_0_2> <note_color_0_3> <note_color_0_4> <note_color_0_5> <note_color_0_6> <note_color_0_7> 
-INFO:Xst:2261 - The FF/Latch <note_color_3_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_3_13> <note_color_3_17> <note_color_3_19> <note_color_3_21> <note_color_3_23> 
 INFO:Xst:2261 - The FF/Latch <note_color_14_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_14_13> <note_color_14_17> <note_color_14_19> <note_color_14_21> <note_color_14_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_0_8> in Unit <rh_display> is equivalent to the following 2 FFs/Latches, which will be removed : <note_color_0_10> <note_color_0_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_2_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_2_10> <note_color_2_12> <note_color_2_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_0_9> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_0_13> 
-INFO:Xst:2261 - The FF/Latch <note_color_2_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_2_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_0_17> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_0_19> <note_color_0_21> <note_color_0_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_15_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_15_10> <note_color_15_12> <note_color_15_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_12_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_12_10> <note_color_12_12> <note_color_12_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_7_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_7_10> <note_color_7_12> <note_color_7_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_4_8> in Unit <rh_display> is equivalent to the following 3 FFs/Latches, which will be removed : <note_color_4_10> <note_color_4_12> <note_color_4_14> 
-INFO:Xst:2261 - The FF/Latch <note_color_15_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_15_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_12_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_12_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_7_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_7_13> <note_color_7_17> <note_color_7_19> <note_color_7_21> <note_color_7_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_7_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_7_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_2_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_2_1> <note_color_2_2> <note_color_2_3> <note_color_2_4> <note_color_2_5> <note_color_2_6> <note_color_2_7> <note_color_2_16> <note_color_2_18> <note_color_2_20> <note_color_2_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_4_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_4_15> 
-INFO:Xst:2261 - The FF/Latch <note_color_2_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_2_13> <note_color_2_17> <note_color_2_19> <note_color_2_21> <note_color_2_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_13_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_13_13> <note_color_13_17> <note_color_13_19> <note_color_13_21> <note_color_13_23> 
-INFO:Xst:2261 - The FF/Latch <note_color_15_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_15_1> <note_color_15_2> <note_color_15_3> <note_color_15_4> <note_color_15_5> <note_color_15_6> <note_color_15_7> <note_color_15_16> <note_color_15_18> <note_color_15_20> <note_color_15_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_12_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_12_1> <note_color_12_2> <note_color_12_3> <note_color_12_4> <note_color_12_5> <note_color_12_6> <note_color_12_7> <note_color_12_16> <note_color_12_18> <note_color_12_20> <note_color_12_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_7_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_7_1> <note_color_7_2> <note_color_7_3> <note_color_7_4> <note_color_7_5> <note_color_7_6> <note_color_7_7> <note_color_7_16> <note_color_7_18> <note_color_7_20> <note_color_7_22> 
-INFO:Xst:2261 - The FF/Latch <note_color_4_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_4_1> <note_color_4_2> <note_color_4_3> <note_color_4_4> <note_color_4_5> <note_color_4_6> <note_color_4_7> <note_color_4_16> <note_color_4_18> <note_color_4_20> <note_color_4_22> 
 WARNING:Xst:1710 - FF/Latch <goal_6> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_5> (without init value) has a constant value of 1 in block <c2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_4> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
@@ -1132,118 +1133,102 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <note_y_pos_11_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <note_y_pos_13_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_1_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_8> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_9> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_4> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_3> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_2> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_1> (without init value) has a constant value of 1 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <lab3> ...
 
@@ -1260,13 +1245,6 @@ Optimizing unit <picture_blob> ...
 Optimizing unit <musical_score_loader> ...
 
 Optimizing unit <rh_display> ...
-WARNING:Xst:1710 - FF/Latch <note_color_0_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_12> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_11> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_10> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_9> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_8> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_7> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_6> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_5> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_4> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
@@ -1283,14 +1261,10 @@ WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_21> (without init value) has a const
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_20> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_19> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_18> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_4> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_5> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_6> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/onscreen_notes_0_7> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_17> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_16> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_15> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_14> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_26> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_24> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
@@ -1305,8 +1279,12 @@ WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_16> (without init value) has a cons
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_15> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_14> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_13> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_21> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_20> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_12> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_11> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_10> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_9> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_8> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_7> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_19> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_18> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_17> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
@@ -1327,10 +1305,6 @@ WARNING:Xst:1710 - FF/Latch <msl/c/goal_3> (without init value) has a constant v
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_17> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_16> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_15> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_14> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_13> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_12> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_11> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
@@ -1350,6 +1324,8 @@ WARNING:Xst:1710 - FF/Latch <msl/c/goal_25> (without init value) has a constant 
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_24> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_23> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_22> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_21> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_20> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1368,12 +1344,12 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_1_22> in Unit <lab3> is equ
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_2_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_2_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_3_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_3_12> <rh_disp/onscreen_notes_3_10> <rh_disp/onscreen_notes_3_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_3_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_3_21> <rh_disp/onscreen_notes_3_19> <rh_disp/onscreen_notes_3_17> <rh_disp/onscreen_notes_3_13> <rh_disp/onscreen_notes_3_9> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_7> in Unit <lab3> is equivalent to the following 7 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_6> <rh_disp/onscreen_notes_0_5> <rh_disp/onscreen_notes_0_4> <rh_disp/onscreen_notes_0_3> <rh_disp/onscreen_notes_0_2> <rh_disp/onscreen_notes_0_1> <rh_disp/onscreen_notes_0_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_13_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_13_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_7_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_14_21> <rh_disp/onscreen_notes_14_19> <rh_disp/onscreen_notes_14_17> <rh_disp/onscreen_notes_14_13> <rh_disp/onscreen_notes_14_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_8_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_8_21> <rh_disp/onscreen_notes_8_19> <rh_disp/onscreen_notes_8_17> <rh_disp/onscreen_notes_8_13> <rh_disp/onscreen_notes_8_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_13> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_9> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/note_color_0_12> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/note_color_0_11> <rh_disp/note_color_0_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_10_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_15_20> <rh_disp/onscreen_notes_15_18> <rh_disp/onscreen_notes_15_16> <rh_disp/onscreen_notes_15_7> <rh_disp/onscreen_notes_15_6> <rh_disp/onscreen_notes_15_5> <rh_disp/onscreen_notes_15_4> <rh_disp/onscreen_notes_15_3> <rh_disp/onscreen_notes_15_2> <rh_disp/onscreen_notes_15_1> <rh_disp/onscreen_notes_15_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_4_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_4_11> 
@@ -1385,7 +1361,6 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_14> in Unit <lab3> is equ
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_14_20> <rh_disp/onscreen_notes_14_18> <rh_disp/onscreen_notes_14_16> <rh_disp/onscreen_notes_14_7> <rh_disp/onscreen_notes_14_6> <rh_disp/onscreen_notes_14_5> <rh_disp/onscreen_notes_14_4> <rh_disp/onscreen_notes_14_3> <rh_disp/onscreen_notes_14_2> <rh_disp/onscreen_notes_14_1> <rh_disp/onscreen_notes_14_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_7_20> <rh_disp/onscreen_notes_7_18> <rh_disp/onscreen_notes_7_16> <rh_disp/onscreen_notes_7_7> <rh_disp/onscreen_notes_7_6> <rh_disp/onscreen_notes_7_5> <rh_disp/onscreen_notes_7_4> <rh_disp/onscreen_notes_7_3> <rh_disp/onscreen_notes_7_2> <rh_disp/onscreen_notes_7_1> <rh_disp/onscreen_notes_7_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_6_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_6_20> <rh_disp/onscreen_notes_6_18> <rh_disp/onscreen_notes_6_16> <rh_disp/onscreen_notes_6_7> <rh_disp/onscreen_notes_6_6> <rh_disp/onscreen_notes_6_5> <rh_disp/onscreen_notes_6_4> <rh_disp/onscreen_notes_6_3> <rh_disp/onscreen_notes_6_2> <rh_disp/onscreen_notes_6_1> <rh_disp/onscreen_notes_6_0> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/note_color_0_17> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/note_color_0_16> <rh_disp/note_color_0_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_10_12> <rh_disp/onscreen_notes_10_10> <rh_disp/onscreen_notes_10_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_10_21> <rh_disp/onscreen_notes_10_19> <rh_disp/onscreen_notes_10_17> <rh_disp/onscreen_notes_10_13> <rh_disp/onscreen_notes_10_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_4_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_4_12> <rh_disp/onscreen_notes_4_10> <rh_disp/onscreen_notes_4_8> 
@@ -1420,14 +1395,12 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_6_15> in Unit <lab3> is equ
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_13_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_13_21> <rh_disp/onscreen_notes_13_19> <rh_disp/onscreen_notes_13_17> <rh_disp/onscreen_notes_13_13> <rh_disp/onscreen_notes_13_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_7_21> <rh_disp/onscreen_notes_7_19> <rh_disp/onscreen_notes_7_17> <rh_disp/onscreen_notes_7_13> <rh_disp/onscreen_notes_7_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_15_12> <rh_disp/onscreen_notes_15_10> <rh_disp/onscreen_notes_15_8> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_15> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_13> <rh_disp/onscreen_notes_0_12> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_23> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_22> <rh_disp/onscreen_notes_0_14> 
 Found area constraint ratio of 100 (+ 5) on block lab3, actual ratio is 3.
-FlipFlop xvga1/hcount_0 has been replicated 3 time(s)
-FlipFlop xvga1/hcount_1 has been replicated 3 time(s)
+FlipFlop xvga1/hcount_0 has been replicated 4 time(s)
+FlipFlop xvga1/hcount_1 has been replicated 4 time(s)
 FlipFlop xvga1/hcount_10 has been replicated 2 time(s)
-FlipFlop xvga1/hcount_2 has been replicated 3 time(s)
-FlipFlop xvga1/hcount_3 has been replicated 2 time(s)
+FlipFlop xvga1/hcount_2 has been replicated 4 time(s)
+FlipFlop xvga1/hcount_3 has been replicated 3 time(s)
 FlipFlop xvga1/hcount_4 has been replicated 3 time(s)
 FlipFlop xvga1/hcount_5 has been replicated 2 time(s)
 FlipFlop xvga1/hcount_7 has been replicated 2 time(s)
@@ -1437,10 +1410,11 @@ FlipFlop xvga1/vcount_0 has been replicated 2 time(s)
 FlipFlop xvga1/vcount_1 has been replicated 1 time(s)
 FlipFlop xvga1/vcount_2 has been replicated 1 time(s)
 FlipFlop xvga1/vcount_3 has been replicated 1 time(s)
-FlipFlop xvga1/vcount_6 has been replicated 2 time(s)
-FlipFlop xvga1/vcount_7 has been replicated 2 time(s)
-FlipFlop xvga1/vcount_8 has been replicated 2 time(s)
-FlipFlop xvga1/vcount_9 has been replicated 1 time(s)
+FlipFlop xvga1/vcount_4 has been replicated 1 time(s)
+FlipFlop xvga1/vcount_6 has been replicated 4 time(s)
+FlipFlop xvga1/vcount_7 has been replicated 4 time(s)
+FlipFlop xvga1/vcount_8 has been replicated 3 time(s)
+FlipFlop xvga1/vcount_9 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -1455,8 +1429,8 @@ Unit <lab3> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 571
- Flip-Flops                                            : 571
+# Registers                                            : 608
+ Flip-Flops                                            : 608
 # Shift Registers                                      : 4
  7-bit shift register                                  : 4
 
@@ -1487,30 +1461,31 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 3641
+# BELS                             : 3666
 #      GND                         : 11
-#      INV                         : 175
+#      INV                         : 143
 #      LUT1                        : 398
-#      LUT2                        : 571
-#      LUT3                        : 246
-#      LUT3_D                      : 8
-#      LUT3_L                      : 6
-#      LUT4                        : 496
-#      LUT4_D                      : 26
-#      LUT4_L                      : 60
+#      LUT2                        : 602
+#      LUT3                        : 215
+#      LUT3_D                      : 10
+#      LUT3_L                      : 29
+#      LUT4                        : 560
+#      LUT4_D                      : 32
+#      LUT4_L                      : 19
 #      MUXCY                       : 1226
-#      MUXF5                       : 78
+#      MUXF5                       : 81
 #      MUXF6                       : 27
 #      MUXF7                       : 5
 #      VCC                         : 11
 #      XORCY                       : 297
-# FlipFlops/Latches                : 591
-#      FD                          : 83
-#      FDE                         : 24
-#      FDR                         : 232
-#      FDRE                        : 169
-#      FDRS                        : 15
-#      FDS                         : 56
+# FlipFlops/Latches                : 628
+#      FD                          : 5
+#      FDE                         : 148
+#      FDR                         : 240
+#      FDRE                        : 177
+#      FDRS                        : 14
+#      FDRSE                       : 6
+#      FDS                         : 26
 #      FDSE                        : 12
 # RAMS                             : 58
 #      RAMB16_S1_S1                : 48
@@ -1537,10 +1512,10 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                     1101  out of  33792     3%  
- Number of Slice Flip Flops:            591  out of  67584     0%  
- Number of 4 input LUTs:               1991  out of  67584     2%  
-    Number used as logic:              1986
+ Number of Slices:                     1111  out of  33792     3%  
+ Number of Slice Flip Flops:            628  out of  67584     0%  
+ Number of 4 input LUTs:               2013  out of  67584     2%  
+    Number used as logic:              2008
     Number used as Shift registers:       5
  Number of IOs:                         576
  Number of bonded IOBs:                 247  out of    684    36%  
@@ -1570,9 +1545,9 @@ Clock Information:
 -----------------------------------+------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                | Load  |
 -----------------------------------+------------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX                                                                                          | 549   |
+clock_27mhz                        | vclk1:CLKFX                                                                                          | 586   |
 hex_display/clock1                 | BUFG                                                                                                 | 43    |
-tv_in_clock_OBUF                   | NONE(rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_0)                       | 55    |
+analyzer1_data_0_OBUF              | NONE(rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_0)                       | 55    |
 rh_disp/pb/nl/BU2/dbiterr          | NONE(rh_disp/pb/nl/BU2/U0/blk_mem_generator/valid.cstr/ramloop[48].ram.r/v2_init.ram/dpram.dp1x1.ram)| 49    |
 -----------------------------------+------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -1585,10 +1560,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 24.770ns (Maximum Frequency: 40.371MHz)
-   Minimum input arrival time before clock: 5.801ns
+   Minimum period: 24.826ns (Maximum Frequency: 40.281MHz)
+   Minimum input arrival time before clock: 6.087ns
    Maximum output required time after clock: 9.565ns
-   Maximum combinational path delay: 6.936ns
+   Maximum combinational path delay: 7.222ns
 
 Timing Detail:
 --------------
@@ -1596,10 +1571,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
-  Clock period: 24.770ns (frequency: 40.371MHz)
-  Total number of paths / destination ports: 37365 / 1194
+  Clock period: 24.826ns (frequency: 40.281MHz)
+  Total number of paths / destination ports: 45793 / 1365
 -------------------------------------------------------------------------
-Delay:               10.321ns (Levels of Logic = 29)
+Delay:               10.344ns (Levels of Logic = 29)
   Source:            rh_disp/c2/count_0 (FF)
   Destination:       rh_disp/lead_note_x_10 (FF)
   Source Clock:      clock_27mhz rising 2.4X
@@ -1624,7 +1599,7 @@ Delay:               10.321ns (Levels of Logic = 29)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/c2/Mcompar_ready_cy<10> (rh_disp/c2/Mcompar_ready_cy<10>)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/c2/Mcompar_ready_cy<11> (rh_disp/c2/Mcompar_ready_cy<11>)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/c2/Mcompar_ready_cy<12> (rh_disp/c2/Mcompar_ready_cy<12>)
-     MUXCY:CI->O          13   0.942   0.989  rh_disp/c2/Mcompar_ready_cy<13> (rh_disp/tempo_beat_move)
+     MUXCY:CI->O          14   0.942   1.011  rh_disp/c2/Mcompar_ready_cy<13> (rh_disp/tempo_beat_move)
      LUT4:I2->O            6   0.439   1.002  rh_disp/lead_note_x_mux00022 (rh_disp/lead_note_x_mux0002)
      LUT3:I1->O            1   0.439   0.000  rh_disp/Maddsub_lead_note_x_share0000_lut<0> (rh_disp/Maddsub_lead_note_x_share0000_lut<0>)
      MUXCY:S->O            1   0.298   0.000  rh_disp/Maddsub_lead_note_x_share0000_cy<0> (rh_disp/Maddsub_lead_note_x_share0000_cy<0>)
@@ -1641,8 +1616,8 @@ Delay:               10.321ns (Levels of Logic = 29)
      LUT2:I1->O            1   0.439   0.000  rh_disp/lead_note_x_mux0000<10>1 (rh_disp/lead_note_x_mux0000<10>)
      FDRE:D                    0.370          rh_disp/lead_note_x_10
     ----------------------------------------
-    Total                     10.321ns (6.619ns logic, 3.702ns route)
-                                       (64.1% logic, 35.9% route)
+    Total                     10.344ns (6.619ns logic, 3.725ns route)
+                                       (64.0% logic, 36.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hex_display/clock1'
@@ -1671,7 +1646,7 @@ Delay:               13.215ns (Levels of Logic = 15)
      MUXF7:I0->O           1   0.447   0.726  hex_display/Mmux__varindex0000_8_f7 (hex_display/Mmux__varindex0000_8_f7)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux0000782 (hex_display/disp_data_out_mux0000782)
      MUXF5:I0->O           1   0.436   0.552  hex_display/disp_data_out_mux000078_f5 (hex_display/disp_data_out_mux000078)
-     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N210)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N256)
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001692 (hex_display/disp_data_out_mux00001691)
      MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000169_f5 (hex_display/disp_data_out_mux0000)
@@ -1684,7 +1659,7 @@ Delay:               13.215ns (Levels of Logic = 15)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
   Total number of paths / destination ports: 220 / 124
 -------------------------------------------------------------------------
-Offset:              5.801ns (Levels of Logic = 4)
+Offset:              6.087ns (Levels of Logic = 4)
   Source:            switch<0> (PAD)
   Destination:       rgb_0 (FF)
   Destination Clock: clock_27mhz rising 2.4X
@@ -1693,14 +1668,14 @@ Offset:              5.801ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.825   1.079  switch_0_IBUF (switch_0_IBUF)
+     IBUF:I->O            29   0.825   1.365  switch_0_IBUF (switch_0_IBUF)
      LUT2:I0->O            1   0.439   0.726  Mmux_rgb_mux00001011209 (Mmux_rgb_mux00001011209)
      LUT4_D:I1->O          2   0.439   0.736  Mmux_rgb_mux00001011213 (N5)
      LUT4:I2->O            8   0.439   0.840  Mmux_rgb_mux00001111 (N2)
      FDS:S                     0.280          rgb_0
     ----------------------------------------
-    Total                      5.801ns (2.422ns logic, 3.379ns route)
-                                       (41.8% logic, 58.2% route)
+    Total                      6.087ns (2.422ns logic, 3.665ns route)
+                                       (39.8% logic, 60.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
@@ -1745,7 +1720,7 @@ Offset:              5.630ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               6.936ns (Levels of Logic = 3)
+Delay:               7.222ns (Levels of Logic = 3)
   Source:            switch<1> (PAD)
   Destination:       led<1> (PAD)
 
@@ -1753,12 +1728,12 @@ Delay:               6.936ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   0.825   0.793  switch_1_IBUF (switch_1_IBUF)
+     IBUF:I->O            29   0.825   1.080  switch_1_IBUF (switch_1_IBUF)
      INV:I->O              1   0.439   0.517  led<1>1_INV_0 (led_1_OBUF)
      OBUF:I->O                 4.361          led_1_OBUF (led<1>)
     ----------------------------------------
-    Total                      6.936ns (5.625ns logic, 1.311ns route)
-                                       (81.1% logic, 18.9% route)
+    Total                      7.222ns (5.625ns logic, 1.597ns route)
+                                       (77.9% logic, 22.1% route)
 
 =========================================================================
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/generate_characters[0].csd/f.
@@ -1770,15 +1745,15 @@ WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/generate_characters[6].csd/f.
 
 
-Total REAL time to Xst completion: 32.00 secs
-Total CPU time to Xst completion: 30.64 secs
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 32.18 secs
  
 --> 
 
 
-Total memory usage is 513900 kilobytes
+Total memory usage is 515540 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  646 (   0 filtered)
-Number of infos    :  182 (   0 filtered)
+Number of warnings :  621 (   0 filtered)
+Number of infos    :  180 (   0 filtered)
 

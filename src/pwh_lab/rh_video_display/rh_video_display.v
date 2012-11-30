@@ -620,63 +620,6 @@ module rh_display (
 	reg [23:0] note_color[15:0];
 	
 	integer k;
-	always @(posedge vclock) begin
-		for (k=0; k<16; k=k+1) begin
-			case(notes[k])
-				4'd0: note_y_pos[k] <= FIRST_LETTER;
-				// C, C#
-				4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*32;
-				4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*32;
-				// D, D#
-				4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*32;
-				4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*32;
-				// E
-				4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*32;
-				// F, F#
-				4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*32;
-				4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*32;
-				// G, G#
-				4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*32;
-				4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*32;
-				// A, A#
-				4'd10: note_y_pos[k] <= FIRST_LETTER + 1*32;
-				4'd11: note_y_pos[k] <= FIRST_LETTER + 1*32;
-				// B
-				4'd12: note_y_pos[k] <= FIRST_LETTER + 0*32;
-				// C high
-				4'd13: note_y_pos[k] <= FIRST_LETTER + 6*32;
-				default: note_y_pos[k] <= FIRST_LETTER;
-			endcase
-			
-			case(notes[k])
-				// Don't display rests
-				4'd0: note_color[k] <= 24'h00_00_00;
-				// C#
-				4'd2:  note_color[k] <= 24'h55_55_FF;
-				// D#
-				4'd4:  note_color[k] <= 24'h55_55_FF;
-				// F#
-				4'd7:  note_color[k] <= 24'h55_55_FF;
-				// G#
-				4'd9:  note_color[k] <= 24'h55_55_FF;
-				// A#
-				4'd11: note_color[k] <= 24'h55_55_FF;
-				// C high
-				4'd13: note_color[k] <= 24'h00_DD_00;
-				default: note_color[k] <= 24'hFF_FF_FF;
-			endcase
-		end
-		
-		// Change color of to-be-played note based on whether
-		// the player is playing the right now
-		if (notes[0] == 4'd0) begin
-			note_color[0] <= 24'h00_00_00;
-		end else if ((playing_correct) && (notes[0] > 4'd0)) begin
-			note_color[0] <= 24'hFF_FF_00;
-		end else if ((!playing_correct) && (notes[0] > 4'd0)) begin
-			note_color[0] <= 24'hFF_45_00;
-		end
-	end
 	
 	genvar j;
 	generate
@@ -684,7 +627,6 @@ module rh_display (
 		  blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
 				note(.x(lead_note_x + NOTE_WIDTH * j),
 					  .y(note_y_pos[j]),
-					  //.y(FIRST_LETTER + j*32),
 					  .hcount(hcount),
 					  .vcount(vcount),
 					  .color(note_color[j]),
@@ -713,10 +655,10 @@ module rh_display (
 	
 	always @(posedge vclock) begin
 		if (reset) begin
-			lead_note_x <= ACTION_LINE_X;
-			load_tempo = 1;
+			lead_note_x <= 1023;
+			load_tempo <= 1;
 		end else begin
-			load_tempo = 0;
+			load_tempo <= 0;
 		end
 		
 		// Debug single note
@@ -732,6 +674,62 @@ module rh_display (
 			lead_note_x <= lead_note_x - 1;
 		end else if (tempo_beat) begin
 			lead_note_x <= ACTION_LINE_X;
+			
+			for (k=0; k<16; k=k+1) begin
+				case(notes[k])
+					4'd0: note_y_pos[k] <= FIRST_LETTER + 7*32;
+					// C, C#
+					4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*32;
+					4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*32;
+					// D, D#
+					4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*32;
+					4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*32;
+					// E
+					4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*32;
+					// F, F#
+					4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*32;
+					4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*32;
+					// G, G#
+					4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*32;
+					4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*32;
+					// A, A#
+					4'd10: note_y_pos[k] <= FIRST_LETTER + 1*32;
+					4'd11: note_y_pos[k] <= FIRST_LETTER + 1*32;
+					// B
+					4'd12: note_y_pos[k] <= FIRST_LETTER + 0*32;
+					// C high
+					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*32;
+					default: note_y_pos[k] <= FIRST_LETTER;
+				endcase
+				
+				case(notes[k])
+					// Don't display rests
+					4'd0: note_color[k] <= 24'h00_00_00;
+					// C#
+					4'd2:  note_color[k] <= 24'h55_55_FF;
+					// D#
+					4'd4:  note_color[k] <= 24'h55_55_FF;
+					// F#
+					4'd7:  note_color[k] <= 24'h55_55_FF;
+					// G#
+					4'd9:  note_color[k] <= 24'h55_55_FF;
+					// A#
+					4'd11: note_color[k] <= 24'h55_55_FF;
+					// C high
+					4'd13: note_color[k] <= 24'h00_DD_00;
+					default: note_color[k] <= 24'hFF_FF_FF;
+				endcase
+			end
+		end
+		
+		// Change color of to-be-played note based on whether
+		// the player is playing the right now
+		if (notes[0] == 4'd0) begin
+			note_color[0] <= 24'h00_00_00;
+		end else if ((playing_correct) && (notes[0] > 4'd0)) begin
+			note_color[0] <= 24'hFF_FF_00;
+		end else if ((!playing_correct) && (notes[0] > 4'd0)) begin
+			note_color[0] <= 24'hFF_45_00;
 		end
 	end
 	

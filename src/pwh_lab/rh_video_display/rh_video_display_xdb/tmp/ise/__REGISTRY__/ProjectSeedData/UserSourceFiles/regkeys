@@ -1,5 +1,5 @@
 NUM_USER_FILES
-15
+16
 s
 user_file_1
 labkit.ucf
@@ -20,7 +20,7 @@ user_file_14
 lotr_song.xco
 s
 user_file_15
-song_scales.xco
+rh_display.v
 s
 user_file_16
 song_scales.xco
