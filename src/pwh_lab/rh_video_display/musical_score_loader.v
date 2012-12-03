@@ -23,7 +23,8 @@ module musical_score_loader(
 	 input reset,
     input song_id,
 	 output [25:0] tempo_out,
-    output [63:0] next_notes_out
+    output [63:0] next_notes_out,
+	 output [63:0] debug_out
     );
 	
 	reg load_tempo;
@@ -32,7 +33,7 @@ module musical_score_loader(
 	wire [3:0] next_note_lotr;
 	wire [3:0] next_note_ss;
 	
-	reg [25:0] tempo = 26'b0;
+	wire [25:0] tempo;
 	
 	song_scales ss(.clka(clk), .addra(read_addr), .douta(next_note_ss));
 	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
@@ -44,15 +45,24 @@ module musical_score_loader(
 				 .count_to(tempo),
 				 .ready(tempo_beat));
 	
+	assign tempo = (song_id == 0) ? 26'b0_1111_0111_1111_0100_1001_0000_0 : 26'b00_1111_0111_1111_0100_1001_0000;
+	
+//	always @(*) begin
+//		case(song_id)
+//			1'b0: tempo_reg = 26'b0_1111_0111_1111_0100_1001_0000_0;
+//			1'b1: tempo_reg = 26'b00_1111_0111_1111_0100_1001_0000;
+//			default: tempo_reg = 26'b0_1111_0111_1111_0100_1001_0000_0;
+//		endcase
+//	end
+	
 	integer i;
 	always @(posedge clk) begin
 		if (reset) begin
 			read_addr <= 7'b0;
-			for (i=0; i < 16; i=i+1) begin
-				next_notes[i] <= 4'b0;
-			end
 			
-			tempo <= (song_id == 0) ? 26'b1111_0111_1111_0100_1001_0000_0 : 26'b00_1111_0111_1111_0100_1001_0000;
+			for (i=0; i < 16; i=i+1) begin
+				next_notes[i] <= 4'b0001;
+			end
 			
 			load_tempo <= 1;
 		end else if (tempo_beat) begin
@@ -62,7 +72,12 @@ module musical_score_loader(
 				next_notes[i] <= next_notes[i+1];
 			end
 			
-			next_notes[15] <= (song_id == 0) ? next_note_lotr : next_note_ss;
+			case(song_id)
+				1'b0: next_notes[15] <= next_note_lotr;
+				1'b1: next_notes[15] <= next_note_ss;
+				default: next_notes[15] <= 4'b0000;
+			endcase
+			
 			read_addr <= read_addr + 1;
 		end
 	end
@@ -75,5 +90,5 @@ module musical_score_loader(
 									  next_notes[0]};
 									  
 	assign tempo_out = tempo;
-
+	assign debug_out = {next_notes[12], next_notes[13], next_notes[14], next_notes[15], 1'b0, read_addr, 2'b00, tempo, 4'b1111};
 endmodule

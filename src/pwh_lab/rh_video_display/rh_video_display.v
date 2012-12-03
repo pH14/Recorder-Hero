@@ -363,8 +363,8 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [63:0] dispdata;
    wire phsync,pvsync,pblank;
 	
-	wire debug_rh_display = 1;
-	reg right_note;
+	wire debug_rh_display = 0;
+	reg right_note = 1;
 	
 	reg [31:0] count = 0;
 	reg [3:0] notes[15:0];
@@ -458,10 +458,12 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 //							 notes[2], notes[1], notes[0]};
 	wire [63:0] nn;
 	wire [25:0] tempo;
+	wire [63:0] msl_debug;
 	
 	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
 								    .song_id(switch[7]), .next_notes_out(nn),
-									 .tempo_out(tempo));
+									 .tempo_out(tempo),
+									 .debug_out(msl_debug));
 	
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
@@ -476,7 +478,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clock_65mhz), 
-		.data(dispdata),
+		.data(msl_debug),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
 		.disp_rs(disp_rs), 
@@ -605,7 +607,7 @@ module rh_display (
 	parameter NOTE_WIDTH = 64;
 	parameter NOTE_HEIGHT = 35;
 	parameter FIRST_LETTER = 128 + 16;
-	parameter NOTE_STEP = 73;
+	parameter NOTE_STEP = 74;
 	parameter ACTION_LINE_X = 72;
 	
 	wire [3:0] notes[15:0];
@@ -641,7 +643,7 @@ module rh_display (
 	
 	// Temporary tempo is 1/2 vclock, .5s per eighth note
 	//reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
-	reg [25:0] song_tempo;
+	reg [25:0] song_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
 	wire tempo_beat;
 	wire tempo_beat_move;
 	
@@ -656,6 +658,10 @@ module rh_display (
 				 .reset(load_tempo),
 				 .count_to(song_tempo/64),
 				 .ready(tempo_beat_move));
+	
+	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 640;
+	reg [23:0] onscreen_notes[15:0];
+	integer n;
 	
 	always @(posedge vclock) begin
 		if (reset) begin
@@ -736,6 +742,10 @@ module rh_display (
 		end else if ((!playing_correct) && (notes[0] > 4'd0)) begin
 			note_color[0] <= 24'hFF_45_00;
 		end
+		
+		for (n=0; n<16; n=n+1) begin
+			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
+		end
 	end
 	
 	// character display module: sample string in middle of screen
@@ -756,18 +766,7 @@ module rh_display (
 //			defparam csd.NCHAR = 1;
 //		end
 //	endgenerate
-	
-	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 640;
-   
-	reg [23:0] onscreen_notes[15:0];
-	
-	integer n;
-	always @(posedge vclock) begin
-		for (n=0; n<16; n=n+1) begin
-			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
-		end
-	end
-	
+
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
 					    .x(4),

@@ -5,14 +5,14 @@ Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_vide
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: lab3.prj
@@ -150,7 +150,7 @@ Analyzing hierarchy for module <rh_display> in library <work> with parameters.
 	COLOR = "111111111111111111111111"
 	FIRST_LETTER = "00000000000000000000000010010000"
 	NOTE_HEIGHT = "00000000000000000000000000100011"
-	NOTE_STEP = "00000000000000000000000001001001"
+	NOTE_STEP = "00000000000000000000000001001010"
 	NOTE_WIDTH = "00000000000000000000000001000000"
 	SCREEN_HEIGHT = "1011111111"
 	SCREEN_WIDTH = "01111111111"
@@ -212,7 +212,7 @@ Analyzing module <rh_display> in library <work>.
 	COLOR = 24'b111111111111111111111111
 	FIRST_LETTER = 32'sb00000000000000000000000010010000
 	NOTE_HEIGHT = 32'sb00000000000000000000000000100011
-	NOTE_STEP = 32'sb00000000000000000000000001001001
+	NOTE_STEP = 32'sb00000000000000000000000001001010
 	NOTE_WIDTH = 32'sb00000000000000000000000001000000
 	SCREEN_HEIGHT = 10'b1011111111
 	SCREEN_WIDTH = 11'b01111111111
@@ -349,10 +349,9 @@ Synthesizing Unit <musical_score_loader>.
     Found 1-bit register for signal <load_tempo>.
     Found 64-bit register for signal <next_notes>.
     Found 7-bit up counter for signal <read_addr>.
-    Found 26-bit register for signal <tempo>.
     Summary:
 	inferred   1 Counter(s).
-	inferred  91 D-type flip-flop(s).
+	inferred  65 D-type flip-flop(s).
 Unit <musical_score_loader> synthesized.
 
 
@@ -378,32 +377,32 @@ Unit <picture_blob> synthesized.
 
 Synthesizing Unit <rh_display>.
     Related source file is "rh_video_display.v".
-    Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_1$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_2$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_3$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_4$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_5$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_6$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_7$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_8$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_9$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_10$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_11$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_12$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_13$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_14$mux0000> created at line 684.
-    Found 16x10-bit ROM for signal <note_y_pos_15$mux0000> created at line 684.
-    Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 760.
-    Found 10-bit comparator lessequal for signal <action_line$cmp_le0000> created at line 760.
+    Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_1$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_2$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_3$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_4$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_5$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_6$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_7$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_8$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_9$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_10$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_11$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_12$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_13$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_14$mux0000> created at line 690.
+    Found 16x10-bit ROM for signal <note_y_pos_15$mux0000> created at line 690.
+    Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 662.
+    Found 10-bit comparator lessequal for signal <action_line$cmp_le0000> created at line 662.
     Found 11-bit register for signal <lead_note_x>.
     Found 11-bit addsub for signal <lead_note_x$share0000>.
     Found 1-bit register for signal <load_tempo>.
     Found 384-bit register for signal <note_color>.
-    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 734.
+    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 740.
     Found 160-bit register for signal <note_y_pos>.
     Found 384-bit register for signal <onscreen_notes>.
-    Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 767.
+    Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 747.
     Found 26-bit register for signal <song_tempo>.
 INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <note_color>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <onscreen_notes>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
@@ -724,6 +723,7 @@ WARNING:Xst:2565 - Inout <user3<2>> is never assigned.
 WARNING:Xst:2565 - Inout <user3<27>> is never assigned.
 WARNING:Xst:2565 - Inout <user3<3>> is never assigned.
 WARNING:Xst:646 - Signal <notes> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dispdata> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <b>.
     Found 1-bit 4-to-1 multiplexer for signal <b$mux0000>.
     Found 32-bit up counter for signal <count>.
@@ -732,19 +732,11 @@ WARNING:Xst:646 - Signal <notes> is assigned but never used. This unconnected si
     Found 24-bit register for signal <rgb>.
     Found 24-bit 4-to-1 multiplexer for signal <rgb$mux0000>.
     Found 1-bit register for signal <right_note>.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0000> created at line 380.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0001> created at line 389.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0002> created at line 398.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0003> created at line 407.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0004> created at line 416.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0005> created at line 425.
-    Found 32-bit comparator greater for signal <right_note$cmp_gt0006> created at line 434.
     Found 1-bit register for signal <vs>.
     Found 1-bit 4-to-1 multiplexer for signal <vs$mux0000>.
     Summary:
 	inferred   1 Counter(s).
 	inferred  28 D-type flip-flop(s).
-	inferred   7 Comparator(s).
 	inferred  27 Multiplexer(s).
 Unit <lab3> synthesized.
 
@@ -769,25 +761,24 @@ Macro Statistics
  13-bit subtractor                                     : 1
  16-bit adder                                          : 1
  4-bit subtractor                                      : 1
-# Counters                                             : 12
+# Counters                                             : 11
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
  20-bit up counter                                     : 3
  27-bit up counter                                     : 3
- 32-bit up counter                                     : 1
  5-bit up counter                                      : 1
  7-bit up counter                                      : 1
  8-bit down counter                                    : 1
-# Registers                                            : 97
+# Registers                                            : 96
  1-bit register                                        : 22
  10-bit register                                       : 17
  11-bit register                                       : 1
  24-bit register                                       : 34
- 26-bit register                                       : 2
+ 26-bit register                                       : 1
  27-bit register                                       : 3
  32-bit register                                       : 1
  4-bit register                                        : 17
-# Comparators                                          : 82
+# Comparators                                          : 75
  10-bit comparator greatequal                          : 18
  10-bit comparator lessequal                           : 1
  11-bit comparator greatequal                          : 17
@@ -795,7 +786,6 @@ Macro Statistics
  11-bit comparator less                                : 17
  12-bit comparator less                                : 17
  27-bit comparator equal                               : 3
- 32-bit comparator greater                             : 7
  4-bit comparator greater                              : 1
 # Multiplexers                                         : 6
  1-bit 4-to-1 multiplexer                              : 3
@@ -855,16 +845,6 @@ INFO:Xst - In order to maximize performance and save block RAM resources, the sm
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_14_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 Unit <rh_display> synthesized (advanced).
 INFO:Xst:2261 - The FF/Latch <pixel_0> in Unit <picture_blob> is equivalent to the following 23 FFs/Latches, which will be removed : <pixel_1> <pixel_2> <pixel_3> <pixel_4> <pixel_5> <pixel_6> <pixel_7> <pixel_8> <pixel_9> <pixel_10> <pixel_11> <pixel_12> <pixel_13> <pixel_14> <pixel_15> <pixel_16> <pixel_17> <pixel_18> <pixel_19> <pixel_20> <pixel_21> <pixel_22> <pixel_23> 
-WARNING:Xst:1293 - FF/Latch <tempo_0> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempo_1> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempo_2> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempo_3> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempo_6> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempo_9> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempo_25> has a constant value of 0 in block <musical_score_loader>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <tempo_4> in Unit <musical_score_loader> is equivalent to the following 4 FFs/Latches, which will be removed : <tempo_7> <tempo_10> <tempo_12> <tempo_20> 
-INFO:Xst:2261 - The FF/Latch <tempo_13> in Unit <musical_score_loader> is equivalent to the following 8 FFs/Latches, which will be removed : <tempo_14> <tempo_15> <tempo_16> <tempo_17> <tempo_18> <tempo_21> <tempo_22> <tempo_23> 
-INFO:Xst:2261 - The FF/Latch <tempo_5> in Unit <musical_score_loader> is equivalent to the following 4 FFs/Latches, which will be removed : <tempo_8> <tempo_11> <tempo_19> <tempo_24> 
 INFO:Xst:2261 - The FF/Latch <note_color_0_9> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_0_13> 
 INFO:Xst:2261 - The FF/Latch <note_color_15_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_15_1> <note_color_15_2> <note_color_15_3> <note_color_15_4> <note_color_15_5> <note_color_15_6> <note_color_15_7> <note_color_15_16> <note_color_15_18> <note_color_15_20> <note_color_15_22> 
 INFO:Xst:2261 - The FF/Latch <note_color_9_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_9_1> <note_color_9_2> <note_color_9_3> <note_color_9_4> <note_color_9_5> <note_color_9_6> <note_color_9_7> <note_color_9_16> <note_color_9_18> <note_color_9_20> <note_color_9_22> 
@@ -931,6 +911,9 @@ INFO:Xst:2261 - The FF/Latch <note_color_12_11> in Unit <rh_display> is equivale
 INFO:Xst:2261 - The FF/Latch <note_color_1_0> in Unit <rh_display> is equivalent to the following 11 FFs/Latches, which will be removed : <note_color_1_1> <note_color_1_2> <note_color_1_3> <note_color_1_4> <note_color_1_5> <note_color_1_6> <note_color_1_7> <note_color_1_16> <note_color_1_18> <note_color_1_20> <note_color_1_22> 
 INFO:Xst:2261 - The FF/Latch <note_color_3_11> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_3_15> 
 INFO:Xst:2261 - The FF/Latch <note_color_14_9> in Unit <rh_display> is equivalent to the following 5 FFs/Latches, which will be removed : <note_color_14_13> <note_color_14_17> <note_color_14_19> <note_color_14_21> <note_color_14_23> 
+WARNING:Xst:1426 - The value init of the FF/Latch right_note hinder the constant cleaning in the block lab3.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <right_note> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_26> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_25> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_24> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
@@ -955,13 +938,13 @@ WARNING:Xst:1710 - FF/Latch <goal_6> (without init value) has a constant value o
 WARNING:Xst:1710 - FF/Latch <goal_9> (without init value) has a constant value of 0 in block <c>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_25> (without init value) has a constant value of 0 in block <c>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_26> (without init value) has a constant value of 0 in block <c>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_0> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_1> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_2> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_3> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_6> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_9> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <song_tempo_25> (without init value) has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_0> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_1> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_2> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_3> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_6> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_9> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <song_tempo_25> has a constant value of 0 in block <rh_disp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_0> (without init value) has a constant value of 0 in block <c>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_1> (without init value) has a constant value of 0 in block <c>. This FF/Latch will be trimmed during the optimization process.
 
@@ -984,18 +967,17 @@ Macro Statistics
  13-bit subtractor                                     : 1
  16-bit adder                                          : 1
  4-bit subtractor                                      : 1
-# Counters                                             : 12
+# Counters                                             : 11
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
  20-bit up counter                                     : 3
  27-bit up counter                                     : 3
- 32-bit up counter                                     : 1
  5-bit up counter                                      : 1
  7-bit up counter                                      : 1
  8-bit down counter                                    : 1
-# Registers                                            : 892
- Flip-Flops                                            : 892
-# Comparators                                          : 82
+# Registers                                            : 888
+ Flip-Flops                                            : 888
+# Comparators                                          : 75
  10-bit comparator greatequal                          : 18
  10-bit comparator lessequal                           : 1
  11-bit comparator greatequal                          : 17
@@ -1003,7 +985,6 @@ Macro Statistics
  11-bit comparator less                                : 17
  12-bit comparator less                                : 17
  27-bit comparator equal                               : 3
- 32-bit comparator greater                             : 7
  4-bit comparator greater                              : 1
 # Multiplexers                                         : 6
  1-bit 4-to-1 multiplexer                              : 3
@@ -1018,26 +999,29 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <note_y_pos_15_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_15_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_8_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_8_3> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_8> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_0_12> 
+INFO:Xst:2261 - The FF/Latch <note_color_0_9> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_color_0_17> 
+WARNING:Xst:1710 - FF/Latch <note_y_pos_1_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_0_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_4_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_2_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_3_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <note_y_pos_6_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_6_7> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_14_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_14_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_7_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_7_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_13_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_13_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_6_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_6_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_12_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_12_3> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_0_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_0_7> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_5_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_5_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_11_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_11_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_4_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_4_3> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_10_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_10_7> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_10_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_10_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_3_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_3_3> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_5_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_5_7> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_2_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_2_3> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_1_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_1_3> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_15_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_15_7> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_0_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_0_3> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_4_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_4_7> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_14_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_14_7> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_9_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_9_7> 
@@ -1048,7 +1032,6 @@ INFO:Xst:2261 - The FF/Latch <note_y_pos_2_4> in Unit <rh_display> is equivalent
 INFO:Xst:2261 - The FF/Latch <note_y_pos_12_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_12_7> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_7_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_7_7> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_1_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_1_7> 
-INFO:Xst:2261 - The FF/Latch <note_y_pos_9_0> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_9_3> 
 INFO:Xst:2261 - The FF/Latch <note_y_pos_11_4> in Unit <rh_display> is equivalent to the following FF/Latch, which will be removed : <note_y_pos_11_7> 
 
 Optimizing unit <lab3> ...
@@ -1062,43 +1045,77 @@ Optimizing unit <counter> ...
 Optimizing unit <blob> ...
 
 Optimizing unit <musical_score_loader> ...
-WARNING:Xst:1426 - The value init of the FF/Latch tempo_13 hinder the constant cleaning in the block musical_score_loader.
-   You should achieve better results by setting this init to 1.
 
 Optimizing unit <rh_display> ...
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_6> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_9> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/song_tempo_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_26> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_24> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_23> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_22> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_21> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_20> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rh_disp/c/goal_26> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_6> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_9> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <msl/c/goal_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_20> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_21> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_22> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_23> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_24> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rh_disp/c2/goal_26> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_25> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_23> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_22> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_21> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_18> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_17> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_16> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_15> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_14> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_13> has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_9> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_6> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_3> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_2> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_1> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_0> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_26> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_23> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_22> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_21> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_18> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_17> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_16> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_15> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_14> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_13> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_9> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_6> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <msl/c/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_6> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_9> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_19> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_14> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_15> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_16> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_17> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_18> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_21> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_22> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_23> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_25> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_13> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_3> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_7> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_8> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_9> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_10> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_11> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_12> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_15> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_16> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_17> (without init value) has a constant value of 1 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c2/goal_19> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rh_disp/c/goal_9> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1118,12 +1135,11 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_2_15> in Unit <lab3> is equ
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_3_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_3_12> <rh_disp/onscreen_notes_3_10> <rh_disp/onscreen_notes_3_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_3_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_3_21> <rh_disp/onscreen_notes_3_19> <rh_disp/onscreen_notes_3_17> <rh_disp/onscreen_notes_3_13> <rh_disp/onscreen_notes_3_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_7> in Unit <lab3> is equivalent to the following 7 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_6> <rh_disp/onscreen_notes_0_5> <rh_disp/onscreen_notes_0_4> <rh_disp/onscreen_notes_0_3> <rh_disp/onscreen_notes_0_2> <rh_disp/onscreen_notes_0_1> <rh_disp/onscreen_notes_0_0> 
-INFO:Xst:2261 - The FF/Latch <msl/c/goal_13> in Unit <lab3> is equivalent to the following 8 FFs/Latches, which will be removed : <msl/c/goal_14> <msl/c/goal_15> <msl/c/goal_16> <msl/c/goal_17> <msl/c/goal_18> <msl/c/goal_21> <msl/c/goal_22> <msl/c/goal_23> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_13_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_13_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_7_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_14_21> <rh_disp/onscreen_notes_14_19> <rh_disp/onscreen_notes_14_17> <rh_disp/onscreen_notes_14_13> <rh_disp/onscreen_notes_14_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_8_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_8_21> <rh_disp/onscreen_notes_8_19> <rh_disp/onscreen_notes_8_17> <rh_disp/onscreen_notes_8_13> <rh_disp/onscreen_notes_8_9> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_13> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_9> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_21> <rh_disp/onscreen_notes_0_19> <rh_disp/onscreen_notes_0_17> <rh_disp/onscreen_notes_0_13> <rh_disp/onscreen_notes_0_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_7> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_1> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_8> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_2> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_10_11> 
@@ -1139,32 +1155,20 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_10> in Unit <lab3> is equivalent to
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_7_20> <rh_disp/onscreen_notes_7_18> <rh_disp/onscreen_notes_7_16> <rh_disp/onscreen_notes_7_7> <rh_disp/onscreen_notes_7_6> <rh_disp/onscreen_notes_7_5> <rh_disp/onscreen_notes_7_4> <rh_disp/onscreen_notes_7_3> <rh_disp/onscreen_notes_7_2> <rh_disp/onscreen_notes_7_1> <rh_disp/onscreen_notes_7_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_11> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_5> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_12> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_6> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_13> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_7> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_14> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_8> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_20> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_14> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_16> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_10> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_21> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_15> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_17> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_11> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_22> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_16> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_18> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_12> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_23> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_17> 
-INFO:Xst:2261 - The FF/Latch <msl/c/goal_4> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <msl/c/goal_7> <msl/c/goal_10> <msl/c/goal_12> <msl/c/goal_20> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_24> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_18> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_19> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_13> 
-INFO:Xst:2261 - The FF/Latch <msl/c/goal_5> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <msl/c/goal_8> <msl/c/goal_11> <msl/c/goal_19> <msl/c/goal_24> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_24> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_18> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_6_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_6_20> <rh_disp/onscreen_notes_6_18> <rh_disp/onscreen_notes_6_16> <rh_disp/onscreen_notes_6_7> <rh_disp/onscreen_notes_6_6> <rh_disp/onscreen_notes_6_5> <rh_disp/onscreen_notes_6_4> <rh_disp/onscreen_notes_6_3> <rh_disp/onscreen_notes_6_2> <rh_disp/onscreen_notes_6_1> <rh_disp/onscreen_notes_6_0> 
+INFO:Xst:2261 - The FF/Latch <msl/c/goal_5> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <msl/c/goal_8> <msl/c/goal_11> <msl/c/goal_19> <msl/c/goal_24> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_10_12> <rh_disp/onscreen_notes_10_10> <rh_disp/onscreen_notes_10_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_10_21> <rh_disp/onscreen_notes_10_19> <rh_disp/onscreen_notes_10_17> <rh_disp/onscreen_notes_10_13> <rh_disp/onscreen_notes_10_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_4_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_4_12> <rh_disp/onscreen_notes_4_10> <rh_disp/onscreen_notes_4_8> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_20> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <rh_disp/song_tempo_12> <rh_disp/song_tempo_10> <rh_disp/song_tempo_7> <rh_disp/song_tempo_4> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_24> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <rh_disp/song_tempo_19> <rh_disp/song_tempo_11> <rh_disp/song_tempo_8> <rh_disp/song_tempo_5> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_5_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_5_20> <rh_disp/onscreen_notes_5_18> <rh_disp/onscreen_notes_5_16> <rh_disp/onscreen_notes_5_7> <rh_disp/onscreen_notes_5_6> <rh_disp/onscreen_notes_5_5> <rh_disp/onscreen_notes_5_4> <rh_disp/onscreen_notes_5_3> <rh_disp/onscreen_notes_5_2> <rh_disp/onscreen_notes_5_1> <rh_disp/onscreen_notes_5_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_14_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_8_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_8_11> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_20> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <rh_disp/song_tempo_12> <rh_disp/song_tempo_10> <rh_disp/song_tempo_7> <rh_disp/song_tempo_4> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_15_21> <rh_disp/onscreen_notes_15_19> <rh_disp/onscreen_notes_15_17> <rh_disp/onscreen_notes_15_13> <rh_disp/onscreen_notes_15_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_9_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_9_21> <rh_disp/onscreen_notes_9_19> <rh_disp/onscreen_notes_9_17> <rh_disp/onscreen_notes_9_13> <rh_disp/onscreen_notes_9_9> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_23> in Unit <lab3> is equivalent to the following 8 FFs/Latches, which will be removed : <rh_disp/song_tempo_22> <rh_disp/song_tempo_21> <rh_disp/song_tempo_18> <rh_disp/song_tempo_17> <rh_disp/song_tempo_16> <rh_disp/song_tempo_15> <rh_disp/song_tempo_14> <rh_disp/song_tempo_13> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_11> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_1_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_1_21> <rh_disp/onscreen_notes_1_19> <rh_disp/onscreen_notes_1_17> <rh_disp/onscreen_notes_1_13> <rh_disp/onscreen_notes_1_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_11_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_11_11> 
@@ -1173,8 +1177,9 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_12_23> in Unit <lab3> is eq
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_6_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_6_21> <rh_disp/onscreen_notes_6_19> <rh_disp/onscreen_notes_6_17> <rh_disp/onscreen_notes_6_13> <rh_disp/onscreen_notes_6_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_14_12> <rh_disp/onscreen_notes_14_10> <rh_disp/onscreen_notes_14_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_8_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_8_12> <rh_disp/onscreen_notes_8_10> <rh_disp/onscreen_notes_8_8> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_23> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_21> <rh_disp/onscreen_notes_0_19> <rh_disp/onscreen_notes_0_17> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_14> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_10> <rh_disp/onscreen_notes_0_8> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_12> <rh_disp/onscreen_notes_0_10> <rh_disp/onscreen_notes_0_8> 
+INFO:Xst:2261 - The FF/Latch <msl/c/goal_4> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <msl/c/goal_7> <msl/c/goal_10> <msl/c/goal_12> <msl/c/goal_20> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_24> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <rh_disp/song_tempo_19> <rh_disp/song_tempo_11> <rh_disp/song_tempo_8> <rh_disp/song_tempo_5> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_11_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_11_12> <rh_disp/onscreen_notes_11_10> <rh_disp/onscreen_notes_11_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_5_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_5_12> <rh_disp/onscreen_notes_5_10> <rh_disp/onscreen_notes_5_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_15_11> 
@@ -1193,15 +1198,14 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_7_23> in Unit <lab3> is equ
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_15_12> <rh_disp/onscreen_notes_15_10> <rh_disp/onscreen_notes_15_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_7> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/c/goal_10> <rh_disp/c/goal_12> <rh_disp/c/goal_20> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_8> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/c/goal_11> <rh_disp/c/goal_19> <rh_disp/c/goal_24> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_13> in Unit <lab3> is equivalent to the following 8 FFs/Latches, which will be removed : <rh_disp/c/goal_14> <rh_disp/c/goal_15> <rh_disp/c/goal_16> <rh_disp/c/goal_17> <rh_disp/c/goal_18> <rh_disp/c/goal_21> <rh_disp/c/goal_22> <rh_disp/c/goal_23> 
 INFO:Xst:2261 - The FF/Latch <rgb_16> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_18> <rgb_20> <rgb_22> 
 INFO:Xst:2261 - The FF/Latch <rgb_17> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_19> <rgb_21> <rgb_23> 
+INFO:Xst:2261 - The FF/Latch <rgb_9> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_13> 
 INFO:Xst:2261 - The FF/Latch <rgb_11> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_15> 
 INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <lab3> is equivalent to the following 7 FFs/Latches, which will be removed : <rgb_1> <rgb_2> <rgb_3> <rgb_4> <rgb_5> <rgb_6> <rgb_7> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_4> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_7> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_5> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_8> 
-INFO:Xst:2261 - The FF/Latch <rgb_8> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rgb_10> <rgb_14> 
-INFO:Xst:2261 - The FF/Latch <rgb_9> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_13> 
+INFO:Xst:2261 - The FF/Latch <rgb_8> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_10> <rgb_12> <rgb_14> 
 Found area constraint ratio of 100 (+ 5) on block lab3, actual ratio is 3.
 FlipFlop xvga1/vcount_7 has been replicated 4 time(s)
 FlipFlop xvga1/vcount_8 has been replicated 4 time(s)
@@ -1220,8 +1224,8 @@ Unit <lab3> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 625
- Flip-Flops                                            : 625
+# Registers                                            : 581
+ Flip-Flops                                            : 581
 # Shift Registers                                      : 4
  7-bit shift register                                  : 4
 
@@ -1252,32 +1256,32 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 3324
+# BELS                             : 3077
 #      GND                         : 4
-#      INV                         : 65
-#      LUT1                        : 214
-#      LUT2                        : 675
-#      LUT2_D                      : 1
-#      LUT3                        : 235
+#      INV                         : 59
+#      LUT1                        : 179
+#      LUT2                        : 642
+#      LUT2_D                      : 17
+#      LUT3                        : 233
 #      LUT3_D                      : 2
 #      LUT3_L                      : 1
-#      LUT4                        : 727
-#      LUT4_D                      : 4
-#      MUXCY                       : 1092
-#      MUXF5                       : 51
-#      MUXF6                       : 8
+#      LUT4                        : 629
+#      LUT4_D                      : 36
+#      MUXCY                       : 958
+#      MUXF5                       : 92
+#      MUXF6                       : 12
 #      MUXF7                       : 5
 #      VCC                         : 4
-#      XORCY                       : 236
-# FlipFlops/Latches                : 643
+#      XORCY                       : 204
+# FlipFlops/Latches                : 599
 #      FD                          : 5
-#      FDE                         : 222
-#      FDR                         : 204
-#      FDRE                        : 169
+#      FDE                         : 216
+#      FDR                         : 170
+#      FDRE                        : 153
 #      FDRS                        : 15
-#      FDRSE                       : 6
-#      FDS                         : 9
-#      FDSE                        : 13
+#      FDRSE                       : 4
+#      FDS                         : 7
+#      FDSE                        : 29
 # RAMS                             : 20
 #      RAMB16_S1_S1                : 16
 #      RAMB16_S36_S36              : 2
@@ -1302,10 +1306,10 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                     1065  out of  33792     3%  
- Number of Slice Flip Flops:            643  out of  67584     0%  
- Number of 4 input LUTs:               1929  out of  67584     2%  
-    Number used as logic:              1924
+ Number of Slices:                      980  out of  33792     2%  
+ Number of Slice Flip Flops:            599  out of  67584     0%  
+ Number of 4 input LUTs:               1803  out of  67584     2%  
+    Number used as logic:              1798
     Number used as Shift registers:       5
  Number of IOs:                         576
  Number of bonded IOBs:                 247  out of    684    36%  
@@ -1335,7 +1339,7 @@ Clock Information:
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                  | Load  |
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX                                                                                            | 625   |
+clock_27mhz                        | vclk1:CLKFX                                                                                            | 581   |
 hex_display/clock1                 | BUFG                                                                                                   | 43    |
 rh_disp/pb/rom1/BU2/dbiterr        | NONE(rh_disp/pb/rom1/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram)| 18    |
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
@@ -1350,9 +1354,9 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 33.570ns (Maximum Frequency: 29.788MHz)
-   Minimum input arrival time before clock: 5.416ns
+   Minimum input arrival time before clock: 13.269ns
    Maximum output required time after clock: 9.565ns
-   Maximum combinational path delay: 7.097ns
+   Maximum combinational path delay: 7.051ns
 
 Timing Detail:
 --------------
@@ -1361,7 +1365,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
   Clock period: 33.570ns (frequency: 29.788MHz)
-  Total number of paths / destination ports: 97749 / 1667
+  Total number of paths / destination ports: 93331 / 1573
 -------------------------------------------------------------------------
 Delay:               13.988ns (Levels of Logic = 7)
   Source:            xvga1/vcount_9_1 (FF)
@@ -1389,10 +1393,10 @@ Delay:               13.988ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hex_display/clock1'
-  Clock period: 13.124ns (frequency: 76.197MHz)
-  Total number of paths / destination ports: 3004 / 74
+  Clock period: 13.199ns (frequency: 75.760MHz)
+  Total number of paths / destination ports: 4598 / 74
 -------------------------------------------------------------------------
-Delay:               13.124ns (Levels of Logic = 15)
+Delay:               13.199ns (Levels of Logic = 15)
   Source:            hex_display/char_index_0 (FF)
   Destination:       hex_display/disp_data_out (FF)
   Source Clock:      hex_display/clock1 rising
@@ -1402,8 +1406,64 @@ Delay:               13.124ns (Levels of Logic = 15)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             17   0.568   1.297  hex_display/char_index_0 (hex_display/char_index_0)
-     LUT3:I0->O            1   0.439   0.000  hex_display/Mmux_nibble_75 (hex_display/Mmux_nibble_75)
+     FDE:C->Q             32   0.568   1.373  hex_display/char_index_0 (hex_display/char_index_0)
+     LUT3:I0->O            1   0.439   0.000  hex_display/Mmux_nibble_63 (hex_display/Mmux_nibble_63)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux_nibble_4_f5_0 (hex_display/Mmux_nibble_4_f51)
+     MUXF6:I1->O           1   0.447   0.000  hex_display/Mmux_nibble_3_f6_0 (hex_display/Mmux_nibble_3_f61)
+     MUXF7:I1->O          29   0.447   1.365  hex_display/Mmux_nibble_2_f7_0 (hex_display/nibble<1>)
+     LUT4:I0->O            2   0.439   0.735  hex_display/Mrom_dots1311 (hex_display/Mrom_dots12)
+     LUT3:I2->O            1   0.439   0.000  hex_display/Mmux__varindex0000_131 (hex_display/Mmux__varindex0000_131)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux__varindex0000_11_f5_0 (hex_display/Mmux__varindex0000_11_f51)
+     MUXF6:I1->O           1   0.447   0.000  hex_display/Mmux__varindex0000_10_f6 (hex_display/Mmux__varindex0000_10_f6)
+     MUXF7:I0->O           1   0.447   0.726  hex_display/Mmux__varindex0000_8_f7 (hex_display/Mmux__varindex0000_8_f7)
+     LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux0000782 (hex_display/disp_data_out_mux0000782)
+     MUXF5:I0->O           1   0.436   0.552  hex_display/disp_data_out_mux000078_f5 (hex_display/disp_data_out_mux000078)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N206)
+     MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
+     LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001692 (hex_display/disp_data_out_mux00001691)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000169_f5 (hex_display/disp_data_out_mux0000)
+     FDE:D                     0.370          hex_display/disp_data_out
+    ----------------------------------------
+    Total                     13.199ns (7.540ns logic, 5.659ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
+  Total number of paths / destination ports: 128 / 92
+-------------------------------------------------------------------------
+Offset:              5.347ns (Levels of Logic = 4)
+  Source:            switch<0> (PAD)
+  Destination:       rgb_8 (FF)
+  Destination Clock: clock_27mhz rising 2.4X
+
+  Data Path: switch<0> to rgb_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.825   1.193  switch_0_IBUF (switch_0_IBUF)
+     LUT4:I0->O            1   0.439   0.000  Mmux_rgb_mux00001102132 (Mmux_rgb_mux00001102131)
+     MUXF5:I0->O           3   0.436   1.010  Mmux_rgb_mux0000110213_f5 (N1)
+     LUT4:I0->O            3   0.439   0.725  Mmux_rgb_mux0000251 (N4)
+     FDS:S                     0.280          rgb_8
+    ----------------------------------------
+    Total                      5.347ns (2.419ns logic, 2.927ns route)
+                                       (45.2% logic, 54.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hex_display/clock1'
+  Total number of paths / destination ports: 410 / 1
+-------------------------------------------------------------------------
+Offset:              13.269ns (Levels of Logic = 16)
+  Source:            switch<7> (PAD)
+  Destination:       hex_display/disp_data_out (FF)
+  Destination Clock: hex_display/clock1 rising
+
+  Data Path: switch<7> to hex_display/disp_data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   0.825   1.186  switch_7_IBUF (switch_7_IBUF)
+     LUT2:I1->O            1   0.439   0.000  hex_display/Mmux_nibble_75 (hex_display/Mmux_nibble_75)
      MUXF5:I1->O           1   0.436   0.000  hex_display/Mmux_nibble_6_f5_0 (hex_display/Mmux_nibble_6_f51)
      MUXF6:I0->O           1   0.447   0.000  hex_display/Mmux_nibble_4_f6_0 (hex_display/Mmux_nibble_4_f61)
      MUXF7:I0->O          29   0.447   1.365  hex_display/Mmux_nibble_2_f7_0 (hex_display/nibble<1>)
@@ -1414,36 +1474,14 @@ Delay:               13.124ns (Levels of Logic = 15)
      MUXF7:I0->O           1   0.447   0.726  hex_display/Mmux__varindex0000_8_f7 (hex_display/Mmux__varindex0000_8_f7)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux0000782 (hex_display/disp_data_out_mux0000782)
      MUXF5:I0->O           1   0.436   0.552  hex_display/disp_data_out_mux000078_f5 (hex_display/disp_data_out_mux000078)
-     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N278)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N206)
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001692 (hex_display/disp_data_out_mux00001691)
      MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000169_f5 (hex_display/disp_data_out_mux0000)
      FDE:D                     0.370          hex_display/disp_data_out
     ----------------------------------------
-    Total                     13.124ns (7.540ns logic, 5.584ns route)
-                                       (57.5% logic, 42.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 134 / 92
--------------------------------------------------------------------------
-Offset:              5.416ns (Levels of Logic = 4)
-  Source:            switch<0> (PAD)
-  Destination:       rgb_8 (FF)
-  Destination Clock: clock_27mhz rising 2.4X
-
-  Data Path: switch<0> to rgb_8
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            13   0.825   1.239  switch_0_IBUF (switch_0_IBUF)
-     LUT4:I0->O            1   0.439   0.000  Mmux_rgb_mux000010112132 (Mmux_rgb_mux000010112131)
-     MUXF5:I0->O           3   0.436   1.009  Mmux_rgb_mux00001011213_f5 (N5)
-     LUT4:I0->O            4   0.439   0.747  Mmux_rgb_mux0000251 (N4)
-     FDS:S                     0.280          rgb_8
-    ----------------------------------------
-    Total                      5.416ns (2.419ns logic, 2.996ns route)
-                                       (44.7% logic, 55.3% route)
+    Total                     13.269ns (7.797ns logic, 5.472ns route)
+                                       (58.8% logic, 41.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
@@ -1488,7 +1526,7 @@ Offset:              5.630ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               7.097ns (Levels of Logic = 3)
+Delay:               7.051ns (Levels of Logic = 3)
   Source:            switch<1> (PAD)
   Destination:       led<1> (PAD)
 
@@ -1496,25 +1534,25 @@ Delay:               7.097ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   0.825   0.955  switch_1_IBUF (switch_1_IBUF)
+     IBUF:I->O            11   0.825   0.909  switch_1_IBUF (switch_1_IBUF)
      INV:I->O              1   0.439   0.517  led<1>1_INV_0 (led_1_OBUF)
      OBUF:I->O                 4.361          led_1_OBUF (led<1>)
     ----------------------------------------
-    Total                      7.097ns (5.625ns logic, 1.472ns route)
-                                       (79.3% logic, 20.7% route)
+    Total                      7.051ns (5.625ns logic, 1.426ns route)
+                                       (79.8% logic, 20.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 29.00 secs
-Total CPU time to Xst completion: 27.43 secs
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 26.34 secs
  
 --> 
 
 
-Total memory usage is 507224 kilobytes
+Total memory usage is 504272 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  410 (   0 filtered)
-Number of infos    :  235 (   0 filtered)
+Number of warnings :  457 (   0 filtered)
+Number of infos    :  205 (   0 filtered)
 

@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version K.39
-# Date: Tue Nov 27 02:24:06 2012
+# Date: Mon Dec  3 21:26:14 2012
 #
 ##############################################################
 #
@@ -38,7 +38,7 @@ SELECT Block_Memory_Generator family Xilinx,_Inc. 2.8
 CSET algorithm=Minimum_Area
 CSET assume_synchronous_clk=false
 CSET byte_size=9
-CSET coe_file=/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/scripts/binary_music/concerning_hobbits.coe
+CSET coe_file=/afs/athena.mit.edu/user/p/w/pwh/rh2/scripts/binary_music/concerning_hobbits.coe
 CSET collision_warnings=ALL
 CSET component_name=lotr_song
 CSET disable_collision_warnings=false
@@ -74,5 +74,5 @@ CSET write_width_a=4
 CSET write_width_b=4
 # END Parameters
 GENERATE
-# CRC: b9e25ce1
+# CRC: d5ecdc95
 

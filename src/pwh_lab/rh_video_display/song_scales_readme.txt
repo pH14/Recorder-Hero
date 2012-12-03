@@ -1,5 +1,5 @@
 The following files were generated for 'song_scales' in directory 
-/afs/athena.mit.edu/user/p/w/pwh/Recorder-Hero/src/pwh_lab/rh_video_display:
+/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display:
 
 song_scales.asy:
    Graphical symbol information file. Used by the ISE tools and some
