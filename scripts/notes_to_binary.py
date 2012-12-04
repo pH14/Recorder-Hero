@@ -33,7 +33,8 @@ for music_file in os.listdir('music'):
     f_w.write('memory_initialization_radix=2;\n')
     f_w.write('memory_initialization_vector=\n')
     f_w.write(',\n'.join(song_output[:-1]))
-    f_w.write(',\n'+song_output[-1]+';')
+    f_w.write(',\n'+song_output[-1])
+    f_w.write(',\n1111;')
 
     print 'Song: %s' % music_file
     print '\n'.join(song_output)
