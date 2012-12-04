@@ -59,7 +59,7 @@ title('Red values in 24 bit bitmap')
 %table where each index specifies an r, g, and b value separately.
 %
 %Because of this, now we need to load both the image and it's colormap.
-[picture color_table] = imread('letter_notes_high_res_converted.bmp');
+[picture color_table] = imread('bono.bmp');
 
 %% Displaying without the color table
 %If we try to display the picture without the colormap, the image does not
@@ -133,13 +133,13 @@ title('Another way to see the color table')
 %colortables, image data, anything.  Here's how to send the red component
 %of the color table of the last example
 
-red = color_table(:,3);             %grabs the red part of the colortable
+red = color_table(:,1);             %grabs the red part of the colortable
 scaled_data = red*255;              %scales the floats back to 0-255
 rounded_data = round(scaled_data);  %rounds them down
 data = dec2bin(rounded_data,8);     %convert the binary data to 8 bit binary #s
 
 %open a file
-output_name = 'note_text_ct_blue.coe';
+output_name = 'bono_ct_red.coe';
 file = fopen(output_name,'w');
 
 %write the header info
@@ -180,7 +180,7 @@ for r = 1:num_rows
 end
 
 %open a file
-output_name = 'note_text_pixels_2.coe';
+output_name = 'bono_pixels.coe';
 file = fopen(output_name,'w');
 
 %write the header info
