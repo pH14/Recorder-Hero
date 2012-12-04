@@ -363,8 +363,8 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [63:0] dispdata;
    wire phsync,pvsync,pblank;
 	
-	wire debug_rh_display = 1;
-	reg right_note;
+	wire debug_rh_display = 0;
+	reg right_note = 1;
 	
 	reg [31:0] count = 0;
 	reg [3:0] notes[15:0];
@@ -457,28 +457,28 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 //							 notes[9], notes[8], notes[7], notes[6], notes[5], notes[4], notes[3],
 //							 notes[2], notes[1], notes[0]};
 	wire [63:0] nn;
-
+	wire [25:0] tempo;
+	wire [63:0] msl_debug;
+	
 	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
-								    .song_id(0), .next_notes_out(nn));
+								    .song_id(switch[7]), .next_notes_out(nn),
+									 .tempo_out(tempo),
+									 .debug_out(msl_debug));
 	
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
 		.playing_correct(right_note),
 		.next_notes(nn), 
-		.tempo(26'b1111_0111_1111_0100_1001_0000_0),
+		.tempo(tempo),
 		.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),
 		.blank(blank),.phsync(phsync),
 		.pvsync(pvsync),.pblank(pblank),
 		.pixel(pixel), .debug(dispdata));
-	
-	reg [6:0] read_addr = 0;
-	wire [3:0] next_note;
-	lotr_song lotr(.clka(clock_65mhz), .addra(read_addr), .douta(next_note));
-	
+
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clock_65mhz), 
-		.data(nn),
+		.data(msl_debug),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
 		.disp_rs(disp_rs), 
@@ -605,8 +605,9 @@ module rh_display (
 	parameter [10:0] SCREEN_WIDTH = 1023;
 	parameter [9:0] SCREEN_HEIGHT = 767;
 	parameter NOTE_WIDTH = 64;
-	parameter NOTE_HEIGHT = 24;
-	parameter FIRST_LETTER = 550;
+	parameter NOTE_HEIGHT = 35;
+	parameter FIRST_LETTER = 128 + 16;
+	parameter NOTE_STEP = 74;
 	parameter ACTION_LINE_X = 72;
 	
 	wire [3:0] notes[15:0];
@@ -624,59 +625,6 @@ module rh_display (
 	reg [23:0] note_color[15:0];
 	
 	integer k;
-	always @(posedge vclock) begin
-		for (k=0; k<16; k=k+1) begin
-			case(notes[k])
-				4'd0: note_y_pos[k] <= FIRST_LETTER;
-				// C, C#
-				4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*32;
-				4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*32;
-				// D, D#
-				4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*32;
-				4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*32;
-				// E
-				4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*32;
-				// F, F#
-				4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*32;
-				4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*32;
-				// G, G#
-				4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*32;
-				4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*32;
-				// A, A#
-				4'd10: note_y_pos[k] <= FIRST_LETTER + 1*32;
-				4'd11: note_y_pos[k] <= FIRST_LETTER + 1*32;
-				// B
-				4'd12: note_y_pos[k] <= FIRST_LETTER + 0*32;
-				// C high
-				4'd13: note_y_pos[k] <= FIRST_LETTER + 6*32;
-				default: note_y_pos[k] <= FIRST_LETTER;
-			endcase
-			
-			case(notes[k])
-				// Don't display rests
-				4'd0: note_color[k] <= 24'h00_00_00;
-				// C#
-				4'd2:  note_color[k] <= 24'h55_55_FF;
-				// D#
-				4'd4:  note_color[k] <= 24'h55_55_FF;
-				// F#
-				4'd7:  note_color[k] <= 24'h55_55_FF;
-				// G#
-				4'd9:  note_color[k] <= 24'h55_55_FF;
-				// A#
-				4'd11: note_color[k] <= 24'h55_55_FF;
-				// C high
-				4'd13: note_color[k] <= 24'h00_DD_00;
-				default: note_color[k] <= 24'hFF_FF_FF;
-			endcase
-			
-			if (playing_correct && notes[k] > 0) begin
-				note_color[0] <= 24'hFF_FF_00;
-			end else begin
-				note_color[0] <= 24'hFF_45_00;
-			end
-		end
-	end
 	
 	genvar j;
 	generate
@@ -684,7 +632,6 @@ module rh_display (
 		  blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
 				note(.x(lead_note_x + NOTE_WIDTH * j),
 					  .y(note_y_pos[j]),
-					  //.y(FIRST_LETTER + j*32),
 					  .hcount(hcount),
 					  .vcount(vcount),
 					  .color(note_color[j]),
@@ -695,28 +642,34 @@ module rh_display (
 	reg load_tempo = 0;
 	
 	// Temporary tempo is 1/2 vclock, .5s per eighth note
-	reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
+	//reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
+	reg [25:0] song_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
 	wire tempo_beat;
 	wire tempo_beat_move;
 	
 	counter c(.clk(vclock),
 				 .reset(load_tempo),
-				 .count_to(temp_tempo),
+				 .count_to(song_tempo),
 				 .ready(tempo_beat));
 	
 	// The width of one note is 64, break the tempo up by 64
 	// to know the interval we need to move the notes by 1px
 	counter c2(.clk(vclock),
 				 .reset(load_tempo),
-				 .count_to(temp_tempo/64),
+				 .count_to(song_tempo/64),
 				 .ready(tempo_beat_move));
+	
+	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 640;
+	reg [23:0] onscreen_notes[15:0];
+	integer n;
 	
 	always @(posedge vclock) begin
 		if (reset) begin
-			lead_note_x <= ACTION_LINE_X;
-			load_tempo = 1;
+			song_tempo <= tempo;
+			lead_note_x <= 1023; // TODO: Revert back to 1023
+			load_tempo <= 1;
 		end else begin
-			load_tempo = 0;
+			load_tempo <= 0;
 		end
 		
 		// Debug single note
@@ -732,44 +685,93 @@ module rh_display (
 			lead_note_x <= lead_note_x - 1;
 		end else if (tempo_beat) begin
 			lead_note_x <= ACTION_LINE_X;
+			
+			for (k=0; k<16; k=k+1) begin
+				case(notes[k])
+					4'd0: note_y_pos[k] <= FIRST_LETTER + 768;
+					// C, C#
+					4'd1:  note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
+					4'd2:  note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
+					// D, D#
+					4'd3:  note_y_pos[k] <= FIRST_LETTER + 5*NOTE_STEP;
+					4'd4:  note_y_pos[k] <= FIRST_LETTER + 5*NOTE_STEP;
+					// E
+					4'd5:  note_y_pos[k] <= FIRST_LETTER + 4*NOTE_STEP;
+					// F, F#
+					4'd6:  note_y_pos[k] <= FIRST_LETTER + 3*NOTE_STEP;
+					4'd7:  note_y_pos[k] <= FIRST_LETTER + 3*NOTE_STEP;
+					// G, G#
+					4'd8:  note_y_pos[k] <= FIRST_LETTER + 2*NOTE_STEP;
+					4'd9:  note_y_pos[k] <= FIRST_LETTER + 2*NOTE_STEP;
+					// A, A#
+					4'd10: note_y_pos[k] <= FIRST_LETTER + 1*NOTE_STEP;
+					4'd11: note_y_pos[k] <= FIRST_LETTER + 1*NOTE_STEP;
+					// B
+					4'd12: note_y_pos[k] <= FIRST_LETTER + 0*NOTE_STEP;
+					// C high
+					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
+					default: note_y_pos[k] <= FIRST_LETTER;
+				endcase
+				
+				case(notes[k])
+					// Don't display rests
+					4'd0: note_color[k] <= 24'h00_00_00;
+					// C#
+					4'd2:  note_color[k] <= 24'h55_55_FF;
+					// D#
+					4'd4:  note_color[k] <= 24'h55_55_FF;
+					// F#
+					4'd7:  note_color[k] <= 24'h55_55_FF;
+					// G#
+					4'd9:  note_color[k] <= 24'h55_55_FF;
+					// A#
+					4'd11: note_color[k] <= 24'h55_55_FF;
+					// C high
+					4'd13: note_color[k] <= 24'h00_DD_00;
+					default: note_color[k] <= 24'hFF_FF_FF;
+				endcase
+			end
 		end
-	end
-	
-	// character display module: sample string in middle of screen
-	// char height = 24px
-   wire [55:0] cstring = "BAGFEDC";
-   wire [2:0] cdpixel[6:0];
-	
-	genvar i;
-	generate
-		for(i=0; i<7; i=i+1) begin:generate_characters
-		  char_string_display csd(.vclock(vclock), 
-										  .hcount(hcount), 
-										  .vcount(vcount),
-										  .pixel(cdpixel[i]),
-										  .cstring(cstring[8*(i+1)-1 : 8*i]),
-										  .cx(11'd24),
-										  .cy(FIRST_LETTER + 192 - 32*i));
-			defparam csd.NCHAR = 1;
+		
+		// Change color of to-be-played note based on whether
+		// the player is playing the right now
+		if (notes[0] == 4'd0) begin
+			note_color[0] <= 24'h00_00_00;
+		end else if ((playing_correct) && (notes[0] > 4'd0)) begin
+			note_color[0] <= 24'hFF_FF_00;
+		end else if ((!playing_correct) && (notes[0] > 4'd0)) begin
+			note_color[0] <= 24'hFF_45_00;
 		end
-	endgenerate
-	
-	wire action_line = hcount == ACTION_LINE_X & vcount >= 550;
-   
-	reg [23:0] onscreen_notes[15:0];
-	
-	integer n;
-	always @(posedge vclock) begin
+		
 		for (n=0; n<16; n=n+1) begin
 			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
 		end
 	end
 	
+	// character display module: sample string in middle of screen
+	// char height = 24px
+//   wire [55:0] cstring = "BAGFEDC";
+//   wire [2:0] cdpixel[6:0];
+	
+//	genvar i;
+//	generate
+//		for(i=0; i<7; i=i+1) begin:generate_characters
+//		  char_string_display csd(.vclock(vclock), 
+//										  .hcount(hcount), 
+//										  .vcount(vcount),
+//										  .pixel(cdpixel[i]),
+//										  .cstring(cstring[8*(i+1)-1 : 8*i]),
+//										  .cx(11'd24),
+//										  .cy(FIRST_LETTER + 192 - 32*i));
+//			defparam csd.NCHAR = 1;
+//		end
+//	endgenerate
+
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
-					    .x(15),
+					    .x(4),
 						 .hcount(hcount),
-						 .y(15),
+						 .y(128),
 						 .vcount(vcount),
 						 .pixel(bmp_pixel));
 	
@@ -789,15 +791,8 @@ module rh_display (
 						| onscreen_notes[13]
 						| onscreen_notes[14]
 						| onscreen_notes[15]
-						| {8{cdpixel[6]}}
-						| {8{cdpixel[5]}} 
-						| {8{cdpixel[4]}}
-						| {8{cdpixel[3]}} 
-						| {8{cdpixel[2]}}
-						| {8{cdpixel[1]}} 
-						| {8{cdpixel[0]}}
 						| {24{action_line}}
 						| bmp_pixel;
 						
-	assign debug = {next_notes[63:60], 15};
+	assign debug = {song_tempo, {3'b000, tempo_beat_move}};
 endmodule

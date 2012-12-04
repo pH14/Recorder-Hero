@@ -836,7 +836,7 @@ proc restore { { project_dir "" } } {
   } "A problem occured while restoring project settings."
 
   set user_files { 
-      "../../../../../../Downloads/image_cursor.bit" 
+      "../../../../Downloads/image_cursor.bit" 
       "blob.v" 
       "counter.v" 
       "counter_tb.v" 
@@ -848,8 +848,14 @@ proc restore { { project_dir "" } } {
       "musical_score_loader.v" 
       "musical_score_loader_tb.v" 
       "note_letters.xco" 
+      "note_letters_bmp.xco" 
+      "notes_blue_map.xco" 
+      "notes_green_map.xco" 
+      "notes_red_map.xco" 
       "picture_blob.v" 
-      "rh_video_display.v"}
+      "rh_display.v" 
+      "rh_video_display.v" 
+      "song_scales.xco"}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files
@@ -873,7 +879,42 @@ proc restore { { project_dir "" } } {
       "note_letters.v" 
       "note_letters.veo" 
       "note_letters.vhd" 
-      "note_letters.vho"}
+      "note_letters.vho" 
+      "note_letters_bmp.asy" 
+      "note_letters_bmp.ngc" 
+      "note_letters_bmp.sym" 
+      "note_letters_bmp.v" 
+      "note_letters_bmp.veo" 
+      "note_letters_bmp.vhd" 
+      "note_letters_bmp.vho" 
+      "notes_blue_map.asy" 
+      "notes_blue_map.ngc" 
+      "notes_blue_map.sym" 
+      "notes_blue_map.v" 
+      "notes_blue_map.veo" 
+      "notes_blue_map.vhd" 
+      "notes_blue_map.vho" 
+      "notes_green_map.asy" 
+      "notes_green_map.ngc" 
+      "notes_green_map.sym" 
+      "notes_green_map.v" 
+      "notes_green_map.veo" 
+      "notes_green_map.vhd" 
+      "notes_green_map.vho" 
+      "notes_red_map.asy" 
+      "notes_red_map.ngc" 
+      "notes_red_map.sym" 
+      "notes_red_map.v" 
+      "notes_red_map.veo" 
+      "notes_red_map.vhd" 
+      "notes_red_map.vho" 
+      "song_scales.asy" 
+      "song_scales.ngc" 
+      "song_scales.sym" 
+      "song_scales.v" 
+      "song_scales.veo" 
+      "song_scales.vhd" 
+      "song_scales.vho"}
 
   set origination 2
 
@@ -887,7 +928,7 @@ proc restore { { project_dir "" } } {
       "A" "" "" "" "PROPEXT_xilxSynthAddBufg_virtex2" "16" 
       "A" "" "" "" "PROPEXT_xilxSynthMaxFanout_virtex2" "500" 
       "A" "" "" "" "PROP_AutoGenFile" "false" 
-      "A" "" "" "" "PROP_BehavioralSimTop" "Module|musical_score_loader_tb" 
+      "A" "" "" "" "PROP_BehavioralSimTop" "Module|counter_tb" 
       "A" "" "" "" "PROP_CPLDFitkeepio" "false" 
       "A" "" "" "" "PROP_CompxlibAbelLib" "true" 
       "A" "" "" "" "PROP_CompxlibCPLDDetLib" "true" 
