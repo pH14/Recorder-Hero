@@ -468,7 +468,9 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
 		.playing_correct(right_note),
-		.next_notes(nn), 
+		.next_notes(nn),
+		.score_string("00006111"),
+		.current_note_string("C"),
 		.tempo(tempo),
 		.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),
@@ -583,6 +585,8 @@ module rh_display (
 	input down,
 	
 	input playing_correct,
+	input [7:0] current_note_string,
+	input [63:0] score_string,
 	input [63:0] next_notes,
 	input [25:0] tempo,
 	
@@ -624,6 +628,7 @@ module rh_display (
 	reg [9:0] note_y_pos[15:0];
 	reg [23:0] note_color[15:0];
 	
+	wire [23:0] note_line_pixels[7:0];
 	integer k;
 	
 	genvar j;
@@ -638,6 +643,20 @@ module rh_display (
 					  .pixel(note_pixels[j]));
 		end
 	endgenerate
+	
+	genvar w;
+	generate
+		for(w=0; w<8; w=w+1) begin:generate_note_lines
+		  blob #(.WIDTH(1023-72), .HEIGHT(1))
+				note_line(.x(ACTION_LINE_X),
+							  .y(128 + w*73),
+							  .hcount(hcount),
+							  .vcount(vcount),
+							  .color(24'hAA_AA_AA),
+							  .pixel(note_line_pixels[w]));
+		end
+	endgenerate
+	
 
 	reg load_tempo = 0;
 	
@@ -659,7 +678,9 @@ module rh_display (
 				 .count_to(song_tempo/64),
 				 .ready(tempo_beat_move));
 	
-	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 640;
+	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 639;
+	wire right_boundary_line = hcount == 1023 & vcount >= 128 & vcount <= 639;
+	
 	reg [23:0] onscreen_notes[15:0];
 	integer n;
 	
@@ -747,25 +768,28 @@ module rh_display (
 			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
 		end
 	end
+
+	wire [2:0] score_pixel;
+	char_string_display csd_score(.vclock(vclock),
+								   .hcount(hcount),
+									.vcount(vcount),
+									.pixel(score_pixel),
+									.cstring({"SCORE: ", score_string}),
+									.cx(700),
+									.cy(10));
+	defparam csd_score.NCHAR = 15;
+	defparam csd_score.NCHAR_BITS = 4;
 	
-	// character display module: sample string in middle of screen
-	// char height = 24px
-//   wire [55:0] cstring = "BAGFEDC";
-//   wire [2:0] cdpixel[6:0];
-	
-//	genvar i;
-//	generate
-//		for(i=0; i<7; i=i+1) begin:generate_characters
-//		  char_string_display csd(.vclock(vclock), 
-//										  .hcount(hcount), 
-//										  .vcount(vcount),
-//										  .pixel(cdpixel[i]),
-//										  .cstring(cstring[8*(i+1)-1 : 8*i]),
-//										  .cx(11'd24),
-//										  .cy(FIRST_LETTER + 192 - 32*i));
-//			defparam csd.NCHAR = 1;
-//		end
-//	endgenerate
+	wire [2:0] current_note_pixel;
+	char_string_display csd_note(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(current_note_pixel),
+											.cstring({"NOTE: ", current_note_string}),
+											.cx(700),
+											.cy(30));
+	defparam csd_note.NCHAR = 7;
+	defparam csd_note.NCHAR_BITS = 3;
 
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
@@ -791,7 +815,18 @@ module rh_display (
 						| onscreen_notes[13]
 						| onscreen_notes[14]
 						| onscreen_notes[15]
+						| note_line_pixels[0]
+						| note_line_pixels[1]
+						| note_line_pixels[2]
+						| note_line_pixels[3]
+						| note_line_pixels[4]
+						| note_line_pixels[5]
+						| note_line_pixels[6]
+						| note_line_pixels[7]
 						| {24{action_line}}
+						| {24{right_boundary_line}}
+						| {8{score_pixel}}
+						| {8{current_note_pixel}}
 						| bmp_pixel;
 						
 	assign debug = {song_tempo, {3'b000, tempo_beat_move}};

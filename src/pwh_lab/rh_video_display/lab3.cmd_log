@@ -655,3 +655,48 @@ map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_v
 par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
 trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
 bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "lab3.ngc" lab3.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -p xc2v6000-bf957-4 -cm area -pr off -k 4 -c 100 -tx off -o lab3_map.ncd lab3.ngd lab3.pcf
+par -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -w -intstyle ise -ol std -t 1 lab3_map.ncd lab3.ncd lab3.pcf
+trce -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -v 3 -s 4 -xml lab3 lab3.ncd -o lab3.twr lab3.pcf -ucf labkit.ucf
+bitgen -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -f lab3.ut lab3.ncd
