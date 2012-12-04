@@ -666,7 +666,7 @@ module rh_display (
 	always @(posedge vclock) begin
 		if (reset) begin
 			song_tempo <= tempo;
-			lead_note_x <= 512; // TODO: Revert back to 1023
+			lead_note_x <= 1023; // TODO: Revert back to 1023
 			load_tempo <= 1;
 		end else begin
 			load_tempo <= 0;

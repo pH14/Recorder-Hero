@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 38 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 37 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 39 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 38 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
 </msg>
 
 <msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;musical_score_loader.v&quot; line 45 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
@@ -1848,9 +1848,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_6_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_6_20&gt; &lt;rh_disp/onscreen_notes_6_18&gt; &lt;rh_disp/onscreen_notes_6_16&gt; &lt;rh_disp/onscreen_notes_6_7&gt; &lt;rh_disp/onscreen_notes_6_6&gt; &lt;rh_disp/onscreen_notes_6_5&gt; &lt;rh_disp/onscreen_notes_6_4&gt; &lt;rh_disp/onscreen_notes_6_3&gt; &lt;rh_disp/onscreen_notes_6_2&gt; &lt;rh_disp/onscreen_notes_6_1&gt; &lt;rh_disp/onscreen_notes_6_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">msl/c/goal_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;msl/c/goal_8&gt; &lt;msl/c/goal_11&gt; &lt;msl/c/goal_19&gt; &lt;msl/c/goal_24&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_10_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_10_12&gt; &lt;rh_disp/onscreen_notes_10_10&gt; &lt;rh_disp/onscreen_notes_10_8&gt; </arg>
 </msg>
 
@@ -1866,10 +1863,10 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_14_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_14_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_8_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_8_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/song_tempo_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">9 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/song_tempo_19&gt; &lt;rh_disp/song_tempo_11&gt; &lt;rh_disp/song_tempo_8&gt; &lt;rh_disp/song_tempo_5&gt; &lt;msl/c/goal_5&gt; &lt;msl/c/goal_8&gt; &lt;msl/c/goal_11&gt; &lt;msl/c/goal_19&gt; &lt;msl/c/goal_24&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/song_tempo_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/song_tempo_12&gt; &lt;rh_disp/song_tempo_10&gt; &lt;rh_disp/song_tempo_7&gt; &lt;rh_disp/song_tempo_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_8_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_8_11&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_15_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_15_21&gt; &lt;rh_disp/onscreen_notes_15_19&gt; &lt;rh_disp/onscreen_notes_15_17&gt; &lt;rh_disp/onscreen_notes_15_13&gt; &lt;rh_disp/onscreen_notes_15_9&gt; </arg>
@@ -1905,10 +1902,7 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_12&gt; &lt;rh_disp/onscreen_notes_0_10&gt; &lt;rh_disp/onscreen_notes_0_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">msl/c/goal_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;msl/c/goal_7&gt; &lt;msl/c/goal_10&gt; &lt;msl/c/goal_12&gt; &lt;msl/c/goal_20&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/song_tempo_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/song_tempo_19&gt; &lt;rh_disp/song_tempo_11&gt; &lt;rh_disp/song_tempo_8&gt; &lt;rh_disp/song_tempo_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/song_tempo_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">9 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/song_tempo_12&gt; &lt;rh_disp/song_tempo_10&gt; &lt;rh_disp/song_tempo_7&gt; &lt;rh_disp/song_tempo_4&gt; &lt;msl/c/goal_4&gt; &lt;msl/c/goal_7&gt; &lt;msl/c/goal_10&gt; &lt;msl/c/goal_12&gt; &lt;msl/c/goal_20&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_11_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_11_12&gt; &lt;rh_disp/onscreen_notes_11_10&gt; &lt;rh_disp/onscreen_notes_11_8&gt; </arg>
@@ -1968,6 +1962,12 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_18&gt; &lt;rgb_20&gt; &lt;rgb_22&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/c/goal_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/c/goal_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/c/goal_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/c/goal_8&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_19&gt; &lt;rgb_21&gt; &lt;rgb_23&gt; </arg>
 </msg>
 
@@ -1978,12 +1978,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_1&gt; &lt;rgb_2&gt; &lt;rgb_3&gt; &lt;rgb_4&gt; &lt;rgb_5&gt; &lt;rgb_6&gt; &lt;rgb_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/c/goal_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/c/goal_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/c/goal_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/c/goal_8&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lab3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_10&gt; &lt;rgb_12&gt; &lt;rgb_14&gt; </arg>

@@ -5,14 +5,14 @@ Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_vide
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: lab3.prj
@@ -346,9 +346,9 @@ Unit <blob> synthesized.
 
 Synthesizing Unit <musical_score_loader>.
     Related source file is "musical_score_loader.v".
-    Found 1-bit register for signal <load_tempo>.
     Found 64-bit register for signal <next_notes>.
     Found 7-bit up counter for signal <read_addr>.
+    Found 1-bit register for signal <song_has_ended>.
     Summary:
 	inferred   1 Counter(s).
 	inferred  65 D-type flip-flop(s).
@@ -1159,14 +1159,13 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_20> in Unit <lab3> is equivalent to
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_19> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_13> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_24> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c2/goal_18> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_6_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_6_20> <rh_disp/onscreen_notes_6_18> <rh_disp/onscreen_notes_6_16> <rh_disp/onscreen_notes_6_7> <rh_disp/onscreen_notes_6_6> <rh_disp/onscreen_notes_6_5> <rh_disp/onscreen_notes_6_4> <rh_disp/onscreen_notes_6_3> <rh_disp/onscreen_notes_6_2> <rh_disp/onscreen_notes_6_1> <rh_disp/onscreen_notes_6_0> 
-INFO:Xst:2261 - The FF/Latch <msl/c/goal_5> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <msl/c/goal_8> <msl/c/goal_11> <msl/c/goal_19> <msl/c/goal_24> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_10_12> <rh_disp/onscreen_notes_10_10> <rh_disp/onscreen_notes_10_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_10_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_10_21> <rh_disp/onscreen_notes_10_19> <rh_disp/onscreen_notes_10_17> <rh_disp/onscreen_notes_10_13> <rh_disp/onscreen_notes_10_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_4_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_4_12> <rh_disp/onscreen_notes_4_10> <rh_disp/onscreen_notes_4_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_5_22> in Unit <lab3> is equivalent to the following 11 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_5_20> <rh_disp/onscreen_notes_5_18> <rh_disp/onscreen_notes_5_16> <rh_disp/onscreen_notes_5_7> <rh_disp/onscreen_notes_5_6> <rh_disp/onscreen_notes_5_5> <rh_disp/onscreen_notes_5_4> <rh_disp/onscreen_notes_5_3> <rh_disp/onscreen_notes_5_2> <rh_disp/onscreen_notes_5_1> <rh_disp/onscreen_notes_5_0> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_14_11> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_24> in Unit <lab3> is equivalent to the following 9 FFs/Latches, which will be removed : <rh_disp/song_tempo_19> <rh_disp/song_tempo_11> <rh_disp/song_tempo_8> <rh_disp/song_tempo_5> <msl/c/goal_5> <msl/c/goal_8> <msl/c/goal_11> <msl/c/goal_19> <msl/c/goal_24> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_8_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_8_11> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_20> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <rh_disp/song_tempo_12> <rh_disp/song_tempo_10> <rh_disp/song_tempo_7> <rh_disp/song_tempo_4> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_15_21> <rh_disp/onscreen_notes_15_19> <rh_disp/onscreen_notes_15_17> <rh_disp/onscreen_notes_15_13> <rh_disp/onscreen_notes_15_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_9_23> in Unit <lab3> is equivalent to the following 5 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_9_21> <rh_disp/onscreen_notes_9_19> <rh_disp/onscreen_notes_9_17> <rh_disp/onscreen_notes_9_13> <rh_disp/onscreen_notes_9_9> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_11> 
@@ -1178,8 +1177,7 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_6_23> in Unit <lab3> is equ
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_14_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_14_12> <rh_disp/onscreen_notes_14_10> <rh_disp/onscreen_notes_14_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_8_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_8_12> <rh_disp/onscreen_notes_8_10> <rh_disp/onscreen_notes_8_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_12> <rh_disp/onscreen_notes_0_10> <rh_disp/onscreen_notes_0_8> 
-INFO:Xst:2261 - The FF/Latch <msl/c/goal_4> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <msl/c/goal_7> <msl/c/goal_10> <msl/c/goal_12> <msl/c/goal_20> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_24> in Unit <lab3> is equivalent to the following 4 FFs/Latches, which will be removed : <rh_disp/song_tempo_19> <rh_disp/song_tempo_11> <rh_disp/song_tempo_8> <rh_disp/song_tempo_5> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_20> in Unit <lab3> is equivalent to the following 9 FFs/Latches, which will be removed : <rh_disp/song_tempo_12> <rh_disp/song_tempo_10> <rh_disp/song_tempo_7> <rh_disp/song_tempo_4> <msl/c/goal_4> <msl/c/goal_7> <msl/c/goal_10> <msl/c/goal_12> <msl/c/goal_20> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_11_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_11_12> <rh_disp/onscreen_notes_11_10> <rh_disp/onscreen_notes_11_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_5_14> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_5_12> <rh_disp/onscreen_notes_5_10> <rh_disp/onscreen_notes_5_8> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_15> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_15_11> 
@@ -1199,12 +1197,12 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_15_14> in Unit <lab3> is eq
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_7> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/c/goal_10> <rh_disp/c/goal_12> <rh_disp/c/goal_20> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_8> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/c/goal_11> <rh_disp/c/goal_19> <rh_disp/c/goal_24> 
 INFO:Xst:2261 - The FF/Latch <rgb_16> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_18> <rgb_20> <rgb_22> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_4> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_7> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_5> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_8> 
 INFO:Xst:2261 - The FF/Latch <rgb_17> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_19> <rgb_21> <rgb_23> 
 INFO:Xst:2261 - The FF/Latch <rgb_9> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_13> 
 INFO:Xst:2261 - The FF/Latch <rgb_11> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_15> 
 INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <lab3> is equivalent to the following 7 FFs/Latches, which will be removed : <rgb_1> <rgb_2> <rgb_3> <rgb_4> <rgb_5> <rgb_6> <rgb_7> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_4> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_7> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_5> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_8> 
 INFO:Xst:2261 - The FF/Latch <rgb_8> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_10> <rgb_12> <rgb_14> 
 Found area constraint ratio of 100 (+ 5) on block lab3, actual ratio is 3.
 FlipFlop xvga1/vcount_7 has been replicated 4 time(s)
@@ -1224,8 +1222,8 @@ Unit <lab3> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 581
- Flip-Flops                                            : 581
+# Registers                                            : 579
+ Flip-Flops                                            : 579
 # Shift Registers                                      : 4
  7-bit shift register                                  : 4
 
@@ -1256,32 +1254,32 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 3077
+# BELS                             : 3082
 #      GND                         : 4
 #      INV                         : 59
 #      LUT1                        : 179
-#      LUT2                        : 642
+#      LUT2                        : 641
 #      LUT2_D                      : 17
-#      LUT3                        : 233
-#      LUT3_D                      : 2
+#      LUT3                        : 234
+#      LUT3_D                      : 1
 #      LUT3_L                      : 1
-#      LUT4                        : 629
-#      LUT4_D                      : 36
+#      LUT4                        : 632
+#      LUT4_D                      : 37
 #      MUXCY                       : 958
-#      MUXF5                       : 92
+#      MUXF5                       : 94
 #      MUXF6                       : 12
 #      MUXF7                       : 5
 #      VCC                         : 4
 #      XORCY                       : 204
-# FlipFlops/Latches                : 599
+# FlipFlops/Latches                : 597
 #      FD                          : 5
-#      FDE                         : 216
+#      FDE                         : 214
 #      FDR                         : 170
-#      FDRE                        : 153
+#      FDRE                        : 170
 #      FDRS                        : 15
 #      FDRSE                       : 4
 #      FDS                         : 7
-#      FDSE                        : 29
+#      FDSE                        : 12
 # RAMS                             : 20
 #      RAMB16_S1_S1                : 16
 #      RAMB16_S36_S36              : 2
@@ -1306,10 +1304,10 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                      980  out of  33792     2%  
- Number of Slice Flip Flops:            599  out of  67584     0%  
- Number of 4 input LUTs:               1803  out of  67584     2%  
-    Number used as logic:              1798
+ Number of Slices:                      984  out of  33792     2%  
+ Number of Slice Flip Flops:            597  out of  67584     0%  
+ Number of 4 input LUTs:               1806  out of  67584     2%  
+    Number used as logic:              1801
     Number used as Shift registers:       5
  Number of IOs:                         576
  Number of bonded IOBs:                 247  out of    684    36%  
@@ -1339,7 +1337,7 @@ Clock Information:
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                  | Load  |
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX                                                                                            | 581   |
+clock_27mhz                        | vclk1:CLKFX                                                                                            | 579   |
 hex_display/clock1                 | BUFG                                                                                                   | 43    |
 rh_disp/pb/rom1/BU2/dbiterr        | NONE(rh_disp/pb/rom1/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram)| 18    |
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
@@ -1354,8 +1352,8 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 33.570ns (Maximum Frequency: 29.788MHz)
-   Minimum input arrival time before clock: 13.269ns
-   Maximum output required time after clock: 9.565ns
+   Minimum input arrival time before clock: 13.311ns
+   Maximum output required time after clock: 9.588ns
    Maximum combinational path delay: 7.051ns
 
 Timing Detail:
@@ -1365,7 +1363,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
   Clock period: 33.570ns (frequency: 29.788MHz)
-  Total number of paths / destination ports: 93331 / 1573
+  Total number of paths / destination ports: 93399 / 1571
 -------------------------------------------------------------------------
 Delay:               13.988ns (Levels of Logic = 7)
   Source:            xvga1/vcount_9_1 (FF)
@@ -1393,10 +1391,10 @@ Delay:               13.988ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hex_display/clock1'
-  Clock period: 13.199ns (frequency: 75.760MHz)
-  Total number of paths / destination ports: 4598 / 74
+  Clock period: 13.210ns (frequency: 75.701MHz)
+  Total number of paths / destination ports: 4834 / 74
 -------------------------------------------------------------------------
-Delay:               13.199ns (Levels of Logic = 15)
+Delay:               13.210ns (Levels of Logic = 15)
   Source:            hex_display/char_index_0 (FF)
   Destination:       hex_display/disp_data_out (FF)
   Source Clock:      hex_display/clock1 rising
@@ -1406,9 +1404,9 @@ Delay:               13.199ns (Levels of Logic = 15)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             32   0.568   1.373  hex_display/char_index_0 (hex_display/char_index_0)
-     LUT3:I0->O            1   0.439   0.000  hex_display/Mmux_nibble_63 (hex_display/Mmux_nibble_63)
-     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux_nibble_4_f5_0 (hex_display/Mmux_nibble_4_f51)
+     FDE:C->Q             36   0.568   1.383  hex_display/char_index_0 (hex_display/char_index_0)
+     LUT3:I0->O            1   0.439   0.000  hex_display/Mmux_nibble_51 (hex_display/Mmux_nibble_51)
+     MUXF5:I1->O           1   0.436   0.000  hex_display/Mmux_nibble_4_f5_0 (hex_display/Mmux_nibble_4_f51)
      MUXF6:I1->O           1   0.447   0.000  hex_display/Mmux_nibble_3_f6_0 (hex_display/Mmux_nibble_3_f61)
      MUXF7:I1->O          29   0.447   1.365  hex_display/Mmux_nibble_2_f7_0 (hex_display/nibble<1>)
      LUT4:I0->O            2   0.439   0.735  hex_display/Mrom_dots1311 (hex_display/Mrom_dots12)
@@ -1418,18 +1416,18 @@ Delay:               13.199ns (Levels of Logic = 15)
      MUXF7:I0->O           1   0.447   0.726  hex_display/Mmux__varindex0000_8_f7 (hex_display/Mmux__varindex0000_8_f7)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux0000782 (hex_display/disp_data_out_mux0000782)
      MUXF5:I0->O           1   0.436   0.552  hex_display/disp_data_out_mux000078_f5 (hex_display/disp_data_out_mux000078)
-     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N206)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N204)
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001692 (hex_display/disp_data_out_mux00001691)
      MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000169_f5 (hex_display/disp_data_out_mux0000)
      FDE:D                     0.370          hex_display/disp_data_out
     ----------------------------------------
-    Total                     13.199ns (7.540ns logic, 5.659ns route)
+    Total                     13.210ns (7.540ns logic, 5.670ns route)
                                        (57.1% logic, 42.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 128 / 92
+  Total number of paths / destination ports: 126 / 90
 -------------------------------------------------------------------------
 Offset:              5.347ns (Levels of Logic = 4)
   Source:            switch<0> (PAD)
@@ -1453,7 +1451,7 @@ Offset:              5.347ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'hex_display/clock1'
   Total number of paths / destination ports: 410 / 1
 -------------------------------------------------------------------------
-Offset:              13.269ns (Levels of Logic = 16)
+Offset:              13.311ns (Levels of Logic = 16)
   Source:            switch<7> (PAD)
   Destination:       hex_display/disp_data_out (FF)
   Destination Clock: hex_display/clock1 rising
@@ -1462,32 +1460,32 @@ Offset:              13.269ns (Levels of Logic = 16)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   0.825   1.186  switch_7_IBUF (switch_7_IBUF)
-     LUT2:I1->O            1   0.439   0.000  hex_display/Mmux_nibble_75 (hex_display/Mmux_nibble_75)
-     MUXF5:I1->O           1   0.436   0.000  hex_display/Mmux_nibble_6_f5_0 (hex_display/Mmux_nibble_6_f51)
-     MUXF6:I0->O           1   0.447   0.000  hex_display/Mmux_nibble_4_f6_0 (hex_display/Mmux_nibble_4_f61)
-     MUXF7:I0->O          29   0.447   1.365  hex_display/Mmux_nibble_2_f7_0 (hex_display/nibble<1>)
-     LUT4:I0->O            2   0.439   0.735  hex_display/Mrom_dots1311 (hex_display/Mrom_dots12)
-     LUT3:I2->O            1   0.439   0.000  hex_display/Mmux__varindex0000_131 (hex_display/Mmux__varindex0000_131)
+     IBUF:I->O            13   0.825   1.240  switch_7_IBUF (switch_7_IBUF)
+     LUT2:I0->O            1   0.439   0.000  hex_display/Mmux_nibble_71 (hex_display/Mmux_nibble_71)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux_nibble_5_f5_0 (hex_display/Mmux_nibble_5_f51)
+     MUXF6:I1->O           1   0.447   0.000  hex_display/Mmux_nibble_4_f6 (hex_display/Mmux_nibble_4_f6)
+     MUXF7:I0->O          28   0.447   1.362  hex_display/Mmux_nibble_2_f7 (hex_display/nibble<0>)
+     LUT4:I0->O            1   0.439   0.726  hex_display/Mrom_dots111 (hex_display/Mrom_dots1)
+     LUT3:I1->O            1   0.439   0.000  hex_display/Mmux__varindex0000_131 (hex_display/Mmux__varindex0000_131)
      MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux__varindex0000_11_f5_0 (hex_display/Mmux__varindex0000_11_f51)
      MUXF6:I1->O           1   0.447   0.000  hex_display/Mmux__varindex0000_10_f6 (hex_display/Mmux__varindex0000_10_f6)
      MUXF7:I0->O           1   0.447   0.726  hex_display/Mmux__varindex0000_8_f7 (hex_display/Mmux__varindex0000_8_f7)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux0000782 (hex_display/disp_data_out_mux0000782)
      MUXF5:I0->O           1   0.436   0.552  hex_display/disp_data_out_mux000078_f5 (hex_display/disp_data_out_mux000078)
-     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N206)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N204)
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001692 (hex_display/disp_data_out_mux00001691)
      MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000169_f5 (hex_display/disp_data_out_mux0000)
      FDE:D                     0.370          hex_display/disp_data_out
     ----------------------------------------
-    Total                     13.269ns (7.797ns logic, 5.472ns route)
-                                       (58.8% logic, 41.2% route)
+    Total                     13.311ns (7.797ns logic, 5.514ns route)
+                                       (58.6% logic, 41.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
   Total number of paths / destination ports: 32 / 31
 -------------------------------------------------------------------------
-Offset:              9.565ns (Levels of Logic = 2)
+Offset:              9.588ns (Levels of Logic = 2)
   Source:            reset_sr (FF)
   Destination:       led<2> (PAD)
   Source Clock:      clock_27mhz rising 2.4X
@@ -1496,12 +1494,12 @@ Offset:              9.565ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRL16:CLK->Q         13   2.901   1.162  reset_sr (power_on_reset)
+     SRL16:CLK->Q         14   2.901   1.186  reset_sr (power_on_reset)
      LUT2:I1->O            2   0.439   0.701  led<2>1 (led_2_OBUF)
      OBUF:I->O                 4.361          led_2_OBUF (led<2>)
     ----------------------------------------
-    Total                      9.565ns (7.701ns logic, 1.864ns route)
-                                       (80.5% logic, 19.5% route)
+    Total                      9.588ns (7.701ns logic, 1.887ns route)
+                                       (80.3% logic, 19.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'hex_display/clock1'
@@ -1545,14 +1543,14 @@ Delay:               7.051ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 26.34 secs
+Total CPU time to Xst completion: 26.35 secs
  
 --> 
 
 
-Total memory usage is 504272 kilobytes
+Total memory usage is 503624 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  457 (   0 filtered)
-Number of infos    :  205 (   0 filtered)
+Number of infos    :  203 (   0 filtered)
 

@@ -27,7 +27,6 @@ module musical_score_loader(
 	 output [63:0] debug_out
     );
 	
-	reg load_tempo;
 	reg [6:0] read_addr;
 	reg [3:0] next_notes[15:0];
 	wire [3:0] next_note_lotr;
@@ -39,44 +38,45 @@ module musical_score_loader(
 	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
 	
 	wire tempo_beat;
+	reg song_has_ended = 1;
 	
 	counter c(.clk(clk),
-				 .reset(load_tempo),
+				 .reset(reset),
 				 .count_to(tempo),
 				 .ready(tempo_beat));
 	
-	assign tempo = (song_id == 0) ? 26'b0_1111_0111_1111_0100_1001_0000_0 : 26'b00_1111_0111_1111_0100_1001_0000;
-	
-//	always @(*) begin
-//		case(song_id)
-//			1'b0: tempo_reg = 26'b0_1111_0111_1111_0100_1001_0000_0;
-//			1'b1: tempo_reg = 26'b00_1111_0111_1111_0100_1001_0000;
-//			default: tempo_reg = 26'b0_1111_0111_1111_0100_1001_0000_0;
-//		endcase
-//	end
+	assign tempo = (song_id == 0) ? 26'b00_1111_0111_1111_0100_1001_0000
+											  : 26'b0_1111_0111_1111_0100_1001_0000_0;
 	
 	integer i;
 	always @(posedge clk) begin
 		if (reset) begin
 			read_addr <= 7'b0;
+			song_has_ended <= 0;
 			
+			// When a song reloads fill it rests initially
 			for (i=0; i < 16; i=i+1) begin
-				next_notes[i] <= 4'b0001;
+				next_notes[i] <= 4'b0000;
 			end
 			
-			load_tempo <= 1;
 		end else if (tempo_beat) begin
-			load_tempo <= 0;
-			
 			for (i=0; i < 15; i=i+1) begin
 				next_notes[i] <= next_notes[i+1];
 			end
 			
-			case(song_id)
-				1'b0: next_notes[15] <= next_note_lotr;
-				1'b1: next_notes[15] <= next_note_ss;
-				default: next_notes[15] <= 4'b0000;
-			endcase
+			if (song_has_ended) begin
+				next_notes[15] <= 4'b0000;
+			end else begin
+				case(song_id)
+					1'b0: next_notes[15] <= next_note_lotr;
+					1'b1: next_notes[15] <= next_note_ss;
+					default: next_notes[15] <= 4'b0000;
+				endcase
+			end
+			
+			if (next_notes[15] == 4'b1111) begin
+				song_has_ended <= 1;
+			end
 			
 			read_addr <= read_addr + 1;
 		end
@@ -90,5 +90,10 @@ module musical_score_loader(
 									  next_notes[0]};
 									  
 	assign tempo_out = tempo;
-	assign debug_out = {next_notes[12], next_notes[13], next_notes[14], next_notes[15], 1'b0, read_addr, 2'b00, tempo, 4'b1111};
+	assign debug_out = {next_notes[0], next_notes[11],
+								next_notes[12], next_notes[13], 
+								next_notes[14], next_notes[15], 
+								1'b0, read_addr, 
+								2'b00, tempo, 
+								4'b1111};
 endmodule
