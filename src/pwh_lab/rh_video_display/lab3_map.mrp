@@ -11,31 +11,31 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Mon Dec  3 20:18:31 2012
+Mapped Date    : Mon Dec  3 23:02:51 2012
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  392
 Logic Utilization:
-  Number of Slice Flip Flops:           597 out of  67,584    1%
-  Number of 4 input LUTs:             1,625 out of  67,584    2%
+  Number of Slice Flip Flops:           601 out of  67,584    1%
+  Number of 4 input LUTs:             1,840 out of  67,584    2%
 Logic Distribution:
-  Number of occupied Slices:          1,001 out of  33,792    2%
-    Number of Slices containing only related logic:   1,001 out of   1,001 100%
-    Number of Slices containing unrelated logic:          0 out of   1,001   0%
+  Number of occupied Slices:          1,125 out of  33,792    3%
+    Number of Slices containing only related logic:   1,125 out of   1,125 100%
+    Number of Slices containing unrelated logic:          0 out of   1,125   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,804 out of  67,584    2%
-    Number used as logic:             1,620
-    Number used as a route-thru:        179
+  Total Number of 4 input LUTs:       2,042 out of  67,584    3%
+    Number used as logic:             1,835
+    Number used as a route-thru:        202
     Number used as Shift registers:       5
   Number of bonded IOBs:                576 out of     684   84%
-  Number of RAMB16s:                     20 out of     144   13%
-  Number of MULT18X18s:                   1 out of     144    1%
+  Number of RAMB16s:                     22 out of     144   15%
+  Number of MULT18X18s:                   3 out of     144    2%
   Number of BUFGMUXs:                     2 out of      16   12%
   Number of DCMs:                         1 out of      12    8%
 
-Peak Memory Usage:  506 MB
+Peak Memory Usage:  510 MB
 Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   5 secs 
 
@@ -943,7 +943,7 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 Section 4 - Removed Logic Summary
 ---------------------------------
    6 block(s) removed
-   9 block(s) optimized away
+  13 block(s) optimized away
    1 signal(s) removed
 
 Section 5 - Removed Logic
@@ -975,6 +975,10 @@ GND 		msl/lotr/BU2/XST_GND
 VCC 		msl/lotr/BU2/XST_VCC
 GND 		msl/ss/BU2/XST_GND
 VCC 		msl/ss/BU2/XST_VCC
+GND 		rh_disp/csd_note/f/GND
+VCC 		rh_disp/csd_note/f/VCC
+GND 		rh_disp/csd_score/f/GND
+VCC 		rh_disp/csd_score/f/VCC
 GND 		rh_disp/pb/rom1/BU2/XST_GND
 VCC 		rh_disp/pb/rom1/BU2/XST_VCC
 

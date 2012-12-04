@@ -64,7 +64,7 @@ module musical_score_loader(
 				next_notes[i] <= next_notes[i+1];
 			end
 			
-			if (song_has_ended) begin
+			if (song_has_ended == 1) begin
 				next_notes[15] <= 4'b0000;
 			end else begin
 				case(song_id)
@@ -72,13 +72,11 @@ module musical_score_loader(
 					1'b1: next_notes[15] <= next_note_ss;
 					default: next_notes[15] <= 4'b0000;
 				endcase
+				
+				read_addr <= read_addr + 1;
 			end
 			
-			if (next_notes[15] == 4'b1111) begin
-				song_has_ended <= 1;
-			end
-			
-			read_addr <= read_addr + 1;
+			if (next_notes[15] == 4'b1111) song_has_ended <= 1;
 		end
 	end
 	
