@@ -4,15 +4,15 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: lab3.prj
@@ -232,6 +232,22 @@ Analyzing module <rh_display> in library <work>.
 	NOTE_WIDTH = 32'sb00000000000000000000000001000000
 	SCREEN_HEIGHT = 10'b1011111111
 	SCREEN_WIDTH = 11'b01111111111
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
+WARNING:Xst:883 - "rh_video_display.v" line 735: Ignored duplicate item in case statement. 
 Module <rh_display> is correct for synthesis.
  
 Analyzing module <char_string_display.1> in library <work>.
@@ -475,6 +491,8 @@ Unit <picture_blob> synthesized.
 
 Synthesizing Unit <rh_display>.
     Related source file is "rh_video_display.v".
+WARNING:Xst:646 - Signal <curr_note_y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <curr_note_alpha_blend_pixel> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 711.
     Found 16x10-bit ROM for signal <note_y_pos_1$mux0000> created at line 711.
     Found 16x10-bit ROM for signal <note_y_pos_2$mux0000> created at line 711.
@@ -493,22 +511,25 @@ Synthesizing Unit <rh_display>.
     Found 16x10-bit ROM for signal <note_y_pos_15$mux0000> created at line 711.
     Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 681.
     Found 10-bit comparator lessequal for signal <action_line$cmp_le0000> created at line 681.
+    Found 24-bit adder for signal <bmp_pixel_alpha$addsub0000> created at line 836.
+    Found 10-bit comparator greatequal for signal <bmp_pixel_alpha$cmp_ge0000> created at line 833.
+    Found 11-bit comparator lessequal for signal <bmp_pixel_alpha$cmp_le0000> created at line 833.
     Found 11-bit register for signal <lead_note_x>.
     Found 11-bit addsub for signal <lead_note_x$share0000>.
     Found 1-bit register for signal <load_tempo>.
     Found 384-bit register for signal <note_color>.
-    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 761.
+    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 763.
     Found 160-bit register for signal <note_y_pos>.
     Found 384-bit register for signal <onscreen_notes>.
-    Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 768.
+    Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 770.
     Found 26-bit register for signal <song_tempo>.
 INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <note_color>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <onscreen_notes>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred  16 ROM(s).
 	inferred 966 D-type flip-flop(s).
-	inferred  16 Adder/Subtractor(s).
-	inferred   4 Comparator(s).
+	inferred  17 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
 Unit <rh_display> synthesized.
 
 
@@ -850,7 +871,7 @@ Macro Statistics
 # Multipliers                                          : 3
  11x9-bit multiplier                                   : 1
  7x4-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 79
+# Adders/Subtractors                                   : 80
  10-bit adder carry out                                : 24
  10-bit addsub                                         : 1
  10-bit subtractor                                     : 2
@@ -860,6 +881,7 @@ Macro Statistics
  11-bit subtractor                                     : 5
  13-bit subtractor                                     : 1
  16-bit adder                                          : 1
+ 24-bit adder                                          : 1
  3-bit adder                                           : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 1
@@ -880,12 +902,13 @@ Macro Statistics
  27-bit register                                       : 3
  32-bit register                                       : 1
  4-bit register                                        : 17
-# Comparators                                          : 115
- 10-bit comparator greatequal                          : 28
+# Comparators                                          : 117
+ 10-bit comparator greatequal                          : 29
  10-bit comparator lessequal                           : 1
  11-bit comparator greatequal                          : 25
  11-bit comparator greater                             : 3
  11-bit comparator less                                : 27
+ 11-bit comparator lessequal                           : 1
  12-bit comparator less                                : 25
  12-bit comparator lessequal                           : 2
  27-bit comparator equal                               : 3
@@ -961,17 +984,17 @@ Synthesizing (advanced) Unit <rh_display>.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_0_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_1_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_2_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_4_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_3_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_5_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_4_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_6_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_5_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_7_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_8_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_9_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_11_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_10_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_12_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_11_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_13_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_12_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_14_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 INFO:Xst - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_y_pos_15_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 Unit <rh_display> synthesized (advanced).
@@ -1089,7 +1112,7 @@ Macro Statistics
 # Multipliers                                          : 3
  11x9-bit multiplier                                   : 1
  7x4-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 77
+# Adders/Subtractors                                   : 78
  10-bit adder carry out                                : 24
  10-bit addsub                                         : 1
  11-bit adder                                          : 17
@@ -1098,6 +1121,7 @@ Macro Statistics
  11-bit subtractor                                     : 1
  13-bit subtractor                                     : 1
  16-bit adder                                          : 1
+ 24-bit adder                                          : 1
  3-bit adder                                           : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 1
@@ -1114,12 +1138,13 @@ Macro Statistics
  8-bit down counter                                    : 1
 # Registers                                            : 888
  Flip-Flops                                            : 888
-# Comparators                                          : 115
- 10-bit comparator greatequal                          : 28
+# Comparators                                          : 117
+ 10-bit comparator greatequal                          : 29
  10-bit comparator lessequal                           : 1
  11-bit comparator greatequal                          : 25
  11-bit comparator greater                             : 3
  11-bit comparator less                                : 27
+ 11-bit comparator lessequal                           : 1
  12-bit comparator less                                : 25
  12-bit comparator lessequal                           : 2
  27-bit comparator equal                               : 3
@@ -1165,10 +1190,10 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_5_0> (wi
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_6_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_7_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_8_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_9_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_12_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_10_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_11_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_13_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_14_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_y_pos_15_0> (without init value) has a constant value of 0 in block <rh_display>. This FF/Latch will be trimmed during the optimization process.
@@ -1359,9 +1384,8 @@ INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_4> in Unit <lab3> is equivalent to 
 INFO:Xst:2261 - The FF/Latch <rgb_16> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_18> <rgb_20> <rgb_22> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/c/goal_5> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rh_disp/c/goal_8> 
 INFO:Xst:2261 - The FF/Latch <rgb_11> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_15> 
-INFO:Xst:2261 - The FF/Latch <rgb_1> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_3> <rgb_5> <rgb_7> 
-INFO:Xst:2261 - The FF/Latch <rgb_17> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_19> <rgb_21> <rgb_23> 
-INFO:Xst:2261 - The FF/Latch <rgb_9> in Unit <lab3> is equivalent to the following FF/Latch, which will be removed : <rgb_13> 
+INFO:Xst:2261 - The FF/Latch <rgb_1> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rgb_3> <rgb_5> 
+INFO:Xst:2261 - The FF/Latch <rgb_17> in Unit <lab3> is equivalent to the following 2 FFs/Latches, which will be removed : <rgb_19> <rgb_21> 
 INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_2> <rgb_4> <rgb_6> 
 INFO:Xst:2261 - The FF/Latch <rgb_8> in Unit <lab3> is equivalent to the following 3 FFs/Latches, which will be removed : <rgb_10> <rgb_12> <rgb_14> 
 Found area constraint ratio of 100 (+ 5) on block lab3, actual ratio is 3.
@@ -1382,8 +1406,8 @@ Unit <lab3> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 580
- Flip-Flops                                            : 580
+# Registers                                            : 583
+ Flip-Flops                                            : 583
 # Shift Registers                                      : 4
  7-bit shift register                                  : 4
 
@@ -1414,33 +1438,33 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 3392
+# BELS                             : 3431
 #      GND                         : 6
 #      INV                         : 77
 #      LUT1                        : 197
-#      LUT2                        : 670
+#      LUT2                        : 668
 #      LUT2_D                      : 16
-#      LUT2_L                      : 1
-#      LUT3                        : 254
-#      LUT3_D                      : 2
-#      LUT3_L                      : 1
-#      LUT4                        : 710
-#      LUT4_D                      : 40
-#      LUT4_L                      : 16
+#      LUT2_L                      : 2
+#      LUT3                        : 257
+#      LUT3_D                      : 5
+#      LUT3_L                      : 2
+#      LUT4                        : 737
+#      LUT4_D                      : 42
+#      LUT4_L                      : 17
 #      MUXCY                       : 1038
-#      MUXF5                       : 110
+#      MUXF5                       : 113
 #      MUXF6                       : 17
 #      MUXF7                       : 5
 #      VCC                         : 6
 #      XORCY                       : 226
-# FlipFlops/Latches                : 598
+# FlipFlops/Latches                : 601
 #      FD                          : 5
 #      FDE                         : 214
 #      FDR                         : 170
 #      FDRE                        : 170
 #      FDRS                        : 15
 #      FDRSE                       : 4
-#      FDS                         : 8
+#      FDS                         : 11
 #      FDSE                        : 12
 # RAMS                             : 22
 #      RAMB16_S1_S1                : 16
@@ -1467,10 +1491,10 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                     1080  out of  33792     3%  
- Number of Slice Flip Flops:            598  out of  67584     0%  
- Number of 4 input LUTs:               1989  out of  67584     2%  
-    Number used as logic:              1984
+ Number of Slices:                     1101  out of  33792     3%  
+ Number of Slice Flip Flops:            601  out of  67584     0%  
+ Number of 4 input LUTs:               2025  out of  67584     2%  
+    Number used as logic:              2020
     Number used as Shift registers:       5
  Number of IOs:                         576
  Number of bonded IOBs:                 247  out of    684    36%  
@@ -1500,7 +1524,7 @@ Clock Information:
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                  | Load  |
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX                                                                                            | 580   |
+clock_27mhz                        | vclk1:CLKFX                                                                                            | 583   |
 hex_display/clock1                 | BUFG                                                                                                   | 43    |
 rh_disp/pb/rom1/BU2/dbiterr        | NONE(rh_disp/pb/rom1/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram)| 18    |
 -----------------------------------+--------------------------------------------------------------------------------------------------------+-------+
@@ -1517,7 +1541,7 @@ Speed Grade: -4
    Minimum period: 33.570ns (Maximum Frequency: 29.788MHz)
    Minimum input arrival time before clock: 13.311ns
    Maximum output required time after clock: 9.588ns
-   Maximum combinational path delay: 7.074ns
+   Maximum combinational path delay: 7.132ns
 
 Timing Detail:
 --------------
@@ -1526,7 +1550,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
   Clock period: 33.570ns (frequency: 29.788MHz)
-  Total number of paths / destination ports: 95341 / 1573
+  Total number of paths / destination ports: 96734 / 1579
 -------------------------------------------------------------------------
 Delay:               13.988ns (Levels of Logic = 7)
   Source:            xvga1/vcount_9_1 (FF)
@@ -1590,9 +1614,9 @@ Delay:               13.210ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 134 / 92
+  Total number of paths / destination ports: 158 / 98
 -------------------------------------------------------------------------
-Offset:              5.370ns (Levels of Logic = 4)
+Offset:              5.450ns (Levels of Logic = 4)
   Source:            switch<1> (PAD)
   Destination:       rgb_8 (FF)
   Destination Clock: clock_27mhz rising 2.4X
@@ -1601,14 +1625,14 @@ Offset:              5.370ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   0.825   1.217  switch_1_IBUF (switch_1_IBUF)
+     IBUF:I->O            15   0.825   1.274  switch_1_IBUF (switch_1_IBUF)
      LUT4:I0->O            1   0.439   0.000  Mmux_rgb_mux00001102132 (Mmux_rgb_mux00001102131)
-     MUXF5:I0->O           3   0.436   1.010  Mmux_rgb_mux0000110213_f5 (N1)
-     LUT4:I0->O            3   0.439   0.725  Mmux_rgb_mux0000251 (N4)
+     MUXF5:I0->O           3   0.436   1.009  Mmux_rgb_mux0000110213_f5 (N1)
+     LUT4:I0->O            4   0.439   0.747  Mmux_rgb_mux0000251 (N4)
      FDS:S                     0.280          rgb_8
     ----------------------------------------
-    Total                      5.370ns (2.419ns logic, 2.951ns route)
-                                       (45.1% logic, 54.9% route)
+    Total                      5.450ns (2.419ns logic, 3.031ns route)
+                                       (44.4% logic, 55.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'hex_display/clock1'
@@ -1687,7 +1711,7 @@ Offset:              5.630ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               7.074ns (Levels of Logic = 3)
+Delay:               7.132ns (Levels of Logic = 3)
   Source:            switch<1> (PAD)
   Destination:       led<1> (PAD)
 
@@ -1695,27 +1719,27 @@ Delay:               7.074ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   0.825   0.931  switch_1_IBUF (switch_1_IBUF)
+     IBUF:I->O            15   0.825   0.989  switch_1_IBUF (switch_1_IBUF)
      INV:I->O              1   0.439   0.517  led<1>1_INV_0 (led_1_OBUF)
      OBUF:I->O                 4.361          led_1_OBUF (led<1>)
     ----------------------------------------
-    Total                      7.074ns (5.625ns logic, 1.449ns route)
-                                       (79.5% logic, 20.5% route)
+    Total                      7.132ns (5.625ns logic, 1.506ns route)
+                                       (78.9% logic, 21.1% route)
 
 =========================================================================
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_note/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_score/f.
 
 
-Total REAL time to Xst completion: 31.00 secs
-Total CPU time to Xst completion: 30.40 secs
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 30.96 secs
  
 --> 
 
 
-Total memory usage is 516484 kilobytes
+Total memory usage is 517568 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  488 (   0 filtered)
-Number of infos    :  206 (   0 filtered)
+Number of warnings :  506 (   0 filtered)
+Number of infos    :  205 (   0 filtered)
 

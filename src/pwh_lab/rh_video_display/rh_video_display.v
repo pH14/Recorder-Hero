@@ -731,6 +731,8 @@ module rh_display (
 					4'd12: note_y_pos[k] <= FIRST_LETTER + 0*NOTE_STEP;
 					// C high
 					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
+					// EOF
+					4'd16: note_y_pos[k] <= FIRST_LETTER + 768;
 					default: note_y_pos[k] <= FIRST_LETTER;
 				endcase
 				
@@ -798,6 +800,44 @@ module rh_display (
 						 .y(128),
 						 .vcount(vcount),
 						 .pixel(bmp_pixel));
+
+	wire [23:0] curr_note_alpha_blend_pixel;
+	reg [9:0] curr_note_y;
+	
+	reg [23:0] bmp_pixel_alpha;
+	
+//   blob #(.WIDTH(72), .HEIGHT(50))
+//		letter_alpha(.x(1),
+//			  .y(curr_note_y),
+//			  .hcount(hcount),
+//			  .vcount(vcount),
+//			  .color(24'hFF_FF_00),
+//			  .pixel(curr_note_alpha_blend_pixel));
+
+	always @(*) begin
+		case(current_note_string)
+			"B" : curr_note_y = 127;
+			"A#": curr_note_y = 127 + 1*NOTE_STEP;
+			"A" : curr_note_y = 127 + 1*NOTE_STEP;
+			"G#": curr_note_y = 127 + 2*NOTE_STEP;
+			"G" : curr_note_y = 127 + 2*NOTE_STEP;
+			"F#": curr_note_y = 127 + 3*NOTE_STEP;
+			"F" : curr_note_y = 127 + 3*NOTE_STEP;
+			"E" : curr_note_y = 127 + 4*NOTE_STEP;
+			"D#": curr_note_y = 127 + 5*NOTE_STEP;
+			"D" : curr_note_y = 127 + 5*NOTE_STEP;
+			"C#": curr_note_y = 127 + 6*NOTE_STEP;
+			"C" : curr_note_y = 127 + 6*NOTE_STEP;
+		endcase
+		
+		if (|bmp_pixel 
+		    && vcount >= curr_note_y 
+		    && vcount <= curr_note_y + NOTE_STEP) begin
+			bmp_pixel_alpha = bmp_pixel/2 + (24'hFF_FF_00 / 2);
+		end else begin
+			bmp_pixel_alpha = bmp_pixel;
+		end
+	end
 	
 	assign pixel = onscreen_notes[0]
 						| onscreen_notes[1]
@@ -827,7 +867,7 @@ module rh_display (
 						| {24{right_boundary_line}}
 						| {8{score_pixel}}
 						| {8{current_note_pixel}}
-						| bmp_pixel;
+						| bmp_pixel_alpha;
 						
 	assign debug = {song_tempo, {3'b000, tempo_beat_move}};
 endmodule
