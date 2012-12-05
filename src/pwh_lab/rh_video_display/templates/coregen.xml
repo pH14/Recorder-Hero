@@ -134,6 +134,48 @@ note_letters_bmp YourInstanceName (
 
  
 		</Template>
+		<Template label="bono_red" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_red YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="bono_green" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_green YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="bono_blue" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_blue YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
 	</Folder>
 	<Folder label="VHDL Component Instantiation" treetype="folder">
 		<Template label="font_rom" treetype="template">
@@ -374,6 +416,84 @@ end component;
 -- Substitute your own instance name and net names.
  
 your_instance_name : note_letters_bmp
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_red" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_red
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_red
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_green" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_green
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_green
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_blue" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_blue
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_blue
         port map (
             clka =&gt; clka,
             addra =&gt; addra,

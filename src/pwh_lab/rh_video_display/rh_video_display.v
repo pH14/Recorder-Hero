@@ -468,6 +468,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
 		.up(up), .down(down),
 		.playing_correct(right_note),
+		.menu_state(switch[6:4]),
 		.next_notes(nn),
 		.score_string("00006111"),
 		.current_note_string("C"),
@@ -585,6 +586,7 @@ module rh_display (
 	input down,
 	
 	input playing_correct,
+	input [2:0] menu_state;
 	input [7:0] current_note_string,
 	input [63:0] score_string,
 	input [63:0] next_notes,
@@ -839,7 +841,12 @@ module rh_display (
 		end
 	end
 	
-	assign pixel = onscreen_notes[0]
+	///////////////////////
+	// MAIN MENU DISPLAY //
+	///////////////////////
+	always @(*) begin
+		if (menu_state[2] == 0) begin
+			pixel = onscreen_notes[0]
 						| onscreen_notes[1]
 						| onscreen_notes[2]
 						| onscreen_notes[3]
@@ -868,6 +875,41 @@ module rh_display (
 						| {8{score_pixel}}
 						| {8{current_note_pixel}}
 						| bmp_pixel_alpha;
+		end else begin
+			pixel = ;
+		end
+	end
+	
+	
+//	assign pixel = onscreen_notes[0]
+//						| onscreen_notes[1]
+//						| onscreen_notes[2]
+//						| onscreen_notes[3]
+//						| onscreen_notes[4]
+//						| onscreen_notes[5]
+//						| onscreen_notes[6]
+//						| onscreen_notes[7]
+//						| onscreen_notes[8]
+//						| onscreen_notes[9]
+//						| onscreen_notes[10]
+//						| onscreen_notes[11]
+//						| onscreen_notes[12]
+//						| onscreen_notes[13]
+//						| onscreen_notes[14]
+//						| onscreen_notes[15]
+//						| note_line_pixels[0]
+//						| note_line_pixels[1]
+//						| note_line_pixels[2]
+//						| note_line_pixels[3]
+//						| note_line_pixels[4]
+//						| note_line_pixels[5]
+//						| note_line_pixels[6]
+//						| note_line_pixels[7]
+//						| {24{action_line}}
+//						| {24{right_boundary_line}}
+//						| {8{score_pixel}}
+//						| {8{current_note_pixel}}
+//						| bmp_pixel_alpha;
 						
 	assign debug = {song_tempo, {3'b000, tempo_beat_move}};
 endmodule
