@@ -1,11 +1,11 @@
 Release 10.1.03 - par K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Mon Dec  3 23:04:03 2012
+Thu Dec  6 00:56:43 2012
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 281 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
    ac97_bit_clock_IBUF
@@ -18,7 +18,6 @@ WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This des
    button_right_IBUF
    clock1_IBUF
    clock2_IBUF
-   clock_feedback_in_IBUF
    daughtercard<0>_IBUF
    daughtercard<10>_IBUF
    daughtercard<11>_IBUF
@@ -85,42 +84,6 @@ WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This des
    keyboard_data_IBUF
    mouse_clock_IBUF
    mouse_data_IBUF
-   ram0_data<0>_IBUF
-   ram0_data<10>_IBUF
-   ram0_data<11>_IBUF
-   ram0_data<12>_IBUF
-   ram0_data<13>_IBUF
-   ram0_data<14>_IBUF
-   ram0_data<15>_IBUF
-   ram0_data<16>_IBUF
-   ram0_data<17>_IBUF
-   ram0_data<18>_IBUF
-   ram0_data<19>_IBUF
-   ram0_data<1>_IBUF
-   ram0_data<20>_IBUF
-   ram0_data<21>_IBUF
-   ram0_data<22>_IBUF
-   ram0_data<23>_IBUF
-   ram0_data<24>_IBUF
-   ram0_data<25>_IBUF
-   ram0_data<26>_IBUF
-   ram0_data<27>_IBUF
-   ram0_data<28>_IBUF
-   ram0_data<29>_IBUF
-   ram0_data<2>_IBUF
-   ram0_data<30>_IBUF
-   ram0_data<31>_IBUF
-   ram0_data<32>_IBUF
-   ram0_data<33>_IBUF
-   ram0_data<34>_IBUF
-   ram0_data<35>_IBUF
-   ram0_data<3>_IBUF
-   ram0_data<4>_IBUF
-   ram0_data<5>_IBUF
-   ram0_data<6>_IBUF
-   ram0_data<7>_IBUF
-   ram0_data<8>_IBUF
-   ram0_data<9>_IBUF
    ram1_data<0>_IBUF
    ram1_data<10>_IBUF
    ram1_data<11>_IBUF
@@ -160,7 +123,6 @@ WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This des
    rs232_cts_IBUF
    rs232_rxd_IBUF
    switch<2>_IBUF
-   switch<3>_IBUF
    switch<4>_IBUF
    switch<5>_IBUF
    switch<6>_IBUF
@@ -209,7 +171,6 @@ WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This des
    tv_in_ycrcb<7>_IBUF
    tv_in_ycrcb<8>_IBUF
    tv_in_ycrcb<9>_IBUF
-   user1<0>_IBUF
    user1<10>_IBUF
    user1<11>_IBUF
    user1<12>_IBUF
@@ -220,7 +181,6 @@ WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This des
    user1<17>_IBUF
    user1<18>_IBUF
    user1<19>_IBUF
-   user1<1>_IBUF
    user1<20>_IBUF
    user1<21>_IBUF
    user1<22>_IBUF
@@ -231,16 +191,8 @@ WARNING:ParHelpers:361 - There are 329 loadless signals in this design. This des
    user1<27>_IBUF
    user1<28>_IBUF
    user1<29>_IBUF
-   user1<2>_IBUF
    user1<30>_IBUF
    user1<31>_IBUF
-   user1<3>_IBUF
-   user1<4>_IBUF
-   user1<5>_IBUF
-   user1<6>_IBUF
-   user1<7>_IBUF
-   user1<8>_IBUF
-   user1<9>_IBUF
    user2<0>_IBUF
    user2<10>_IBUF
    user2<11>_IBUF

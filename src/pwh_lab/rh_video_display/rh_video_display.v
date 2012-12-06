@@ -1,3 +1,5 @@
+`default_nettype none
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Pushbutton Debounce Module (video version - 24 bits)  
@@ -239,15 +241,24 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // tv_in_aef, tv_in_hff, and tv_in_aff are inputs
    
    // SRAMs
+/* change lines below to enable ZBT RAM bank0 */
+
+/*
    assign ram0_data = 36'hZ;
    assign ram0_address = 19'h0;
-   assign ram0_adv_ld = 1'b0;
    assign ram0_clk = 1'b0;
-   assign ram0_cen_b = 1'b1;
-   assign ram0_ce_b = 1'b1;
-   assign ram0_oe_b = 1'b1;
    assign ram0_we_b = 1'b1;
-   assign ram0_bwe_b = 4'hF;
+   assign ram0_cen_b = 1'b0;	// clock enable
+*/
+
+/* enable RAM pins */
+
+   assign ram0_ce_b = 1'b0;
+   assign ram0_oe_b = 1'b0;
+   assign ram0_adv_ld = 1'b0;
+   assign ram0_bwe_b = 4'h0; 
+
+/**********/
    assign ram1_data = 36'hZ; 
    assign ram1_address = 19'h0;
    assign ram1_adv_ld = 1'b0;
@@ -257,7 +268,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    assign ram1_oe_b = 1'b1;
    assign ram1_we_b = 1'b1;
    assign ram1_bwe_b = 4'hF;
-   assign clock_feedback_out = 1'b0;
+   //assign clock_feedback_out = 1'b0;
    // clock_feedback_in is an input
    
    // Flash ROM
@@ -293,7 +304,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // button_left, button_down, button_up, and switches are inputs
 
    // User I/Os
-   assign user1 = 32'hZ;
+   //assign user1 = 32'hZ;
    assign user2 = 32'hZ;
    assign user3 = 32'hZ;
    assign user4 = 32'hZ;
@@ -327,17 +338,29 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
    // use FPGA's digital clock manager to produce a
    // 65MHz clock (actually 64.8MHz)
-   wire clock_65mhz_unbuf,clock_65mhz;
+   wire clock_65mhz_unbuf,clock_65mhz,clk;
    DCM vclk1(.CLKIN(clock_27mhz),.CLKFX(clock_65mhz_unbuf));
    // synthesis attribute CLKFX_DIVIDE of vclk1 is 10
    // synthesis attribute CLKFX_MULTIPLY of vclk1 is 24
    // synthesis attribute CLK_FEEDBACK of vclk1 is NONE
    // synthesis attribute CLKIN_PERIOD of vclk1 is 37
    BUFG vclk2(.O(clock_65mhz),.I(clock_65mhz_unbuf));
+	
+	// ZBT Memory
+	wire locked;
+	//assign clock_feedback_out = 0; // gph 2011-Nov-10
+   
+   ramclock rc(.ref_clock(clock_65mhz), 
+					.fpga_clock(clk),
+					.ram0_clock(ram0_clk), 
+					//.ram1_clock(ram1_clk),   //uncomment if ram1 is used
+					.clock_feedback_in(clock_feedback_in),
+					.clock_feedback_out(clock_feedback_out), 
+					.locked(locked));
 
    // power-on reset generation
    wire power_on_reset;    // remain high for first 16 clocks
-   SRL16 reset_sr (.D(1'b0), .CLK(clock_65mhz), .Q(power_on_reset),
+   SRL16 reset_sr (.D(1'b0), .CLK(clk), .Q(power_on_reset),
 		   .A0(1'b1), .A1(1'b1), .A2(1'b1), .A3(1'b1));
    defparam reset_sr.INIT = 16'hFFFF;
 
@@ -348,14 +371,14 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    
    // UP and DOWN buttons for pong paddle
    wire up,down;
-   debounce db2(.reset(reset),.clock(clock_65mhz),.noisy(~button_up),.clean(up));
-   debounce db3(.reset(reset),.clock(clock_65mhz),.noisy(~button_down),.clean(down));
+   debounce db2(.reset(reset),.clock(clk),.noisy(~button_up),.clean(up));
+   debounce db3(.reset(reset),.clock(clk),.noisy(~button_down),.clean(down));
 
    // generate basic XVGA video signals
    wire [10:0] hcount;
    wire [9:0]  vcount;
    wire hsync,vsync,blank;
-   xvga xvga1(.vclock(clock_65mhz),.hcount(hcount),.vcount(vcount),
+   xvga xvga1(.vclock(clk),.hcount(hcount),.vcount(vcount),
               .hsync(hsync),.vsync(vsync),.blank(blank));
 
    // feed XVGA signals to user's pong game
@@ -369,7 +392,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	reg [31:0] count = 0;
 	reg [3:0] notes[15:0];
 	
-	always @(posedge clock_65mhz) begin
+	always @(posedge clk) begin
 		count <= count + 1;
 		
 		if (reset) begin
@@ -460,14 +483,45 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [25:0] tempo;
 	wire [63:0] msl_debug;
 	
-	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
+	wire [7:0] fifo_data_input;
+	wire rd;
+	wire rxf;
+	wire [7:0] fifo_data_output;
+	reg [7:0] from_fifo;
+	wire fifo_newout;
+	wire fifo_hold;
+	wire [3:0] fifo_state;
+	
+	assign fifo_data_input = user1[9:2];
+//	assign rd = user1[1];
+	assign user1[1] = rd;
+	assign rxf = user1[0];
+	
+	usb_input usb_input_module(.clk(clk),
+										.reset(reset),
+										.data(fifo_data_input),
+										.rd(rd),
+										.rxf(rxf),
+										.out(fifo_data_output),
+										.newout(fifo_newout),
+										.hold(switch[3]),
+										.state(fifo_state));
+										
+	always @(posedge clk) begin
+		if (fifo_newout) begin
+			from_fifo <= fifo_data_output;
+		end
+	end
+	
+	musical_score_loader msl(.clk(clk), .reset(reset),
 								    .song_id(switch[7]), .next_notes_out(nn),
 									 .tempo_out(tempo),
 									 .debug_out(msl_debug));
 	
-   rh_display rh_disp(.vclock(clock_65mhz),.reset(reset),
+   rh_display rh_disp(.vclock(clk),.reset(reset),
 		.up(up), .down(down),
 		.playing_correct(right_note),
+		.menu_state(switch[6:4]),
 		.next_notes(nn),
 		.score_string("00006111"),
 		.current_note_string("C"),
@@ -479,8 +533,8 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		.pixel(pixel), .debug(dispdata));
 
 	display_16hex hex_display(.reset(reset), 
-		.clock_27mhz(clock_65mhz), 
-		.data(msl_debug),//{nn[63:31], 2'b00, dispdata}),
+		.clock_27mhz(clk), 
+		.data({from_fifo,4'b0,fifo_state,3'b0,fifo_newout,4'hA}),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
 		.disp_rs(disp_rs), 
@@ -496,7 +550,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    wire border = (hcount==0 | hcount==1023 | vcount==0 | vcount==767);
    
    reg b,hs,vs;
-   always @(posedge clock_65mhz) begin
+   always @(posedge clk) begin
       if (switch[1:0] == 2'b01) begin
 	 // 1 pixel outline of visible area (white)
 	 hs <= hsync;
@@ -525,11 +579,23 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    assign vga_out_blue = rgb[7:0];
    assign vga_out_sync_b = 1'b1;    // not used
    assign vga_out_blank_b = ~b;
-   assign vga_out_pixel_clock = ~clock_65mhz;
+   assign vga_out_pixel_clock = ~clk;
    assign vga_out_hsync = hs;
    assign vga_out_vsync = vs;
    
    assign led = ~{3'b000,up,down,reset,switch[1:0]};
+					
+   // wire up to ZBT ram
+   wire [35:0] vram_write_data;
+   wire [35:0] vram_read_data;
+   wire [18:0] vram_addr;
+   wire        vram_we;
+
+   wire ram0_clk_not_used;
+   zbt_6111 zbt1(clk, 1'b1, vram_we, vram_addr,
+		   vram_write_data, vram_read_data,
+		   ram0_clk_not_used,   //to get good timing, don't connect ram_clk to zbt_6111
+		   ram0_we_b, ram0_address, ram0_data, ram0_cen_b);
 
 endmodule
 
@@ -585,6 +651,7 @@ module rh_display (
 	input down,
 	
 	input playing_correct,
+	input [2:0] menu_state,
 	input [7:0] current_note_string,
 	input [63:0] score_string,
 	input [63:0] next_notes,
@@ -800,6 +867,8 @@ module rh_display (
 						 .y(128),
 						 .vcount(vcount),
 						 .pixel(bmp_pixel));
+						 
+	wire [23:0] bono_pixel;
 
 	wire [23:0] curr_note_alpha_blend_pixel;
 	reg [9:0] curr_note_y;
@@ -839,6 +908,46 @@ module rh_display (
 		end
 	end
 	
+	///////////////////////
+	// MAIN MENU DISPLAY //
+//	///////////////////////
+//	always @(*) begin
+//		if (menu_state[2] == 0) begin
+//			pixel = onscreen_notes[0]
+//						| onscreen_notes[1]
+//						| onscreen_notes[2]
+//						| onscreen_notes[3]
+//						| onscreen_notes[4]
+//						| onscreen_notes[5]
+//						| onscreen_notes[6]
+//						| onscreen_notes[7]
+//						| onscreen_notes[8]
+//						| onscreen_notes[9]
+//						| onscreen_notes[10]
+//						| onscreen_notes[11]
+//						| onscreen_notes[12]
+//						| onscreen_notes[13]
+//						| onscreen_notes[14]
+//						| onscreen_notes[15]
+//						| note_line_pixels[0]
+//						| note_line_pixels[1]
+//						| note_line_pixels[2]
+//						| note_line_pixels[3]
+//						| note_line_pixels[4]
+//						| note_line_pixels[5]
+//						| note_line_pixels[6]
+//						| note_line_pixels[7]
+//						| {24{action_line}}
+//						| {24{right_boundary_line}}
+//						| {8{score_pixel}}
+//						| {8{current_note_pixel}}
+//						| bmp_pixel_alpha;
+//		end else begin
+//			pixel = 24'b0;
+//		end
+//	end
+	
+//	assign pixel = bono_pixel;
 	assign pixel = onscreen_notes[0]
 						| onscreen_notes[1]
 						| onscreen_notes[2]

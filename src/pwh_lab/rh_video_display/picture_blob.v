@@ -24,7 +24,7 @@ module picture_blob
 	
 	// calculate rom address and read the location
 	assign image_addr = (hcount-x) + (vcount-y) * WIDTH;
-	note_letters_bmp rom1(pixel_clk, image_addr, image_bits);
+	note_letters_bmp nl_rom(pixel_clk, image_addr, image_bits);
 	
 	// use color map to create 8bits R, 8bits G, 8 bits B;
 	assign red_mapped = (image_bits == 8'h00) ? 8'h00 : 8'hFF;

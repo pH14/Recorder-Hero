@@ -8,28 +8,33 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# do {counter_tb.fdo} 
+# do {zbt_image_writer_tb.fdo} 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
-# -- Compiling module counter
+# -- Compiling module zbt_image_writer
 # 
 # Top level modules:
-# 	counter
+# 	zbt_image_writer
 # Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
-# -- Compiling module counter_tb
+# -- Compiling module zbt_image_writer_tb
 # 
 # Top level modules:
-# 	counter_tb
+# 	zbt_image_writer_tb
 # Model Technology ModelSim SE vlog 6.4a Compiler 2008.08 Aug 28 2008
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps counter_tb glbl 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading work.counter_tb(fast)
-# Loading work.counter(fast)
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps zbt_image_writer_tb glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.zbt_image_writer_tb(fast)
+# Loading work.zbt_image_writer(fast)
 # Loading work.glbl(fast)
 # .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
 # .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
 # .main_pane.signals.interior.cs
+restart -f
+# Loading work.zbt_image_writer_tb(fast)
+# Loading work.zbt_image_writer(fast)
+# Loading work.glbl(fast)
+run 300ns

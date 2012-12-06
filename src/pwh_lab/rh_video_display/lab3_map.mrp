@@ -11,32 +11,33 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Mon Dec  3 23:02:51 2012
+Mapped Date    : Thu Dec  6 00:54:52 2012
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  392
+Number of warnings:  380
 Logic Utilization:
-  Number of Slice Flip Flops:           601 out of  67,584    1%
-  Number of 4 input LUTs:             1,840 out of  67,584    2%
+  Number of Slice Flip Flops:           623 out of  67,584    1%
+  Number of 4 input LUTs:             1,847 out of  67,584    2%
 Logic Distribution:
-  Number of occupied Slices:          1,125 out of  33,792    3%
-    Number of Slices containing only related logic:   1,125 out of   1,125 100%
-    Number of Slices containing unrelated logic:          0 out of   1,125   0%
+  Number of occupied Slices:          1,139 out of  33,792    3%
+    Number of Slices containing only related logic:   1,139 out of   1,139 100%
+    Number of Slices containing unrelated logic:          0 out of   1,139   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,042 out of  67,584    3%
-    Number used as logic:             1,835
-    Number used as a route-thru:        202
-    Number used as Shift registers:       5
-  Number of bonded IOBs:                576 out of     684   84%
+  Total Number of 4 input LUTs:       2,051 out of  67,584    3%
+    Number used as logic:             1,841
+    Number used as a route-thru:        204
+    Number used as Shift registers:       6
+  Number of bonded IOBs:                541 out of     684   79%
+    IOB Flip Flops:                       6
   Number of RAMB16s:                     22 out of     144   15%
   Number of MULT18X18s:                   3 out of     144    2%
-  Number of BUFGMUXs:                     2 out of      16   12%
-  Number of DCMs:                         1 out of      12    8%
+  Number of BUFGMUXs:                     4 out of      16   25%
+  Number of DCMs:                         3 out of      12   25%
 
-Peak Memory Usage:  510 MB
-Total REAL time to MAP completion:  5 secs 
+Peak Memory Usage:  514 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   5 secs 
 
 NOTES:
@@ -80,7 +81,7 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network user3<28>_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 328
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 280
    more times for the following (max. 5 shown):
    user3<4>_IBUF,
    user3<29>_IBUF,
@@ -88,6 +89,78 @@ WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 328
    user3<6>_IBUF,
    user3<7>_IBUF
    To see the details of these warning messages, please use the -detail switch.
+WARNING:MapLib:701 - Signal ram0_data<35> connected to top level port
+   ram0_data<35> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<34> connected to top level port
+   ram0_data<34> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<33> connected to top level port
+   ram0_data<33> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<32> connected to top level port
+   ram0_data<32> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<31> connected to top level port
+   ram0_data<31> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<30> connected to top level port
+   ram0_data<30> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<29> connected to top level port
+   ram0_data<29> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<28> connected to top level port
+   ram0_data<28> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<27> connected to top level port
+   ram0_data<27> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<26> connected to top level port
+   ram0_data<26> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<25> connected to top level port
+   ram0_data<25> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<24> connected to top level port
+   ram0_data<24> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<23> connected to top level port
+   ram0_data<23> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<22> connected to top level port
+   ram0_data<22> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<21> connected to top level port
+   ram0_data<21> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<20> connected to top level port
+   ram0_data<20> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<19> connected to top level port
+   ram0_data<19> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<18> connected to top level port
+   ram0_data<18> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<17> connected to top level port
+   ram0_data<17> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<16> connected to top level port
+   ram0_data<16> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<15> connected to top level port
+   ram0_data<15> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<14> connected to top level port
+   ram0_data<14> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<13> connected to top level port
+   ram0_data<13> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<12> connected to top level port
+   ram0_data<12> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<11> connected to top level port
+   ram0_data<11> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<10> connected to top level port
+   ram0_data<10> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<9> connected to top level port
+   ram0_data<9> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<8> connected to top level port
+   ram0_data<8> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<7> connected to top level port
+   ram0_data<7> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<6> connected to top level port
+   ram0_data<6> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<5> connected to top level port
+   ram0_data<5> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<4> connected to top level port
+   ram0_data<4> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<3> connected to top level port
+   ram0_data<3> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<2> connected to top level port
+   ram0_data<2> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<1> connected to top level port
+   ram0_data<1> has been removed.
+WARNING:MapLib:701 - Signal ram0_data<0> connected to top level port
+   ram0_data<0> has been removed.
 WARNING:LIT:162 - Only DFS outputs (CLKFX/FX180/CONCUR) of DCM symbol "vclk1"
    are routed, but CLKFB is not routed. Proper phase relationship of output
    clocks to CLKIN cannot be guaranteed.
@@ -275,8 +348,6 @@ WARNING:PhysDesignRules:367 - The signal <button3_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switch<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <switch<3>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switch<4>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switch<5>_IBUF> is incomplete. The
@@ -284,8 +355,6 @@ WARNING:PhysDesignRules:367 - The signal <switch<5>_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <switch<6>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <daughtercard<10>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <clock_feedback_in_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <daughtercard<11>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
@@ -359,89 +428,17 @@ WARNING:PhysDesignRules:367 - The signal <button_left_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <rs232_cts_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<10>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<11>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<20>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<12>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<21>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<13>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<30>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<22>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<14>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<31>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<23>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<15>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <rs232_rxd_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<32>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<24>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<16>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<33>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<25>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<17>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<34>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<26>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<18>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<35>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<27>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<19>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <systemace_mpbrdy_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<28>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<29>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <keyboard_clock_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <tv_in_i2c_data_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <keyboard_data_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<0>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<1>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<2>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<3>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<4>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<5>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<6>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <mouse_clock_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<7>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<8>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ram0_data<9>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <mouse_data_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -545,15 +542,11 @@ WARNING:PhysDesignRules:367 - The signal <user2<26>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<18>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<0>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user3<11>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<27>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<19>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<1>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<0>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -563,8 +556,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<12>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<28>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<2>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<1>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user3<21>_IBUF> is incomplete. The
@@ -572,8 +563,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<21>_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <user3<13>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<29>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<3>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -584,8 +573,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<22>_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <user3<14>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<0>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<4>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <tv_in_aef_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -599,8 +586,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<15>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<1>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<5>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <tv_in_aff_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<4>_IBUF> is incomplete. The
@@ -611,8 +596,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<16>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<2>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<6>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<5>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user3<25>_IBUF> is incomplete. The
@@ -620,8 +603,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<25>_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <user3<17>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user2<3>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<7>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<6>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -635,8 +616,6 @@ WARNING:PhysDesignRules:367 - The signal <user2<4>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user4<10>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<8>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<7>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user3<27>_IBUF> is incomplete. The
@@ -648,8 +627,6 @@ WARNING:PhysDesignRules:367 - The signal <user3<19>_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <user2<5>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <user4<11>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <user1<9>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<8>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -942,9 +919,9 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   6 block(s) removed
-  13 block(s) optimized away
-   1 signal(s) removed
+  78 block(s) removed
+  14 block(s) optimized away
+  37 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -959,13 +936,127 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-The signal "rh_disp/pb/rom1/BU2/N1" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/N1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "ram0_data<0>" is unused and has been removed.
+ Unused block "ram0_data_0_OBUFT" (TRI) removed.
+The signal "ram0_data<10>" is unused and has been removed.
+ Unused block "ram0_data_10_OBUFT" (TRI) removed.
+The signal "ram0_data<11>" is unused and has been removed.
+ Unused block "ram0_data_11_OBUFT" (TRI) removed.
+The signal "ram0_data<12>" is unused and has been removed.
+ Unused block "ram0_data_12_OBUFT" (TRI) removed.
+The signal "ram0_data<13>" is unused and has been removed.
+ Unused block "ram0_data_13_OBUFT" (TRI) removed.
+The signal "ram0_data<14>" is unused and has been removed.
+ Unused block "ram0_data_14_OBUFT" (TRI) removed.
+The signal "ram0_data<15>" is unused and has been removed.
+ Unused block "ram0_data_15_OBUFT" (TRI) removed.
+The signal "ram0_data<16>" is unused and has been removed.
+ Unused block "ram0_data_16_OBUFT" (TRI) removed.
+The signal "ram0_data<17>" is unused and has been removed.
+ Unused block "ram0_data_17_OBUFT" (TRI) removed.
+The signal "ram0_data<18>" is unused and has been removed.
+ Unused block "ram0_data_18_OBUFT" (TRI) removed.
+The signal "ram0_data<19>" is unused and has been removed.
+ Unused block "ram0_data_19_OBUFT" (TRI) removed.
+The signal "ram0_data<1>" is unused and has been removed.
+ Unused block "ram0_data_1_OBUFT" (TRI) removed.
+The signal "ram0_data<20>" is unused and has been removed.
+ Unused block "ram0_data_20_OBUFT" (TRI) removed.
+The signal "ram0_data<21>" is unused and has been removed.
+ Unused block "ram0_data_21_OBUFT" (TRI) removed.
+The signal "ram0_data<22>" is unused and has been removed.
+ Unused block "ram0_data_22_OBUFT" (TRI) removed.
+The signal "ram0_data<23>" is unused and has been removed.
+ Unused block "ram0_data_23_OBUFT" (TRI) removed.
+The signal "ram0_data<24>" is unused and has been removed.
+ Unused block "ram0_data_24_OBUFT" (TRI) removed.
+The signal "ram0_data<25>" is unused and has been removed.
+ Unused block "ram0_data_25_OBUFT" (TRI) removed.
+The signal "ram0_data<26>" is unused and has been removed.
+ Unused block "ram0_data_26_OBUFT" (TRI) removed.
+The signal "ram0_data<27>" is unused and has been removed.
+ Unused block "ram0_data_27_OBUFT" (TRI) removed.
+The signal "ram0_data<28>" is unused and has been removed.
+ Unused block "ram0_data_28_OBUFT" (TRI) removed.
+The signal "ram0_data<29>" is unused and has been removed.
+ Unused block "ram0_data_29_OBUFT" (TRI) removed.
+The signal "ram0_data<2>" is unused and has been removed.
+ Unused block "ram0_data_2_OBUFT" (TRI) removed.
+The signal "ram0_data<30>" is unused and has been removed.
+ Unused block "ram0_data_30_OBUFT" (TRI) removed.
+The signal "ram0_data<31>" is unused and has been removed.
+ Unused block "ram0_data_31_OBUFT" (TRI) removed.
+The signal "ram0_data<32>" is unused and has been removed.
+ Unused block "ram0_data_32_OBUFT" (TRI) removed.
+The signal "ram0_data<33>" is unused and has been removed.
+ Unused block "ram0_data_33_OBUFT" (TRI) removed.
+The signal "ram0_data<34>" is unused and has been removed.
+ Unused block "ram0_data_34_OBUFT" (TRI) removed.
+The signal "ram0_data<35>" is unused and has been removed.
+ Unused block "ram0_data_35_OBUFT" (TRI) removed.
+The signal "ram0_data<3>" is unused and has been removed.
+ Unused block "ram0_data_3_OBUFT" (TRI) removed.
+The signal "ram0_data<4>" is unused and has been removed.
+ Unused block "ram0_data_4_OBUFT" (TRI) removed.
+The signal "ram0_data<5>" is unused and has been removed.
+ Unused block "ram0_data_5_OBUFT" (TRI) removed.
+The signal "ram0_data<6>" is unused and has been removed.
+ Unused block "ram0_data_6_OBUFT" (TRI) removed.
+The signal "ram0_data<7>" is unused and has been removed.
+ Unused block "ram0_data_7_OBUFT" (TRI) removed.
+The signal "ram0_data<8>" is unused and has been removed.
+ Unused block "ram0_data_8_OBUFT" (TRI) removed.
+The signal "ram0_data<9>" is unused and has been removed.
+ Unused block "ram0_data_9_OBUFT" (TRI) removed.
 Unused block "msl/lotr/GND" (ZERO) removed.
 Unused block "msl/lotr/VCC" (ONE) removed.
 Unused block "msl/ss/GND" (ZERO) removed.
 Unused block "msl/ss/VCC" (ONE) removed.
-Unused block "rh_disp/pb/rom1/GND" (ZERO) removed.
-Unused block "rh_disp/pb/rom1/VCC" (ONE) removed.
+Unused block "ram0_data<0>" (PAD) removed.
+Unused block "ram0_data<10>" (PAD) removed.
+Unused block "ram0_data<11>" (PAD) removed.
+Unused block "ram0_data<12>" (PAD) removed.
+Unused block "ram0_data<13>" (PAD) removed.
+Unused block "ram0_data<14>" (PAD) removed.
+Unused block "ram0_data<15>" (PAD) removed.
+Unused block "ram0_data<16>" (PAD) removed.
+Unused block "ram0_data<17>" (PAD) removed.
+Unused block "ram0_data<18>" (PAD) removed.
+Unused block "ram0_data<19>" (PAD) removed.
+Unused block "ram0_data<1>" (PAD) removed.
+Unused block "ram0_data<20>" (PAD) removed.
+Unused block "ram0_data<21>" (PAD) removed.
+Unused block "ram0_data<22>" (PAD) removed.
+Unused block "ram0_data<23>" (PAD) removed.
+Unused block "ram0_data<24>" (PAD) removed.
+Unused block "ram0_data<25>" (PAD) removed.
+Unused block "ram0_data<26>" (PAD) removed.
+Unused block "ram0_data<27>" (PAD) removed.
+Unused block "ram0_data<28>" (PAD) removed.
+Unused block "ram0_data<29>" (PAD) removed.
+Unused block "ram0_data<2>" (PAD) removed.
+Unused block "ram0_data<30>" (PAD) removed.
+Unused block "ram0_data<31>" (PAD) removed.
+Unused block "ram0_data<32>" (PAD) removed.
+Unused block "ram0_data<33>" (PAD) removed.
+Unused block "ram0_data<34>" (PAD) removed.
+Unused block "ram0_data<35>" (PAD) removed.
+Unused block "ram0_data<3>" (PAD) removed.
+Unused block "ram0_data<4>" (PAD) removed.
+Unused block "ram0_data<5>" (PAD) removed.
+Unused block "ram0_data<6>" (PAD) removed.
+Unused block "ram0_data<7>" (PAD) removed.
+Unused block "ram0_data<8>" (PAD) removed.
+Unused block "ram0_data<9>" (PAD) removed.
+Unused block "rh_disp/pb/nl_rom/GND" (ZERO) removed.
+Unused block "rh_disp/pb/nl_rom/VCC" (ONE) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -979,8 +1070,8 @@ GND 		rh_disp/csd_note/f/GND
 VCC 		rh_disp/csd_note/f/VCC
 GND 		rh_disp/csd_score/f/GND
 VCC 		rh_disp/csd_score/f/VCC
-GND 		rh_disp/pb/rom1/BU2/XST_GND
-VCC 		rh_disp/pb/rom1/BU2/XST_VCC
+GND 		rh_disp/pb/nl_rom/BU2/XST_GND
+VCC 		rh_disp/pb/nl_rom/BU2/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -992,6 +1083,7 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Strength | Rate |              |          | Delay    |
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
+| Q                                  | IOB              | OUTPUT    | LVTTL                | 12       | SLOW | OUTDDR       |          |          |
 | ac97_bit_clock                     | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | ac97_sdata_in                      | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | ac97_sdata_out                     | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
@@ -1079,7 +1171,7 @@ Section 6 - IOB Properties
 | clock2                             | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | clock_27mhz                        | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | clock_feedback_in                  | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
-| clock_feedback_out                 | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
+| clock_feedback_out                 | IOB              | OUTPUT    | LVDCI_33             |          |      | OUTDDR       |          |          |
 | daughtercard<0>                    | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | daughtercard<1>                    | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | daughtercard<2>                    | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
@@ -1215,43 +1307,7 @@ Section 6 - IOB Properties
 | ram0_bwe_b<3>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_ce_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_cen_b                         | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
-| ram0_clk                           | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
-| ram0_data<0>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<1>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<2>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<3>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<4>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<5>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<6>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<7>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<8>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<9>                       | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<10>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<11>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<12>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<13>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<14>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<15>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<16>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<17>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<18>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<19>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<20>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<21>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<22>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<23>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<24>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<25>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<26>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<27>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<28>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<29>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<30>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<31>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<32>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<33>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<34>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<35>                      | IOB              | INPUT     | LVDCI_33             |          |      |              |          |          |
+| ram0_clk                           | IOB              | OUTPUT    | LVDCI_33             |          |      | OUTDDR       |          |          |
 | ram0_oe_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_we_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram1_address<0>                    | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
@@ -1412,7 +1468,7 @@ Section 6 - IOB Properties
 | tv_out_ycrcb<8>                    | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | tv_out_ycrcb<9>                    | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | user1<0>                           | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
-| user1<1>                           | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
+| user1<1>                           | IOB              | OUTPUT    | LVTTL                | 12       | SLOW |              |          |          |
 | user1<2>                           | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | user1<3>                           | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | user1<4>                           | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
