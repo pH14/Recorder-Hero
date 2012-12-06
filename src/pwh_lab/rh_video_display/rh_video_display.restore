@@ -840,6 +840,7 @@ proc restore { { project_dir "" } } {
       "blob.v" 
       "bono_blue.xco" 
       "bono_green.xco" 
+      "bono_pb.v" 
       "bono_red.xco" 
       "counter.v" 
       "counter_tb.v" 
@@ -856,9 +857,12 @@ proc restore { { project_dir "" } } {
       "notes_green_map.xco" 
       "notes_red_map.xco" 
       "picture_blob.v" 
+      "ramclock.v" 
       "rh_display.v" 
       "rh_video_display.v" 
-      "song_scales.xco"}
+      "song_scales.xco" 
+      "usb_input.v" 
+      "zbt_6111.v"}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files

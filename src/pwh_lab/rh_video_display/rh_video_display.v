@@ -1,3 +1,5 @@
+`default_nettype none
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Pushbutton Debounce Module (video version - 24 bits)  
@@ -239,15 +241,24 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // tv_in_aef, tv_in_hff, and tv_in_aff are inputs
    
    // SRAMs
+/* change lines below to enable ZBT RAM bank0 */
+
+/*
    assign ram0_data = 36'hZ;
    assign ram0_address = 19'h0;
-   assign ram0_adv_ld = 1'b0;
    assign ram0_clk = 1'b0;
-   assign ram0_cen_b = 1'b1;
-   assign ram0_ce_b = 1'b1;
-   assign ram0_oe_b = 1'b1;
    assign ram0_we_b = 1'b1;
-   assign ram0_bwe_b = 4'hF;
+   assign ram0_cen_b = 1'b0;	// clock enable
+*/
+
+/* enable RAM pins */
+
+   assign ram0_ce_b = 1'b0;
+   assign ram0_oe_b = 1'b0;
+   assign ram0_adv_ld = 1'b0;
+   assign ram0_bwe_b = 4'h0; 
+
+/**********/
    assign ram1_data = 36'hZ; 
    assign ram1_address = 19'h0;
    assign ram1_adv_ld = 1'b0;
@@ -257,7 +268,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    assign ram1_oe_b = 1'b1;
    assign ram1_we_b = 1'b1;
    assign ram1_bwe_b = 4'hF;
-   assign clock_feedback_out = 1'b0;
+   //assign clock_feedback_out = 1'b0;
    // clock_feedback_in is an input
    
    // Flash ROM
@@ -293,7 +304,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    // button_left, button_down, button_up, and switches are inputs
 
    // User I/Os
-   assign user1 = 32'hZ;
+   //assign user1 = 32'hZ;
    assign user2 = 32'hZ;
    assign user3 = 32'hZ;
    assign user4 = 32'hZ;
@@ -460,6 +471,36 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [25:0] tempo;
 	wire [63:0] msl_debug;
 	
+	wire [7:0] fifo_data_input;
+	wire rd;
+	wire rxf;
+	wire [7:0] fifo_data_output;
+	reg [7:0] from_fifo;
+	wire fifo_newout;
+	wire fifo_hold;
+	wire [3:0] fifo_state;
+	
+	assign fifo_data_input = user1[9:2];
+//	assign rd = user1[1];
+	assign user1[1] = rd;
+	assign rxf = user1[0];
+	
+	usb_input usb_input_module(.clk(clock_65mhz),
+										.reset(reset),
+										.data(fifo_data_input),
+										.rd(rd),
+										.rxf(rxf),
+										.out(fifo_data_output),
+										.newout(fifo_newout),
+										.hold(switch[3]),
+										.state(fifo_state));
+										
+	always @(posedge clock_65mhz) begin
+		if (fifo_newout) begin
+			from_fifo <= fifo_data_output;
+		end
+	end
+	
 	musical_score_loader msl(.clk(clock_65mhz), .reset(reset),
 								    .song_id(switch[7]), .next_notes_out(nn),
 									 .tempo_out(tempo),
@@ -481,7 +522,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clock_65mhz), 
-		.data(msl_debug),//{nn[63:31], 2'b00, dispdata}),
+		.data({from_fifo,4'b0,fifo_state,3'b0,fifo_newout,4'hA}),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
 		.disp_rs(disp_rs), 
@@ -531,6 +572,32 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    assign vga_out_vsync = vs;
    
    assign led = ~{3'b000,up,down,reset,switch[1:0]};
+	
+	
+	// ZBT Memory
+	wire locked;
+	wire clk;
+	//assign clock_feedback_out = 0; // gph 2011-Nov-10
+   
+   ramclock rc(.ref_clock(clock_65mhz), 
+					.fpga_clock(clk),
+					.ram0_clock(ram0_clk), 
+					//.ram1_clock(ram1_clk),   //uncomment if ram1 is used
+					.clock_feedback_in(clock_feedback_in),
+					.clock_feedback_out(clock_feedback_out), 
+					.locked(locked));
+					
+   // wire up to ZBT ram
+   wire [35:0] vram_write_data;
+   wire [35:0] vram_read_data;
+   wire [18:0] vram_addr;
+   wire        vram_we;
+
+   wire ram0_clk_not_used;
+   zbt_6111 zbt1(clk, 1'b1, vram_we, vram_addr,
+		   vram_write_data, vram_read_data,
+		   ram0_clk_not_used,   //to get good timing, don't connect ram_clk to zbt_6111
+		   ram0_we_b, ram0_address, ram0_data, ram0_cen_b);
 
 endmodule
 
@@ -586,7 +653,7 @@ module rh_display (
 	input down,
 	
 	input playing_correct,
-	input [2:0] menu_state;
+	input [2:0] menu_state,
 	input [7:0] current_note_string,
 	input [63:0] score_string,
 	input [63:0] next_notes,
@@ -802,6 +869,8 @@ module rh_display (
 						 .y(128),
 						 .vcount(vcount),
 						 .pixel(bmp_pixel));
+						 
+	wire [23:0] bono_pixel;
 
 	wire [23:0] curr_note_alpha_blend_pixel;
 	reg [9:0] curr_note_y;
@@ -843,45 +912,10 @@ module rh_display (
 	
 	///////////////////////
 	// MAIN MENU DISPLAY //
-	///////////////////////
-	always @(*) begin
-		if (menu_state[2] == 0) begin
-			pixel = onscreen_notes[0]
-						| onscreen_notes[1]
-						| onscreen_notes[2]
-						| onscreen_notes[3]
-						| onscreen_notes[4]
-						| onscreen_notes[5]
-						| onscreen_notes[6]
-						| onscreen_notes[7]
-						| onscreen_notes[8]
-						| onscreen_notes[9]
-						| onscreen_notes[10]
-						| onscreen_notes[11]
-						| onscreen_notes[12]
-						| onscreen_notes[13]
-						| onscreen_notes[14]
-						| onscreen_notes[15]
-						| note_line_pixels[0]
-						| note_line_pixels[1]
-						| note_line_pixels[2]
-						| note_line_pixels[3]
-						| note_line_pixels[4]
-						| note_line_pixels[5]
-						| note_line_pixels[6]
-						| note_line_pixels[7]
-						| {24{action_line}}
-						| {24{right_boundary_line}}
-						| {8{score_pixel}}
-						| {8{current_note_pixel}}
-						| bmp_pixel_alpha;
-		end else begin
-			pixel = ;
-		end
-	end
-	
-	
-//	assign pixel = onscreen_notes[0]
+//	///////////////////////
+//	always @(*) begin
+//		if (menu_state[2] == 0) begin
+//			pixel = onscreen_notes[0]
 //						| onscreen_notes[1]
 //						| onscreen_notes[2]
 //						| onscreen_notes[3]
@@ -910,6 +944,41 @@ module rh_display (
 //						| {8{score_pixel}}
 //						| {8{current_note_pixel}}
 //						| bmp_pixel_alpha;
+//		end else begin
+//			pixel = 24'b0;
+//		end
+//	end
+	
+//	assign pixel = bono_pixel;
+	assign pixel = onscreen_notes[0]
+						| onscreen_notes[1]
+						| onscreen_notes[2]
+						| onscreen_notes[3]
+						| onscreen_notes[4]
+						| onscreen_notes[5]
+						| onscreen_notes[6]
+						| onscreen_notes[7]
+						| onscreen_notes[8]
+						| onscreen_notes[9]
+						| onscreen_notes[10]
+						| onscreen_notes[11]
+						| onscreen_notes[12]
+						| onscreen_notes[13]
+						| onscreen_notes[14]
+						| onscreen_notes[15]
+						| note_line_pixels[0]
+						| note_line_pixels[1]
+						| note_line_pixels[2]
+						| note_line_pixels[3]
+						| note_line_pixels[4]
+						| note_line_pixels[5]
+						| note_line_pixels[6]
+						| note_line_pixels[7]
+						| {24{action_line}}
+						| {24{right_boundary_line}}
+						| {8{score_pixel}}
+						| {8{current_note_pixel}}
+						| bmp_pixel_alpha;
 						
 	assign debug = {song_tempo, {3'b000, tempo_beat_move}};
 endmodule

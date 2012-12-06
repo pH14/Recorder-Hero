@@ -1,5 +1,5 @@
 NUM_USER_FILES
-23
+27
 s
 user_file_1
 labkit.ucf
@@ -48,6 +48,18 @@ bono_green.xco
 s
 user_file_23
 bono_blue.xco
+s
+user_file_24
+bono_pb.v
+s
+user_file_25
+zbt_6111.v
+s
+user_file_26
+ramclock.v
+s
+user_file_27
+usb_input.v
 s
 user_file_3
 blob.v
