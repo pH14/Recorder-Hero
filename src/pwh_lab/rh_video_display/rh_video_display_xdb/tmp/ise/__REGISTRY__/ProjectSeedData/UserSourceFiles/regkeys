@@ -1,5 +1,5 @@
 NUM_USER_FILES
-27
+29
 s
 user_file_1
 labkit.ucf
@@ -60,6 +60,12 @@ ramclock.v
 s
 user_file_27
 usb_input.v
+s
+user_file_28
+zbt_image_writer.v
+s
+user_file_29
+zbt_image_writer_tb.v
 s
 user_file_3
 blob.v

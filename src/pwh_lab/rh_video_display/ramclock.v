@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////////////////////
+// ramclock module
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // 6.111 FPGA Labkit -- ZBT RAM clock generation
@@ -42,7 +45,10 @@ module ramclock(ref_clock, fpga_clock, ram0_clock, ram1_clock,
 
    ////////////////////////////////////////////////////////////////////////////
    
-   IBUFG ref_buf (.O(ref_clk), .I(ref_clock));
+   //To force ISE to compile the ramclock, this line has to be removed.
+   //IBUFG ref_buf (.O(ref_clk), .I(ref_clock));
+	
+	assign ref_clk = ref_clock;
    
    BUFG int_buf (.O(fpga_clock), .I(fpga_clk));
 

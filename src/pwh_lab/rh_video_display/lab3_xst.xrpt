@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Dec  6 00:20:56 2012">
+  <application stringID="Xst" timeStamp="Thu Dec  6 01:12:02 2012">
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
       <item dataType="int" stringID="XST_ROMS" value="17"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="80">
@@ -122,9 +122,9 @@
         <item dataType="int" stringID="XST_CLOCK_BUFFERS" value="4">
           <item dataType="int" stringID="XST_BUFG" value="4"/>
         </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="294">
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="293">
           <item dataType="int" stringID="XST_IBUF" value="16"/>
-          <item dataType="int" stringID="XST_IBUFG" value="3"/>
+          <item dataType="int" stringID="XST_IBUFG" value="2"/>
           <item dataType="int" stringID="XST_OBUF" value="239"/>
           <item dataType="int" stringID="XST_OBUFT" value="36"/>
         </item>

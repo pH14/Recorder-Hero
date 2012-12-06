@@ -862,7 +862,9 @@ proc restore { { project_dir "" } } {
       "rh_video_display.v" 
       "song_scales.xco" 
       "usb_input.v" 
-      "zbt_6111.v"}
+      "zbt_6111.v" 
+      "zbt_image_writer.v" 
+      "zbt_image_writer_tb.v"}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files
@@ -956,7 +958,7 @@ proc restore { { project_dir "" } } {
       "A" "" "" "" "PROPEXT_xilxSynthAddBufg_virtex2" "16" 
       "A" "" "" "" "PROPEXT_xilxSynthMaxFanout_virtex2" "500" 
       "A" "" "" "" "PROP_AutoGenFile" "false" 
-      "A" "" "" "" "PROP_BehavioralSimTop" "Module|counter_tb" 
+      "A" "" "" "" "PROP_BehavioralSimTop" "Module|zbt_image_writer_tb" 
       "A" "" "" "" "PROP_CPLDFitkeepio" "false" 
       "A" "" "" "" "PROP_CompxlibAbelLib" "true" 
       "A" "" "" "" "PROP_CompxlibCPLDDetLib" "true" 

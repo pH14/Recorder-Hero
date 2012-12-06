@@ -25,9 +25,6 @@ bmp.ngc"...
 Reading in constraint information from 'labkit.ucf'...
 Gathering constraint information from source properties...
 Done.
-INFO:NgdBuild:889 - Pad net 'clock_65mhz' is not connected to an external port
-   in this design.  A new port 'clock_65mhz' has been added and is connected to
-   this signal.
 INFO:NgdBuild:889 - Pad net 'rc/ddr_reg1/Q' is not connected to an external port
    in this design.  A new port 'Q' has been added and is connected to this
    signal.
@@ -43,34 +40,6 @@ Done...
 Checking Partitions ...
 
 Checking expanded design ...
-ERROR:NgdBuild:770 - IBUFG 'rc/ref_buf' and BUFG 'vclk2' on net 'clock_65mhz'
-   are lined up in series. Buffers of the same direction cannot be placed in
-   series.
-ERROR:NgdBuild:462 - input pad net 'clock_65mhz' drives multiple buffers:
-     pin I on block rc/ref_buf with type IBUFG,
-     pin I on block vga_out_pixel_clock1_INV_0 with type INV
-ERROR:NgdBuild:924 - input pad net 'clock_65mhz' is driving non-buffer
-   primitives:
-     pin C on block from_fifo_0 with type FDE,
-     pin C on block from_fifo_1 with type FDE,
-     pin C on block from_fifo_2 with type FDE,
-     pin C on block from_fifo_3 with type FDE,
-     pin C on block from_fifo_4 with type FDE,
-     pin C on block from_fifo_5 with type FDE,
-     pin C on block from_fifo_6 with type FDE,
-     pin C on block from_fifo_7 with type FDE,
-     pin C on block b with type FD,
-     pin C on block hs with type FD,
-     pin C on block vs with type FD,
-     pin C on block db3/new with type FDE,
-     pin C on block db3/clean with type FDE,
-     pin C on block db2/new with type FDE,
-     pin C on block db2/clean with type FDE,
-     pin C on block db1/new with type FDE,
-     pin C on block db1/clean with type FDE,
-     pin C on block db3/count_0 with type FDRE,
-     pin C on block db3/count_1 with type FDRE,
-     pin C on block db3/count_2 with type FDRE
 WARNING:NgdBuild:470 - bidirect pad net 'user3<28>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'user3<4>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'user3<29>' has no legal driver
@@ -311,12 +280,11 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:     3
+  Number of errors:     0
   Number of warnings: 231
 
-Total memory usage is 238692 kilobytes
+Total memory usage is 238528 kilobytes
 
-
-One or more errors were found during NGDBUILD.  No NGD file will be written.
+Writing NGD file "lab3.ngd" ...
 
 Writing NGDBUILD log file "lab3.bld"...
