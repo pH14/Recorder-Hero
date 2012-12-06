@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/zbt_image_writer_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="zbt_image_writer_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/zbt_image_writer_tb/new_output" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">new_output</obj_property>
+      <obj_property name="ObjectShortName">new_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/image_data_zbt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">image_data_zbt[35:0]</obj_property>
+      <obj_property name="ObjectShortName">image_data_zbt[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/image_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">image_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">image_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/new_input" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">new_input</obj_property>
+      <obj_property name="ObjectShortName">new_input</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/uut/image_data_zbt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">image_data_zbt[35:0]</obj_property>
+      <obj_property name="ObjectShortName">image_data_zbt[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/uut/n_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">n_out</obj_property>
+      <obj_property name="ObjectShortName">n_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/uut/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">count[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zbt_image_writer_tb/uut/image_row" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">image_row[35:0]</obj_property>
+      <obj_property name="ObjectShortName">image_row[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

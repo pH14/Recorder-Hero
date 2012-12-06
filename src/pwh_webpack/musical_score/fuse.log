@@ -1,23 +1,20 @@
-Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/musical_score_load_tb_isim_beh.exe -prj Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/musical_score_load_tb_beh.prj work.musical_score_load_tb work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/zbt_image_writer_tb_isim_beh.exe" -prj "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/zbt_image_writer_tb_beh.prj" "work.zbt_image_writer_tb" "work.glbl" 
 ISim P.28xd (signature 0x1048c146)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Analyzing Verilog file "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/divider.v" into library work
-Analyzing Verilog file "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/musical_score_load.v" into library work
-Analyzing Verilog file "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/musical_score_load_tb.v" into library work
+Analyzing Verilog file "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/zbt_image_writer.v" into library work
+Analyzing Verilog file "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/zbr_image_writer_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/musical_score_load.v" Line 48: Size mismatch in connection of port <count_to_input>. Formal port size is 32-bit while actual signal size is 26-bit.
 Completed static elaboration
-Fuse Memory Usage: 99908 KB
-Fuse CPU Usage: 467 ms
-Compiling module divider
-Compiling module musical_score_load
-Compiling module musical_score_load_tb
+Fuse Memory Usage: 102828 KB
+Fuse CPU Usage: 358 ms
+Compiling module zbt_image_writer
+Compiling module zbt_image_writer_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 4 Verilog Units
-Built simulation executable Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/musical_score_load_tb_isim_beh.exe
-Fuse Memory Usage: 103476 KB
-Fuse CPU Usage: 561 ms
+Compiled 3 Verilog Units
+Built simulation executable Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/zbt_image_writer_tb_isim_beh.exe
+Fuse Memory Usage: 106396 KB
+Fuse CPU Usage: 420 ms
