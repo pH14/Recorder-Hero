@@ -1,0 +1,58 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display
+T_opt
+Z1 VR1`zhf]bA;d[]Ok5:[3;Q0
+Z2 04 19 4 work zbt_image_writer_tb fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-f04da20f0fdf-50c13ead-6bdfd-9a5
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver
+Z6 OE;O;6.4a;39
+T_opt1
+Z7 VNT6d=lCNfC2DOe9kUMj8T2
+R2
+R3
+Z8 =1-f04da20f0fdf-50c14ace-13bc-e85
+R5
+R6
+vglbl
+Z9 IB;@1jEXmEfQXL`;Kf0IBZ3
+Z10 VnN]4Gon>inod6>M^M2[SV1
+Z11 w1202685744
+Z12 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z13 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+L0 5
+Z14 OE;L;6.4a;39
+r1
+31
+Z15 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
+Z16 !s100 T?5S;>bN`@zG_25]R_4A33
+!s85 0
+vzbt_image_writer
+Z17 I5=c]W4>5<6=0BXF]S2Jae0
+Z18 VVTY=6<7Qg3BabGLFdgVYC1
+Z19 w1354844841
+Z20 8zbt_image_writer.v
+Z21 Fzbt_image_writer.v
+L0 21
+R14
+r1
+31
+R15
+Z22 !s100 Dc;lPTb;hk6^EWLX3m7]m1
+!s85 0
+vzbt_image_writer_tb
+Z23 IFOb<;9LGnk[H^Qe=09Pdb2
+Z24 V>kT48BS2K0;o_6hgUTYSd2
+Z25 w1354841694
+Z26 8zbr_image_writer_tb.v
+Z27 Fzbr_image_writer_tb.v
+L0 25
+R14
+r1
+31
+R15
+Z28 !s100 FoKKmB]lD8VDDjOV<6SbY0
+!s85 0

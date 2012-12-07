@@ -513,6 +513,95 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		end
 	end
 	
+   // wire up to ZBT ram
+   wire [35:0] vram_write_data;
+   wire [35:0] vram_read_data;
+   wire [18:0] vram_addr;
+   wire         vram_we;
+
+   wire ram0_clk_not_used;
+   zbt_6111 zbt1(clk, 1'b1, 
+			vram_we, 
+			vram_addr,
+		   vram_write_data, 
+			vram_read_data,
+		   ram0_clk_not_used,   //to get good timing, don't connect ram_clk to zbt_6111
+		   ram0_we_b, ram0_address, ram0_data, ram0_cen_b);
+			
+	wire zbt_iw_newout;
+	wire [35:0] zbt_iw_output;
+	reg [35:0] zbt_iw_output_reg;
+	zbt_image_writer ziw1(.clk(clk),
+						  .reset(reset),
+						  .image_data(fifo_data_output),
+						  .new_input(fifo_newout),
+						  .new_output(zbt_iw_newout),
+						  .image_data_zbt(zbt_iw_output));
+	
+	wire [7:0] image_bits;
+	reg [18:0] vram_write_addr = 0;
+	wire [18:0] vram_read_addr;
+//	reg [2:0] vram_read_img_counter = 0;
+	
+	assign vram_we = zbt_iw_newout;
+	assign vram_addr = (zbt_iw_newout == 1) ? vram_write_addr 
+															: vram_read_addr;
+	assign vram_write_data = zbt_iw_output_reg;
+	
+	vram_display vd1(.reset(reset),
+						  .clk(clk),
+						  .hcount(hcount),
+						  .vcount(vcount),
+						  .vr_pixel(image_bits),
+						  .vram_addr(vram_read_addr),
+						  .vram_read_data(vram_read_data));
+	reg [9:0] x_pixels = 0;
+	reg [9:0] y_pixels = 0;
+	
+	always @(posedge clk) begin
+		if (reset) begin
+			vram_write_addr <= 0;
+			x_pixels <= 0;
+			y_pixels <= 0;
+//			vram_read_addr <= 0;
+//			vram_read_img_counter <= 0;
+		end
+		
+		if (fifo_newout) begin
+			x_pixels <= x_pixels + 1;
+		end
+		
+		if (x_pixels >= 1023) begin
+			x_pixels <= 0;
+			y_pixels <= y_pixels + 1;
+		end
+		
+		if (zbt_iw_newout) begin
+			vram_write_addr <= {0, y_pixels, x_pixels[9:2]};
+			zbt_iw_output_reg <= zbt_iw_output;
+		end
+		
+//		vram_read_img_counter <= vram_read_img_counter + 1;
+//		
+//		if (vram_read_img_counter >= 3) begin
+//			vram_read_addr <= vram_read_addr + 1;
+//			vram_read_img_counter <= 0;
+//		end
+		
+//		if ((hcount == 1) && (vcount == 1)) begin
+//			vram_read_addr <= 0;
+//		end
+//		
+//		case(vram_read_img_counter)
+//			3'd0: image_bits <= vram_read_data[7:0];
+//			3'd1: image_bits <= vram_read_data[15:8];
+//			3'd2: image_bits <= vram_read_data[23:16];
+//			3'd3: image_bits <= vram_read_data[31:24];
+//			default: image_bits <= 8'h00;
+//		endcase
+		// PIXEL # (hcount-x) + (vcount-y) * WIDTH;
+	end
+	
 	musical_score_loader msl(.clk(clk), .reset(reset),
 								    .song_id(switch[7]), .next_notes_out(nn),
 									 .tempo_out(tempo),
@@ -526,6 +615,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		.score_string("00006111"),
 		.current_note_string("C"),
 		.tempo(tempo),
+		.bono_image_bits(image_bits),
 		.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),
 		.blank(blank),.phsync(phsync),
@@ -534,13 +624,19 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clk), 
-		.data({from_fifo,4'b0,fifo_state,3'b0,fifo_newout,4'hA}),//{nn[63:31], 2'b00, dispdata}),
+		.data({ dispdata,
+				  from_fifo,image_bits }),//fifo_state,
+				  //3'b0,fifo_newout}),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
 		.disp_rs(disp_rs), 
 		.disp_ce_b(disp_ce_b),
 		.disp_reset_b(disp_reset_b),
 		.disp_data_out(disp_data_out));
+		
+	//{ 4'hF,1'b0,vram_read_addr,4'hF,
+//				  1'b0,vram_write_addr,
+//				  from_fifo,image_bits}
 
    // switch[1:0] selects which video generator to use:
    //  00: user's pong game
@@ -583,19 +679,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
    assign vga_out_hsync = hs;
    assign vga_out_vsync = vs;
    
-   assign led = ~{3'b000,up,down,reset,switch[1:0]};
-					
-   // wire up to ZBT ram
-   wire [35:0] vram_write_data;
-   wire [35:0] vram_read_data;
-   wire [18:0] vram_addr;
-   wire        vram_we;
-
-   wire ram0_clk_not_used;
-   zbt_6111 zbt1(clk, 1'b1, vram_we, vram_addr,
-		   vram_write_data, vram_read_data,
-		   ram0_clk_not_used,   //to get good timing, don't connect ram_clk to zbt_6111
-		   ram0_we_b, ram0_address, ram0_data, ram0_cen_b);
+   assign led = ~{2'b00, vram_we,up,down,reset,switch[1:0]};
 
 endmodule
 
@@ -656,7 +740,7 @@ module rh_display (
 	input [63:0] score_string,
 	input [63:0] next_notes,
 	input [25:0] tempo,
-	
+	input [7:0] bono_image_bits,
 	input [10:0] hcount,
 	input [9:0] vcount,
 	input hsync,
@@ -869,10 +953,16 @@ module rh_display (
 						 .pixel(bmp_pixel));
 						 
 	wire [23:0] bono_pixel;
+	bono_picture_blob bpb_img(.pixel_clk(vclock),
+								     .x(1),
+									  .hcount(hcount),
+									  .y(1),
+									  .vcount(vcount),
+									  .image_bits(bono_image_bits),
+									  .pixel(bono_pixel));
 
 	wire [23:0] curr_note_alpha_blend_pixel;
 	reg [9:0] curr_note_y;
-	
 	reg [23:0] bmp_pixel_alpha;
 	
 //   blob #(.WIDTH(72), .HEIGHT(50))
@@ -947,36 +1037,36 @@ module rh_display (
 //		end
 //	end
 	
-//	assign pixel = bono_pixel;
-	assign pixel = onscreen_notes[0]
-						| onscreen_notes[1]
-						| onscreen_notes[2]
-						| onscreen_notes[3]
-						| onscreen_notes[4]
-						| onscreen_notes[5]
-						| onscreen_notes[6]
-						| onscreen_notes[7]
-						| onscreen_notes[8]
-						| onscreen_notes[9]
-						| onscreen_notes[10]
-						| onscreen_notes[11]
-						| onscreen_notes[12]
-						| onscreen_notes[13]
-						| onscreen_notes[14]
-						| onscreen_notes[15]
-						| note_line_pixels[0]
-						| note_line_pixels[1]
-						| note_line_pixels[2]
-						| note_line_pixels[3]
-						| note_line_pixels[4]
-						| note_line_pixels[5]
-						| note_line_pixels[6]
-						| note_line_pixels[7]
-						| {24{action_line}}
-						| {24{right_boundary_line}}
-						| {8{score_pixel}}
-						| {8{current_note_pixel}}
-						| bmp_pixel_alpha;
+	assign pixel = bono_pixel;
+//	assign pixel = onscreen_notes[0]
+//						| onscreen_notes[1]
+//						| onscreen_notes[2]
+//						| onscreen_notes[3]
+//						| onscreen_notes[4]
+//						| onscreen_notes[5]
+//						| onscreen_notes[6]
+//						| onscreen_notes[7]
+//						| onscreen_notes[8]
+//						| onscreen_notes[9]
+//						| onscreen_notes[10]
+//						| onscreen_notes[11]
+//						| onscreen_notes[12]
+//						| onscreen_notes[13]
+//						| onscreen_notes[14]
+//						| onscreen_notes[15]
+//						| note_line_pixels[0]
+//						| note_line_pixels[1]
+//						| note_line_pixels[2]
+//						| note_line_pixels[3]
+//						| note_line_pixels[4]
+//						| note_line_pixels[5]
+//						| note_line_pixels[6]
+//						| note_line_pixels[7]
+//						| {24{action_line}}
+//						| {24{right_boundary_line}}
+//						| {8{score_pixel}}
+//						| {8{current_note_pixel}}
+//						| bmp_pixel_alpha;
 						
-	assign debug = {song_tempo, {3'b000, tempo_beat_move}};
+	assign debug = {bono_pixel};
 endmodule

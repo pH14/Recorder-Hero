@@ -1,0 +1,4 @@
+verilog work "bono_red.v"
+verilog work "bono_green.v"
+verilog work "bono_blue.v"
+verilog work "bono_pb.v"

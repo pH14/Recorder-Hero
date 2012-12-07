@@ -862,9 +862,10 @@ proc restore { { project_dir "" } } {
       "rh_video_display.v" 
       "song_scales.xco" 
       "usb_input.v" 
+      "vram_display.v" 
+      "zbr_image_writer_tb.v" 
       "zbt_6111.v" 
-      "zbt_image_writer.v" 
-      "zbt_image_writer_tb.v"}
+      "zbt_image_writer.v"}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files

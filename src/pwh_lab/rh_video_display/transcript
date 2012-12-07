@@ -26,15 +26,17 @@
 # Top level modules:
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps zbt_image_writer_tb glbl 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: pwh  Hostname: eecs-digital-33  ProcessID: 2469
+#           Attempting to use alternate WLF file "./wlftB43jFp".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftB43jFp
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftB43jFp
+# Design is being optimized...
 # Loading work.zbt_image_writer_tb(fast)
 # Loading work.zbt_image_writer(fast)
 # Loading work.glbl(fast)
 # .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
 # .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
 # .main_pane.signals.interior.cs
-restart -f
-# Loading work.zbt_image_writer_tb(fast)
-# Loading work.zbt_image_writer(fast)
-# Loading work.glbl(fast)
-run 300ns

@@ -11,34 +11,33 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Thu Dec  6 00:54:52 2012
+Mapped Date    : Fri Dec  7 01:06:08 2012
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  380
+Number of warnings:  369
 Logic Utilization:
-  Number of Slice Flip Flops:           623 out of  67,584    1%
-  Number of 4 input LUTs:             1,847 out of  67,584    2%
+  Number of Slice Flip Flops:           421 out of  67,584    1%
+  Number of 4 input LUTs:               524 out of  67,584    1%
 Logic Distribution:
-  Number of occupied Slices:          1,139 out of  33,792    3%
-    Number of Slices containing only related logic:   1,139 out of   1,139 100%
-    Number of Slices containing unrelated logic:          0 out of   1,139   0%
+  Number of occupied Slices:            405 out of  33,792    1%
+    Number of Slices containing only related logic:     405 out of     405 100%
+    Number of Slices containing unrelated logic:          0 out of     405   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,051 out of  67,584    3%
-    Number used as logic:             1,841
-    Number used as a route-thru:        204
-    Number used as Shift registers:       6
-  Number of bonded IOBs:                541 out of     684   79%
+  Total Number of 4 input LUTs:         626 out of  67,584    1%
+    Number used as logic:               485
+    Number used as a route-thru:        102
+    Number used as Shift registers:      39
+  Number of bonded IOBs:                576 out of     684   84%
     IOB Flip Flops:                       6
-  Number of RAMB16s:                     22 out of     144   15%
-  Number of MULT18X18s:                   3 out of     144    2%
+  Number of RAMB16s:                      3 out of     144    2%
   Number of BUFGMUXs:                     4 out of      16   25%
   Number of DCMs:                         3 out of      12   25%
 
-Peak Memory Usage:  514 MB
-Total REAL time to MAP completion:  6 secs 
-Total CPU time to MAP completion:   5 secs 
+Peak Memory Usage:  488 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 
@@ -81,7 +80,7 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network user3<28>_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 280
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 304
    more times for the following (max. 5 shown):
    user3<4>_IBUF,
    user3<29>_IBUF,
@@ -89,78 +88,8 @@ WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 280
    user3<6>_IBUF,
    user3<7>_IBUF
    To see the details of these warning messages, please use the -detail switch.
-WARNING:MapLib:701 - Signal ram0_data<35> connected to top level port
-   ram0_data<35> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<34> connected to top level port
-   ram0_data<34> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<33> connected to top level port
-   ram0_data<33> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<32> connected to top level port
-   ram0_data<32> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<31> connected to top level port
-   ram0_data<31> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<30> connected to top level port
-   ram0_data<30> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<29> connected to top level port
-   ram0_data<29> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<28> connected to top level port
-   ram0_data<28> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<27> connected to top level port
-   ram0_data<27> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<26> connected to top level port
-   ram0_data<26> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<25> connected to top level port
-   ram0_data<25> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<24> connected to top level port
-   ram0_data<24> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<23> connected to top level port
-   ram0_data<23> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<22> connected to top level port
-   ram0_data<22> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<21> connected to top level port
-   ram0_data<21> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<20> connected to top level port
-   ram0_data<20> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<19> connected to top level port
-   ram0_data<19> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<18> connected to top level port
-   ram0_data<18> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<17> connected to top level port
-   ram0_data<17> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<16> connected to top level port
-   ram0_data<16> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<15> connected to top level port
-   ram0_data<15> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<14> connected to top level port
-   ram0_data<14> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<13> connected to top level port
-   ram0_data<13> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<12> connected to top level port
-   ram0_data<12> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<11> connected to top level port
-   ram0_data<11> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<10> connected to top level port
-   ram0_data<10> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<9> connected to top level port
-   ram0_data<9> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<8> connected to top level port
-   ram0_data<8> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<7> connected to top level port
-   ram0_data<7> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<6> connected to top level port
-   ram0_data<6> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<5> connected to top level port
-   ram0_data<5> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<4> connected to top level port
-   ram0_data<4> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<3> connected to top level port
-   ram0_data<3> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<2> connected to top level port
-   ram0_data<2> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<1> connected to top level port
-   ram0_data<1> has been removed.
-WARNING:MapLib:701 - Signal ram0_data<0> connected to top level port
-   ram0_data<0> has been removed.
+WARNING:MapLib:701 - Signal switch<7> connected to top level port switch<7> has
+   been removed.
 WARNING:LIT:162 - Only DFS outputs (CLKFX/FX180/CONCUR) of DCM symbol "vclk1"
    are routed, but CLKFB is not routed. Proper phase relationship of output
    clocks to CLKIN cannot be guaranteed.
@@ -727,185 +656,257 @@ WARNING:PhysDesignRules:367 - The signal <tv_in_line_clock2_IBUF> is incomplete.
 WARNING:PhysDesignRules:367 - The signal <user4<9>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
-WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
-WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
-   block:<msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ra
-   m/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_green/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0]
+   .ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
-WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
-WARNING:PhysDesignRules:812 - Dangling pin <DOB24> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
-   block:<msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
-   ram/spram.ram.B>:<RAMB16_RAMB16B>.
+   block:<rh_disp/bpb_img/b_red/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].r
+   am.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB17> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB18> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB19> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB20> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB21> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB22> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB23> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB25> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB26> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB27> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].
+   ram.r/v2_init.ram/spram.ram.B>:<RAMB16_RAMB16B>.
 
 Section 3 - Informational
 -------------------------
@@ -919,9 +920,9 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  78 block(s) removed
-  14 block(s) optimized away
-  37 signal(s) removed
+ 419 block(s) removed
+  43 block(s) optimized away
+ 468 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -936,125 +937,1143 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
+The signal "msl/lotr/BU2/doutb<0>" is sourceless and has been removed.
+The signal "msl/lotr/BU2/N1" is sourceless and has been removed.
+The signal "msl/ss/BU2/doutb<0>" is sourceless and has been removed.
+The signal "msl/ss/BU2/N1" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<7>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<6>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<5>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<4>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<3>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<2>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<1>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/dout<0>" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/N1" is sourceless and has been removed.
+The signal "rh_disp/csd_note/f/N0" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<7>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<6>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<5>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<4>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<3>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<2>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<1>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/dout<0>" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/N1" is sourceless and has been removed.
+The signal "rh_disp/csd_score/f/N0" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<7>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<6>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<5>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<4>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<3>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<2>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<1>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/douta<0>" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/doutb<0>" is sourceless and has been removed.
 The signal "rh_disp/pb/nl_rom/BU2/N1" is sourceless and has been removed.
+ Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_0"
+(FF) removed.
+  The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<0>"
+is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_371" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_37" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_6" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_361" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_36" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_5" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_351" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_35" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_4" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_341" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_34" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_3" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_331" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_33" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_2" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_321" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_32" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_1" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_311" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_31" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5_0" (MUX) removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_31" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_3" is sourceless and has been removed.
+     Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_2_f5" (MUX) removed.
+ Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_1"
+(FF) removed.
+  The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<1>"
+is sourceless and has been removed.
+ Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_2"
+(FF) removed.
+  The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<2>"
+is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_471" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_47" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_461" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_46" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_451" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_45" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_441" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_44" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_431" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_43" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_421" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_42" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_411" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_41" is sourceless and has been removed.
+   Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_41" (ROM) removed.
+    The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/Mmux_dout_mux
+_4" is sourceless and has been removed.
+ Sourceless block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe_3"
+(FF) removed.
+  The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/has_mux_a.A/sel_pipe<3>"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena0" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena" is
+sourceless and has been removed.
+The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/en
+out_8_cmp_eq0000" is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta16"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta15"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta14"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta13"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta12"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta11"
+is sourceless and has been removed.
+The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta10<3>" is
+sourceless and has been removed.
+The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta10<2>" is
+sourceless and has been removed.
+The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta10<1>" is
+sourceless and has been removed.
+The signal
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta10<0>" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta9" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta8" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta7" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta6" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta5" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta4" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta3" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta2" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta1<3>"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta1<2>"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta1<1>"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta1<0>"
+is sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta0" is
+sourceless and has been removed.
+The signal "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_douta" is
+sourceless and has been removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
    2. part of disabled logic
    3. a side-effect of other trimmed logic
 
-The signal "ram0_data<0>" is unused and has been removed.
- Unused block "ram0_data_0_OBUFT" (TRI) removed.
-The signal "ram0_data<10>" is unused and has been removed.
- Unused block "ram0_data_10_OBUFT" (TRI) removed.
-The signal "ram0_data<11>" is unused and has been removed.
- Unused block "ram0_data_11_OBUFT" (TRI) removed.
-The signal "ram0_data<12>" is unused and has been removed.
- Unused block "ram0_data_12_OBUFT" (TRI) removed.
-The signal "ram0_data<13>" is unused and has been removed.
- Unused block "ram0_data_13_OBUFT" (TRI) removed.
-The signal "ram0_data<14>" is unused and has been removed.
- Unused block "ram0_data_14_OBUFT" (TRI) removed.
-The signal "ram0_data<15>" is unused and has been removed.
- Unused block "ram0_data_15_OBUFT" (TRI) removed.
-The signal "ram0_data<16>" is unused and has been removed.
- Unused block "ram0_data_16_OBUFT" (TRI) removed.
-The signal "ram0_data<17>" is unused and has been removed.
- Unused block "ram0_data_17_OBUFT" (TRI) removed.
-The signal "ram0_data<18>" is unused and has been removed.
- Unused block "ram0_data_18_OBUFT" (TRI) removed.
-The signal "ram0_data<19>" is unused and has been removed.
- Unused block "ram0_data_19_OBUFT" (TRI) removed.
-The signal "ram0_data<1>" is unused and has been removed.
- Unused block "ram0_data_1_OBUFT" (TRI) removed.
-The signal "ram0_data<20>" is unused and has been removed.
- Unused block "ram0_data_20_OBUFT" (TRI) removed.
-The signal "ram0_data<21>" is unused and has been removed.
- Unused block "ram0_data_21_OBUFT" (TRI) removed.
-The signal "ram0_data<22>" is unused and has been removed.
- Unused block "ram0_data_22_OBUFT" (TRI) removed.
-The signal "ram0_data<23>" is unused and has been removed.
- Unused block "ram0_data_23_OBUFT" (TRI) removed.
-The signal "ram0_data<24>" is unused and has been removed.
- Unused block "ram0_data_24_OBUFT" (TRI) removed.
-The signal "ram0_data<25>" is unused and has been removed.
- Unused block "ram0_data_25_OBUFT" (TRI) removed.
-The signal "ram0_data<26>" is unused and has been removed.
- Unused block "ram0_data_26_OBUFT" (TRI) removed.
-The signal "ram0_data<27>" is unused and has been removed.
- Unused block "ram0_data_27_OBUFT" (TRI) removed.
-The signal "ram0_data<28>" is unused and has been removed.
- Unused block "ram0_data_28_OBUFT" (TRI) removed.
-The signal "ram0_data<29>" is unused and has been removed.
- Unused block "ram0_data_29_OBUFT" (TRI) removed.
-The signal "ram0_data<2>" is unused and has been removed.
- Unused block "ram0_data_2_OBUFT" (TRI) removed.
-The signal "ram0_data<30>" is unused and has been removed.
- Unused block "ram0_data_30_OBUFT" (TRI) removed.
-The signal "ram0_data<31>" is unused and has been removed.
- Unused block "ram0_data_31_OBUFT" (TRI) removed.
-The signal "ram0_data<32>" is unused and has been removed.
- Unused block "ram0_data_32_OBUFT" (TRI) removed.
-The signal "ram0_data<33>" is unused and has been removed.
- Unused block "ram0_data_33_OBUFT" (TRI) removed.
-The signal "ram0_data<34>" is unused and has been removed.
- Unused block "ram0_data_34_OBUFT" (TRI) removed.
-The signal "ram0_data<35>" is unused and has been removed.
- Unused block "ram0_data_35_OBUFT" (TRI) removed.
-The signal "ram0_data<3>" is unused and has been removed.
- Unused block "ram0_data_3_OBUFT" (TRI) removed.
-The signal "ram0_data<4>" is unused and has been removed.
- Unused block "ram0_data_4_OBUFT" (TRI) removed.
-The signal "ram0_data<5>" is unused and has been removed.
- Unused block "ram0_data_5_OBUFT" (TRI) removed.
-The signal "ram0_data<6>" is unused and has been removed.
- Unused block "ram0_data_6_OBUFT" (TRI) removed.
-The signal "ram0_data<7>" is unused and has been removed.
- Unused block "ram0_data_7_OBUFT" (TRI) removed.
-The signal "ram0_data<8>" is unused and has been removed.
- Unused block "ram0_data_8_OBUFT" (TRI) removed.
-The signal "ram0_data<9>" is unused and has been removed.
- Unused block "ram0_data_9_OBUFT" (TRI) removed.
+The signal "N12" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_column_xor<2>1_SW0" (ROM) removed.
+The signal "N182" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>296_SW0" (ROM) removed.
+  The signal "rh_disp/csd_score/Mmux__COND_43_5_f6" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Mmux__COND_43_5_f6" (MUX) removed.
+    The signal "rh_disp/csd_score/Mmux__COND_43_7_f5" is unused and has been
+removed.
+     Unused block "rh_disp/csd_score/Mmux__COND_43_7_f5" (MUX) removed.
+      The signal "rh_disp/csd_score/Mmux__COND_38_81" is unused and has been removed.
+       Unused block "rh_disp/csd_score/Mmux__COND_38_811" (ROM) removed.
+        The signal "rh_disp/csd_score/N111" is unused and has been removed.
+         Unused block "rh_disp/csd_score/N1111" (ROM) removed.
+      The signal "rh_disp/csd_score/column<1>" is unused and has been removed.
+       Unused block "rh_disp/csd_score/Madd_column_xor<1>11" (ROM) removed.
+    The signal "rh_disp/csd_score/column<2>" is unused and has been removed.
+     Unused block "rh_disp/csd_score/Madd_column_xor<2>12" (ROM) removed.
+  The signal "rh_disp/csd_score/N20" is unused and has been removed.
+   Unused block "rh_disp/csd_score/Madd_column_xor<2>111" (ROM) removed.
+The signal "msl/Mcount_read_addr_cy<0>" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_cy<0>" (MUX) removed.
+  The signal "msl/Mcount_read_addr_lut<0>" is unused and has been removed.
+   Unused block "msl/Mcount_read_addr_lut<0>_INV_0" (BUF) removed.
+    The signal "msl/read_addr<0>" is unused and has been removed.
+     Unused block "msl/read_addr_0" (SFF) removed.
+      The signal "msl/read_addr_not0001" is unused and has been removed.
+       Unused block "msl/read_addr_not00011" (ROM) removed.
+        The signal "msl/song_has_ended" is unused and has been removed.
+         Unused block "msl/song_has_ended" (SFF) removed.
+          The signal "msl/song_has_ended_not0001" is unused and has been removed.
+           Unused block "msl/song_has_ended_not0001_f5" (MUX) removed.
+            The signal "msl/song_has_ended_not00011" is unused and has been removed.
+             Unused block "msl/song_has_ended_not00011" (ROM) removed.
+              The signal "msl/next_notes_15_3" is unused and has been removed.
+               Unused block "msl/next_notes_15_3" (SFF) removed.
+                The signal "msl/tempo_beat" is unused and has been removed.
+                 Unused block "msl/c/Mcompar_ready_cy<13>" (MUX) removed.
+                  The signal "msl/c/Mcompar_ready_cy<12>" is unused and has been removed.
+                   Unused block "msl/c/Mcompar_ready_cy<12>" (MUX) removed.
+                    The signal "msl/c/Mcompar_ready_cy<11>" is unused and has been removed.
+                     Unused block "msl/c/Mcompar_ready_cy<11>" (MUX) removed.
+                      The signal "msl/c/Mcompar_ready_cy<10>" is unused and has been removed.
+                       Unused block "msl/c/Mcompar_ready_cy<10>" (MUX) removed.
+                        The signal "msl/c/Mcompar_ready_cy<9>" is unused and has been removed.
+                         Unused block "msl/c/Mcompar_ready_cy<9>" (MUX) removed.
+                          The signal "msl/c/Mcompar_ready_cy<8>" is unused and has been removed.
+                           Unused block "msl/c/Mcompar_ready_cy<8>" (MUX) removed.
+                            The signal "msl/c/Mcompar_ready_cy<7>" is unused and has been removed.
+                             Unused block "msl/c/Mcompar_ready_cy<7>" (MUX) removed.
+                              The signal "msl/c/Mcompar_ready_cy<6>" is unused and has been removed.
+                               Unused block "msl/c/Mcompar_ready_cy<6>" (MUX) removed.
+                                The signal "msl/c/Mcompar_ready_cy<5>" is unused and has been removed.
+                                 Unused block "msl/c/Mcompar_ready_cy<5>" (MUX) removed.
+                                  The signal "msl/c/Mcompar_ready_cy<4>" is unused and has been removed.
+                                   Unused block "msl/c/Mcompar_ready_cy<4>" (MUX) removed.
+                                    The signal "msl/c/Mcompar_ready_cy<3>" is unused and has been removed.
+                                     Unused block "msl/c/Mcompar_ready_cy<3>" (MUX) removed.
+                                      The signal "msl/c/Mcompar_ready_cy<2>" is unused and has been removed.
+                                       Unused block "msl/c/Mcompar_ready_cy<2>" (MUX) removed.
+                                        The signal "msl/c/Mcompar_ready_cy<1>" is unused and has been removed.
+                                         Unused block "msl/c/Mcompar_ready_cy<1>" (MUX) removed.
+                                          The signal "msl/c/Mcompar_ready_cy<0>" is unused and has been removed.
+                                           Unused block "msl/c/Mcompar_ready_cy<0>" (MUX) removed.
+                                            The signal "msl/c/Mcompar_ready_lut<0>" is unused and has been removed.
+                                             Unused block "msl/c/Mcompar_ready_lut<0>1" (ROM) removed.
+                                              The signal "msl/c/count<0>" is unused and has been removed.
+                                               Unused block "msl/c/count_0" (SFF) removed.
+                                                The signal "msl/c/Result<0>" is unused and has been removed.
+                                                 Unused block "msl/c/Mcount_count_xor<0>" (XOR) removed.
+*The signal "msl/c/Mcount_count_lut<0>" is unused and has been removed.
+* Unused block "msl/c/Mcount_count_lut<0>_INV_0" (BUF) removed.
+                                                The signal "msl/c/count_or0000" is unused and has been removed.
+                                                 Unused block "msl/c/count_or00001" (ROM) removed.
+                                              The signal "msl/c/count<1>" is unused and has been removed.
+                                               Unused block "msl/c/count_1" (SFF) removed.
+                                                The signal "msl/c/Result<1>" is unused and has been removed.
+                                                 Unused block "msl/c/Mcount_count_xor<1>" (XOR) removed.
+*The signal "msl/c/Mcount_count_cy<0>" is unused and has been removed.
+* Unused block "msl/c/Mcount_count_cy<0>" (MUX) removed.
+*The signal "msl/c/Mcount_count_cy<1>_rt" is unused and has been removed.
+* Unused block "msl/c/Mcount_count_cy<1>_rt" (ROM) removed.
+                                          The signal "msl/c/Mcompar_ready_lut<1>" is unused and has been removed.
+                                           Unused block "msl/c/Mcompar_ready_lut<1>1" (ROM) removed.
+                                            The signal "msl/c/count<2>" is unused and has been removed.
+                                             Unused block "msl/c/count_2" (SFF) removed.
+                                              The signal "msl/c/Result<2>" is unused and has been removed.
+                                               Unused block "msl/c/Mcount_count_xor<2>" (XOR) removed.
+                                                The signal "msl/c/Mcount_count_cy<1>" is unused and has been removed.
+                                                 Unused block "msl/c/Mcount_count_cy<1>" (MUX) removed.
+                                                The signal "msl/c/Mcount_count_cy<2>_rt" is unused and has been removed.
+                                                 Unused block "msl/c/Mcount_count_cy<2>_rt" (ROM) removed.
+                                            The signal "msl/c/count<3>" is unused and has been removed.
+                                             Unused block "msl/c/count_3" (SFF) removed.
+                                              The signal "msl/c/Result<3>" is unused and has been removed.
+                                               Unused block "msl/c/Mcount_count_xor<3>" (XOR) removed.
+                                                The signal "msl/c/Mcount_count_cy<2>" is unused and has been removed.
+                                                 Unused block "msl/c/Mcount_count_cy<2>" (MUX) removed.
+                                                The signal "msl/c/Mcount_count_cy<3>_rt" is unused and has been removed.
+                                                 Unused block "msl/c/Mcount_count_cy<3>_rt" (ROM) removed.
+                                        The signal "msl/c/Mcompar_ready_lut<2>" is unused and has been removed.
+                                         Unused block "msl/c/Mcompar_ready_lut<2>" (ROM) removed.
+                                          The signal "msl/c/count<4>" is unused and has been removed.
+                                           Unused block "msl/c/count_4" (SFF) removed.
+                                            The signal "msl/c/Result<4>" is unused and has been removed.
+                                             Unused block "msl/c/Mcount_count_xor<4>" (XOR) removed.
+                                              The signal "msl/c/Mcount_count_cy<3>" is unused and has been removed.
+                                               Unused block "msl/c/Mcount_count_cy<3>" (MUX) removed.
+                                              The signal "msl/c/Mcount_count_cy<4>_rt" is unused and has been removed.
+                                               Unused block "msl/c/Mcount_count_cy<4>_rt" (ROM) removed.
+                                          The signal "msl/c/goal<4>" is unused and has been removed.
+                                           Unused block "msl/c/goal_4" (FF) removed.
+                                            The signal "tempo<10>" is unused and has been removed.
+                                             Unused block "msl/tempo_out<10>1_INV_0" (BUF) removed.
+                                              The signal "switch_7_IBUF" is unused and has been removed.
+                                               Unused block "switch_7_IBUF" (BUF) removed.
+                                                The signal "switch<7>" is unused and has been removed.
+                                                 Unused block "switch<7>" (PAD) removed.
+                                          The signal "msl/c/count<5>" is unused and has been removed.
+                                           Unused block "msl/c/count_5" (SFF) removed.
+                                            The signal "msl/c/Result<5>" is unused and has been removed.
+                                             Unused block "msl/c/Mcount_count_xor<5>" (XOR) removed.
+                                              The signal "msl/c/Mcount_count_cy<4>" is unused and has been removed.
+                                               Unused block "msl/c/Mcount_count_cy<4>" (MUX) removed.
+                                              The signal "msl/c/Mcount_count_cy<5>_rt" is unused and has been removed.
+                                               Unused block "msl/c/Mcount_count_cy<5>_rt" (ROM) removed.
+                                          The signal "msl/c/goal<5>" is unused and has been removed.
+                                           Unused block "msl/c/goal_5" (FF) removed.
+                                      The signal "msl/c/Mcompar_ready_lut<3>" is unused and has been removed.
+                                       Unused block "msl/c/Mcompar_ready_lut<3>" (ROM) removed.
+                                        The signal "msl/c/count<6>" is unused and has been removed.
+                                         Unused block "msl/c/count_6" (SFF) removed.
+                                          The signal "msl/c/Result<6>" is unused and has been removed.
+                                           Unused block "msl/c/Mcount_count_xor<6>" (XOR) removed.
+                                            The signal "msl/c/Mcount_count_cy<5>" is unused and has been removed.
+                                             Unused block "msl/c/Mcount_count_cy<5>" (MUX) removed.
+                                            The signal "msl/c/Mcount_count_cy<6>_rt" is unused and has been removed.
+                                             Unused block "msl/c/Mcount_count_cy<6>_rt" (ROM) removed.
+                                        The signal "msl/c/count<7>" is unused and has been removed.
+                                         Unused block "msl/c/count_7" (SFF) removed.
+                                          The signal "msl/c/Result<7>" is unused and has been removed.
+                                           Unused block "msl/c/Mcount_count_xor<7>" (XOR) removed.
+                                            The signal "msl/c/Mcount_count_cy<6>" is unused and has been removed.
+                                             Unused block "msl/c/Mcount_count_cy<6>" (MUX) removed.
+                                            The signal "msl/c/Mcount_count_cy<7>_rt" is unused and has been removed.
+                                             Unused block "msl/c/Mcount_count_cy<7>_rt" (ROM) removed.
+                                    The signal "msl/c/Mcompar_ready_lut<4>" is unused and has been removed.
+                                     Unused block "msl/c/Mcompar_ready_lut<4>" (ROM) removed.
+                                      The signal "msl/c/count<8>" is unused and has been removed.
+                                       Unused block "msl/c/count_8" (SFF) removed.
+                                        The signal "msl/c/Result<8>" is unused and has been removed.
+                                         Unused block "msl/c/Mcount_count_xor<8>" (XOR) removed.
+                                          The signal "msl/c/Mcount_count_cy<7>" is unused and has been removed.
+                                           Unused block "msl/c/Mcount_count_cy<7>" (MUX) removed.
+                                          The signal "msl/c/Mcount_count_cy<8>_rt" is unused and has been removed.
+                                           Unused block "msl/c/Mcount_count_cy<8>_rt" (ROM) removed.
+                                      The signal "msl/c/count<9>" is unused and has been removed.
+                                       Unused block "msl/c/count_9" (SFF) removed.
+                                        The signal "msl/c/Result<9>" is unused and has been removed.
+                                         Unused block "msl/c/Mcount_count_xor<9>" (XOR) removed.
+                                          The signal "msl/c/Mcount_count_cy<8>" is unused and has been removed.
+                                           Unused block "msl/c/Mcount_count_cy<8>" (MUX) removed.
+                                          The signal "msl/c/Mcount_count_cy<9>_rt" is unused and has been removed.
+                                           Unused block "msl/c/Mcount_count_cy<9>_rt" (ROM) removed.
+                                  The signal "msl/c/Mcompar_ready_lut<5>" is unused and has been removed.
+                                   Unused block "msl/c/Mcompar_ready_lut<5>" (ROM) removed.
+                                    The signal "msl/c/count<10>" is unused and has been removed.
+                                     Unused block "msl/c/count_10" (SFF) removed.
+                                      The signal "msl/c/Result<10>" is unused and has been removed.
+                                       Unused block "msl/c/Mcount_count_xor<10>" (XOR) removed.
+                                        The signal "msl/c/Mcount_count_cy<9>" is unused and has been removed.
+                                         Unused block "msl/c/Mcount_count_cy<9>" (MUX) removed.
+                                        The signal "msl/c/Mcount_count_cy<10>_rt" is unused and has been removed.
+                                         Unused block "msl/c/Mcount_count_cy<10>_rt" (ROM) removed.
+                                    The signal "msl/c/count<11>" is unused and has been removed.
+                                     Unused block "msl/c/count_11" (SFF) removed.
+                                      The signal "msl/c/Result<11>" is unused and has been removed.
+                                       Unused block "msl/c/Mcount_count_xor<11>" (XOR) removed.
+                                        The signal "msl/c/Mcount_count_cy<10>" is unused and has been removed.
+                                         Unused block "msl/c/Mcount_count_cy<10>" (MUX) removed.
+                                        The signal "msl/c/Mcount_count_cy<11>_rt" is unused and has been removed.
+                                         Unused block "msl/c/Mcount_count_cy<11>_rt" (ROM) removed.
+                                The signal "msl/c/Mcompar_ready_lut<6>" is unused and has been removed.
+                                 Unused block "msl/c/Mcompar_ready_lut<6>" (ROM) removed.
+                                  The signal "msl/c/count<12>" is unused and has been removed.
+                                   Unused block "msl/c/count_12" (SFF) removed.
+                                    The signal "msl/c/Result<12>" is unused and has been removed.
+                                     Unused block "msl/c/Mcount_count_xor<12>" (XOR) removed.
+                                      The signal "msl/c/Mcount_count_cy<11>" is unused and has been removed.
+                                       Unused block "msl/c/Mcount_count_cy<11>" (MUX) removed.
+                                      The signal "msl/c/Mcount_count_cy<12>_rt" is unused and has been removed.
+                                       Unused block "msl/c/Mcount_count_cy<12>_rt" (ROM) removed.
+                                  The signal "msl/c/count<13>" is unused and has been removed.
+                                   Unused block "msl/c/count_13" (SFF) removed.
+                                    The signal "msl/c/Result<13>" is unused and has been removed.
+                                     Unused block "msl/c/Mcount_count_xor<13>" (XOR) removed.
+                                      The signal "msl/c/Mcount_count_cy<12>" is unused and has been removed.
+                                       Unused block "msl/c/Mcount_count_cy<12>" (MUX) removed.
+                                      The signal "msl/c/Mcount_count_cy<13>_rt" is unused and has been removed.
+                                       Unused block "msl/c/Mcount_count_cy<13>_rt" (ROM) removed.
+                              The signal "msl/c/Mcompar_ready_lut<7>" is unused and has been removed.
+                               Unused block "msl/c/Mcompar_ready_lut<7>1" (ROM) removed.
+                                The signal "msl/c/count<14>" is unused and has been removed.
+                                 Unused block "msl/c/count_14" (SFF) removed.
+                                  The signal "msl/c/Result<14>" is unused and has been removed.
+                                   Unused block "msl/c/Mcount_count_xor<14>" (XOR) removed.
+                                    The signal "msl/c/Mcount_count_cy<13>" is unused and has been removed.
+                                     Unused block "msl/c/Mcount_count_cy<13>" (MUX) removed.
+                                    The signal "msl/c/Mcount_count_cy<14>_rt" is unused and has been removed.
+                                     Unused block "msl/c/Mcount_count_cy<14>_rt" (ROM) removed.
+                                The signal "msl/c/count<15>" is unused and has been removed.
+                                 Unused block "msl/c/count_15" (SFF) removed.
+                                  The signal "msl/c/Result<15>" is unused and has been removed.
+                                   Unused block "msl/c/Mcount_count_xor<15>" (XOR) removed.
+                                    The signal "msl/c/Mcount_count_cy<14>" is unused and has been removed.
+                                     Unused block "msl/c/Mcount_count_cy<14>" (MUX) removed.
+                                    The signal "msl/c/Mcount_count_cy<15>_rt" is unused and has been removed.
+                                     Unused block "msl/c/Mcount_count_cy<15>_rt" (ROM) removed.
+                            The signal "msl/c/Mcompar_ready_lut<8>" is unused and has been removed.
+                             Unused block "msl/c/Mcompar_ready_lut<8>1" (ROM) removed.
+                              The signal "msl/c/count<16>" is unused and has been removed.
+                               Unused block "msl/c/count_16" (SFF) removed.
+                                The signal "msl/c/Result<16>" is unused and has been removed.
+                                 Unused block "msl/c/Mcount_count_xor<16>" (XOR) removed.
+                                  The signal "msl/c/Mcount_count_cy<15>" is unused and has been removed.
+                                   Unused block "msl/c/Mcount_count_cy<15>" (MUX) removed.
+                                  The signal "msl/c/Mcount_count_cy<16>_rt" is unused and has been removed.
+                                   Unused block "msl/c/Mcount_count_cy<16>_rt" (ROM) removed.
+                              The signal "msl/c/count<17>" is unused and has been removed.
+                               Unused block "msl/c/count_17" (SFF) removed.
+                                The signal "msl/c/Result<17>" is unused and has been removed.
+                                 Unused block "msl/c/Mcount_count_xor<17>" (XOR) removed.
+                                  The signal "msl/c/Mcount_count_cy<16>" is unused and has been removed.
+                                   Unused block "msl/c/Mcount_count_cy<16>" (MUX) removed.
+                                  The signal "msl/c/Mcount_count_cy<17>_rt" is unused and has been removed.
+                                   Unused block "msl/c/Mcount_count_cy<17>_rt" (ROM) removed.
+                          The signal "msl/c/Mcompar_ready_lut<9>" is unused and has been removed.
+                           Unused block "msl/c/Mcompar_ready_lut<9>" (ROM) removed.
+                            The signal "msl/c/count<18>" is unused and has been removed.
+                             Unused block "msl/c/count_18" (SFF) removed.
+                              The signal "msl/c/Result<18>" is unused and has been removed.
+                               Unused block "msl/c/Mcount_count_xor<18>" (XOR) removed.
+                                The signal "msl/c/Mcount_count_cy<17>" is unused and has been removed.
+                                 Unused block "msl/c/Mcount_count_cy<17>" (MUX) removed.
+                                The signal "msl/c/Mcount_count_cy<18>_rt" is unused and has been removed.
+                                 Unused block "msl/c/Mcount_count_cy<18>_rt" (ROM) removed.
+                            The signal "msl/c/count<19>" is unused and has been removed.
+                             Unused block "msl/c/count_19" (SFF) removed.
+                              The signal "msl/c/Result<19>" is unused and has been removed.
+                               Unused block "msl/c/Mcount_count_xor<19>" (XOR) removed.
+                                The signal "msl/c/Mcount_count_cy<18>" is unused and has been removed.
+                                 Unused block "msl/c/Mcount_count_cy<18>" (MUX) removed.
+                                The signal "msl/c/Mcount_count_cy<19>_rt" is unused and has been removed.
+                                 Unused block "msl/c/Mcount_count_cy<19>_rt" (ROM) removed.
+                        The signal "msl/c/Mcompar_ready_lut<10>" is unused and has been removed.
+                         Unused block "msl/c/Mcompar_ready_lut<10>" (ROM) removed.
+                          The signal "msl/c/count<20>" is unused and has been removed.
+                           Unused block "msl/c/count_20" (SFF) removed.
+                            The signal "msl/c/Result<20>" is unused and has been removed.
+                             Unused block "msl/c/Mcount_count_xor<20>" (XOR) removed.
+                              The signal "msl/c/Mcount_count_cy<19>" is unused and has been removed.
+                               Unused block "msl/c/Mcount_count_cy<19>" (MUX) removed.
+                              The signal "msl/c/Mcount_count_cy<20>_rt" is unused and has been removed.
+                               Unused block "msl/c/Mcount_count_cy<20>_rt" (ROM) removed.
+                          The signal "msl/c/count<21>" is unused and has been removed.
+                           Unused block "msl/c/count_21" (SFF) removed.
+                            The signal "msl/c/Result<21>" is unused and has been removed.
+                             Unused block "msl/c/Mcount_count_xor<21>" (XOR) removed.
+                              The signal "msl/c/Mcount_count_cy<20>" is unused and has been removed.
+                               Unused block "msl/c/Mcount_count_cy<20>" (MUX) removed.
+                              The signal "msl/c/Mcount_count_cy<21>_rt" is unused and has been removed.
+                               Unused block "msl/c/Mcount_count_cy<21>_rt" (ROM) removed.
+                      The signal "msl/c/Mcompar_ready_lut<11>" is unused and has been removed.
+                       Unused block "msl/c/Mcompar_ready_lut<11>1" (ROM) removed.
+                        The signal "msl/c/count<22>" is unused and has been removed.
+                         Unused block "msl/c/count_22" (SFF) removed.
+                          The signal "msl/c/Result<22>" is unused and has been removed.
+                           Unused block "msl/c/Mcount_count_xor<22>" (XOR) removed.
+                            The signal "msl/c/Mcount_count_cy<21>" is unused and has been removed.
+                             Unused block "msl/c/Mcount_count_cy<21>" (MUX) removed.
+                            The signal "msl/c/Mcount_count_cy<22>_rt" is unused and has been removed.
+                             Unused block "msl/c/Mcount_count_cy<22>_rt" (ROM) removed.
+                        The signal "msl/c/count<23>" is unused and has been removed.
+                         Unused block "msl/c/count_23" (SFF) removed.
+                          The signal "msl/c/Result<23>" is unused and has been removed.
+                           Unused block "msl/c/Mcount_count_xor<23>" (XOR) removed.
+                            The signal "msl/c/Mcount_count_cy<22>" is unused and has been removed.
+                             Unused block "msl/c/Mcount_count_cy<22>" (MUX) removed.
+                            The signal "msl/c/Mcount_count_cy<23>_rt" is unused and has been removed.
+                             Unused block "msl/c/Mcount_count_cy<23>_rt" (ROM) removed.
+                    The signal "msl/c/Mcompar_ready_lut<12>" is unused and has been removed.
+                     Unused block "msl/c/Mcompar_ready_lut<12>" (ROM) removed.
+                      The signal "msl/c/count<24>" is unused and has been removed.
+                       Unused block "msl/c/count_24" (SFF) removed.
+                        The signal "msl/c/Result<24>" is unused and has been removed.
+                         Unused block "msl/c/Mcount_count_xor<24>" (XOR) removed.
+                          The signal "msl/c/Mcount_count_cy<23>" is unused and has been removed.
+                           Unused block "msl/c/Mcount_count_cy<23>" (MUX) removed.
+                          The signal "msl/c/Mcount_count_cy<24>_rt" is unused and has been removed.
+                           Unused block "msl/c/Mcount_count_cy<24>_rt" (ROM) removed.
+                      The signal "msl/c/count<25>" is unused and has been removed.
+                       Unused block "msl/c/count_25" (SFF) removed.
+                        The signal "msl/c/Result<25>" is unused and has been removed.
+                         Unused block "msl/c/Mcount_count_xor<25>" (XOR) removed.
+                          The signal "msl/c/Mcount_count_cy<24>" is unused and has been removed.
+                           Unused block "msl/c/Mcount_count_cy<24>" (MUX) removed.
+                          The signal "msl/c/Mcount_count_cy<25>_rt" is unused and has been removed.
+                           Unused block "msl/c/Mcount_count_cy<25>_rt" (ROM) removed.
+                  The signal "msl/c/Mcompar_ready_lut<13>" is unused and has been removed.
+                   Unused block "msl/c/Mcompar_ready_lut<13>1_INV_0" (BUF) removed.
+                    The signal "msl/c/count<26>" is unused and has been removed.
+                     Unused block "msl/c/count_26" (SFF) removed.
+                      The signal "msl/c/Result<26>" is unused and has been removed.
+                       Unused block "msl/c/Mcount_count_xor<26>" (XOR) removed.
+                        The signal "msl/c/Mcount_count_cy<25>" is unused and has been removed.
+                         Unused block "msl/c/Mcount_count_cy<25>" (MUX) removed.
+                        The signal "msl/c/Mcount_count_xor<26>_rt" is unused and has been removed.
+                         Unused block "msl/c/Mcount_count_xor<26>_rt" (ROM) removed.
+                The signal "msl/next_notes_15_mux0000<0>" is unused and has been removed.
+                 Unused block "msl/next_notes_15_mux0000<0>1" (ROM) removed.
+                  The signal "msl/next_note_lotr<3>" is unused and has been removed.
+                  The signal "msl/next_note_ss<3>" is unused and has been removed.
+              The signal "msl/next_notes_15_2" is unused and has been removed.
+               Unused block "msl/next_notes_15_2" (SFF) removed.
+                The signal "msl/next_notes_15_mux0000<1>" is unused and has been removed.
+                 Unused block "msl/next_notes_15_mux0000<1>1" (ROM) removed.
+                  The signal "msl/next_note_lotr<2>" is unused and has been removed.
+                  The signal "msl/next_note_ss<2>" is unused and has been removed.
+              The signal "msl/next_notes_15_1" is unused and has been removed.
+               Unused block "msl/next_notes_15_1" (SFF) removed.
+                The signal "msl/next_notes_15_mux0000<2>" is unused and has been removed.
+                 Unused block "msl/next_notes_15_mux0000<2>1" (ROM) removed.
+                  The signal "msl/next_note_lotr<1>" is unused and has been removed.
+                  The signal "msl/next_note_ss<1>" is unused and has been removed.
+              The signal "msl/next_notes_15_0" is unused and has been removed.
+               Unused block "msl/next_notes_15_0" (SFF) removed.
+                The signal "msl/next_notes_15_mux0000<3>" is unused and has been removed.
+                 Unused block "msl/next_notes_15_mux0000<3>1" (ROM) removed.
+                  The signal "msl/next_note_lotr<0>" is unused and has been removed.
+                  The signal "msl/next_note_ss<0>" is unused and has been removed.
+      The signal "msl/Result<0>" is unused and has been removed.
+       Unused block "msl/Mcount_read_addr_xor<0>" (XOR) removed.
+The signal "msl/Mcount_read_addr_cy<1>" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_cy<1>" (MUX) removed.
+  The signal "msl/Mcount_read_addr_cy<1>_rt" is unused and has been removed.
+   Unused block "msl/Mcount_read_addr_cy<1>_rt" (ROM) removed.
+    The signal "msl/read_addr<1>" is unused and has been removed.
+     Unused block "msl/read_addr_1" (SFF) removed.
+      The signal "msl/Result<1>" is unused and has been removed.
+       Unused block "msl/Mcount_read_addr_xor<1>" (XOR) removed.
+The signal "msl/Mcount_read_addr_cy<2>" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_cy<2>" (MUX) removed.
+  The signal "msl/Mcount_read_addr_cy<2>_rt" is unused and has been removed.
+   Unused block "msl/Mcount_read_addr_cy<2>_rt" (ROM) removed.
+    The signal "msl/read_addr<2>" is unused and has been removed.
+     Unused block "msl/read_addr_2" (SFF) removed.
+      The signal "msl/Result<2>" is unused and has been removed.
+       Unused block "msl/Mcount_read_addr_xor<2>" (XOR) removed.
+The signal "msl/Mcount_read_addr_cy<3>" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_cy<3>" (MUX) removed.
+  The signal "msl/Mcount_read_addr_cy<3>_rt" is unused and has been removed.
+   Unused block "msl/Mcount_read_addr_cy<3>_rt" (ROM) removed.
+    The signal "msl/read_addr<3>" is unused and has been removed.
+     Unused block "msl/read_addr_3" (SFF) removed.
+      The signal "msl/Result<3>" is unused and has been removed.
+       Unused block "msl/Mcount_read_addr_xor<3>" (XOR) removed.
+The signal "msl/Mcount_read_addr_cy<4>" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_cy<4>" (MUX) removed.
+  The signal "msl/Mcount_read_addr_cy<4>_rt" is unused and has been removed.
+   Unused block "msl/Mcount_read_addr_cy<4>_rt" (ROM) removed.
+    The signal "msl/read_addr<4>" is unused and has been removed.
+     Unused block "msl/read_addr_4" (SFF) removed.
+      The signal "msl/Result<4>" is unused and has been removed.
+       Unused block "msl/Mcount_read_addr_xor<4>" (XOR) removed.
+The signal "msl/Mcount_read_addr_cy<5>" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_cy<5>" (MUX) removed.
+  The signal "msl/Mcount_read_addr_cy<5>_rt" is unused and has been removed.
+   Unused block "msl/Mcount_read_addr_cy<5>_rt" (ROM) removed.
+    The signal "msl/read_addr<5>" is unused and has been removed.
+     Unused block "msl/read_addr_5" (SFF) removed.
+      The signal "msl/Result<5>" is unused and has been removed.
+       Unused block "msl/Mcount_read_addr_xor<5>" (XOR) removed.
+The signal "msl/Mcount_read_addr_xor<6>_rt" is unused and has been removed.
+ Unused block "msl/Mcount_read_addr_xor<6>_rt" (ROM) removed.
+  The signal "msl/read_addr<6>" is unused and has been removed.
+   Unused block "msl/read_addr_6" (SFF) removed.
+    The signal "msl/Result<6>" is unused and has been removed.
+     Unused block "msl/Mcount_read_addr_xor<6>" (XOR) removed.
+The signal "rh_disp/csd_note/Madd_column" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Msub_hoff_Madd_Madd_xor<4>11" (ROM) removed.
+  The signal "rh_disp/csd_note/N22" is unused and has been removed.
+   Unused block "rh_disp/csd_note/Msub_hoff_Madd_Madd_xor<3>121" (ROM) removed.
+The signal "rh_disp/csd_note/Madd_column2" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Msub_hoff_Madd_Madd_xor<5>11" (ROM) removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<0>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<0>" (MUX) removed.
+  The signal "rh_disp/csd_note/font_addr_mult0000<0>" is unused and has been
+removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_lut<0>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_lut<0>" (ROM) removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<1>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<1>" (MUX) removed.
+  The signal "rh_disp/csd_note/font_addr_mult0000<1>" is unused and has been
+removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_lut<1>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_lut<1>" (ROM) removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<2>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<2>" (MUX) removed.
+  The signal "rh_disp/csd_note/font_addr_mult0000<2>" is unused and has been
+removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_lut<2>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_lut<2>" (ROM) removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<3>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<3>" (MUX) removed.
+  The signal "rh_disp/csd_note/font_addr_mult0000<3>" is unused and has been
+removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_lut<3>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_lut<3>" (ROM) removed.
+    The signal "rh_disp/csd_note/voff<4>" is unused and has been removed.
+     Unused block "rh_disp/csd_note/Msub_voff_Madd_xor<4>11" (ROM) removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<4>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<4>" (MUX) removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_cy<4>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_cy<4>_rt" (ROM) removed.
+    The signal "rh_disp/csd_note/font_addr_mult0000<4>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<5>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<5>" (MUX) removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_cy<5>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_cy<5>_rt" (ROM) removed.
+    The signal "rh_disp/csd_note/font_addr_mult0000<5>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<6>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<6>" (MUX) removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_cy<6>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_cy<6>_rt" (ROM) removed.
+    The signal "rh_disp/csd_note/font_addr_mult0000<6>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<7>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<7>" (MUX) removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_cy<7>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_cy<7>_rt" (ROM) removed.
+    The signal "rh_disp/csd_note/font_addr_mult0000<7>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<8>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<8>" (MUX) removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_cy<8>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_cy<8>_rt" (ROM) removed.
+    The signal "rh_disp/csd_note/font_addr_mult0000<8>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/Madd_font_addr_cy<9>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_cy<9>" (MUX) removed.
+  The signal "rh_disp/csd_note/Madd_font_addr_cy<9>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_note/Madd_font_addr_cy<9>_rt" (ROM) removed.
+    The signal "rh_disp/csd_note/font_addr_mult0000<9>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/char<0>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_5811" (ROM) removed.
+  The signal "rh_disp/csd_note/column<2>" is unused and has been removed.
+   Unused block "rh_disp/csd_note/Madd_column_xor<2>1" (ROM) removed.
+The signal "rh_disp/csd_note/char<1>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_6111" (ROM) removed.
+The signal "rh_disp/csd_note/char<2>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_6311" (ROM) removed.
+The signal "rh_disp/csd_note/char<3>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_6511" (ROM) removed.
+The signal "rh_disp/csd_note/char<4>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_6711" (ROM) removed.
+The signal "rh_disp/csd_note/char<5>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_6911" (ROM) removed.
+The signal "rh_disp/csd_note/char<6>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Mmux__COND_7111" (ROM) removed.
+The signal "rh_disp/csd_note/font_addr<0>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<0>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<10>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<10>" (XOR) removed.
+  The signal "rh_disp/csd_note/font_addr_mult0000<10>" is unused and has been
+removed.
+The signal "rh_disp/csd_note/font_addr<1>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<1>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<2>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<2>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<3>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<3>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<4>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<4>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<5>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<5>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<6>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<6>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<7>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<7>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<8>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<8>" (XOR) removed.
+The signal "rh_disp/csd_note/font_addr<9>" is unused and has been removed.
+ Unused block "rh_disp/csd_note/Madd_font_addr_xor<9>" (XOR) removed.
+The signal "rh_disp/csd_score/Madd_column" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Msub_hoff_Madd_Madd_xor<4>11" (ROM) removed.
+The signal "rh_disp/csd_score/Madd_column2" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Msub_hoff_Madd_Madd_xor<5>11" (ROM) removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<0>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<0>" (MUX) removed.
+  The signal "rh_disp/csd_score/font_addr_mult0000<0>" is unused and has been
+removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_lut<0>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_lut<0>" (ROM) removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<1>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<1>" (MUX) removed.
+  The signal "rh_disp/csd_score/font_addr_mult0000<1>" is unused and has been
+removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_lut<1>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_lut<1>" (ROM) removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<2>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<2>" (MUX) removed.
+  The signal "rh_disp/csd_score/font_addr_mult0000<2>" is unused and has been
+removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_lut<2>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_lut<2>" (ROM) removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<3>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<3>" (MUX) removed.
+  The signal "rh_disp/csd_score/font_addr_mult0000<3>" is unused and has been
+removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_lut<3>" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_lut<3>" (ROM) removed.
+    The signal "rh_disp/csd_score/N02" is unused and has been removed.
+     Unused block "rh_disp/csd_score/pixel<0>111" (ROM) removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<4>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<4>" (MUX) removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_cy<4>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_cy<4>_rt" (ROM) removed.
+    The signal "rh_disp/csd_score/font_addr_mult0000<4>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<5>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<5>" (MUX) removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_cy<5>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_cy<5>_rt" (ROM) removed.
+    The signal "rh_disp/csd_score/font_addr_mult0000<5>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<6>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<6>" (MUX) removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_cy<6>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_cy<6>_rt" (ROM) removed.
+    The signal "rh_disp/csd_score/font_addr_mult0000<6>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<7>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<7>" (MUX) removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_cy<7>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_cy<7>_rt" (ROM) removed.
+    The signal "rh_disp/csd_score/font_addr_mult0000<7>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<8>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<8>" (MUX) removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_cy<8>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_cy<8>_rt" (ROM) removed.
+    The signal "rh_disp/csd_score/font_addr_mult0000<8>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/Madd_font_addr_cy<9>" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_cy<9>" (MUX) removed.
+  The signal "rh_disp/csd_score/Madd_font_addr_cy<9>_rt" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Madd_font_addr_cy<9>_rt" (ROM) removed.
+    The signal "rh_disp/csd_score/font_addr_mult0000<9>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/Mmux__COND_38_5_f6" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Mmux__COND_38_5_f6" (MUX) removed.
+  The signal "rh_disp/csd_score/Mmux__COND_38_7_f5" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Mmux__COND_38_7_f5" (MUX) removed.
+    The signal "rh_disp/csd_score/Mmux__COND_38_7_f51" is unused and has been
+removed.
+     Unused block "rh_disp/csd_score/Mmux__COND_38_7_f51" (ROM) removed.
+The signal "rh_disp/csd_score/Mmux__COND_41_5_f6" is unused and has been
+removed.
+ Unused block "rh_disp/csd_score/Mmux__COND_41_5_f6" (MUX) removed.
+  The signal "rh_disp/csd_score/Mmux__COND_41_7_f5" is unused and has been
+removed.
+   Unused block "rh_disp/csd_score/Mmux__COND_41_7_f5" (MUX) removed.
+The signal "rh_disp/csd_score/char<0>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>_f5" (MUX) removed.
+  The signal "rh_disp/csd_score/column<3>1" is unused and has been removed.
+   Unused block "rh_disp/csd_score/column<3>1" (ROM) removed.
+  The signal "rh_disp/csd_score/column<3>" is unused and has been removed.
+   Unused block "rh_disp/csd_score/Madd_column_xor<3>11" (ROM) removed.
+The signal "rh_disp/csd_score/char<1>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>157_f5" (MUX) removed.
+  The signal "rh_disp/csd_score/column<3>157" is unused and has been removed.
+   Unused block "rh_disp/csd_score/column<3>1571" (ROM) removed.
+The signal "rh_disp/csd_score/char<2>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>296" (ROM) removed.
+  The signal "rh_disp/csd_score/column<3>278" is unused and has been removed.
+   Unused block "rh_disp/csd_score/column<3>278" (ROM) removed.
+The signal "rh_disp/csd_score/char<3>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>31" (ROM) removed.
+The signal "rh_disp/csd_score/char<4>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>41" (ROM) removed.
+The signal "rh_disp/csd_score/char<5>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>5_f5" (MUX) removed.
+  The signal "rh_disp/csd_score/column<3>51" is unused and has been removed.
+   Unused block "rh_disp/csd_score/column<3>52" (ROM) removed.
+  The signal "rh_disp/csd_score/column<3>5" is unused and has been removed.
+   Unused block "rh_disp/csd_score/column<3>51" (ROM) removed.
+The signal "rh_disp/csd_score/char<6>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/column<3>61" (ROM) removed.
+The signal "rh_disp/csd_score/font_addr<0>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<0>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<10>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<10>" (XOR) removed.
+  The signal "rh_disp/csd_score/font_addr_mult0000<10>" is unused and has been
+removed.
+The signal "rh_disp/csd_score/font_addr<1>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<1>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<2>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<2>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<3>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<3>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<4>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<4>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<5>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<5>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<6>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<6>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<7>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<7>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<8>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<8>" (XOR) removed.
+The signal "rh_disp/csd_score/font_addr<9>" is unused and has been removed.
+ Unused block "rh_disp/csd_score/Madd_font_addr_xor<9>" (XOR) removed.
+The signal "rh_disp/pb/Madd_image_addr_cy<0>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_cy<0>" (MUX) removed.
+  The signal "rh_disp/pb/Madd_image_addr_lut<0>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_lut<0>" (ROM) removed.
+    The signal "rh_disp/pb/image_addr_mult0001<0>" is unused and has been removed.
+The signal "rh_disp/pb/Madd_image_addr_cy<10>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_cy<10>" (MUX) removed.
+  The signal "rh_disp/pb/Madd_image_addr_cy<9>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_cy<9>" (MUX) removed.
+    The signal "rh_disp/pb/Madd_image_addr_cy<8>" is unused and has been removed.
+     Unused block "rh_disp/pb/Madd_image_addr_cy<8>" (MUX) removed.
+      The signal "rh_disp/pb/Madd_image_addr_cy<7>" is unused and has been removed.
+       Unused block "rh_disp/pb/Madd_image_addr_cy<7>" (MUX) removed.
+        The signal "rh_disp/pb/Madd_image_addr_cy<6>" is unused and has been removed.
+         Unused block "rh_disp/pb/Madd_image_addr_cy<6>" (MUX) removed.
+          The signal "rh_disp/pb/Madd_image_addr_cy<5>" is unused and has been removed.
+           Unused block "rh_disp/pb/Madd_image_addr_cy<5>" (MUX) removed.
+            The signal "rh_disp/pb/Madd_image_addr_cy<4>" is unused and has been removed.
+             Unused block "rh_disp/pb/Madd_image_addr_cy<4>" (MUX) removed.
+              The signal "rh_disp/pb/Madd_image_addr_cy<3>" is unused and has been removed.
+               Unused block "rh_disp/pb/Madd_image_addr_cy<3>" (MUX) removed.
+                The signal "rh_disp/pb/Madd_image_addr_cy<2>" is unused and has been removed.
+                 Unused block "rh_disp/pb/Madd_image_addr_cy<2>" (MUX) removed.
+                  The signal "rh_disp/pb/Madd_image_addr_cy<1>" is unused and has been removed.
+                   Unused block "rh_disp/pb/Madd_image_addr_cy<1>" (MUX) removed.
+                    The signal "rh_disp/pb/Madd_image_addr_lut<1>" is unused and has been removed.
+                     Unused block "rh_disp/pb/Madd_image_addr_lut<1>" (ROM) removed.
+                      The signal "rh_disp/pb/image_addr_mult0001<1>" is unused and has been removed.
+                  The signal "rh_disp/pb/image_addr_mult0001<2>" is unused and has been removed.
+                  The signal "rh_disp/pb/Madd_image_addr_lut<2>" is unused and has been removed.
+                   Unused block "rh_disp/pb/Madd_image_addr_lut<2>" (ROM) removed.
+                The signal "rh_disp/pb/image_addr_mult0001<3>" is unused and has been removed.
+                The signal "rh_disp/pb/Madd_image_addr_lut<3>" is unused and has been removed.
+                 Unused block "rh_disp/pb/Madd_image_addr_lut<3>" (ROM) removed.
+              The signal "rh_disp/pb/image_addr_mult0001<4>" is unused and has been removed.
+              The signal "rh_disp/pb/Madd_image_addr_lut<4>" is unused and has been removed.
+               Unused block "rh_disp/pb/Madd_image_addr_lut<4>" (ROM) removed.
+            The signal "rh_disp/pb/image_addr_mult0001<5>" is unused and has been removed.
+            The signal "rh_disp/pb/Madd_image_addr_lut<5>" is unused and has been removed.
+             Unused block "rh_disp/pb/Madd_image_addr_lut<5>" (ROM) removed.
+              The signal "rh_disp/pb/Msub_image_addr_sub0000_cy<3>" is unused and has been
+removed.
+               Unused block "rh_disp/pb/Msub_image_addr_sub0000_cy<3>11" (ROM) removed.
+          The signal "rh_disp/pb/image_addr_mult0001<6>" is unused and has been removed.
+          The signal "rh_disp/pb/Madd_image_addr_lut<6>" is unused and has been removed.
+           Unused block "rh_disp/pb/Madd_image_addr_lut<6>" (ROM) removed.
+            The signal "rh_disp/pb/image_addr_sub0000<6>" is unused and has been removed.
+             Unused block "rh_disp/pb/Msub_image_addr_sub0000_xor<6>11" (ROM) removed.
+        The signal "rh_disp/pb/image_addr_mult0001<7>" is unused and has been removed.
+        The signal "rh_disp/pb/Madd_image_addr_lut<7>" is unused and has been removed.
+         Unused block "rh_disp/pb/Madd_image_addr_lut<7>" (ROM) removed.
+          The signal "rh_disp/pb/Msub_image_addr_sub0000_cy<6>" is unused and has been
+removed.
+           Unused block "rh_disp/pb/Msub_image_addr_sub0000_cy<6>11" (ROM) removed.
+      The signal "rh_disp/pb/image_addr_mult0001<8>" is unused and has been removed.
+      The signal "rh_disp/pb/Madd_image_addr_lut<8>" is unused and has been removed.
+       Unused block "rh_disp/pb/Madd_image_addr_lut<8>" (ROM) removed.
+    The signal "rh_disp/pb/image_addr_mult0001<9>" is unused and has been removed.
+    The signal "rh_disp/pb/Madd_image_addr_lut<9>" is unused and has been removed.
+     Unused block "rh_disp/pb/Madd_image_addr_lut<9>" (ROM) removed.
+      The signal "rh_disp/pb/image_addr_sub0000<9>" is unused and has been removed.
+       Unused block "rh_disp/pb/Msub_image_addr_sub0000_xor<9>11" (ROM) removed.
+  The signal "rh_disp/pb/image_addr_mult0001<10>" is unused and has been removed.
+  The signal "rh_disp/pb/Madd_image_addr_lut<10>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_lut<10>" (ROM) removed.
+    The signal "rh_disp/pb/Msub_image_addr_sub0000_cy<9>" is unused and has been
+removed.
+     Unused block "rh_disp/pb/Msub_image_addr_sub0000_cy<9>11" (ROM) removed.
+The signal "rh_disp/pb/Madd_image_addr_cy<11>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_cy<11>" (MUX) removed.
+  The signal "rh_disp/pb/image_addr_mult0001<11>" is unused and has been removed.
+  The signal "rh_disp/pb/Madd_image_addr_lut<11>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_lut<11>" (ROM) removed.
+    The signal "rh_disp/pb/image_addr_sub0000<11>" is unused and has been removed.
+     Unused block "rh_disp/pb/image_addr_sub0000<11>1" (ROM) removed.
+The signal "rh_disp/pb/Madd_image_addr_cy<12>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_cy<12>" (MUX) removed.
+  The signal "rh_disp/pb/image_addr_mult0001<12>" is unused and has been removed.
+  The signal "rh_disp/pb/Madd_image_addr_lut<12>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_lut<12>" (ROM) removed.
+The signal "rh_disp/pb/Madd_image_addr_cy<13>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_cy<13>" (MUX) removed.
+  The signal "rh_disp/pb/image_addr_mult0001<13>" is unused and has been removed.
+  The signal "rh_disp/pb/Madd_image_addr_lut<13>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_lut<13>" (ROM) removed.
+The signal "rh_disp/pb/Madd_image_addr_cy<14>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_cy<14>" (MUX) removed.
+  The signal "rh_disp/pb/image_addr_mult0001<14>" is unused and has been removed.
+  The signal "rh_disp/pb/Madd_image_addr_lut<14>" is unused and has been removed.
+   Unused block "rh_disp/pb/Madd_image_addr_lut<14>" (ROM) removed.
+The signal "rh_disp/pb/Madd_image_addr_lut<15>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_lut<15>" (ROM) removed.
+  The signal "rh_disp/pb/image_addr_mult0001<15>" is unused and has been removed.
+The signal "rh_disp/pb/image_addr<0>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<0>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<10>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<10>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<11>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<11>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<12>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<12>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<13>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<13>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<14>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<14>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<15>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<15>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<1>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<1>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<2>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<2>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<3>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<3>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<4>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<4>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<5>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<5>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<6>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<6>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<7>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<7>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<8>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<8>" (XOR) removed.
+The signal "rh_disp/pb/image_addr<9>" is unused and has been removed.
+ Unused block "rh_disp/pb/Madd_image_addr_xor<9>" (XOR) removed.
+The signal "rh_disp/pb/image_addr_addsub0000<10>" is unused and has been
+removed.
+ Unused block "rh_disp/pb/Msub_image_addr_addsub0000_xor<10>11" (ROM) removed.
+The signal "rh_disp/pb/image_addr_addsub0000<7>" is unused and has been removed.
+ Unused block "rh_disp/pb/Msub_image_addr_addsub0000_xor<7>11_INV_0" (BUF)
+removed.
+The signal "rh_disp/pb/image_addr_addsub0000<8>" is unused and has been removed.
+ Unused block "rh_disp/pb/Msub_image_addr_addsub0000_xor<8>11" (ROM) removed.
+The signal "rh_disp/pb/image_addr_addsub0000<9>" is unused and has been removed.
+ Unused block "rh_disp/pb/Msub_image_addr_addsub0000_xor<9>11" (ROM) removed.
+Unused block
+"msl/lotr/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram
+.ram" () removed.
+Unused block "msl/lotr/BU2/XST_GND" (ZERO) removed.
+Unused block "msl/lotr/BU2/XST_VCC" (ONE) removed.
 Unused block "msl/lotr/GND" (ZERO) removed.
 Unused block "msl/lotr/VCC" (ONE) removed.
+Unused block
+"msl/ss/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.r
+am" () removed.
+Unused block "msl/ss/BU2/XST_GND" (ZERO) removed.
+Unused block "msl/ss/BU2/XST_VCC" (ONE) removed.
 Unused block "msl/ss/GND" (ZERO) removed.
 Unused block "msl/ss/VCC" (ONE) removed.
-Unused block "ram0_data<0>" (PAD) removed.
-Unused block "ram0_data<10>" (PAD) removed.
-Unused block "ram0_data<11>" (PAD) removed.
-Unused block "ram0_data<12>" (PAD) removed.
-Unused block "ram0_data<13>" (PAD) removed.
-Unused block "ram0_data<14>" (PAD) removed.
-Unused block "ram0_data<15>" (PAD) removed.
-Unused block "ram0_data<16>" (PAD) removed.
-Unused block "ram0_data<17>" (PAD) removed.
-Unused block "ram0_data<18>" (PAD) removed.
-Unused block "ram0_data<19>" (PAD) removed.
-Unused block "ram0_data<1>" (PAD) removed.
-Unused block "ram0_data<20>" (PAD) removed.
-Unused block "ram0_data<21>" (PAD) removed.
-Unused block "ram0_data<22>" (PAD) removed.
-Unused block "ram0_data<23>" (PAD) removed.
-Unused block "ram0_data<24>" (PAD) removed.
-Unused block "ram0_data<25>" (PAD) removed.
-Unused block "ram0_data<26>" (PAD) removed.
-Unused block "ram0_data<27>" (PAD) removed.
-Unused block "ram0_data<28>" (PAD) removed.
-Unused block "ram0_data<29>" (PAD) removed.
-Unused block "ram0_data<2>" (PAD) removed.
-Unused block "ram0_data<30>" (PAD) removed.
-Unused block "ram0_data<31>" (PAD) removed.
-Unused block "ram0_data<32>" (PAD) removed.
-Unused block "ram0_data<33>" (PAD) removed.
-Unused block "ram0_data<34>" (PAD) removed.
-Unused block "ram0_data<35>" (PAD) removed.
-Unused block "ram0_data<3>" (PAD) removed.
-Unused block "ram0_data<4>" (PAD) removed.
-Unused block "ram0_data<5>" (PAD) removed.
-Unused block "ram0_data<6>" (PAD) removed.
-Unused block "ram0_data<7>" (PAD) removed.
-Unused block "ram0_data<8>" (PAD) removed.
-Unused block "ram0_data<9>" (PAD) removed.
+Unused block "rh_disp/bpb_img/b_blue/GND" (ZERO) removed.
+Unused block "rh_disp/bpb_img/b_blue/VCC" (ONE) removed.
+Unused block "rh_disp/bpb_img/b_green/GND" (ZERO) removed.
+Unused block "rh_disp/bpb_img/b_green/VCC" (ONE) removed.
+Unused block "rh_disp/bpb_img/b_red/GND" (ZERO) removed.
+Unused block "rh_disp/bpb_img/b_red/VCC" (ONE) removed.
+Unused block "rh_disp/csd_note/Mmult_font_addr_mult0000" () removed.
+Unused block "rh_disp/csd_note/f/B6" () removed.
+Unused block "rh_disp/csd_note/f/GND" (ZERO) removed.
+Unused block "rh_disp/csd_note/f/VCC" (ONE) removed.
+Unused block "rh_disp/csd_score/Mmult_font_addr_mult0000" () removed.
+Unused block "rh_disp/csd_score/f/B6" () removed.
+Unused block "rh_disp/csd_score/f/GND" (ZERO) removed.
+Unused block "rh_disp/csd_score/f/VCC" (ONE) removed.
+Unused block "rh_disp/pb/Mmult_image_addr_mult0001" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/bindec_a.bindec_inst_a/en
+out_8_cmp_eq00001" (ROM) removed.
+Unused block "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena01"
+(ROM) removed.
+Unused block "rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ram_ena1"
+(ROM) removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[10].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[11].ram.r/v2_init
+.ram/dpram.dp4x4.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[12].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[13].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[14].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[15].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[16].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init
+.ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2_init.
+ram/dpram.dp4x4.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[8].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block
+"rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[9].ram.r/v2_init.
+ram/dpram.dp1x1.ram" () removed.
+Unused block "rh_disp/pb/nl_rom/BU2/XST_GND" (ZERO) removed.
+Unused block "rh_disp/pb/nl_rom/BU2/XST_VCC" (ONE) removed.
 Unused block "rh_disp/pb/nl_rom/GND" (ZERO) removed.
 Unused block "rh_disp/pb/nl_rom/VCC" (ONE) removed.
 
@@ -1062,16 +2081,12 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-GND 		msl/lotr/BU2/XST_GND
-VCC 		msl/lotr/BU2/XST_VCC
-GND 		msl/ss/BU2/XST_GND
-VCC 		msl/ss/BU2/XST_VCC
-GND 		rh_disp/csd_note/f/GND
-VCC 		rh_disp/csd_note/f/VCC
-GND 		rh_disp/csd_score/f/GND
-VCC 		rh_disp/csd_score/f/VCC
-GND 		rh_disp/pb/nl_rom/BU2/XST_GND
-VCC 		rh_disp/pb/nl_rom/BU2/XST_VCC
+GND 		rh_disp/bpb_img/b_blue/BU2/XST_GND
+VCC 		rh_disp/bpb_img/b_blue/BU2/XST_VCC
+GND 		rh_disp/bpb_img/b_green/BU2/XST_GND
+VCC 		rh_disp/bpb_img/b_green/BU2/XST_VCC
+GND 		rh_disp/bpb_img/b_red/BU2/XST_GND
+VCC 		rh_disp/bpb_img/b_red/BU2/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -1308,6 +2323,42 @@ Section 6 - IOB Properties
 | ram0_ce_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_cen_b                         | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_clk                           | IOB              | OUTPUT    | LVDCI_33             |          |      | OUTDDR       |          |          |
+| ram0_data<0>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<1>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<2>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<3>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<4>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<5>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<6>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<7>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<8>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<9>                       | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<10>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<11>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<12>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<13>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<14>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<15>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<16>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<17>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<18>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<19>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<20>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<21>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<22>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<23>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<24>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<25>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<26>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<27>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<28>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<29>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<30>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<31>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<32>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
+| ram0_data<33>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
+| ram0_data<34>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
+| ram0_data<35>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_oe_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_we_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram1_address<0>                    | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
@@ -1386,7 +2437,6 @@ Section 6 - IOB Properties
 | switch<4>                          | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | switch<5>                          | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | switch<6>                          | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
-| switch<7>                          | IOB              | INPUT     | LVTTL                |          |      |              |          |          |
 | systemace_address<0>               | IOB              | OUTPUT    | LVTTL                | 12       | SLOW |              |          |          |
 | systemace_address<1>               | IOB              | OUTPUT    | LVTTL                | 12       | SLOW |              |          |          |
 | systemace_address<2>               | IOB              | OUTPUT    | LVTTL                | 12       | SLOW |              |          |          |

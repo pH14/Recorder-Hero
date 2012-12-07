@@ -1,5 +1,5 @@
 NUM_USER_FILES
-29
+30
 s
 user_file_1
 labkit.ucf
@@ -65,10 +65,13 @@ user_file_28
 zbt_image_writer.v
 s
 user_file_29
-zbt_image_writer_tb.v
+zbr_image_writer_tb.v
 s
 user_file_3
 blob.v
+s
+user_file_30
+vram_display.v
 s
 user_file_4
 cstringdisp.v

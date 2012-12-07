@@ -15,6 +15,15 @@ Loading design module
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/song_scales.n
 gc"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_blue.ngc
+"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_red.ngc"
+...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_green.ng
+c"...
 Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/_ngo/font_rom
@@ -283,7 +292,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 231
 
-Total memory usage is 238528 kilobytes
+Total memory usage is 232256 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

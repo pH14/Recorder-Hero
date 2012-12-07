@@ -4,48 +4,55 @@ K3
 cModel Technology
 Z0 d/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display
 T_opt
-V2Y`i9DYmD:fS0e0:26]gJ3
-Z1 04 19 4 work zbt_image_writer_tb fast 0
-Z2 04 4 4 work glbl fast 0
-Z3 =1-f04da20f0fdf-50c03ba8-95d05-3270
-Z4 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver
-Z5 OE;O;6.4a;39
+Z1 VR1`zhf]bA;d[]Ok5:[3;Q0
+Z2 04 19 4 work zbt_image_writer_tb fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-f04da20f0fdf-50c13ead-6bdfd-9a5
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver
+Z6 OE;O;6.4a;39
+T_opt1
+VNT6d=lCNfC2DOe9kUMj8T2
+R2
+R3
+Z7 =1-f04da20f0fdf-50c14ace-13bc-e85
+R5
+R6
 vglbl
-Z6 IB;@1jEXmEfQXL`;Kf0IBZ3
-Z7 VnN]4Gon>inod6>M^M2[SV1
-Z8 w1202685744
-Z9 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
-Z10 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z8 IB;@1jEXmEfQXL`;Kf0IBZ3
+Z9 VnN]4Gon>inod6>M^M2[SV1
+Z10 w1202685744
+Z11 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z12 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
 L0 5
-Z11 OE;L;6.4a;39
+Z13 OE;L;6.4a;39
 r1
 31
-Z12 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
-Z13 !s100 T?5S;>bN`@zG_25]R_4A33
+Z14 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
+Z15 !s100 T?5S;>bN`@zG_25]R_4A33
 !s85 0
 vzbt_image_writer
-Z14 ImWKUMfS>5JfRH9ihSGHP33
-Z15 VVTY=6<7Qg3BabGLFdgVYC1
-Z16 w1354775449
-Z17 8zbt_image_writer.v
-Z18 Fzbt_image_writer.v
+Z16 I5=c]W4>5<6=0BXF]S2Jae0
+Z17 VVTY=6<7Qg3BabGLFdgVYC1
+Z18 w1354844841
+Z19 8zbt_image_writer.v
+Z20 Fzbt_image_writer.v
 L0 21
-R11
+R13
 r1
 31
-R12
-Z19 !s100 EDTmVF6ohF`A0`P?<hF?m3
+R14
+Z21 !s100 Dc;lPTb;hk6^EWLX3m7]m1
 !s85 0
 vzbt_image_writer_tb
-Z20 I[FK0gXM9>D1YXmRMdd17c3
-Z21 V>kT48BS2K0;o_6hgUTYSd2
-Z22 w1354775224
-Z23 8zbt_image_writer_tb.v
-Z24 Fzbt_image_writer_tb.v
+Z22 IFOb<;9LGnk[H^Qe=09Pdb2
+Z23 V>kT48BS2K0;o_6hgUTYSd2
+Z24 w1354841694
+Z25 8zbr_image_writer_tb.v
+Z26 Fzbr_image_writer_tb.v
 L0 25
-R11
+R13
 r1
 31
-R12
-Z25 !s100 jb6ZEMEK8:fFMRk<34<f[3
+R14
+Z27 !s100 FoKKmB]lD8VDDjOV<6SbY0
 !s85 0

@@ -851,7 +851,7 @@
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">user4&lt;9&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="info" file="Place" num="834" delta="unknown" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">541</arg> IOs, <arg fmt="%d" index="2">540</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+<msg type="info" file="Place" num="834" delta="unknown" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">576</arg> IOs, <arg fmt="%d" index="2">575</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
 </msg>
 
 <msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
