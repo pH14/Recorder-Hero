@@ -493,7 +493,6 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [3:0] fifo_state;
 	
 	assign fifo_data_input = user1[9:2];
-//	assign rd = user1[1];
 	assign user1[1] = rd;
 	assign rxf = user1[0];
 	
@@ -541,7 +540,6 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [7:0] image_bits;
 	reg [18:0] vram_write_addr = 0;
 	wire [18:0] vram_read_addr;
-//	reg [2:0] vram_read_img_counter = 0;
 	
 	assign vram_we = zbt_iw_newout;
 	assign vram_addr = (zbt_iw_newout == 1) ? vram_write_addr 
@@ -563,8 +561,6 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			vram_write_addr <= 0;
 			x_pixels <= 0;
 			y_pixels <= 0;
-//			vram_read_addr <= 0;
-//			vram_read_img_counter <= 0;
 		end
 		
 		if (fifo_newout) begin
@@ -580,26 +576,6 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			vram_write_addr <= {0, y_pixels, x_pixels[9:2]};
 			zbt_iw_output_reg <= zbt_iw_output;
 		end
-		
-//		vram_read_img_counter <= vram_read_img_counter + 1;
-//		
-//		if (vram_read_img_counter >= 3) begin
-//			vram_read_addr <= vram_read_addr + 1;
-//			vram_read_img_counter <= 0;
-//		end
-		
-//		if ((hcount == 1) && (vcount == 1)) begin
-//			vram_read_addr <= 0;
-//		end
-//		
-//		case(vram_read_img_counter)
-//			3'd0: image_bits <= vram_read_data[7:0];
-//			3'd1: image_bits <= vram_read_data[15:8];
-//			3'd2: image_bits <= vram_read_data[23:16];
-//			3'd3: image_bits <= vram_read_data[31:24];
-//			default: image_bits <= 8'h00;
-//		endcase
-		// PIXEL # (hcount-x) + (vcount-y) * WIDTH;
 	end
 	
 	musical_score_loader msl(.clk(clk), .reset(reset),
@@ -883,7 +859,7 @@ module rh_display (
 					// C high
 					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
 					// EOF
-					4'd16: note_y_pos[k] <= FIRST_LETTER + 768;
+					4'd15: note_y_pos[k] <= FIRST_LETTER + 768;
 					default: note_y_pos[k] <= FIRST_LETTER;
 				endcase
 				
@@ -955,9 +931,9 @@ module rh_display (
 	wire [23:0] bono_pixel;
 	bono_picture_blob bpb_img(.pixel_clk(vclock),
 								     .x(1),
-									  .hcount(hcount),
+									  .hcount(hcount+2),
 									  .y(1),
-									  .vcount(vcount),
+									  .vcount(vcount+2),
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
 
@@ -1000,73 +976,81 @@ module rh_display (
 	
 	///////////////////////
 	// MAIN MENU DISPLAY //
-//	///////////////////////
-//	always @(*) begin
-//		if (menu_state[2] == 0) begin
-//			pixel = onscreen_notes[0]
-//						| onscreen_notes[1]
-//						| onscreen_notes[2]
-//						| onscreen_notes[3]
-//						| onscreen_notes[4]
-//						| onscreen_notes[5]
-//						| onscreen_notes[6]
-//						| onscreen_notes[7]
-//						| onscreen_notes[8]
-//						| onscreen_notes[9]
-//						| onscreen_notes[10]
-//						| onscreen_notes[11]
-//						| onscreen_notes[12]
-//						| onscreen_notes[13]
-//						| onscreen_notes[14]
-//						| onscreen_notes[15]
-//						| note_line_pixels[0]
-//						| note_line_pixels[1]
-//						| note_line_pixels[2]
-//						| note_line_pixels[3]
-//						| note_line_pixels[4]
-//						| note_line_pixels[5]
-//						| note_line_pixels[6]
-//						| note_line_pixels[7]
-//						| {24{action_line}}
-//						| {24{right_boundary_line}}
-//						| {8{score_pixel}}
-//						| {8{current_note_pixel}}
-//						| bmp_pixel_alpha;
-//		end else begin
-//			pixel = 24'b0;
-//		end
-//	end
+   ///////////////////////
+	wire [2:0] song_title_1_pixel;
+	char_string_display csd_st1(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(song_title_1_pixel),
+											.cstring("Concerning Hobbits"),
+											.cx(18),
+											.cy(285));
+	defparam csd_st1.NCHAR = 18;
+	defparam csd_st1.NCHAR_BITS = 5;
 	
-	assign pixel = bono_pixel;
-//	assign pixel = onscreen_notes[0]
-//						| onscreen_notes[1]
-//						| onscreen_notes[2]
-//						| onscreen_notes[3]
-//						| onscreen_notes[4]
-//						| onscreen_notes[5]
-//						| onscreen_notes[6]
-//						| onscreen_notes[7]
-//						| onscreen_notes[8]
-//						| onscreen_notes[9]
-//						| onscreen_notes[10]
-//						| onscreen_notes[11]
-//						| onscreen_notes[12]
-//						| onscreen_notes[13]
-//						| onscreen_notes[14]
-//						| onscreen_notes[15]
-//						| note_line_pixels[0]
-//						| note_line_pixels[1]
-//						| note_line_pixels[2]
-//						| note_line_pixels[3]
-//						| note_line_pixels[4]
-//						| note_line_pixels[5]
-//						| note_line_pixels[6]
-//						| note_line_pixels[7]
-//						| {24{action_line}}
-//						| {24{right_boundary_line}}
-//						| {8{score_pixel}}
-//						| {8{current_note_pixel}}
-//						| bmp_pixel_alpha;
-						
+	wire [2:0] song_title_2_pixel;
+	char_string_display csd_st2(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(song_title_2_pixel),
+											.cstring("Practice Scale"),
+											.cx(18),
+											.cy(315));
+	defparam csd_st2.NCHAR = 14;
+	defparam csd_st2.NCHAR_BITS = 4;
+	
+	wire [6:0] current_song_y;
+	assign current_song_y = (menu_state[1:0] == 2'b00) ? 285 : 315;
+	
+	wire [23:0] song_select_box_pixel;
+   blob #(.WIDTH(10), .HEIGHT(10))
+		song_selector_box(.x(5),
+		  .y(current_song_y + 5),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'hFF_FF_FF),
+		  .pixel());
+	
+	reg [23:0] pixel_reg;
+	always @(posedge vclock) begin
+		if (!menu_state[2]) begin
+			pixel_reg <= bono_pixel
+					  | {8{song_title_1_pixel}}
+					  | {8{song_title_2_pixel}}
+					  | song_select_box_pixel;
+		end else begin
+			pixel_reg <= onscreen_notes[0]
+						| onscreen_notes[1]
+						| onscreen_notes[2]
+						| onscreen_notes[3]
+						| onscreen_notes[4]
+						| onscreen_notes[5]
+						| onscreen_notes[6]
+						| onscreen_notes[7]
+						| onscreen_notes[8]
+						| onscreen_notes[9]
+						| onscreen_notes[10]
+						| onscreen_notes[11]
+						| onscreen_notes[12]
+						| onscreen_notes[13]
+						| onscreen_notes[14]
+						| onscreen_notes[15]
+						| note_line_pixels[0]
+						| note_line_pixels[1]
+						| note_line_pixels[2]
+						| note_line_pixels[3]
+						| note_line_pixels[4]
+						| note_line_pixels[5]
+						| note_line_pixels[6]
+						| note_line_pixels[7]
+						| {24{action_line}}
+						| {24{right_boundary_line}}
+						| {8{score_pixel}}
+						| {8{current_note_pixel}}
+						| bmp_pixel_alpha;
+		end
+	end
+	
+	assign pixel = pixel_reg;
 	assign debug = {bono_pixel};
 endmodule

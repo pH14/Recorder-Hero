@@ -1,7 +1,7 @@
 Release 10.1.03 - par K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Fri Dec  7 01:08:27 2012
+Fri Dec  7 17:51:03 2012
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -163,7 +163,7 @@ Pinout by Pin Number:
 |AD19      |tv_in_i2c_data      |IOB      |IO_L68N_5             |INPUT    |LVDCI_33   |5             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
 |AD20      |tv_in_ycrcb<13>     |IOB      |IO_L68P_5             |INPUT    |LVTTL*     |5             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
 |AD21      |tv_in_i2c_clock     |IOB      |IO_L26N_5             |OUTPUT   |LVDCI_33   |5             |          |NONE*    |NONE**     |         |       |LOCATED   |         |NO         |DRIVER          |
-|AD22      |                    |DIFFM    |IO_L26P_5             |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|AD22      |switch<7>           |IOB      |IO_L26P_5             |INPUT    |LVTTL*     |5             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
 |AD23      |                    |DIFFS    |IO_L05N_5/VRP_5       |UNUSED   |           |5             |          |         |TERMINATION|         |       |          |         |           |                |
 |AD24      |                    |         |GND                   |         |           |              |          |         |           |         |       |          |         |           |                |
 |AD25      |ram0_data<27>       |IOB      |IO_L20P_6             |BIDIR    |LVDCI_33   |6             |          |NONE*    |NONE**     |NONE     |       |LOCATED   |         |NO         |NONE            |
@@ -416,7 +416,7 @@ Pinout by Pin Number:
 |B26       |user2<30>           |IOB      |IO_L21P_0/VREF_0      |INPUT    |LVTTL*     |0             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
 |B27       |user2<31>           |IOB      |IO_L21N_0             |INPUT    |LVTTL*     |0             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
 |B28       |                    |         |DXP                   |         |           |              |          |         |           |         |       |          |         |           |                |
-|B29       |                    |DIFFS    |IO_L03N_0/VRP_0       |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|B29       |Q                   |IOB      |IO_L03N_0/VRP_0       |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |       |          |         |YES        |NONE            |
 |B30       |                    |         |GND                   |         |           |              |          |         |           |         |       |          |         |           |                |
 |B31       |                    |         |GND                   |         |           |              |          |         |           |         |       |          |         |           |                |
 |C1        |                    |         |GND                   |         |           |              |          |         |           |         |       |          |         |           |                |
@@ -848,7 +848,7 @@ Pinout by Pin Number:
 |T24       |tv_in_ycrcb<4>      |IOB      |IO_L94N_6             |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
 |T25       |                    |         |GND                   |         |           |              |          |         |           |         |       |          |         |           |                |
 |T26       |tv_in_ycrcb<5>      |IOB      |IO_L92N_6             |INPUT    |LVTTL*     |6             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
-|T27       |Q                   |IOB      |IO_L96P_7             |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |       |          |         |YES        |NONE            |
+|T27       |                    |DIFFM    |IO_L96P_7             |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
 |T28       |                    |         |GND                   |         |           |              |          |         |           |         |       |          |         |           |                |
 |T29       |tv_out_ycrcb<7>     |IOB      |IO_L94P_7             |OUTPUT   |LVDCI_33   |7             |          |NONE*    |NONE**     |         |       |LOCATED   |         |NO         |DRIVER          |
 |T30       |                    |         |VCCAUX                |         |           |              |          |         |           |         |3.3    |          |         |           |                |
