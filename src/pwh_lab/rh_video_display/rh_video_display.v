@@ -529,7 +529,8 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			
 	wire zbt_iw_newout;
 	wire [35:0] zbt_iw_output;
-	reg [35:0] zbt_iw_output_reg;
+	reg [35:0] zbt_iw_output_reg = 0;
+	
 	zbt_image_writer ziw1(.clk(clk),
 						  .reset(reset),
 						  .image_data(fifo_data_output),
@@ -563,6 +564,11 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			y_pixels <= 0;
 		end
 		
+		if (zbt_iw_newout) begin
+			vram_write_addr <= {0, y_pixels, x_pixels[9:2]-1'b1};
+			zbt_iw_output_reg <= zbt_iw_output;
+		end
+		
 		if (fifo_newout) begin
 			x_pixels <= x_pixels + 1;
 		end
@@ -570,11 +576,6 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		if (x_pixels >= 1023) begin
 			x_pixels <= 0;
 			y_pixels <= y_pixels + 1;
-		end
-		
-		if (zbt_iw_newout) begin
-			vram_write_addr <= {0, y_pixels, x_pixels[9:2]};
-			zbt_iw_output_reg <= zbt_iw_output;
 		end
 	end
 	
@@ -600,8 +601,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clk), 
-		.data({ dispdata,
-				  from_fifo,image_bits }),//fifo_state,
+		.data({ image_bits, vram_read_data }),//fifo_state,
 				  //3'b0,fifo_newout}),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 

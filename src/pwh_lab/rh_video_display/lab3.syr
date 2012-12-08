@@ -12,7 +12,7 @@ Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_v
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: lab3.prj
@@ -1111,28 +1111,30 @@ WARNING:Xst:646 - Signal <ram0_clk_not_used> is assigned but never used. This un
 WARNING:Xst:646 - Signal <notes> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <msl_debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <locked> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <from_fifo> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <fifo_state> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <fifo_hold> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <dispdata<63:48>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dispdata> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <b>.
     Found 1-bit 4-to-1 multiplexer for signal <b$mux0000>.
     Found 32-bit up counter for signal <count>.
-    Found 8-bit register for signal <from_fifo>.
     Found 1-bit register for signal <hs>.
     Found 1-bit 4-to-1 multiplexer for signal <hs$mux0000>.
     Found 24-bit register for signal <rgb>.
     Found 24-bit 4-to-1 multiplexer for signal <rgb$mux0000>.
     Found 1-bit register for signal <right_note>.
     Found 19-bit register for signal <vram_write_addr>.
+    Found 8-bit subtractor for signal <vram_write_addr$sub0000> created at line 568.
     Found 1-bit register for signal <vs>.
     Found 1-bit 4-to-1 multiplexer for signal <vs$mux0000>.
     Found 10-bit up counter for signal <x_pixels>.
     Found 10-bit up counter for signal <y_pixels>.
-    Found 10-bit comparator greatequal for signal <y_pixels$cmp_ge0000> created at line 570.
+    Found 10-bit comparator greatequal for signal <y_pixels$cmp_ge0000> created at line 576.
     Found 36-bit register for signal <zbt_iw_output_reg>.
     Summary:
 	inferred   3 Counter(s).
-	inferred  91 D-type flip-flop(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 	inferred  27 Multiplexer(s).
 Unit <lab3> synthesized.
@@ -1150,7 +1152,7 @@ Macro Statistics
 # Multipliers                                          : 6
  11x9-bit multiplier                                   : 1
  7x4-bit multiplier                                    : 5
-# Adders/Subtractors                                   : 99
+# Adders/Subtractors                                   : 100
  10-bit adder                                          : 1
  10-bit adder carry out                                : 25
  10-bit addsub                                         : 1
@@ -1166,6 +1168,7 @@ Macro Statistics
  4-bit adder                                           : 3
  4-bit subtractor                                      : 1
  5-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
  9-bit adder carry out                                 : 1
 # Counters                                             : 14
  10-bit up counter                                     : 3
@@ -1176,7 +1179,7 @@ Macro Statistics
  5-bit up counter                                      : 1
  7-bit up counter                                      : 1
  8-bit down counter                                    : 1
-# Registers                                            : 143
+# Registers                                            : 142
  1-bit register                                        : 57
  10-bit register                                       : 17
  11-bit register                                       : 1
@@ -1188,7 +1191,7 @@ Macro Statistics
  32-bit register                                       : 1
  36-bit register                                       : 5
  4-bit register                                        : 18
- 8-bit register                                        : 2
+ 8-bit register                                        : 1
 # Comparators                                          : 136
  10-bit comparator greatequal                          : 34
  10-bit comparator lessequal                           : 1
@@ -1410,10 +1413,10 @@ WARNING:Xst:1710 - FF/Latch <goal_23> (without init value) has a constant value 
 WARNING:Xst:1710 - FF/Latch <goal_24> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_25> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <goal_26> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_32> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_33> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_34> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_35> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_32> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_33> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_34> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_35> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_old1_32> (without init value) has a constant value of 0 in block <zbt1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_old1_33> (without init value) has a constant value of 0 in block <zbt1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_old1_34> (without init value) has a constant value of 0 in block <zbt1>. This FF/Latch will be trimmed during the optimization process.
@@ -1445,7 +1448,7 @@ Macro Statistics
 # Multipliers                                          : 6
  11x9-bit multiplier                                   : 1
  7x4-bit multiplier                                    : 5
-# Adders/Subtractors                                   : 94
+# Adders/Subtractors                                   : 95
  10-bit adder                                          : 1
  10-bit adder carry out                                : 25
  10-bit addsub                                         : 1
@@ -1462,6 +1465,7 @@ Macro Statistics
  5-bit adder                                           : 1
  5-bit subtractor                                      : 5
  7-bit subtractor borrow in                            : 1
+ 8-bit subtractor                                      : 1
  8-bit subtractor borrow in                            : 3
  9-bit adder carry out                                 : 1
  9-bit subtractor borrow in                            : 1
@@ -1474,8 +1478,8 @@ Macro Statistics
  5-bit up counter                                      : 1
  7-bit up counter                                      : 1
  8-bit down counter                                    : 1
-# Registers                                            : 1183
- Flip-Flops                                            : 1183
+# Registers                                            : 1175
+ Flip-Flops                                            : 1175
 # Comparators                                          : 136
  10-bit comparator greatequal                          : 34
  10-bit comparator lessequal                           : 1
@@ -1604,10 +1608,10 @@ WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_3> has a constant value of 0 in 
 WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_2> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_1> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <rh_disp/song_tempo_0> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_32> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_33> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_34> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <zbt_iw_output_reg_35> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_32> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_33> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_34> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <zbt_iw_output_reg_35> has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_0> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_1> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <msl/c/goal_2> (without init value) has a constant value of 0 in block <lab3>. This FF/Latch will be trimmed during the optimization process.
@@ -1792,8 +1796,8 @@ Unit <lab3> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 837
- Flip-Flops                                            : 837
+# Registers                                            : 829
+ Flip-Flops                                            : 829
 # Shift Registers                                      : 37
  2-bit shift register                                  : 33
  7-bit shift register                                  : 4
@@ -1825,31 +1829,31 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 3915
+# BELS                             : 3927
 #      GND                         : 12
-#      INV                         : 83
+#      INV                         : 85
 #      LUT1                        : 238
-#      LUT2                        : 728
+#      LUT2                        : 718
 #      LUT2_D                      : 20
-#      LUT2_L                      : 1
-#      LUT3                        : 366
-#      LUT3_D                      : 4
+#      LUT2_L                      : 2
+#      LUT3                        : 377
+#      LUT3_D                      : 5
 #      LUT3_L                      : 6
-#      LUT4                        : 856
-#      LUT4_D                      : 42
-#      LUT4_L                      : 12
+#      LUT4                        : 871
+#      LUT4_D                      : 40
+#      LUT4_L                      : 11
 #      MUXCY                       : 1110
-#      MUXF5                       : 121
-#      MUXF6                       : 20
-#      MUXF7                       : 5
+#      MUXF5                       : 124
+#      MUXF6                       : 16
+#      MUXF7                       : 1
 #      VCC                         : 12
 #      XORCY                       : 279
-# FlipFlops/Latches                : 891
+# FlipFlops/Latches                : 883
 #      FD                          : 38
-#      FDE                         : 344
-#      FDR                         : 194
+#      FDE                         : 336
+#      FDR                         : 193
 #      FDRE                        : 230
-#      FDRS                        : 15
+#      FDRS                        : 16
 #      FDRSE                       : 4
 #      FDS                         : 49
 #      FDSE                        : 14
@@ -1867,9 +1871,8 @@ Cell Usage :
 # IO Buffers                       : 296
 #      IBUF                        : 19
 #      IBUFG                       : 2
-#      IOBUF                       : 32
+#      IOBUF                       : 36
 #      OBUF                        : 239
-#      OBUFT                       : 4
 # DCMs                             : 3
 #      DCM                         : 3
 # MULTs                            : 6
@@ -1881,10 +1884,10 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                     1308  out of  33792     3%  
- Number of Slice Flip Flops:            891  out of  67584     1%  
- Number of 4 input LUTs:               2395  out of  67584     3%  
-    Number used as logic:              2356
+ Number of Slices:                     1307  out of  33792     3%  
+ Number of Slice Flip Flops:            883  out of  67584     1%  
+ Number of 4 input LUTs:               2412  out of  67584     3%  
+    Number used as logic:              2373
     Number used as Shift registers:      39
  Number of IOs:                         576
  Number of bonded IOBs:                 298  out of    684    43%  
@@ -1914,7 +1917,7 @@ Clock Information:
 -----------------------------------+----------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                    | Load  |
 -----------------------------------+----------------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                        | vclk1:CLKFX+rc/int_dcm:CLK0                                                                              | 913   |
+clock_27mhz                        | vclk1:CLKFX+rc/int_dcm:CLK0                                                                              | 905   |
 hex_display/clock1                 | BUFG                                                                                                     | 43    |
 rh_disp/pb/nl_rom/BU2/dbiterr      | NONE(rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram)| 18    |
 -----------------------------------+----------------------------------------------------------------------------------------------------------+-------+
@@ -1929,7 +1932,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 33.570ns (Maximum Frequency: 29.788MHz)
-   Minimum input arrival time before clock: 8.583ns
+   Minimum input arrival time before clock: 14.114ns
    Maximum output required time after clock: 9.651ns
    Maximum combinational path delay: 7.222ns
 
@@ -1940,7 +1943,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
   Clock period: 33.570ns (frequency: 29.788MHz)
-  Total number of paths / destination ports: 107708 / 2216
+  Total number of paths / destination ports: 107824 / 2200
 -------------------------------------------------------------------------
 Delay:               13.988ns (Levels of Logic = 7)
   Source:            xvga1/vcount_9_1 (FF)
@@ -1968,10 +1971,10 @@ Delay:               13.988ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hex_display/clock1'
-  Clock period: 13.184ns (frequency: 75.850MHz)
-  Total number of paths / destination ports: 4010 / 74
+  Clock period: 14.509ns (frequency: 68.921MHz)
+  Total number of paths / destination ports: 4198 / 75
 -------------------------------------------------------------------------
-Delay:               13.184ns (Levels of Logic = 15)
+Delay:               14.509ns (Levels of Logic = 13)
   Source:            hex_display/char_index_0 (FF)
   Destination:       hex_display/disp_data_out (FF)
   Source Clock:      hex_display/clock1 rising
@@ -1981,32 +1984,30 @@ Delay:               13.184ns (Levels of Logic = 15)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             26   0.568   1.357  hex_display/char_index_0 (hex_display/char_index_0)
-     LUT3:I0->O            1   0.439   0.000  hex_display/Mmux_nibble_73 (hex_display/Mmux_nibble_73)
-     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux_nibble_5_f5_1 (hex_display/Mmux_nibble_5_f52)
-     MUXF6:I0->O           1   0.447   0.000  hex_display/Mmux_nibble_3_f6_0 (hex_display/Mmux_nibble_3_f61)
-     MUXF7:I1->O          29   0.447   1.365  hex_display/Mmux_nibble_2_f7_0 (hex_display/nibble<1>)
-     LUT4:I0->O            2   0.439   0.735  hex_display/Mrom_dots1311 (hex_display/Mrom_dots12)
-     LUT3:I2->O            1   0.439   0.000  hex_display/Mmux__varindex0000_131 (hex_display/Mmux__varindex0000_131)
-     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux__varindex0000_11_f5_0 (hex_display/Mmux__varindex0000_11_f51)
-     MUXF6:I1->O           1   0.447   0.000  hex_display/Mmux__varindex0000_10_f6 (hex_display/Mmux__varindex0000_10_f6)
-     MUXF7:I0->O           1   0.447   0.726  hex_display/Mmux__varindex0000_8_f7 (hex_display/Mmux__varindex0000_8_f7)
-     LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux0000782 (hex_display/disp_data_out_mux0000782)
-     MUXF5:I0->O           1   0.436   0.552  hex_display/disp_data_out_mux000078_f5 (hex_display/disp_data_out_mux000078)
-     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N422)
+     FDE:C->Q             34   0.568   1.378  hex_display/char_index_0 (hex_display/char_index_0)
+     LUT3:I0->O            2   0.439   0.910  hex_display/Mmux_nibble_103 (hex_display/Mmux_nibble_103)
+     LUT4:I1->O            2   0.439   0.986  hex_display/char_index<3>3_SW0 (N92)
+     LUT4:I0->O           26   0.439   1.280  hex_display/char_index<3>3 (hex_display/nibble<3>)
+     LUT4:I1->O            2   0.439   0.735  hex_display/Mrom_dots1312 (hex_display/Mrom_dots12)
+     LUT3:I2->O            1   0.439   0.000  hex_display/Mmux__varindex0000_16 (hex_display/Mmux__varindex0000_16)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux__varindex0000_14_f5 (hex_display/Mmux__varindex0000_14_f5)
+     MUXF6:I0->O           1   0.447   0.557  hex_display/Mmux__varindex0000_12_f6 (hex_display/Mmux__varindex0000_12_f6)
+     LUT4:I3->O            1   0.439   0.557  hex_display/disp_data_out_mux000033 (hex_display/disp_data_out_mux000033)
+     LUT4:I3->O            1   0.439   0.552  hex_display/disp_data_out_mux000078 (hex_display/disp_data_out_mux000078)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N471)
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
-     LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001692 (hex_display/disp_data_out_mux00001691)
-     MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000169_f5 (hex_display/disp_data_out_mux0000)
+     LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001682 (hex_display/disp_data_out_mux00001681)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000168_f5 (hex_display/disp_data_out_mux0000)
      FDE:D                     0.370          hex_display/disp_data_out
     ----------------------------------------
-    Total                     13.184ns (7.540ns logic, 5.644ns route)
-                                       (57.2% logic, 42.8% route)
+    Total                     14.509ns (6.644ns logic, 7.865ns route)
+                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 809 / 232
+  Total number of paths / destination ports: 821 / 232
 -------------------------------------------------------------------------
-Offset:              8.583ns (Levels of Logic = 14)
+Offset:              9.460ns (Levels of Logic = 15)
   Source:            switch<4> (PAD)
   Destination:       rh_disp/pixel_reg_23 (FF)
   Destination Clock: clock_27mhz rising 2.4X
@@ -2026,13 +2027,46 @@ Offset:              8.583ns (Levels of Logic = 14)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_ge0001_cy<7> (rh_disp/song_selector_box/Mcompar_pixel_cmp_ge0001_cy<7>)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_ge0001_cy<8> (rh_disp/song_selector_box/Mcompar_pixel_cmp_ge0001_cy<8>)
      MUXCY:CI->O           1   0.942   0.726  rh_disp/song_selector_box/Mcompar_pixel_cmp_ge0001_cy<9> (rh_disp/song_selector_box/pixel_cmp_ge0001)
-     LUT4:I1->O            1   0.439   0.803  rh_disp/pixel_reg_mux0000<0>277 (rh_disp/pixel_reg_mux0000<0>277)
-     LUT4_D:I0->O         12   0.439   0.971  rh_disp/pixel_reg_mux0000<0>2317 (rh_disp/pixel_reg_mux0000<0>2317)
-     LUT4:I3->O            1   0.439   0.518  rh_disp/pixel_reg_mux0000<7>5 (rh_disp/pixel_reg_mux0000<7>5)
+     LUT4:I1->O            1   0.439   0.557  rh_disp/pixel_reg_mux0000<0>2173_SW0 (N278)
+     LUT4:I3->O            1   0.439   0.557  rh_disp/pixel_reg_mux0000<0>2173 (rh_disp/pixel_reg_mux0000<0>2173)
+     LUT4:I3->O           24   0.439   1.098  rh_disp/pixel_reg_mux0000<0>2415 (rh_disp/N43)
+     LUT3:I2->O            1   0.439   0.518  rh_disp/pixel_reg_mux0000<7>5 (rh_disp/pixel_reg_mux0000<7>5)
      FDS:S                     0.280          rh_disp/pixel_reg_7
     ----------------------------------------
-    Total                      8.583ns (4.472ns logic, 4.111ns route)
-                                       (52.1% logic, 47.9% route)
+    Total                      9.460ns (4.911ns logic, 4.549ns route)
+                                       (51.9% logic, 48.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hex_display/clock1'
+  Total number of paths / destination ports: 2140 / 1
+-------------------------------------------------------------------------
+Offset:              14.114ns (Levels of Logic = 14)
+  Source:            ram0_data<35> (PAD)
+  Destination:       hex_display/disp_data_out (FF)
+  Destination Clock: hex_display/clock1 rising
+
+  Data Path: ram0_data<35> to hex_display/disp_data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   0.825   0.726  ram0_data_35_IOBUF (N190)
+     LUT3:I1->O            2   0.439   0.910  hex_display/Mmux_nibble_103 (hex_display/Mmux_nibble_103)
+     LUT4:I1->O            2   0.439   0.986  hex_display/char_index<3>3_SW0 (N92)
+     LUT4:I0->O           26   0.439   1.280  hex_display/char_index<3>3 (hex_display/nibble<3>)
+     LUT4:I1->O            2   0.439   0.735  hex_display/Mrom_dots1312 (hex_display/Mrom_dots12)
+     LUT3:I2->O            1   0.439   0.000  hex_display/Mmux__varindex0000_16 (hex_display/Mmux__varindex0000_16)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/Mmux__varindex0000_14_f5 (hex_display/Mmux__varindex0000_14_f5)
+     MUXF6:I0->O           1   0.447   0.557  hex_display/Mmux__varindex0000_12_f6 (hex_display/Mmux__varindex0000_12_f6)
+     LUT4:I3->O            1   0.439   0.557  hex_display/disp_data_out_mux000033 (hex_display/disp_data_out_mux000033)
+     LUT4:I3->O            1   0.439   0.552  hex_display/disp_data_out_mux000078 (hex_display/disp_data_out_mux000078)
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N471)
+     MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
+     LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001682 (hex_display/disp_data_out_mux00001681)
+     MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000168_f5 (hex_display/disp_data_out_mux0000)
+     FDE:D                     0.370          hex_display/disp_data_out
+    ----------------------------------------
+    Total                     14.114ns (6.901ns logic, 7.213ns route)
+                                       (48.9% logic, 51.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
@@ -2100,15 +2134,15 @@ WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_st1/f.
 
 
-Total REAL time to Xst completion: 44.00 secs
-Total CPU time to Xst completion: 43.40 secs
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 44.09 secs
  
 --> 
 
 
-Total memory usage is 541004 kilobytes
+Total memory usage is 541508 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  531 (   0 filtered)
+Number of warnings :  532 (   0 filtered)
 Number of infos    :  204 (   0 filtered)
 
