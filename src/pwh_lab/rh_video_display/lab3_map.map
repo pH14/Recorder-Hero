@@ -11,7 +11,7 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Fri Dec  7 17:49:38 2012
+Mapped Date    : Sat Dec  8 15:56:39 2012
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,23 +23,23 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  428
+Number of warnings:  425
 Logic Utilization:
   Number of Slice Flip Flops:           888 out of  67,584    1%
-  Number of 4 input LUTs:             2,143 out of  67,584    3%
+  Number of 4 input LUTs:             2,161 out of  67,584    3%
 Logic Distribution:
-  Number of occupied Slices:          1,392 out of  33,792    4%
-    Number of Slices containing only related logic:   1,392 out of   1,392 100%
-    Number of Slices containing unrelated logic:          0 out of   1,392   0%
+  Number of occupied Slices:          1,393 out of  33,792    4%
+    Number of Slices containing only related logic:   1,393 out of   1,393 100%
+    Number of Slices containing unrelated logic:          0 out of   1,393   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,393 out of  67,584    3%
-    Number used as logic:             2,104
-    Number used as a route-thru:        250
+  Total Number of 4 input LUTs:       2,406 out of  67,584    3%
+    Number used as logic:             2,122
+    Number used as a route-thru:        245
     Number used as Shift registers:      39
   Number of bonded IOBs:                577 out of     684   84%
     IOB Flip Flops:                       6
-  Number of RAMB16s:                     27 out of     144   18%
-  Number of MULT18X18s:                   5 out of     144    3%
+  Number of RAMB16s:                     28 out of     144   19%
+  Number of MULT18X18s:                   6 out of     144    4%
   Number of BUFGMUXs:                     4 out of      16   25%
   Number of DCMs:                         3 out of      12   25%
 

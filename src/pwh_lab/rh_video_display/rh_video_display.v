@@ -930,9 +930,9 @@ module rh_display (
 						 
 	wire [23:0] bono_pixel;
 	bono_picture_blob bpb_img(.pixel_clk(vclock),
-								     .x(1),
+								     .x(0),
 									  .hcount(hcount+2),
-									  .y(1),
+									  .y(0),
 									  .vcount(vcount+2),
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
@@ -983,7 +983,7 @@ module rh_display (
 											.vcount(vcount),
 											.pixel(song_title_1_pixel),
 											.cstring("Concerning Hobbits"),
-											.cx(18),
+											.cx(23),
 											.cy(285));
 	defparam csd_st1.NCHAR = 18;
 	defparam csd_st1.NCHAR_BITS = 5;
@@ -994,22 +994,40 @@ module rh_display (
 											.vcount(vcount),
 											.pixel(song_title_2_pixel),
 											.cstring("Practice Scale"),
-											.cx(18),
+											.cx(23),
 											.cy(315));
 	defparam csd_st2.NCHAR = 14;
 	defparam csd_st2.NCHAR_BITS = 4;
 	
-	wire [6:0] current_song_y;
-	assign current_song_y = (menu_state[1:0] == 2'b00) ? 285 : 315;
+	wire [2:0] song_title_3_pixel;
+	char_string_display csd_st3(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(song_title_3_pixel),
+											.cstring("Prelude in C"),
+											.cx(23),
+											.cy(345));
+	defparam csd_st3.NCHAR = 12;
+	defparam csd_st3.NCHAR_BITS = 4;
+	
+	reg [8:0] current_song_y;
+	always @(*) begin
+		case(menu_state[1:0])
+			2'b00: current_song_y = 9'd285;
+			2'b01: current_song_y = 9'd315;
+			2'b10: current_song_y = 9'd345;
+			default: current_song_y = 9'd285;
+		endcase
+	end
 	
 	wire [23:0] song_select_box_pixel;
    blob #(.WIDTH(10), .HEIGHT(10))
-		song_selector_box(.x(5),
-		  .y(current_song_y + 5),
+		song_selector_box(.x(8),
+		  .y(current_song_y + 6),
 		  .hcount(hcount),
 		  .vcount(vcount),
 		  .color(24'hFF_FF_FF),
-		  .pixel());
+		  .pixel(song_select_box_pixel));
 	
 	reg [23:0] pixel_reg;
 	always @(posedge vclock) begin
@@ -1017,6 +1035,7 @@ module rh_display (
 			pixel_reg <= bono_pixel
 					  | {8{song_title_1_pixel}}
 					  | {8{song_title_2_pixel}}
+					  | {8{song_title_3_pixel}}
 					  | song_select_box_pixel;
 		end else begin
 			pixel_reg <= onscreen_notes[0]
