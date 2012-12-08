@@ -1,0 +1,6 @@
+verilog work "./my_fft.v"
+verilog work "process_audio.v"
+verilog work "cache.v"
+verilog work "noteIdentification.v"
+verilog work "display_16hex.v"
+verilog work "fft.v"

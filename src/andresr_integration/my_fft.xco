@@ -1,0 +1,62 @@
+##############################################################
+#
+# Xilinx Core Generator version K.39
+# Date: Fri Dec  7 02:52:55 2012
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = False
+SET asysymbol = True
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = VHDL
+SET device = xc2v6000
+SET devicefamily = virtex2
+SET flowvendor = Foundation_iSE
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = ngc
+SET package = bf957
+SET removerpms = False
+SET simulationfiles = Structural
+SET speedgrade = -4
+SET verilogsim = True
+SET vhdlsim = True
+# END Project Options
+# BEGIN Select
+SELECT Fast_Fourier_Transform family Xilinx,_Inc. 3.2
+# END Select
+# BEGIN Parameters
+CSET ce=true
+CSET component_name=my_fft
+CSET create_rpm=false
+CSET fast_butterfly=false
+CSET fast_complex_mult=false
+CSET fast_phase_factor=false
+CSET implementation_options=Pipelined_Streaming_IO
+CSET input_width=8
+CSET memory_options_data=Block_Ram
+CSET memory_options_phase_factors=Block_Ram
+CSET number_of_stages_using_block_ram_for_data_and_phase_factors=7
+CSET optimize_for_speed_using_xtreme_dsp_slices=false
+CSET output_data_width=21
+CSET output_ordering=Natural_Order
+CSET ovflo=false
+CSET phase_factor_width=8
+CSET rounding_modes=Convergent_Rounding
+CSET run_time_configurable_transform_length=false
+CSET scaling_options=Unscaled
+CSET sclr=false
+CSET transform_length=4096
+# END Parameters
+GENERATE
+# CRC: 5454276c
+

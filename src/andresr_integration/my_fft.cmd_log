@@ -1,0 +1,1 @@
+ngdbuild -ise "/afs/athena.mit.edu/user/a/n/andresr/6.111work/fft_display/fft_display/fft_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-6 "my_fft.ngc" my_fft.ngd

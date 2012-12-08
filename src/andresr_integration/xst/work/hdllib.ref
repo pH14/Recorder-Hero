@@ -1,0 +1,11 @@
+MO display_16hex NULL display_16hex.v vlg51/display__16hex.bin 1354916393
+MO ac97commands NULL fft.v vlg5A/ac97commands.bin 1354916393
+MO ac97 NULL fft.v vlg5C/ac97.bin 1354916393
+MO debounce NULL fft.v vlg1D/debounce.bin 1354916393
+MO fft NULL fft.v vlg68/fft.bin 1354916393
+MO cache NULL cache.v vlg28/cache.bin 1354916393
+MO sqrt NULL process_audio.v vlg5E/sqrt.bin 1354916393
+MO fft_audio NULL fft.v vlg05/fft__audio.bin 1354916393
+MO my_fft NULL ./my_fft.v vlg45/my__fft.bin 1354916393
+MO process_audio NULL process_audio.v vlg44/process__audio.bin 1354916393
+MO noteIdentification NULL noteIdentification.v vlg70/note_identification.bin 1354916393
