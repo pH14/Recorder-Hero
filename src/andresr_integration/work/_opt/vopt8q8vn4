@@ -1,0 +1,53 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/afs/athena.mit.edu/user/a/n/andresr/6.111work/fft_display/fft_display
+T_opt
+Z1 VEGbjLl`Hz756DlUbTNc0j2
+Z2 04 18 4 work score_Updater_Test fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-f04da20ee27b-50abe9c4-bac1b-21f4
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver
+Z6 OE;O;6.4a;39
+vglbl
+Z7 IB;@1jEXmEfQXL`;Kf0IBZ3
+Z8 VnN]4Gon>inod6>M^M2[SV1
+Z9 w1202685744
+Z10 8/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+Z11 F/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/verilog/src/glbl.v
+L0 5
+Z12 OE;L;6.4a;39
+r1
+31
+Z13 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
+Z14 !s100 T?5S;>bN`@zG_25]R_4A33
+!s85 0
+vscore_Updater_Test
+Z15 ITMOEEPc?`neQ[lnf:e<im3
+Z16 V<UJ[;f3;bnGZzFzWWe0R^0
+Z17 w1353443567
+Z18 8score_Updater_Test.v
+Z19 Fscore_Updater_Test.v
+L0 25
+R12
+r1
+31
+R13
+Z20 nscore_@updater_@test
+Z21 !s100 m6VzHke;RL_S=bm<J@]L?0
+!s85 0
+vscoreUpdater
+Z22 I6LAeRAWPod>Mcb2?@MDYG1
+Z23 VHNG1ClLBdYEF@S4V5fe6z3
+Z24 w1353443775
+Z25 8scoreUpdater.v
+Z26 FscoreUpdater.v
+L0 21
+R12
+r1
+31
+R13
+Z27 nscore@updater
+Z28 !s100 ?Wd?m8VURz<M>_HV?KDAX3
+!s85 0
