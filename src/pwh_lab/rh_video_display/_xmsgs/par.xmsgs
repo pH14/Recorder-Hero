@@ -131,9 +131,6 @@
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">keyboard_data_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">ac97_bit_clock_IBUF</arg> has no load.  PAR will not attempt to route this signal.
-</msg>
-
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">flash_sts_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
@@ -165,9 +162,6 @@
 </msg>
 
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">tv_in_ycrcb&lt;9&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">button0_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">button1_IBUF</arg> has no load.  PAR will not attempt to route this signal.
@@ -575,9 +569,6 @@
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">tv_in_i2c_data_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">switch&lt;2&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
-</msg>
-
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">flash_data&lt;0&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
@@ -606,9 +597,6 @@
 </msg>
 
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">flash_data&lt;9&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">ac97_sdata_in_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
 <msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">user2&lt;0&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
@@ -847,11 +835,11 @@
 
 <msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
 
-<msg type="warning" file="Par" num="283" delta="unknown" >There are <arg fmt="%d" index="1">278</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+<msg type="warning" file="Par" num="283" delta="unknown" >There are <arg fmt="%d" index="1">274</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 </msg>
 
-<msg type="warning" file="ParHelpers" num="361" delta="unknown" >There are <arg fmt="%d" index="1">278</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+<msg type="warning" file="ParHelpers" num="361" delta="unknown" >There are <arg fmt="%d" index="1">274</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 </msg>
 

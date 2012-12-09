@@ -24,7 +24,7 @@ module musical_score_loader(
     input [1:0] song_id,
 	 output [25:0] tempo_out,
     output [63:0] next_notes_out,
-	 output [63:0] debug_out
+	 output song_done
     );
 	
 	reg [7:0] read_addr = 0;
@@ -92,12 +92,7 @@ module musical_score_loader(
 									  next_notes[6], next_notes[5], next_notes[4],
 									  next_notes[3], next_notes[2], next_notes[1],
 									  next_notes[0]};
-									  
+	
+	assign song_done = (next_notes[7] == 4'b1111);
 	assign tempo_out = tempo;
-	assign debug_out = {next_notes[0], next_notes[11],
-								next_notes[12], next_notes[13], 
-								next_notes[14], next_notes[15], 
-								1'b0, read_addr, 
-								2'b00, tempo, 
-								4'b1111};
 endmodule

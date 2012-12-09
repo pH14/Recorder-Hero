@@ -1,18 +1,18 @@
 Release 10.1.03 - xst K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/andresr_integration/xst/projnav.tmp
+Parameter TMPDIR set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/andresr_integration/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
-Parameter xsthdpdir set to /afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/andresr_integration/xst
+Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/andresr_integration/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: fft.prj

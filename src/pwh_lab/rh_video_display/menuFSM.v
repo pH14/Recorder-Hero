@@ -1,0 +1,115 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    14:53:05 11/27/2012 
+// Design Name: 
+// Module Name:    menuFSM 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module menuFSM(
+    input up,
+    input down,
+    input enter,
+    input reset,
+	 input done,
+    input clk,
+	 input[17:0] binaryIn,
+	 input[47:0] asciiIn,
+    output [2:0] menuState,
+    output resetComp,
+	 output [1:0] song,
+	 output [47:0] highScore
+    );
+
+	reg[2:0] state;
+	reg reset_reg = 0;
+	reg[1:0] song_reg;
+	
+	reg previous_button = 0;
+	
+	parameter[2:0] songOne = 3'b000;
+	parameter[2:0] songTwo = 3'b001;
+	parameter[2:0] songThree = 3'b010;
+	parameter[3:0] inGame = 3'b111;
+	
+	reg[17:0] binaryHighScore1 = 0;
+	reg[47:0] asciiHighScore1 = {"000000"};
+	
+	reg[17:0] binaryHighScore2 = 0;
+	reg[47:0] asciiHighScore2 = {"000000"};
+	
+	reg[17:0] binaryHighScore3 = 0;
+	reg[47:0] asciiHighScore3 = {"000000"};
+	
+	reg[47:0] highScoreReg = {"000000"};
+	
+	always @(posedge clk) begin
+		if (reset) state <= songOne;
+		else if (enter & (state != inGame)) begin
+			case(state[1:0])
+				2'b00: highScoreReg <= asciiHighScore1;
+				2'b01: highScoreReg <= asciiHighScore2;
+				2'b10: highScoreReg <= asciiHighScore3;
+			endcase
+			state <= inGame;
+			song_reg <= state[1:0];
+			reset_reg <= 1;
+		end
+		else begin
+			reset_reg <= 0;
+			if (done) begin
+				case(song_reg)
+					2'b00: begin
+						if (binaryIn > binaryHighScore1) begin
+							asciiHighScore1 <= asciiIn;
+							binaryHighScore1 <= binaryIn;
+						end
+					end
+					2'b01: begin
+						if (binaryIn > binaryHighScore2) begin
+							asciiHighScore2 <= asciiIn;
+							binaryHighScore2 <= binaryIn;
+						end
+					end
+					2'b10: begin
+						if (binaryIn > binaryHighScore3) begin
+							asciiHighScore3 <= asciiIn;
+							binaryHighScore3 <= binaryIn;
+						end
+					end
+					default:;
+				endcase
+				state <= songOne;
+			end
+			if (!previous_button) begin
+				case(state)
+					songOne: state <= down ? songTwo: songOne;
+					songTwo: state <=  up ? songOne: down? songThree: songTwo;
+					songThree: state <= up ? songTwo: songThree;
+					inGame: state <= done ? songOne: inGame;
+					default: state <= songOne;
+				endcase
+				previous_button <= 1;
+			end
+			if (!down & !up) previous_button <= 0;
+		end
+	end
+	
+	assign highScore = highScoreReg;
+	assign menuState = state;
+	assign resetComp = reset_reg;
+	assign song = song_reg;
+	
+endmodule

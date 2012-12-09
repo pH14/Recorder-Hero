@@ -1,5 +1,5 @@
-set -tmpdir "/afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/andresr_integration/xst/projnav.tmp"
-set -xsthdpdir "/afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/andresr_integration/xst"
+set -tmpdir "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/andresr_integration/xst/projnav.tmp"
+set -xsthdpdir "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/andresr_integration/xst"
 run
 -ifn fft.prj
 -ifmt mixed

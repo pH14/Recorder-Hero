@@ -1,0 +1,72 @@
+Release 10.1.03 Map K.39 (lin64)
+Xilinx Map Application Log File for Design 'fft'
+
+Design Information
+------------------
+Command Line   : map -ise
+/afs/athena.mit.edu/user/p/w/pwh/rh2/src/scratch_test/scratch_test.ise -intstyle
+ise -p xc2v40-cs144-6 -cm area -pr off -k 4 -c 100 -tx off -o fft_map.ncd
+fft.ngd fft.pcf 
+Target Device  : xc2v40
+Target Package : cs144
+Target Speed   : -6
+Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
+Mapped Date    : Sun Dec  9 14:25:14 2012
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Running unrelated packing...
+ERROR:Pack:2310 - Too many comps of type "MULT18X18" found to fit this device.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      1
+Number of warnings:  163
+Logic Utilization:
+  Number of Slice Flip Flops:         6,290 out of     512 1228% (OVERMAPPED)
+  Number of 4 input LUTs:             7,056 out of     512 1378% (OVERMAPPED)
+Logic Distribution:
+  Number of occupied Slices:          3,778 out of     256 1475% (OVERMAPPED)
+    Number of Slices containing only related logic:   2,156 out of   3,778  57%
+    Number of Slices containing unrelated logic:      1,622 out of   3,778  42%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       7,528 out of     512 1470% (OVERMAPPED)
+    Number used as logic:             6,206
+    Number used as a route-thru:        472
+    Number used as Shift registers:     850
+  Number of bonded IOBs:                303 out of      88  344% (OVERMAPPED)
+    IOB Flip Flops:                       6
+  Number of RAMB16s:                     54 out of       4 1350% (OVERMAPPED)
+  Number of MULT18X18s:                  22 out of       4  550% (OVERMAPPED)
+  Number of BUFGMUXs:                     6 out of      16   37%
+  Number of DCMs:                         3 out of       4   75%
+
+Peak Memory Usage:  516 MB
+Total REAL time to MAP completion:  19 secs 
+Total CPU time to MAP completion:   18 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "fft_map.mrp" for details.
+Problem encountered during the packing phase.

@@ -1,0 +1,787 @@
+Release 10.1.03 ngdbuild K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/bin/lin64/unwrapped/ngdbuild -ise
+/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_displ
+ay.ise -intstyle ise -dd _ngo -aul -nt timestamp -i -p xc2v6000-bf957-4 fft.ngc
+fft.ngd
+
+Reading NGO file
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/fft.ngc" ...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lotr_song.ngc
+"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/song_scales.n
+gc"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_blue.ngc
+"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_red.ngc"
+...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_green.ng
+c"...
+Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/_ngo/font_rom
+.ngo"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/note_letters_
+bmp.ngc"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/my_fft.ngc"..
+.
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/cache.ngc"...
+Reading in constraint information from 'labkit.ucf'...
+Gathering constraint information from source properties...
+Done.
+INFO:NgdBuild:889 - Pad net 'rc/ddr_reg1/Q' is not connected to an external port
+   in this design.  A new port 'Q' has been added and is connected to this
+   signal.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:59 - Constraint <NET "flash_address<24>" LOC="al7";>
+   [labkit.ucf(335)]: NET "flash_address<24>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+Done...
+Checking Partitions ...
+
+Checking expanded design ...
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000037e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000380' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000382' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000497' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000499' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000049b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000049d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000049f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004a1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004a3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004b7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004b9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004bb' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004bd' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004bf' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004c1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004c3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004f9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000004fb' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000005d1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000604' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000638' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000066c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000007f7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000082f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000868' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000008a1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000095c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000992' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000009ea' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000a4b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000a81' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000ba1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000be9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000bed' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000bf0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000bf6' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000c3e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000c42' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000c45' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000c6e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000cad' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000d0b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000d0d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000e1d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000e5f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000ea2' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00000ee5' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000010da' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001121' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001169' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000011b1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001259' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000013be' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000140e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001412' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001416' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001419' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000141f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000146f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001473' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001477' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000147a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000014a7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000014f0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001550' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001552' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001688' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000016d4' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001721' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000176e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017f3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017f6' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017f9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017fc' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017ff' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001802' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001805' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001808' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000180b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000180e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001811' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001814' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001817' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000181a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000181d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001820' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001823' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001826' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001829' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000182c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000182f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001832' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001835' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001838' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000183b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000183e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001841' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001844' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001847' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000184a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001a02' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001a53' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001aa5' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001af7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001b7f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f2c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f84' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f88' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f8c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f8f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f95' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001fed' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ff1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ff5' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ff8' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000202a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000207e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020cc' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020ce' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020d0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020d8' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020da' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020dc' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020de' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020e0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020e2' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000216d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002170' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002173' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002176' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002179' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000217c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000217f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002182' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002185' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002188' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000218b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000218e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002191' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002194' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002197' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000219a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000219d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a6' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021ac' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021af' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021b2' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021b5' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021b8' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021bb' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021be' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021c1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021c4' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021c7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021ca' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000229d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000022f3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000234a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000023a1' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000026e6' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002869' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000286a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000286f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002873' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002877' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002878' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002879' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000287a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000287b' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028a9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028aa' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028af' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b8' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028ba' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028bb' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028e6' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002914' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002974' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002978' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000297c' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000297f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002985' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029e5' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029e9' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029ed' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029f0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002a2d' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002a92' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002aea' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af2' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af4' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af6' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af8' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003013' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003185' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000320f' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000329a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000032ce' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003336' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000333a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000333e' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003341' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003347' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033af' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033b3' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033b7' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033ba' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033fb' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000346a' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000034d0' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000034d2' has unconnected
+   output pin
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003a3d' has unconnected
+   output pin
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig000039fa' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a25' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a26' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a27' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a28' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a29' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2a' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2b' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2c' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2d' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2e' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2f' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a30' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a19' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1a' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1b' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1c' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1d' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1e' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig000039ef' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000080' has no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000081' has no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000082' has no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000083' has no driver
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000084' has no driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<28>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<29>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<20>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<21>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<16>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<22>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<17>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<18>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<23>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<19>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<24>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<25>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<30>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<31>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<26>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<32>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<27>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<33>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<28>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<34>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<29>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<20>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<40>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<35>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<16>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<21>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<41>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<36>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<22>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<17>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<37>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<42>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'flash_data<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<23>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<18>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<38>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<43>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<24>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<19>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<39>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'tv_in_i2c_data' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<30>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<25>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<31>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<26>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<27>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<28>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<29>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<20>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<16>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<21>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<22>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<17>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<23>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<18>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'daughtercard<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<19>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<24>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<30>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<25>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<26>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<31>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<20>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<27>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<16>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<21>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<28>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<22>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<17>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user4<29>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<23>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<18>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<24>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<19>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<25>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<30>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<31>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<26>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<32>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<27>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<20>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<28>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<33>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<21>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<16>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<29>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<34>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<17>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<22>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<35>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<18>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<23>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<24>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<19>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user2<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<25>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<30>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<26>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<31>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<27>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<28>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'systemace_data<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user1<29>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ram1_data<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<10>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<11>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<12>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<13>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<14>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<20>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<15>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<21>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<16>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<22>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<17>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<23>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<18>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<24>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<19>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<30>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<25>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<31>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<26>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<27>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'user3<3>' has no legal driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 475
+
+Total memory usage is 309132 kilobytes
+
+Writing NGD file "fft.ngd" ...
+
+Writing NGDBUILD log file "fft.bld"...

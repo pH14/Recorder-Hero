@@ -1,0 +1,3 @@
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "bono_blue.ngc" bono_blue.ngd
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "bono_blue.ngc" bono_blue.ngd
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-4 "bono_blue.ngc" bono_blue.ngd

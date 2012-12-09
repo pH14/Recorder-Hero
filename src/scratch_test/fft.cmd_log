@@ -1,0 +1,3 @@
+xst -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/scratch_test/scratch_test.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/scratch_test/fft.xst" -ofn "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/scratch_test/fft.syr"
+ngdbuild -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/scratch_test/scratch_test.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v40-cs144-6 "fft.ngc" fft.ngd
+map -ise "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/scratch_test/scratch_test.ise" -intstyle ise -p xc2v40-cs144-6 -cm area -pr off -k 4 -c 100 -tx off -o fft_map.ncd fft.ngd fft.pcf
