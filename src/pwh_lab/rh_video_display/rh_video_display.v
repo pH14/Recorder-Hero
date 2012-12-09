@@ -580,7 +580,8 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	end
 	
 	musical_score_loader msl(.clk(clk), .reset(reset),
-								    .song_id(switch[7]), .next_notes_out(nn),
+								    .song_id({1'b0, switch[7]}), 
+									 .next_notes_out(nn),
 									 .tempo_out(tempo),
 									 .debug_out(msl_debug));
 	
@@ -937,11 +938,7 @@ module rh_display (
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
 
-<<<<<<< HEAD
 	reg [23:0] curr_note_color;
-=======
-	wire [23:0] curr_note_color;
->>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 	reg [9:0] curr_note_y;
 	reg [23:0] bmp_pixel_alpha;
 

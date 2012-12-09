@@ -170,3 +170,53 @@ INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      6 sec.
+WARNING:ProjectMgmt:391 - The ncd database may be corrupt
+EXCEPTION:Xdm:FileReader.c:2895:$Id: FileReader.c,v 1.36 2004/09/15 20:29:16 jdl   Exp $ -   /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.ngc:   internal read error around offset 1 (x1), expected x24 '$' but found x3c '<'.   This usually occurs because the input file is corrupt.
+WARNING:ProjectMgmt:391 - The ncd database may be corrupt
+EXCEPTION:Xdm:FileReader.c:2895:$Id: FileReader.c,v 1.36 2004/09/15 20:29:16 jdl   Exp $ -   /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.ngr:   internal read error around offset 1 (x1), expected x24 '$' but found x3c '<'.   This usually occurs because the input file is corrupt.
+WARNING:ProjectMgmt:391 - The ncd database may be corrupt
+EXCEPTION:Xdm:FileReader.c:2895:$Id: FileReader.c,v 1.36 2004/09/15 20:29:16 jdl   Exp $ -   /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.ngd:   internal read error around offset 1 (x1), expected x24 '$' but found x3c '<'.   This usually occurs because the input file is corrupt.
+WARNING:ProjectMgmt:391 - The ncd database may be corrupt
+EXCEPTION:Xdm:FileReader.c:2895:$Id: FileReader.c,v 1.36 2004/09/15 20:29:16 jdl   Exp $ -   /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3_map.ng   m: internal read error around offset 1 (x1), expected x24 '$' but found x3c   '<'. This usually occurs because the input file is corrupt.
+Recustomizing IP...
+10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+Finished Recustomizing.
+Recustomizing IP...
+10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+Finished Recustomizing.
+Updating config file/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.bit...
+// *** BATCH CMD : Program -p 2 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = 2.
+done.
+'2': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+IDCODE not validated while trying to write FDRI   :         0
+write FDRI issued before or after decrypt operation:         0
+Decryptor keys not used in proper sequence        :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 1011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '2': Completed downloading bit file to device.
+ Match_cycle = 2.
+INFO:iMPACT - '2': Checking done pin....done.
+'2': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.

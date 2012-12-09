@@ -1,6 +1,6 @@
 verilog work "./song_scales.v"
 verilog work "./note_letters_bmp.v"
-verilog work "lotr_song2.v"
+verilog work "./lotr_song.v"
 verilog work "font_rom.v"
 verilog work "counter.v"
 verilog work "./bono_red.v"

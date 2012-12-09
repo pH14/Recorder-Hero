@@ -1,4 +1,0 @@
-set -tmpdir "./xst/projnav.tmp"
-elaborate
--ifn zbt_image_writer.prj
--ifmt mixed
