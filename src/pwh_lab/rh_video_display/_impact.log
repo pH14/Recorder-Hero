@@ -120,6 +120,7 @@ INFO:iMPACT:579 - '2': Completed downloading bit file to device.
 INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
 PROGRESS_END - End Operation.
+<<<<<<< HEAD
 Elapsed time =      6 sec.
 Recustomizing IP...
 10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
@@ -169,4 +170,17 @@ INFO:iMPACT:579 - '2': Completed downloading bit file to device.
 INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
 PROGRESS_END - End Operation.
+=======
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 Elapsed time =      6 sec.
+Recustomizing IP...
+10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+Finished Recustomizing.
+Regenerating IP...
+WARNING:sim:89 - A core named <lotr_song2> already exists in the output   directory. Output products for this core may be overwritten.
+Generating Implementation files.
+Generating ISE symbol file...
+Generating NGC file.
+Finished Regenerating.
+Successfully generated lotr_song2.

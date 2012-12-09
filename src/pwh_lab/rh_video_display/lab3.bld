@@ -292,7 +292,11 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 231
 
+<<<<<<< HEAD
 Total memory usage is 240792 kilobytes
+=======
+Total memory usage is 240796 kilobytes
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 
 Writing NGD file "lab3.ngd" ...
 

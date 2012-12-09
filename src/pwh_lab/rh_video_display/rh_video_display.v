@@ -937,7 +937,11 @@ module rh_display (
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
 
+<<<<<<< HEAD
 	reg [23:0] curr_note_color;
+=======
+	wire [23:0] curr_note_color;
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 	reg [9:0] curr_note_y;
 	reg [23:0] bmp_pixel_alpha;
 

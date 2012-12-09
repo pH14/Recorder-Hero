@@ -36,6 +36,7 @@ Setup/Hold to clock clock_27mhz
              |  Setup to  |  Hold to   |                  | Clock  |
 Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 -------------+------------+------------+------------------+--------+
+<<<<<<< HEAD
 button_down  |    5.408(R)|   -2.560(R)|clk               |   0.000|
 button_enter |    3.590(R)|   -1.533(R)|clock_65mhz       |   0.000|
 button_up    |    2.587(R)|   -1.225(R)|clk               |   0.000|
@@ -87,6 +88,59 @@ user1<6>     |    1.422(R)|   -1.150(R)|clk               |   0.000|
 user1<7>     |    1.025(R)|   -0.753(R)|clk               |   0.000|
 user1<8>     |    1.668(R)|   -1.396(R)|clk               |   0.000|
 user1<9>     |    1.645(R)|   -1.373(R)|clk               |   0.000|
+=======
+button_down  |    6.535(R)|   -3.137(R)|clk               |   0.000|
+button_enter |    5.061(R)|   -2.149(R)|clock_65mhz       |   0.000|
+button_up    |    2.748(R)|   -1.021(R)|clk               |   0.000|
+ram0_data<0> |   -0.482(R)|    0.754(R)|clk               |   0.000|
+ram0_data<1> |   -0.121(R)|    0.393(R)|clk               |   0.000|
+ram0_data<2> |   -0.410(R)|    0.682(R)|clk               |   0.000|
+ram0_data<3> |   -1.409(R)|    1.681(R)|clk               |   0.000|
+ram0_data<4> |    0.310(R)|   -0.038(R)|clk               |   0.000|
+ram0_data<5> |   -0.249(R)|    0.521(R)|clk               |   0.000|
+ram0_data<6> |    0.262(R)|    0.010(R)|clk               |   0.000|
+ram0_data<7> |   -0.314(R)|    0.586(R)|clk               |   0.000|
+ram0_data<8> |    0.308(R)|   -0.036(R)|clk               |   0.000|
+ram0_data<9> |   -2.788(R)|    3.060(R)|clk               |   0.000|
+ram0_data<10>|    0.009(R)|    0.263(R)|clk               |   0.000|
+ram0_data<11>|   -2.055(R)|    2.327(R)|clk               |   0.000|
+ram0_data<12>|   -1.224(R)|    1.496(R)|clk               |   0.000|
+ram0_data<13>|   -1.543(R)|    1.815(R)|clk               |   0.000|
+ram0_data<14>|    0.233(R)|    0.039(R)|clk               |   0.000|
+ram0_data<15>|    1.589(R)|   -1.317(R)|clk               |   0.000|
+ram0_data<16>|    0.041(R)|    0.231(R)|clk               |   0.000|
+ram0_data<17>|   -0.799(R)|    1.071(R)|clk               |   0.000|
+ram0_data<18>|    0.513(R)|   -0.241(R)|clk               |   0.000|
+ram0_data<19>|   -0.070(R)|    0.342(R)|clk               |   0.000|
+ram0_data<20>|   -0.267(R)|    0.539(R)|clk               |   0.000|
+ram0_data<21>|    1.138(R)|   -0.866(R)|clk               |   0.000|
+ram0_data<22>|    0.502(R)|   -0.230(R)|clk               |   0.000|
+ram0_data<23>|   -0.614(R)|    0.886(R)|clk               |   0.000|
+ram0_data<24>|    0.108(R)|    0.164(R)|clk               |   0.000|
+ram0_data<25>|    0.208(R)|    0.064(R)|clk               |   0.000|
+ram0_data<26>|   -0.459(R)|    0.731(R)|clk               |   0.000|
+ram0_data<27>|    0.302(R)|   -0.030(R)|clk               |   0.000|
+ram0_data<28>|   -0.020(R)|    0.292(R)|clk               |   0.000|
+ram0_data<29>|    0.490(R)|   -0.218(R)|clk               |   0.000|
+ram0_data<30>|   -0.336(R)|    0.608(R)|clk               |   0.000|
+ram0_data<31>|    1.036(R)|   -0.764(R)|clk               |   0.000|
+switch<0>    |    6.251(R)|   -1.705(R)|clk               |   0.000|
+switch<1>    |   10.742(R)|   -5.287(R)|clk               |   0.000|
+switch<3>    |    5.219(R)|   -2.443(R)|clk               |   0.000|
+switch<4>    |   10.540(R)|   -6.592(R)|clk               |   0.000|
+switch<5>    |    9.297(R)|   -6.656(R)|clk               |   0.000|
+switch<6>    |    6.402(R)|   -2.598(R)|clk               |   0.000|
+switch<7>    |    2.497(R)|   -1.377(R)|clk               |   0.000|
+user1<0>     |    4.717(R)|   -2.496(R)|clk               |   0.000|
+user1<2>     |    2.070(R)|   -1.798(R)|clk               |   0.000|
+user1<3>     |    1.309(R)|   -1.037(R)|clk               |   0.000|
+user1<4>     |    1.741(R)|   -1.469(R)|clk               |   0.000|
+user1<5>     |    1.731(R)|   -1.459(R)|clk               |   0.000|
+user1<6>     |    1.650(R)|   -1.378(R)|clk               |   0.000|
+user1<7>     |    1.018(R)|   -0.746(R)|clk               |   0.000|
+user1<8>     |    1.711(R)|   -1.439(R)|clk               |   0.000|
+user1<9>     |    1.354(R)|   -1.082(R)|clk               |   0.000|
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 -------------+------------+------------+------------------+--------+
 
 Clock clock_27mhz to Pad
@@ -98,6 +152,7 @@ Q                 |   14.378(R)|rc/ram_clock      |   0.000|
                   |   14.378(F)|rc/ram_clock      |   0.000|
 clock_feedback_out|   12.563(R)|rc/ram_clock      |   0.000|
                   |   12.563(F)|rc/ram_clock      |   0.000|
+<<<<<<< HEAD
 disp_clock        |   12.853(R)|clk               |   0.000|
 led<2>            |   18.701(R)|clk               |   0.000|
                   |   19.281(R)|clock_65mhz       |   0.000|
@@ -140,17 +195,70 @@ ram0_data<12>     |   11.339(R)|clk               |   0.000|
 ram0_data<13>     |   11.382(R)|clk               |   0.000|
 ram0_data<14>     |   11.342(R)|clk               |   0.000|
 ram0_data<15>     |   10.772(R)|clk               |   0.000|
+=======
+disp_clock        |   12.636(R)|clk               |   0.000|
+led<2>            |   18.237(R)|clk               |   0.000|
+                  |   18.760(R)|clock_65mhz       |   0.000|
+led<3>            |   14.787(R)|clk               |   0.000|
+led<4>            |   14.746(R)|clk               |   0.000|
+led<5>            |   13.935(R)|clk               |   0.000|
+ram0_address<0>   |   24.270(R)|clk               |   0.000|
+ram0_address<1>   |   23.283(R)|clk               |   0.000|
+ram0_address<2>   |   24.869(R)|clk               |   0.000|
+ram0_address<3>   |   24.111(R)|clk               |   0.000|
+ram0_address<4>   |   24.207(R)|clk               |   0.000|
+ram0_address<5>   |   24.839(R)|clk               |   0.000|
+ram0_address<6>   |   23.968(R)|clk               |   0.000|
+ram0_address<7>   |   23.658(R)|clk               |   0.000|
+ram0_address<8>   |   17.297(R)|clk               |   0.000|
+ram0_address<9>   |   21.233(R)|clk               |   0.000|
+ram0_address<10>  |   22.887(R)|clk               |   0.000|
+ram0_address<11>  |   22.283(R)|clk               |   0.000|
+ram0_address<12>  |   22.563(R)|clk               |   0.000|
+ram0_address<13>  |   23.505(R)|clk               |   0.000|
+ram0_address<14>  |   23.542(R)|clk               |   0.000|
+ram0_address<15>  |   29.518(R)|clk               |   0.000|
+ram0_address<16>  |   24.025(R)|clk               |   0.000|
+ram0_address<17>  |   23.774(R)|clk               |   0.000|
+ram0_clk          |   12.460(R)|rc/ram_clock      |   0.000|
+                  |   12.460(F)|rc/ram_clock      |   0.000|
+ram0_data<0>      |   11.061(R)|clk               |   0.000|
+ram0_data<1>      |   10.980(R)|clk               |   0.000|
+ram0_data<2>      |   10.975(R)|clk               |   0.000|
+ram0_data<3>      |   10.986(R)|clk               |   0.000|
+ram0_data<4>      |   10.977(R)|clk               |   0.000|
+ram0_data<5>      |   11.166(R)|clk               |   0.000|
+ram0_data<6>      |   10.937(R)|clk               |   0.000|
+ram0_data<7>      |   10.599(R)|clk               |   0.000|
+ram0_data<8>      |   11.663(R)|clk               |   0.000|
+ram0_data<9>      |   11.948(R)|clk               |   0.000|
+ram0_data<10>     |   11.373(R)|clk               |   0.000|
+ram0_data<11>     |   11.960(R)|clk               |   0.000|
+ram0_data<12>     |   10.954(R)|clk               |   0.000|
+ram0_data<13>     |   11.375(R)|clk               |   0.000|
+ram0_data<14>     |   10.957(R)|clk               |   0.000|
+ram0_data<15>     |   10.666(R)|clk               |   0.000|
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 ram0_data<16>     |   11.223(R)|clk               |   0.000|
 ram0_data<17>     |   10.699(R)|clk               |   0.000|
-ram0_data<18>     |   10.955(R)|clk               |   0.000|
+ram0_data<18>     |   10.961(R)|clk               |   0.000|
 ram0_data<19>     |   10.314(R)|clk               |   0.000|
+<<<<<<< HEAD
 ram0_data<20>     |   10.592(R)|clk               |   0.000|
 ram0_data<21>     |   11.276(R)|clk               |   0.000|
+=======
+ram0_data<20>     |   10.451(R)|clk               |   0.000|
+ram0_data<21>     |   11.547(R)|clk               |   0.000|
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 ram0_data<22>     |   11.316(R)|clk               |   0.000|
 ram0_data<23>     |   10.686(R)|clk               |   0.000|
 ram0_data<24>     |   11.193(R)|clk               |   0.000|
 ram0_data<25>     |   11.330(R)|clk               |   0.000|
+<<<<<<< HEAD
 ram0_data<26>     |   10.106(R)|clk               |   0.000|
+=======
+ram0_data<26>     |    9.767(R)|clk               |   0.000|
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 ram0_data<27>     |   10.640(R)|clk               |   0.000|
 ram0_data<28>     |   10.864(R)|clk               |   0.000|
 ram0_data<29>     |   11.154(R)|clk               |   0.000|
@@ -160,6 +268,7 @@ ram0_data<32>     |   11.174(R)|clk               |   0.000|
 ram0_data<33>     |   11.161(R)|clk               |   0.000|
 ram0_data<34>     |   11.172(R)|clk               |   0.000|
 ram0_data<35>     |   10.113(R)|clk               |   0.000|
+<<<<<<< HEAD
 ram0_we_b         |   12.471(R)|clk               |   0.000|
 user1<1>          |   15.920(R)|clk               |   0.000|
 vga_out_blank_b   |   13.478(R)|clk               |   0.000|
@@ -189,6 +298,37 @@ vga_out_red<5>    |   14.040(R)|clk               |   0.000|
 vga_out_red<6>    |   14.070(R)|clk               |   0.000|
 vga_out_red<7>    |   13.974(R)|clk               |   0.000|
 vga_out_vsync     |   13.652(R)|clk               |   0.000|
+=======
+ram0_we_b         |   12.306(R)|clk               |   0.000|
+user1<1>          |   15.497(R)|clk               |   0.000|
+vga_out_blank_b   |   13.730(R)|clk               |   0.000|
+vga_out_blue<0>   |   13.757(R)|clk               |   0.000|
+vga_out_blue<1>   |   14.038(R)|clk               |   0.000|
+vga_out_blue<2>   |   12.908(R)|clk               |   0.000|
+vga_out_blue<3>   |   12.838(R)|clk               |   0.000|
+vga_out_blue<4>   |   13.605(R)|clk               |   0.000|
+vga_out_blue<5>   |   13.638(R)|clk               |   0.000|
+vga_out_blue<6>   |   12.947(R)|clk               |   0.000|
+vga_out_blue<7>   |   11.638(R)|clk               |   0.000|
+vga_out_green<0>  |   12.461(R)|clk               |   0.000|
+vga_out_green<1>  |   13.642(R)|clk               |   0.000|
+vga_out_green<2>  |   12.790(R)|clk               |   0.000|
+vga_out_green<3>  |   12.943(R)|clk               |   0.000|
+vga_out_green<4>  |   14.210(R)|clk               |   0.000|
+vga_out_green<5>  |   14.540(R)|clk               |   0.000|
+vga_out_green<6>  |   15.180(R)|clk               |   0.000|
+vga_out_green<7>  |   14.711(R)|clk               |   0.000|
+vga_out_hsync     |   12.620(R)|clk               |   0.000|
+vga_out_red<0>    |   13.716(R)|clk               |   0.000|
+vga_out_red<1>    |   14.535(R)|clk               |   0.000|
+vga_out_red<2>    |   14.744(R)|clk               |   0.000|
+vga_out_red<3>    |   13.738(R)|clk               |   0.000|
+vga_out_red<4>    |   14.218(R)|clk               |   0.000|
+vga_out_red<5>    |   13.909(R)|clk               |   0.000|
+vga_out_red<6>    |   15.125(R)|clk               |   0.000|
+vga_out_red<7>    |   15.032(R)|clk               |   0.000|
+vga_out_vsync     |   13.394(R)|clk               |   0.000|
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 ------------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock_27mhz
@@ -196,7 +336,11 @@ Clock to Setup on destination clock clock_27mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
+<<<<<<< HEAD
 clock_27mhz    |   16.626|         |         |         |
+=======
+clock_27mhz    |   16.614|         |         |         |
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -209,14 +353,18 @@ switch<1>      |led<1>             |    6.840|
 ---------------+-------------------+---------+
 
 
+<<<<<<< HEAD
 Analysis completed Sat Dec  8 20:18:43 2012 
+=======
+Analysis completed Sat Dec  8 19:58:48 2012 
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 392 MB
+Peak Memory Usage: 393 MB
 
 
 

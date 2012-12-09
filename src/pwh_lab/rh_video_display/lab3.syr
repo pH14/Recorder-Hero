@@ -11,7 +11,11 @@ Total CPU time to Xst completion: 0.05 secs
 Parameter xsthdpdir set to /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/xst
 
 
+<<<<<<< HEAD
 Total REAL time to Xst completion: 1.00 secs
+=======
+Total REAL time to Xst completion: 0.00 secs
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
@@ -822,7 +826,11 @@ Synthesizing Unit <rh_display>.
     Related source file is "rh_video_display.v".
 WARNING:Xst:646 - Signal <vga_display_hack_pixel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <curr_note_y> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+<<<<<<< HEAD
 WARNING:Xst:646 - Signal <curr_note_color> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+=======
+WARNING:Xst:1780 - Signal <curr_note_alpha_blend_pixel> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
     Found 4x9-bit ROM for signal <current_song_y>.
     Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 838.
     Found 16x10-bit ROM for signal <note_y_pos_1$mux0000> created at line 838.
@@ -842,11 +850,19 @@ WARNING:Xst:646 - Signal <curr_note_color> is assigned but never used. This unco
     Found 16x10-bit ROM for signal <note_y_pos_15$mux0000> created at line 838.
     Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 808.
     Found 10-bit comparator lessequal for signal <action_line$cmp_le0000> created at line 808.
+<<<<<<< HEAD
     Found 9-bit adder carry out for signal <add0000$addsub0000> created at line 1025.
     Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 968.
     Found 24-bit adder for signal <bmp_pixel_alpha$addsub0000> created at line 971.
     Found 11-bit comparator lessequal for signal <bmp_pixel_alpha$cmp_le0000> created at line 968.
     Found 11-bit comparator less for signal <bono_pixel_fix$cmp_lt0000> created at line 1045.
+=======
+    Found 9-bit adder carry out for signal <add0000$addsub0000> created at line 1017.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 960.
+    Found 24-bit adder for signal <bmp_pixel_alpha$addsub0000> created at line 963.
+    Found 11-bit comparator lessequal for signal <bmp_pixel_alpha$cmp_le0000> created at line 960.
+    Found 11-bit comparator less for signal <bono_pixel_fix$cmp_lt0000> created at line 1037.
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
     Found 11-bit register for signal <lead_note_x>.
     Found 11-bit addsub for signal <lead_note_x$share0000>.
     Found 1-bit register for signal <load_tempo>.
@@ -1849,6 +1865,7 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
+<<<<<<< HEAD
 # BELS                             : 4000
 #      GND                         : 12
 #      INV                         : 85
@@ -1863,6 +1880,23 @@ Cell Usage :
 #      LUT4_L                      : 24
 #      MUXCY                       : 1117
 #      MUXF5                       : 142
+=======
+# BELS                             : 3987
+#      GND                         : 12
+#      INV                         : 85
+#      LUT1                        : 237
+#      LUT2                        : 732
+#      LUT2_D                      : 22
+#      LUT2_L                      : 1
+#      LUT3                        : 364
+#      LUT3_D                      : 9
+#      LUT3_L                      : 2
+#      LUT4                        : 889
+#      LUT4_D                      : 46
+#      LUT4_L                      : 24
+#      MUXCY                       : 1117
+#      MUXF5                       : 131
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 #      MUXF6                       : 16
 #      MUXF7                       : 1
 #      VCC                         : 12
@@ -1903,10 +1937,17 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
+<<<<<<< HEAD
  Number of Slices:                     1330  out of  33792     3%  
  Number of Slice Flip Flops:            883  out of  67584     1%  
  Number of 4 input LUTs:               2452  out of  67584     3%  
     Number used as logic:              2413
+=======
+ Number of Slices:                     1329  out of  33792     3%  
+ Number of Slice Flip Flops:            883  out of  67584     1%  
+ Number of 4 input LUTs:               2450  out of  67584     3%  
+    Number used as logic:              2411
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
     Number used as Shift registers:      39
  Number of IOs:                         576
  Number of bonded IOBs:                 298  out of    684    43%  
@@ -1962,7 +2003,11 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
   Clock period: 33.570ns (frequency: 29.788MHz)
+<<<<<<< HEAD
   Total number of paths / destination ports: 108728 / 2200
+=======
+  Total number of paths / destination ports: 108792 / 2200
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 -------------------------------------------------------------------------
 Delay:               13.988ns (Levels of Logic = 7)
   Source:            xvga1/vcount_9_1 (FF)
@@ -2013,7 +2058,11 @@ Delay:               14.509ns (Levels of Logic = 13)
      MUXF6:I0->O           1   0.447   0.557  hex_display/Mmux__varindex0000_12_f6 (hex_display/Mmux__varindex0000_12_f6)
      LUT4:I3->O            1   0.439   0.557  hex_display/disp_data_out_mux000033 (hex_display/disp_data_out_mux000033)
      LUT4:I3->O            1   0.439   0.552  hex_display/disp_data_out_mux000078 (hex_display/disp_data_out_mux000078)
+<<<<<<< HEAD
      LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N489)
+=======
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N490)
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001682 (hex_display/disp_data_out_mux00001681)
      MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000168_f5 (hex_display/disp_data_out_mux0000)
@@ -2024,18 +2073,29 @@ Delay:               14.509ns (Levels of Logic = 13)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
+<<<<<<< HEAD
   Total number of paths / destination ports: 844 / 232
 -------------------------------------------------------------------------
 Offset:              9.371ns (Levels of Logic = 15)
   Source:            switch<4> (PAD)
+=======
+  Total number of paths / destination ports: 835 / 232
+-------------------------------------------------------------------------
+Offset:              8.726ns (Levels of Logic = 15)
+  Source:            switch<5> (PAD)
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
   Destination:       rh_disp/pixel_reg_23 (FF)
   Destination Clock: clock_27mhz rising 2.4X
 
-  Data Path: switch<4> to rh_disp/pixel_reg_23
+  Data Path: switch<5> to rh_disp/pixel_reg_23
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
+<<<<<<< HEAD
      IBUF:I->O            10   0.825   1.093  switch_4_IBUF (switch_4_IBUF)
+=======
+     IBUF:I->O            10   0.825   1.093  switch_5_IBUF (switch_5_IBUF)
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
      LUT3:I1->O            1   0.439   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_lut<1> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_lut<1>)
      MUXCY:S->O            1   0.298   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<1> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<1>)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<2> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<2>)
@@ -2045,6 +2105,7 @@ Offset:              9.371ns (Levels of Logic = 15)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<6> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<6>)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<7> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<7>)
      MUXCY:CI->O           1   0.053   0.000  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<8> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<8>)
+<<<<<<< HEAD
      MUXCY:CI->O           1   0.942   0.803  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<9> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<9>)
      LUT4:I0->O            1   0.439   0.557  rh_disp/pixel_reg_mux0000<0>2180_SW0 (N291)
      LUT4_L:I3->LO         1   0.439   0.140  rh_disp/pixel_reg_mux0000<0>2180 (rh_disp/pixel_reg_mux0000<0>2180)
@@ -2054,6 +2115,17 @@ Offset:              9.371ns (Levels of Logic = 15)
     ----------------------------------------
     Total                      9.371ns (4.911ns logic, 4.460ns route)
                                        (52.4% logic, 47.6% route)
+=======
+     MUXCY:CI->O           1   0.942   0.551  rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<9> (rh_disp/song_selector_box/Mcompar_pixel_cmp_lt0001_cy<9>)
+     LUT4:I2->O            1   0.439   0.000  rh_disp/pixel_reg_mux0000<0>2671 (rh_disp/pixel_reg_mux0000<0>2671)
+     MUXF5:I1->O           1   0.436   0.557  rh_disp/pixel_reg_mux0000<0>267_f5 (rh_disp/pixel_reg_mux0000<0>267)
+     LUT4:I3->O           24   0.439   1.098  rh_disp/pixel_reg_mux0000<0>2451 (rh_disp/N43)
+     LUT3:I2->O            1   0.439   0.518  rh_disp/pixel_reg_mux0000<9>2 (rh_disp/pixel_reg_mux0000<9>2)
+     FDS:S                     0.280          rh_disp/pixel_reg_9
+    ----------------------------------------
+    Total                      8.726ns (4.908ns logic, 3.818ns route)
+                                       (56.2% logic, 43.8% route)
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'hex_display/clock1'
@@ -2078,7 +2150,11 @@ Offset:              14.114ns (Levels of Logic = 14)
      MUXF6:I0->O           1   0.447   0.557  hex_display/Mmux__varindex0000_12_f6 (hex_display/Mmux__varindex0000_12_f6)
      LUT4:I3->O            1   0.439   0.557  hex_display/disp_data_out_mux000033 (hex_display/disp_data_out_mux000033)
      LUT4:I3->O            1   0.439   0.552  hex_display/disp_data_out_mux000078 (hex_display/disp_data_out_mux000078)
+<<<<<<< HEAD
      LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N489)
+=======
+     LUT3:I2->O            1   0.439   0.000  hex_display/disp_data_out_mux0000131_G (N490)
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
      MUXF5:I1->O           2   0.436   0.910  hex_display/disp_data_out_mux0000131 (hex_display/disp_data_out_mux0000131)
      LUT2:I1->O            1   0.439   0.000  hex_display/disp_data_out_mux00001682 (hex_display/disp_data_out_mux00001681)
      MUXF5:I0->O           1   0.436   0.000  hex_display/disp_data_out_mux0000168_f5 (hex_display/disp_data_out_mux0000)
@@ -2158,13 +2234,22 @@ WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_note/f.
 
 
+<<<<<<< HEAD
 Total REAL time to Xst completion: 47.00 secs
 Total CPU time to Xst completion: 45.38 secs
+=======
+Total REAL time to Xst completion: 46.00 secs
+Total CPU time to Xst completion: 45.28 secs
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
  
 --> 
 
 
+<<<<<<< HEAD
 Total memory usage is 544812 kilobytes
+=======
+Total memory usage is 544568 kilobytes
+>>>>>>> a62df23e722f1bb9e7416be7b19fcc4ed61a0785
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  537 (   0 filtered)
