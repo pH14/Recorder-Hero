@@ -10,13 +10,13 @@ module vram_display(reset,clk,hcount,vcount,vr_pixel,
 
    //forecast hcount & vcount 8 clock cycles ahead to get data from ZBT
    wire [10:0] hcount_f;
-	assign hcount_f = (hcount >= 1048) ? (hcount - 1048) : (hcount + 8);
+	assign hcount_f = (hcount >= 1024) ? (hcount - 1024) : (hcount + 2);
    wire [9:0] vcount_f;
-	assign vcount_f = (hcount >= 1048) ? ((vcount == 805) ? 0 : vcount + 1) : vcount;
+	assign vcount_f = (hcount >= 1024) ? ((vcount == 805) ? 0 : vcount + 1) : vcount;
       
    wire [18:0] ram_addr;
-//	assign vram_addr = {1'b0, vcount_f, hcount_f[9:2]};
-	assign vram_addr = {1'b0, vcount, hcount[9:2]};
+	assign vram_addr = {1'b0, vcount_f, hcount_f[9:2]};
+//	assign vram_addr = {1'b0, vcount, hcount[9:2]};
 	
    wire [1:0] hc4;
 	assign hc4 = hcount[1:0];

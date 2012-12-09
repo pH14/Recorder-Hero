@@ -10,8 +10,8 @@ lab3.ngd
 Reading NGO file
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lab3.ngc" ...
 Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lotr_song.ngc
-"...
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/lotr_song2.ng
+c"...
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/song_scales.n
 gc"...
@@ -292,7 +292,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 231
 
-Total memory usage is 240640 kilobytes
+Total memory usage is 240796 kilobytes
 
 Writing NGD file "lab3.ngd" ...
 

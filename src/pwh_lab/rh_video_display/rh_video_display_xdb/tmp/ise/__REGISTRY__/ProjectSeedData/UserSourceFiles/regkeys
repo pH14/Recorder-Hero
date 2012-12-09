@@ -1,5 +1,5 @@
 NUM_USER_FILES
-30
+31
 s
 user_file_1
 labkit.ucf
@@ -72,6 +72,9 @@ blob.v
 s
 user_file_30
 vram_display.v
+s
+user_file_31
+lotr_song2.xco
 s
 user_file_4
 cstringdisp.v

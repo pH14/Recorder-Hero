@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Sat Dec  8 17:19:12 2012">
+  <application stringID="NgdBuild" timeStamp="Sat Dec  8 19:57:05 2012">
     <task stringID="NGDBUILD_REPORT">
       <section stringID="NGDBUILD_DESIGN_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
@@ -30,9 +30,9 @@
               <item stringID="NGDBUILD_CORE_INFO" type="blk_mem_gen_v2_8" value="bono_red"/>
               <item c_addra_width="8" c_addrb_width="8" c_algorithm="1" c_byte_size="9" c_common_clk="0" c_default_data="0" c_disable_warn_bhv_coll="0" c_disable_warn_bhv_range="0" c_has_ena="0" c_has_enb="0" c_has_mem_output_regs_a="0" c_has_mem_output_regs_b="0" c_has_mux_output_regs_a="0" c_has_mux_output_regs_b="0" c_has_regcea="0" c_has_regceb="0" c_has_ssra="0" c_has_ssrb="0" c_init_file_name="bono_red.mif" c_load_init_file="1" c_mem_type="3" c_mux_pipeline_stages="0" c_prim_type="1" c_read_depth_a="256" c_read_depth_b="256" c_read_width_a="8" c_read_width_b="8" c_sim_collision_check="ALL" c_sinita_val="0" c_sinitb_val="0" c_use_byte_wea="0" c_use_byte_web="0" c_use_default_data="0" c_use_ecc="0" c_use_ramb16bwer_rst_bhv="0" c_wea_width="1" c_web_width="1" c_write_depth_a="256" c_write_depth_b="256" c_write_mode_a="WRITE_FIRST" c_write_mode_b="WRITE_FIRST" c_write_width_a="8" c_write_width_b="8" component_name="bono_red" stringID="NGDBUILD_CORE_PARAMETERS" value="bono_red"/>
             </scope>
-            <scope stringID="NGDBUILD_CORE_INSTANCE" value="lotr_song">
-              <item stringID="NGDBUILD_CORE_INFO" type="blk_mem_gen_v2_8" value="lotr_song"/>
-              <item c_addra_width="8" c_addrb_width="8" c_algorithm="1" c_byte_size="9" c_common_clk="0" c_default_data="0" c_disable_warn_bhv_coll="0" c_disable_warn_bhv_range="0" c_has_ena="0" c_has_enb="0" c_has_mem_output_regs_a="0" c_has_mem_output_regs_b="0" c_has_mux_output_regs_a="0" c_has_mux_output_regs_b="0" c_has_regcea="0" c_has_regceb="0" c_has_ssra="0" c_has_ssrb="0" c_init_file_name="lotr_song.mif" c_load_init_file="1" c_mem_type="3" c_mux_pipeline_stages="0" c_prim_type="1" c_read_depth_a="256" c_read_depth_b="256" c_read_width_a="4" c_read_width_b="4" c_sim_collision_check="ALL" c_sinita_val="0" c_sinitb_val="0" c_use_byte_wea="0" c_use_byte_web="0" c_use_default_data="1" c_use_ecc="0" c_use_ramb16bwer_rst_bhv="0" c_wea_width="1" c_web_width="1" c_write_depth_a="256" c_write_depth_b="256" c_write_mode_a="WRITE_FIRST" c_write_mode_b="WRITE_FIRST" c_write_width_a="4" c_write_width_b="4" component_name="lotr_song" stringID="NGDBUILD_CORE_PARAMETERS" value="lotr_song"/>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="lotr_song2">
+              <item stringID="NGDBUILD_CORE_INFO" type="blk_mem_gen_v2_8" value="lotr_song2"/>
+              <item c_addra_width="8" c_addrb_width="8" c_algorithm="1" c_byte_size="9" c_common_clk="0" c_default_data="0" c_disable_warn_bhv_coll="0" c_disable_warn_bhv_range="0" c_has_ena="0" c_has_enb="0" c_has_mem_output_regs_a="0" c_has_mem_output_regs_b="0" c_has_mux_output_regs_a="0" c_has_mux_output_regs_b="0" c_has_regcea="0" c_has_regceb="0" c_has_ssra="0" c_has_ssrb="0" c_init_file_name="lotr_song2.mif" c_load_init_file="1" c_mem_type="3" c_mux_pipeline_stages="0" c_prim_type="1" c_read_depth_a="256" c_read_depth_b="256" c_read_width_a="4" c_read_width_b="4" c_sim_collision_check="ALL" c_sinita_val="0" c_sinitb_val="0" c_use_byte_wea="0" c_use_byte_web="0" c_use_default_data="0" c_use_ecc="0" c_use_ramb16bwer_rst_bhv="0" c_wea_width="1" c_web_width="1" c_write_depth_a="256" c_write_depth_b="256" c_write_mode_a="WRITE_FIRST" c_write_mode_b="WRITE_FIRST" c_write_width_a="4" c_write_width_b="4" component_name="lotr_song2" stringID="NGDBUILD_CORE_PARAMETERS" value="lotr_song2"/>
             </scope>
             <scope stringID="NGDBUILD_CORE_INSTANCE" value="note_letters_bmp">
               <item stringID="NGDBUILD_CORE_INFO" type="blk_mem_gen_v2_8" value="note_letters_bmp"/>

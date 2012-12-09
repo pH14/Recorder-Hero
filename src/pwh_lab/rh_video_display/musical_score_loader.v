@@ -35,7 +35,7 @@ module musical_score_loader(
 	wire [25:0] tempo;
 	
 	song_scales ss(.clka(clk), .addra(read_addr), .douta(next_note_ss));
-	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
+	lotr_song2 lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
 	
 	wire tempo_beat;
 	reg song_has_ended = 1;

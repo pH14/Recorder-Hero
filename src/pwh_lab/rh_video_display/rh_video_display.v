@@ -806,7 +806,7 @@ module rh_display (
 				 .ready(tempo_beat_move));
 	
 	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 639;
-	wire right_boundary_line = hcount == 1023 & vcount >= 128 & vcount <= 639;
+	wire right_boundary_line = hcount == 1022 & vcount >= 128 & vcount <= 639;
 	
 	reg [23:0] onscreen_notes[15:0];
 	integer n;
@@ -917,8 +917,8 @@ module rh_display (
 											.cstring({"NOTE: ", current_note_string}),
 											.cx(700),
 											.cy(30));
-	defparam csd_note.NCHAR = 7;
-	defparam csd_note.NCHAR_BITS = 3;
+	defparam csd_note.NCHAR = 8;
+	defparam csd_note.NCHAR_BITS = 4;
 
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
@@ -937,38 +937,38 @@ module rh_display (
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
 
-	wire [23:0] curr_note_alpha_blend_pixel;
+	wire [23:0] curr_note_color;
 	reg [9:0] curr_note_y;
 	reg [23:0] bmp_pixel_alpha;
-	
-//   blob #(.WIDTH(72), .HEIGHT(50))
-//		letter_alpha(.x(1),
-//			  .y(curr_note_y),
-//			  .hcount(hcount),
-//			  .vcount(vcount),
-//			  .color(24'hFF_FF_00),
-//			  .pixel(curr_note_alpha_blend_pixel));
 
 	always @(*) begin
 		case(current_note_string)
-			"B" : curr_note_y = 127;
-			"A#": curr_note_y = 127 + 1*NOTE_STEP;
-			"A" : curr_note_y = 127 + 1*NOTE_STEP;
-			"G#": curr_note_y = 127 + 2*NOTE_STEP;
-			"G" : curr_note_y = 127 + 2*NOTE_STEP;
-			"F#": curr_note_y = 127 + 3*NOTE_STEP;
-			"F" : curr_note_y = 127 + 3*NOTE_STEP;
-			"E" : curr_note_y = 127 + 4*NOTE_STEP;
-			"D#": curr_note_y = 127 + 5*NOTE_STEP;
-			"D" : curr_note_y = 127 + 5*NOTE_STEP;
-			"C#": curr_note_y = 127 + 6*NOTE_STEP;
-			"C" : curr_note_y = 127 + 6*NOTE_STEP;
+			"B " : curr_note_y = 127;
+			"A#" : curr_note_y = 127 + 1*NOTE_STEP;
+			"A " : curr_note_y = 127 + 1*NOTE_STEP;
+			"G#" : curr_note_y = 127 + 2*NOTE_STEP;
+			"G " : curr_note_y = 127 + 2*NOTE_STEP;
+			"F#" : curr_note_y = 127 + 3*NOTE_STEP;
+			"F " : curr_note_y = 127 + 3*NOTE_STEP;
+			"E " : curr_note_y = 127 + 4*NOTE_STEP;
+			"D#" : curr_note_y = 127 + 5*NOTE_STEP;
+			"D " : curr_note_y = 127 + 5*NOTE_STEP;
+			"C#" : curr_note_y = 127 + 6*NOTE_STEP;
+			"C " : curr_note_y = 127 + 6*NOTE_STEP;
 		endcase
 		
+		case(current_note_string)
+			"A#": curr_note_color = 24'h55_55_FF;
+			"G#": curr_note_color = 24'h55_55_FF;
+			"F#": curr_note_color = 24'h55_55_FF;
+			"D#": curr_note_color = 24'h55_55_FF;
+			"C#": curr_note_color = 24'h55_55_FF;
+			default: curr_note_color = 24'hFF_FF_00;
+		endcase
 		if (|bmp_pixel 
 		    && vcount >= curr_note_y 
 		    && vcount <= curr_note_y + NOTE_STEP) begin
-			bmp_pixel_alpha = bmp_pixel/2 + (24'hFF_FF_00 / 2);
+			bmp_pixel_alpha = bmp_pixel/4 + 3*(curr_note_color / 2);
 		end else begin
 			bmp_pixel_alpha = bmp_pixel;
 		end
@@ -1029,10 +1029,24 @@ module rh_display (
 		  .color(24'hFF_FF_FF),
 		  .pixel(song_select_box_pixel));
 	
+	wire [23:0] vga_display_hack_pixel;
+	blob #(.WIDTH(16), .HEIGHT(768))
+		vga_display_hack(.x(0), .y(0),
+							  .hcount(hcount),
+							  .vcount(vcount),
+							  .color(24'h00_00_00),
+							  .pixel(vga_display_hack_pixel));
+	
 	reg [23:0] pixel_reg;
+	
+	// For some reason the image from the zbt shows a small sliver
+	// on the side. This hack at least covers it up on the main screen
+	wire [23:0] bono_pixel_fix;
+	assign bono_pixel_fix = (hcount < 16) ? 24'h00_00_00 : bono_pixel;
+	
 	always @(posedge vclock) begin
 		if (!menu_state[2]) begin
-			pixel_reg <= bono_pixel
+			pixel_reg <= bono_pixel_fix
 					  | {8{song_title_1_pixel}}
 					  | {8{song_title_2_pixel}}
 					  | {8{song_title_3_pixel}}
