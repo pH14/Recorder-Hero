@@ -50,23 +50,29 @@ module scoreUpdater(
 	always @(posedge clk) begin
 		if (hitReg) begin 
 			hitReg <= 0;
-			scoreCount <= scoreCount + 1;
 		end
-		if (&scoreCount) scoreReg <= scoreReg;
+		if (scoreReg) scoreReg <= 0;
+		if (&scoreCount) scoreReg <= 1;
 		if(reset) begin
 			scoreReg <= 0;
 			scoreCount <= 0 ;
 		end
-		notePlayedReg <= currentNote;
+		notePlayedReg <= currentNote - 1;
 		if (currentNote == C) begin
 			notePlayedReg <= B;
-			if (correctNote == B) hitReg <= 1;
+			if (correctNote == B) begin
+				hitReg <= 1;
+				scoreCount <= scoreCount + 1;
+			end
 		end
-		else if ((currentNote - 4'd1) == correctNote) hitReg <= 1;
+		else if ((currentNote - 4'd1) == correctNote) begin
+			hitReg <= 1;
+			scoreCount <= scoreCount + 1;
+		end
 	end
 			
 	assign hit = hitReg;
 	assign score = scoreReg;
-	assign note = notePlayedReg;
+	assign notePlayed = notePlayedReg;
 
 endmodule

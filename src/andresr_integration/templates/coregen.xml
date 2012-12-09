@@ -56,6 +56,144 @@ cache YourInstanceName (
 		</Template>
 		<Template label="counter" treetype="template">
 		</Template>
+		<Template label="song_scales" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+song_scales YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [3 : 0] 
+
+ 
+		</Template>
+		<Template label="bono_blue" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_blue YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="bono_green" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_green YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="bono_red" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_red YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="font_rom" treetype="template">
+		</Template>
+		<Template label="lotr_song" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+lotr_song YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [3 : 0] 
+
+ 
+		</Template>
+		<Template label="note_letters_bmp" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+note_letters_bmp YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [15 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="bono_pixels" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+bono_pixels YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [19 : 0] 
+    .douta(douta)); // Bus [7 : 0] 
+
+ 
+		</Template>
+		<Template label="note_letters" treetype="template">
+		</Template>
+		<Template label="notes_blue_map" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+notes_blue_map YourInstanceName (
+    .clka(clka),
+    .dina(dina), // Bus [15 : 0] 
+    .addra(addra), // Bus [3 : 0] 
+    .wea(wea), // Bus [0 : 0] 
+    .douta(douta)); // Bus [15 : 0] 
+
+ 
+		</Template>
+		<Template label="notes_green_map" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+notes_green_map YourInstanceName (
+    .clka(clka),
+    .dina(dina), // Bus [15 : 0] 
+    .addra(addra), // Bus [3 : 0] 
+    .wea(wea), // Bus [0 : 0] 
+    .douta(douta)); // Bus [15 : 0] 
+
+ 
+		</Template>
+		<Template label="notes_red_map" treetype="template">
+		</Template>
+		<Template label="song1" treetype="template">
+		</Template>
 	</Folder>
 	<Folder label="VHDL Component Instantiation" treetype="folder">
 		<Template label="my_fft" treetype="template">
@@ -153,6 +291,256 @@ your_instance_name : cache
 		<Template label="comparator" treetype="template">
 		</Template>
 		<Template label="counter" treetype="template">
+		</Template>
+		<Template label="song_scales" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component song_scales
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(3 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : song_scales
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_blue" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_blue
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_blue
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_green" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_green
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_green
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_red" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_red
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_red
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="font_rom" treetype="template">
+		</Template>
+		<Template label="lotr_song" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component lotr_song
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(3 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : lotr_song
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="note_letters_bmp" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component note_letters_bmp
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(15 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : note_letters_bmp
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="bono_pixels" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component bono_pixels
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(19 downto 0);
+    douta: OUT std_logic_VECTOR(7 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : bono_pixels
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="note_letters" treetype="template">
+		</Template>
+		<Template label="notes_blue_map" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component notes_blue_map
+    port (
+    clka: IN std_logic;
+    dina: IN std_logic_VECTOR(15 downto 0);
+    addra: IN std_logic_VECTOR(3 downto 0);
+    wea: IN std_logic_VECTOR(0 downto 0);
+    douta: OUT std_logic_VECTOR(15 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : notes_blue_map
+        port map (
+            clka =&gt; clka,
+            dina =&gt; dina,
+            addra =&gt; addra,
+            wea =&gt; wea,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="notes_green_map" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component notes_green_map
+    port (
+    clka: IN std_logic;
+    dina: IN std_logic_VECTOR(15 downto 0);
+    addra: IN std_logic_VECTOR(3 downto 0);
+    wea: IN std_logic_VECTOR(0 downto 0);
+    douta: OUT std_logic_VECTOR(15 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : notes_green_map
+        port map (
+            clka =&gt; clka,
+            dina =&gt; dina,
+            addra =&gt; addra,
+            wea =&gt; wea,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="notes_red_map" treetype="template">
+		</Template>
+		<Template label="song1" treetype="template">
 		</Template>
 	</Folder>
 </RootFolder>

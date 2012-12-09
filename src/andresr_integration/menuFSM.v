@@ -26,16 +26,19 @@ module menuFSM(
 	 input done,
     input clk,
     output [2:0] menuState,
-    output reset_comp,
-	 output song
+    output resetComp,
+	 output [1:0] song
     );
 
 	reg[2:0] state;
-	reg[1:0] song = 0;
 	reg reset_reg = 0;
 	reg[1:0] song_reg;
+	
+	reg previous_button = 0;
+	
 	parameter[2:0] songOne = 3'b000;
-	parameter[3:0] songTwo = 3'b001;
+	parameter[2:0] songTwo = 3'b001;
+	parameter[2:0] songThree = 3'b010;
 	parameter[3:0] inGame = 3'b111;
 	
 	always @(posedge clk) begin
@@ -45,19 +48,24 @@ module menuFSM(
 			song_reg <= state[1:0];
 			reset_reg <= 1;
 		end
-		else
-			reset_comp <= 0;
-			case(state)
-				songOne: state <= down ? songTwo: songOne;
-				songTwo: state <=  up ? songOne: songTwo;
-				inGame: state <= done ? songOne: inGame;
-				default: state <= songOne;
-			endcase
+		else begin
+			reset_reg <= 0;
+			if (!previous_button) begin
+				case(state)
+					songOne: state <= down ? songTwo: songOne;
+					songTwo: state <=  up ? songOne: down? songThree: songTwo;
+					songThree: state <= up ? songTwo: songThree;
+					inGame: state <= done ? songOne: inGame;
+					default: state <= songOne;
+				endcase
+				previous_button <= 1;
+			end
+			if (!down & !up) previous_button <= 0;
 		end
 	end
 	
 	assign menuState = state;
-	assign reset_comp = reset_reg;
+	assign resetComp = reset_reg;
 	assign song = song_reg;
 	
 endmodule

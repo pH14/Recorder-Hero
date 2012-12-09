@@ -1,0 +1,12 @@
+# Output products list for <notes_blue_map>
+notes_blue_map.asy
+notes_blue_map.ngc
+notes_blue_map.sym
+notes_blue_map.v
+notes_blue_map.veo
+notes_blue_map.vhd
+notes_blue_map.vho
+notes_blue_map.xco
+notes_blue_map_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+notes_blue_map_flist.txt
+notes_blue_map_xmdf.tcl
