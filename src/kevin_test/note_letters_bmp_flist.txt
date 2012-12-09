@@ -1,0 +1,13 @@
+# Output products list for <note_letters_bmp>
+note_letters_bmp.asy
+note_letters_bmp.mif
+note_letters_bmp.ngc
+note_letters_bmp.sym
+note_letters_bmp.v
+note_letters_bmp.veo
+note_letters_bmp.vhd
+note_letters_bmp.vho
+note_letters_bmp.xco
+note_letters_bmp_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+note_letters_bmp_flist.txt
+note_letters_bmp_xmdf.tcl

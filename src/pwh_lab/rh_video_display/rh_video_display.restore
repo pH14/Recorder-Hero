@@ -836,7 +836,6 @@ proc restore { { project_dir "" } } {
   } "A problem occured while restoring project settings."
 
   set user_files { 
-      "../../../../Downloads/image_cursor.bit" 
       "blob.v" 
       "bono_blue.xco" 
       "bono_green.xco" 

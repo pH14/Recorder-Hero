@@ -1,0 +1,13 @@
+# Output products list for <bono_red>
+bono_red.asy
+bono_red.mif
+bono_red.ngc
+bono_red.sym
+bono_red.v
+bono_red.veo
+bono_red.vhd
+bono_red.vho
+bono_red.xco
+bono_red_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+bono_red_flist.txt
+bono_red_xmdf.tcl

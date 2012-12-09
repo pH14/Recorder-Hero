@@ -1,0 +1,12 @@
+# Output products list for <notes_green_map>
+notes_green_map.asy
+notes_green_map.ngc
+notes_green_map.sym
+notes_green_map.v
+notes_green_map.veo
+notes_green_map.vhd
+notes_green_map.vho
+notes_green_map.xco
+notes_green_map_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+notes_green_map_flist.txt
+notes_green_map_xmdf.tcl
