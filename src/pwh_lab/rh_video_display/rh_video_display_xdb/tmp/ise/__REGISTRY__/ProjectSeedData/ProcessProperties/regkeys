@@ -14,52 +14,59 @@ prop_101_val
 "false"
 s
 prop_102_name
+<<<<<<< HEAD
 PROP_xilxBitgReadBk_Sec
 s
 prop_102_val
 "Enable Readback and Reconfiguration"
-s
-prop_103_name
+=======
 PROP_CurrentFloorplanFile
 s
-prop_103_val
+prop_102_val
 ""
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
-prop_104_name
+prop_103_name
 PROP_xilxPreTrceRpt
 s
-prop_104_val
+prop_103_val
 "Verbose Report"
 s
-prop_105_name
+prop_104_name
 PROP_xilxPreTrceRptLimit
 s
-prop_105_val
+prop_104_val
 "3"
 s
-prop_106_name
+prop_105_name
 PROP_xilxPreTrceAdvAna
 s
-prop_106_val
+prop_105_val
 "false"
 s
-prop_107_name
+prop_106_name
 PROP_xilxPreTrceUncovPath
+s
+prop_106_val
+""
+s
+prop_107_name
+PROP_xilxPreTrceEndpointPath
 s
 prop_107_val
 ""
 s
 prop_108_name
-PROP_xilxPreTrceEndpointPath
-s
-prop_108_val
-""
-s
-prop_109_name
 PROP_PreTrceFastPath
 s
-prop_109_val
+prop_108_val
 "false"
+s
+prop_109_name
+PROP_xilxPostTrceRpt
+s
+prop_109_val
+"Verbose Report"
 s
 prop_10_name
 PROP_PostXlateSimTop
@@ -68,64 +75,64 @@ prop_10_val
 "Module|musical_score_loader_tb"
 s
 prop_110_name
-PROP_xilxPostTrceRpt
-s
-prop_110_val
-"Verbose Report"
-s
-prop_111_name
 PROP_xilxPostTrceRptLimit
 s
-prop_111_val
+prop_110_val
 "3"
 s
-prop_112_name
+prop_111_name
 PROP_xilxPostTrceAdvAna
 s
-prop_112_val
+prop_111_val
 "false"
 s
-prop_113_name
+prop_112_name
 PROP_xilxPostTrceUncovPath
+s
+prop_112_val
+""
+s
+prop_113_name
+PROP_xilxPostTrceEndpointPath
 s
 prop_113_val
 ""
 s
 prop_114_name
-PROP_xilxPostTrceEndpointPath
-s
-prop_114_val
-""
-s
-prop_115_name
 PROP_PostTrceFastPath
 s
-prop_115_val
+prop_114_val
 "false"
 s
-prop_116_name
+prop_115_name
 PROP_xilxPostTrceStamp
 s
-prop_116_val
+prop_115_val
 ""
 s
-prop_117_name
+prop_116_name
 PROP_PreTrceGenTimegroups
 s
-prop_117_val
+prop_116_val
 "false"
 s
-prop_118_name
+prop_117_name
 PROP_PreTrceGenDatasheet
 s
-prop_118_val
+prop_117_val
 "true"
 s
-prop_119_name
+prop_118_name
 PROP_PostTrceGenTimegroups
 s
-prop_119_val
+prop_118_val
 "false"
+s
+prop_119_name
+PROP_PostTrceGenDatasheet
+s
+prop_119_val
+"true"
 s
 prop_11_name
 PROP_PostMapSimTop
@@ -134,64 +141,64 @@ prop_11_val
 "Module|musical_score_loader_tb"
 s
 prop_120_name
-PROP_PostTrceGenDatasheet
+PROP_xilxPostTrceTSIFile
 s
 prop_120_val
-"true"
+""
 s
 prop_121_name
-PROP_xilxPostTrceTSIFile
+PROP_PreTrceTSIFile
 s
 prop_121_val
 ""
 s
 prop_122_name
-PROP_PreTrceTSIFile
+PROP_primetimeBlockRamData
 s
 prop_122_val
 ""
 s
 prop_123_name
-PROP_primetimeBlockRamData
+PROP_primeFlatternOutputNetlist
 s
 prop_123_val
-""
+"false"
 s
 prop_124_name
-PROP_primeFlatternOutputNetlist
+PROP_primeCorrelateOutput
 s
 prop_124_val
 "false"
 s
 prop_125_name
-PROP_primeCorrelateOutput
-s
-prop_125_val
-"false"
-s
-prop_126_name
 PROP_primeTopLevelModule
 s
-prop_126_val
+prop_125_val
 ""
 s
-prop_127_name
+prop_126_name
 PROP_AutoGenFile
 s
-prop_127_val
+prop_126_val
 "false"
 s
-prop_128_name
+prop_127_name
 PROP_CompxlibXlnxCoreLib
 s
-prop_128_val
+prop_127_val
 "true"
 s
-prop_129_name
+prop_128_name
 PROP_xilxSynthGlobOpt
 s
-prop_129_val
+prop_128_val
 "AllClockNets"
+s
+prop_129_name
+PROP_xstAutoBRAMPacking
+s
+prop_129_val
+"false"
 s
 prop_12_name
 PROP_PostParSimTop
@@ -200,28 +207,28 @@ prop_12_val
 "Module|musical_score_loader_tb"
 s
 prop_130_name
-PROP_xstAutoBRAMPacking
-s
-prop_130_val
-"false"
-s
-prop_131_name
 PROP_xstBRAMUtilRatio
 s
-prop_131_val
+prop_130_val
 "100"
 s
-prop_132_name
+prop_131_name
 PROP_xstAsynToSync
 s
-prop_132_val
+prop_131_val
 "false"
 s
-prop_133_name
+prop_132_name
 PROP_xstReadCores
 s
-prop_133_val
+prop_132_val
 "true"
+s
+prop_133_name
+PROP_xstWriteTimingConstraints
+s
+prop_133_val
+"false"
 s
 prop_134_name
 PROP_xstSliceUtilRatio
@@ -344,6 +351,7 @@ prop_151_val
 "Yes"
 s
 prop_152_name
+<<<<<<< HEAD
 PROP_xcpldUseGlobalOutputEnables
 s
 prop_152_val
@@ -369,17 +377,49 @@ prop_155_val
 s
 prop_156_name
 PROP_CompxlibAbelLib
+=======
+PROP_xilxBitgCfg_DCMShutdown
+s
+prop_152_val
+"false"
+s
+prop_153_name
+PROP_xilxBitgCfg_DCMBandgap
+s
+prop_153_val
+"false"
+s
+prop_154_name
+PROP_xilxBitgCfg_DCIUpdateMode
+s
+prop_154_val
+"Quiet(Off)"
+s
+prop_155_name
+PROP_xcpldUseGlobalOutputEnables
+s
+prop_155_val
+"true"
+s
+prop_156_name
+PROP_xcpldUseGlobalSetReset
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_156_val
 "true"
 s
 prop_157_name
+<<<<<<< HEAD
 PROP_CompxlibCPLDDetLib
+=======
+PROP_hprep6_autosig
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_157_val
-"true"
+"false"
 s
 prop_158_name
+<<<<<<< HEAD
 PROP_EnableWYSIWYG
 s
 prop_158_val
@@ -390,6 +430,18 @@ PROP_cpldfitHDLeqStyle
 s
 prop_159_val
 "Source"
+=======
+PROP_CompxlibAbelLib
+s
+prop_158_val
+"true"
+s
+prop_159_name
+PROP_CompxlibCPLDDetLib
+s
+prop_159_val
+"true"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_15_name
 PROP_UseSmartGuide
@@ -398,6 +450,7 @@ prop_15_val
 "false"
 s
 prop_160_name
+<<<<<<< HEAD
 PROP_fitGenSimModel
 s
 prop_160_val
@@ -435,11 +488,51 @@ prop_165_val
 s
 prop_166_name
 PROP_xcpldFitDesMultiLogicOpt
+=======
+PROP_FunctionBlockInputLimit
+s
+prop_160_val
+"38"
+s
+prop_161_name
+PROP_EnableWYSIWYG
+s
+prop_161_val
+"None"
+s
+prop_162_name
+PROP_cpldfitHDLeqStyle
+s
+prop_162_val
+"Source"
+s
+prop_163_name
+PROP_fitGenSimModel
+s
+prop_163_val
+"false"
+s
+prop_164_name
+PROP_xcpldFitTemplate_xpla3
+s
+prop_164_val
+"Optimize Density"
+s
+prop_165_name
+PROP_xilxSynthKeepHierarchy_CPLD
+s
+prop_165_val
+"Yes"
+s
+prop_166_name
+PROP_PlsClockEnable
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_166_val
 "true"
 s
 prop_167_name
+<<<<<<< HEAD
 PROP_cpldfit_otherCmdLineOptions
 s
 prop_167_val
@@ -456,6 +549,24 @@ PROP_xcpldFittimRptOption
 s
 prop_169_val
 "Summary"
+=======
+PROP_xcpldUseLocConst
+s
+prop_167_val
+"Always"
+s
+prop_168_name
+PROP_xcpldFitDesInit
+s
+prop_168_val
+"Low"
+s
+prop_169_name
+PROP_cpldBestFit
+s
+prop_169_val
+"false"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_16_name
 PROP_PartitionCreateDelete
@@ -464,12 +575,17 @@ prop_16_val
 ""
 s
 prop_170_name
+<<<<<<< HEAD
 PROP_xcpldFitDesTimingCst
+=======
+PROP_xcpldFitDesMultiLogicOpt
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_170_val
 "true"
 s
 prop_171_name
+<<<<<<< HEAD
 PROP_CPLDFitkeepio
 s
 prop_171_val
@@ -495,23 +611,59 @@ prop_174_val
 s
 prop_175_name
 PROP_xilxSynthMacroPreserve
+=======
+PROP_cpldfit_otherCmdLineOptions
+s
+prop_171_val
+""
+s
+prop_172_name
+PROP_hprep6_otherCmdLineOptions
+s
+prop_172_val
+""
+s
+prop_173_name
+PROP_xcpldFittimRptOption
+s
+prop_173_val
+"Summary"
+s
+prop_174_name
+PROP_xcpldFitDesTimingCst
+s
+prop_174_val
+"true"
+s
+prop_175_name
+PROP_CPLDFitkeepio
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_175_val
-"true"
+"false"
 s
 prop_176_name
+<<<<<<< HEAD
 PROP_xilxSynthXORPreserve
+=======
+PROP_xcpldFitDesSlew
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_176_val
-"true"
+"Fast"
 s
 prop_177_name
+<<<<<<< HEAD
 PROP_FunctionBlockInputLimit
+=======
+PROP_xcpldUseGlobalClocks
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_177_val
 "38"
 s
 prop_178_name
+<<<<<<< HEAD
 PROP_xcpldFitDesInputLmt_xbr
 s
 prop_178_val
@@ -519,6 +671,15 @@ prop_178_val
 s
 prop_179_name
 PROP_mpprViewParRptsForAllRslt
+=======
+PROP_taengine_otherCmdLineOptions
+s
+prop_178_val
+""
+s
+prop_179_name
+PROP_xilxSynthMacroPreserve
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_179_val
 "true"
@@ -530,12 +691,17 @@ prop_17_val
 ""
 s
 prop_180_name
+<<<<<<< HEAD
 PROP_mpprViewPadRptsForAllRslt
+=======
+PROP_xilxSynthXORPreserve
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_180_val
 "true"
 s
 prop_181_name
+<<<<<<< HEAD
 PROP_mpprRsltToCopy
 s
 prop_181_val
@@ -543,11 +709,21 @@ prop_181_val
 s
 prop_182_name
 PROP_ngdbuildUseLOCConstraints
+=======
+PROP_UseDataGate
 s
-prop_182_val
+prop_181_val
 "true"
 s
+prop_182_name
+PROP_xilxBitgCfg_GenOpt_IEEE1532File_xbr
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
+s
+prop_182_val
+"false"
+s
 prop_183_name
+<<<<<<< HEAD
 PROP_xilxNgdbldNTType
 s
 prop_183_val
@@ -555,18 +731,31 @@ prop_183_val
 s
 prop_184_name
 PROP_xilxNgdbldIOPads
+=======
+PROP_xcpldFitDesInputLmt_xbr
+s
+prop_183_val
+"32"
+s
+prop_184_name
+PROP_xcpldFitDesUnused
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_184_val
-"false"
+"Keeper"
 s
 prop_185_name
-PROP_xilxMapTrimUnconnSig
+PROP_par_otherCmdLineOptions
 s
 prop_185_val
-"true"
+""
 s
 prop_186_name
+<<<<<<< HEAD
 PROP_xcpldFitDesUnused
+=======
+PROP_mpprViewParRptsForAllRslt
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_186_val
 "Keeper"
@@ -584,7 +773,11 @@ prop_188_val
 "LVCMOS18"
 s
 prop_189_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_GenOpt_DRC
+=======
+PROP_xilxMapReportDetail
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_189_val
 "true"
@@ -596,12 +789,17 @@ prop_18_val
 ""
 s
 prop_190_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_GenOpt_BitFile
+=======
+PROP_mapUseRLOCConstraints
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_190_val
 "true"
 s
 prop_191_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_GenOpt_BinaryFile
 s
 prop_191_val
@@ -621,11 +819,33 @@ prop_193_val
 s
 prop_194_name
 PROP_xstWriteTimingConstraints
+=======
+PROP_xilxMapPackRegInto
+s
+prop_191_val
+"Off"
+s
+prop_192_name
+PROP_xilxBitgCfg_GenOpt_DRC
+s
+prop_192_val
+"true"
+s
+prop_193_name
+PROP_xilxBitgCfg_GenOpt_BitFile
+s
+prop_193_val
+"true"
+s
+prop_194_name
+PROP_xilxBitgCfg_GenOpt_BinaryFile
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_194_val
 "false"
 s
 prop_195_name
+<<<<<<< HEAD
 PROP_UseDataGate
 s
 prop_195_val
@@ -633,17 +853,31 @@ prop_195_val
 s
 prop_196_name
 PROP_xilxBitgCfg_GenOpt_IEEE1532File_xbr
+=======
+PROP_xilxBitgCfg_GenOpt_ASCIIFile
+s
+prop_195_val
+"false"
+s
+prop_196_name
+PROP_xilxBitgCfg_GenOpt_Compress
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_196_val
 "false"
 s
 prop_197_name
+<<<<<<< HEAD
 PROP_mapUseRLOCConstraints
+=======
+PROP_bitgen_otherCmdLineOptions
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_197_val
 "true"
 s
 prop_198_name
+<<<<<<< HEAD
 PROP_xilxMapPackRegInto
 s
 prop_198_val
@@ -654,6 +888,18 @@ PROP_xilxMapDisableRegOrdering
 s
 prop_199_val
 "false"
+=======
+PROP_xilxBitgCfg_Rate
+s
+prop_198_val
+"4"
+s
+prop_199_name
+PROP_xilxBitgCfg_Clk
+s
+prop_199_val
+"Pull Up"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_19_name
 PROP_PartitionForcePlacement
@@ -668,16 +914,27 @@ prop_1_val
 ""
 s
 prop_200_name
+<<<<<<< HEAD
 PROP_bitgen_otherCmdLineOptions
+=======
+PROP_xstCoresSearchDir
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_200_val
 ""
 s
 prop_201_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_Rate
 s
 prop_201_val
 "4"
+=======
+PROP_xilxBitgCfg_M0
+s
+prop_201_val
+"Pull Up"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_202_name
 PROP_xilxBitgCfg_Clk
@@ -686,6 +943,7 @@ prop_202_val
 "Pull Up"
 s
 prop_203_name
+<<<<<<< HEAD
 PROP_xstCoresSearchDir
 s
 prop_203_val
@@ -711,6 +969,33 @@ prop_206_val
 s
 prop_207_name
 PROP_xilxPARstrat
+=======
+PROP_xilxPARplacerEffortLevel
+s
+prop_203_val
+"None"
+s
+prop_204_name
+PROP_xilxPARrouterEffortLevel
+s
+prop_204_val
+"None"
+s
+prop_205_name
+PROP_xilxPARstrat
+s
+prop_205_val
+"Normal Place and Route"
+s
+prop_206_name
+PROP_parUseTimingConstraints
+s
+prop_206_val
+"true"
+s
+prop_207_name
+PROP_xilxNgdbldIOPads
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_207_val
 "Normal Place and Route"
@@ -734,18 +1019,27 @@ prop_20_val
 "rh_video_display"
 s
 prop_210_name
+<<<<<<< HEAD
 PROP_xilxMapReplicateLogic
+=======
+PROP_xilxMapTrimUnconnSig
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_210_val
 "true"
 s
 prop_211_name
+<<<<<<< HEAD
 PROP_xilxMapAllowLogicOpt
+=======
+PROP_xilxMapReplicateLogic
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_211_val
 "false"
 s
 prop_212_name
+<<<<<<< HEAD
 PROP_xilxMapCoverMode
 s
 prop_212_val
@@ -774,24 +1068,58 @@ PROP_parUseTimingConstraints
 s
 prop_216_val
 "true"
+=======
+PROP_xilxMapAllowLogicOpt
 s
-prop_217_name
-PROP_xilxTriStateBuffTXMode
-s
-prop_217_val
-"Off"
-s
-prop_218_name
-PROP_xilxMapSliceLogicInUnusedBRAMs
-s
-prop_218_val
+prop_212_val
 "false"
 s
+prop_213_name
+PROP_xilxMapCoverMode
+s
+prop_213_val
+"Area"
+s
+prop_214_name
+PROP_mpprViewPadRptsForAllRslt
+s
+prop_214_val
+"true"
+s
+prop_215_name
+PROP_mpprRsltToCopy
+s
+prop_215_val
+""
+s
+prop_216_name
+PROP_xilxPARplacerCostTable
+s
+prop_216_val
+"1"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
+s
+prop_217_name
+PROP_xilxMapDisableRegOrdering
+s
+prop_217_val
+"false"
+s
+prop_218_name
+PROP_xilxTriStateBuffTXMode
+s
+prop_218_val
+"Off"
+s
 prop_219_name
+<<<<<<< HEAD
 PROP_map_otherCmdLineOptions
+=======
+PROP_xilxMapSliceLogicInUnusedBRAMs
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_219_val
-""
+"false"
 s
 prop_21_name
 PROP_Dummy
@@ -800,24 +1128,25 @@ prop_21_val
 "dum1"
 s
 prop_220_name
-PROP_parIgnoreTimingConstraints
+PROP_map_otherCmdLineOptions
 s
 prop_220_val
-"false"
+""
 s
 prop_221_name
-PROP_xilxPARuseBondedIO
+PROP_ngdbuildUseLOCConstraints
 s
 prop_221_val
-"false"
+"true"
 s
 prop_222_name
-PROP_mapIgnoreTimingConstraints
+PROP_xilxNgdbldNTType
 s
 prop_222_val
-"false"
+"Timestamp"
 s
 prop_223_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_startKey
 s
 prop_223_val
@@ -831,11 +1160,27 @@ prop_224_val
 s
 prop_225_name
 PROP_xilxBitgCfg_DCMBandgap
+=======
+PROP_parIgnoreTimingConstraints
+s
+prop_223_val
+"false"
+s
+prop_224_name
+PROP_xilxPARuseBondedIO
+s
+prop_224_val
+"false"
+s
+prop_225_name
+PROP_mapIgnoreTimingConstraints
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_225_val
 "false"
 s
 prop_226_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_DCIUpdateMode
 s
 prop_226_val
@@ -858,6 +1203,30 @@ PROP_xilxBitgCfg_PwrDown
 s
 prop_229_val
 "Pull Up"
+=======
+PROP_bitgen_Encrypt_keySeq2
+s
+prop_226_val
+"None"
+s
+prop_227_name
+PROP_bitgen_Encrypt_keySeq3
+s
+prop_227_val
+"None"
+s
+prop_228_name
+PROP_bitgen_Encrypt_keySeq4
+s
+prop_228_val
+"None"
+s
+prop_229_name
+PROP_xilxMapTimingDrivenPacking
+s
+prop_229_val
+"false"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_22_name
 PROP_LastAppliedGoal
@@ -866,12 +1235,17 @@ prop_22_val
 "Balanced"
 s
 prop_230_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_DCMShutdown
+=======
+PROPEXT_SynthMultStyle_virtex2
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_230_val
-"false"
+"Auto"
 s
 prop_231_name
+<<<<<<< HEAD
 PROP_xilxMapTimingDrivenPacking
 s
 prop_231_val
@@ -891,23 +1265,52 @@ prop_233_val
 s
 prop_234_name
 PROPEXT_xilxSynthAddBufg_virtex2
+=======
+PROPEXT_xilxSynthMaxFanout_virtex2
+s
+prop_231_val
+"500"
+s
+prop_232_name
+PROPEXT_xilxSynthAddBufg_virtex2
+s
+prop_232_val
+"16"
+s
+prop_233_name
+PROP_xilxBitgStart_Clk_MatchCycle
+s
+prop_233_val
+"Auto"
+s
+prop_234_name
+PROP_bitgen_Encrypt_keySeq5
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_234_val
 "16"
 s
 prop_235_name
+<<<<<<< HEAD
 PROP_xilxBitgStart_Clk_MatchCycle
 s
 prop_235_val
 "Auto"
+=======
+PROP_bitgen_Encrypt_startKey
+s
+prop_235_val
+"None"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_236_name
-PROPEXT_xilxMapGenInputK_virtex2
+PROP_bitgen_Encrypt_startCBC
 s
 prop_236_val
-"4"
+""
 s
 prop_237_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_keySeq0
 s
 prop_237_val
@@ -924,6 +1327,24 @@ PROP_bitgen_Encrypt_keySeq2
 s
 prop_239_val
 "None"
+=======
+PROPEXT_xilxMapGenInputK_virtex2
+s
+prop_237_val
+"4"
+s
+prop_238_name
+PROP_xilxBitgCfg_GenOpt_IEEE1532File
+s
+prop_238_val
+"false"
+s
+prop_239_name
+PROP_xilxBitgCfg_GenOpt_EnableCRC
+s
+prop_239_val
+"true"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_23_name
 PROP_LastAppliedStrategy
@@ -932,19 +1353,31 @@ prop_23_val
 "Xilinx Default (unlocked)"
 s
 prop_240_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_keySeq3
+=======
+PROP_xilxBitgCfg_PwrDown
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_240_val
-"None"
+"Pull Up"
 s
 prop_241_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_keySeq4
+=======
+PROP_bitgen_Encrypt_keySeq0
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_241_val
 "None"
 s
 prop_242_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_keySeq5
+=======
+PROP_bitgen_Encrypt_keySeq1
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_242_val
 "None"
@@ -1040,19 +1473,31 @@ prop_256_val
 ""
 s
 prop_257_name
+<<<<<<< HEAD
 PROP_ModelSimConfigName
+=======
+PROP_SimCustom_postPar
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_257_val
 "Default"
 s
 prop_258_name
+<<<<<<< HEAD
 PROP_vlog_otherCmdLineOptions
+=======
+PROP_ModelSimSimRunTime_tbw
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_258_val
-""
+"1000ns"
 s
 prop_259_name
+<<<<<<< HEAD
 PROP_vcom_otherCmdLineOptions
+=======
+PROP_vlog_otherCmdLineOptions
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_259_val
 ""
@@ -1064,6 +1509,7 @@ prop_25_val
 ""
 s
 prop_260_name
+<<<<<<< HEAD
 PROP_ModelSimSignalWin
 s
 prop_260_val
@@ -1071,33 +1517,57 @@ prop_260_val
 s
 prop_261_name
 PROP_ModelSimListWin
+=======
+PROP_vcom_otherCmdLineOptions
+s
+prop_260_val
+""
+s
+prop_261_name
+PROP_ModelSimSourceWin
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_261_val
 "false"
 s
 prop_262_name
+<<<<<<< HEAD
 PROP_ModelSimStructWin
+=======
+PROP_ModelSimWaveWin
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_262_val
 "true"
 s
 prop_263_name
-PROP_ModelSimWaveWin
+PROP_ModelSimSignalWin
 s
 prop_263_val
 "true"
 s
 prop_264_name
+<<<<<<< HEAD
 PROP_SimCustom_postPar
+=======
+PROP_SimCustom_postXlate
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_264_val
 ""
 s
 prop_265_name
+<<<<<<< HEAD
 PROP_ModelSimSimRunTime_tbw
 s
 prop_265_val
 "1000ns"
+=======
+PROP_SimCustom_postMap
+s
+prop_265_val
+""
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_266_name
 PROP_DevFamily
@@ -1148,6 +1618,7 @@ prop_272_val
 ""
 s
 prop_273_name
+<<<<<<< HEAD
 PROP_SimUseExpDeclOnly
 s
 prop_273_val
@@ -1155,6 +1626,15 @@ prop_273_val
 s
 prop_274_name
 PROP_ModelSimSimRunTime_tb
+=======
+PROP_SimCustom_behav
+s
+prop_273_val
+""
+s
+prop_274_name
+PROP_SimUserCompileList_behav
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_274_val
 "1000ns"
@@ -1166,6 +1646,7 @@ prop_275_val
 "UUT"
 s
 prop_276_name
+<<<<<<< HEAD
 PROP_SimGenVcdFile
 s
 prop_276_val
@@ -1182,6 +1663,24 @@ PROP_ModelSimUutInstName_postMap
 s
 prop_278_val
 "UUT"
+=======
+PROP_SimSyntax
+s
+prop_276_val
+"93"
+s
+prop_277_name
+PROP_SimUseExpDeclOnly
+s
+prop_277_val
+"true"
+s
+prop_278_name
+PROP_ModelSimProcWin
+s
+prop_278_val
+"false"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_279_name
 PROP_ModelSimDataWin
@@ -1196,6 +1695,7 @@ prop_27_val
 "false"
 s
 prop_280_name
+<<<<<<< HEAD
 PROP_ModelSimSimRes
 s
 prop_280_val
@@ -1203,11 +1703,21 @@ prop_280_val
 s
 prop_281_name
 PROP_ModelSimUutInstName_postPar
+=======
+PROP_SimGenVcdFile
+s
+prop_280_val
+"false"
+s
+prop_281_name
+PROP_ModelSimUutInstName_postMap
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_281_val
 "UUT"
 s
 prop_282_name
+<<<<<<< HEAD
 PROP_SimCustom_postXlate
 s
 prop_282_val
@@ -1218,6 +1728,18 @@ PROP_SimCustom_postMap
 s
 prop_283_val
 ""
+=======
+PROP_ModelSimUutInstName_postPar
+s
+prop_282_val
+"UUT"
+s
+prop_283_name
+PROP_ModelSimConfigName
+s
+prop_283_val
+"Default"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_284_name
 PROP_vsim_otherCmdLineOptions
@@ -1226,22 +1748,37 @@ prop_284_val
 ""
 s
 prop_285_name
+<<<<<<< HEAD
 PROP_ModelSimVarsWin
+=======
+PROP_ModelSimListWin
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_285_val
 "false"
 s
 prop_286_name
+<<<<<<< HEAD
 PROP_ModelSimProcWin
+=======
+PROP_ModelSimVarsWin
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_286_val
 "false"
 s
 prop_287_name
+<<<<<<< HEAD
 PROP_SimSyntax
 s
 prop_287_val
 "93"
+=======
+PROP_ModelSimSimRes
+s
+prop_287_val
+"Default (1 ps)"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_288_name
 PROP_impactPort
@@ -1328,7 +1865,11 @@ prop_29_val
 "true"
 s
 prop_2_name
+<<<<<<< HEAD
 PROP_ModelSimUseConfigName
+=======
+PROP_SimUseCustom_postPar
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_2_val
 "false"
@@ -1346,10 +1887,17 @@ prop_301_val
 "true"
 s
 prop_302_name
+<<<<<<< HEAD
 PROP_xcpldFitDesPtermLmt_xbr
 s
 prop_302_val
 "28"
+=======
+PROP_xcpldFitDesInReg_xbr
+s
+prop_302_val
+"true"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_303_name
 PROP_FitterOptimization_xpla3
@@ -1358,18 +1906,27 @@ prop_303_val
 "Density"
 s
 prop_304_name
+<<<<<<< HEAD
 PROP_xcpldFitDesInReg_xbr
+=======
+PROP_mpprViewParRptForSelRslt
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_304_val
-"true"
+""
 s
 prop_305_name
+<<<<<<< HEAD
 PROP_mpprViewParRptForSelRslt
+=======
+PROP_parGenAsyDlyRpt
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_305_val
 ""
 s
 prop_306_name
+<<<<<<< HEAD
 PROP_mpprViewPadRptForSelRslt
 s
 prop_306_val
@@ -1380,6 +1937,18 @@ PROP_parMpprParIterations
 s
 prop_307_val
 "3"
+=======
+PROP_parGenClkRegionRpt
+s
+prop_306_val
+"false"
+s
+prop_307_name
+PROP_parGenSimModel
+s
+prop_307_val
+"false"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_308_name
 PROP_parGenTimingRpt
@@ -1400,6 +1969,7 @@ prop_30_val
 "Under Current Project Setting"
 s
 prop_310_name
+<<<<<<< HEAD
 PROP_parMpprResultsToSave
 s
 prop_310_val
@@ -1419,11 +1989,33 @@ prop_312_val
 s
 prop_313_name
 PROP_xilxBitgCfg_GenOpt_DbgBitStr
+=======
+PROP_xilxBitgCfg_GenOpt_DbgBitStr
+s
+prop_310_val
+"false"
+s
+prop_311_name
+PROP_xcpldFitDesPtermLmt_xbr
+s
+prop_311_val
+"28"
+s
+prop_312_name
+PROP_mapTimingMode
+s
+prop_312_val
+"Non Timing Driven"
+s
+prop_313_name
+PROP_mpprViewPadRptForSelRslt
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_313_val
 "false"
 s
 prop_314_name
+<<<<<<< HEAD
 PROP_mapTimingMode
 s
 prop_314_val
@@ -1434,6 +2026,18 @@ PROP_xilxMapPackfactor
 s
 prop_315_val
 "100"
+=======
+PROP_parMpprParIterations
+s
+prop_314_val
+"3"
+s
+prop_315_name
+PROP_parMpprResultsToSave
+s
+prop_315_val
+""
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_316_name
 PROP_xilxPAReffortLevel
@@ -1442,22 +2046,22 @@ prop_316_val
 "Standard"
 s
 prop_317_name
-PROP_parTimingMode
+PROP_xilxPAReffortLevel
 s
 prop_317_val
-"Performance Evaluation"
+"Standard"
 s
 prop_318_name
-PROP_parGenAsyDlyRpt
+PROP_parTimingMode
 s
 prop_318_val
-"false"
+"Performance Evaluation"
 s
 prop_319_name
-PROP_parGenClkRegionRpt
+PROP_parGenTimingRpt
 s
 prop_319_val
-"false"
+"true"
 s
 prop_31_name
 PROP_SynthOpt
@@ -1472,10 +2076,17 @@ prop_320_val
 "Medium"
 s
 prop_321_name
+<<<<<<< HEAD
 PROP_MapPlacerCostTable
 s
 prop_321_val
 "1"
+=======
+PROP_bitgen_Encrypt_Encrypt
+s
+prop_321_val
+"false"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_322_name
 PROP_MapLogicOptimization
@@ -1556,10 +2167,14 @@ prop_333_val
 "None"
 s
 prop_334_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_key0
+=======
+PROP_xilxBitgCfg_GenOpt_ReadBack_virtex2
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_334_val
-""
+"false"
 s
 prop_335_name
 PROP_bitgen_Encrypt_key2
@@ -1568,25 +2183,41 @@ prop_335_val
 ""
 s
 prop_336_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_key3
+=======
+PROP_MapExtraEffort
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_336_val
-""
+"None"
 s
 prop_337_name
+<<<<<<< HEAD
 PROP_xilxBitgCfg_GenOpt_ReadBack_virtex2
+=======
+PROP_bitgen_Encrypt_key1
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_337_val
 "false"
 s
 prop_338_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_key5
+=======
+PROP_bitgen_Encrypt_key2
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_338_val
 ""
 s
 prop_339_name
+<<<<<<< HEAD
 PROP_bitgen_Encrypt_keyFile
+=======
+PROP_bitgen_Encrypt_key4
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_339_val
 ""
@@ -1946,10 +2577,17 @@ prop_39_val
 ""
 s
 prop_3_name
+<<<<<<< HEAD
 PROP_MSimSDFTimingToBeRead
 s
 prop_3_val
 "Setup Time"
+=======
+PROP_CompxlibOutputDir
+s
+prop_3_val
+"$XILINX/<language>/<simulator>"
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_40_name
 PROP_xstUserCompileList
@@ -2012,7 +2650,11 @@ prop_49_val
 "true"
 s
 prop_4_name
+<<<<<<< HEAD
 PROP_CompxlibOutputDir
+=======
+PROP_SimUseCustom_postXlate
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_4_val
 "$XILINX/<language>/<simulator>"
@@ -2036,42 +2678,55 @@ prop_52_val
 "true"
 s
 prop_53_name
+<<<<<<< HEAD
 PROP_SimDo
+=======
+PROP_SimUseCustom_behav
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_53_val
 "true"
 s
 prop_54_name
-PROP_CompxlibOverwriteLib
+PROP_SimDo
 s
 prop_54_val
-"Overwrite"
-s
-prop_55_name
-PROP_CompxlibOtherCompxlibOpts
-s
-prop_55_val
-""
-s
-prop_56_name
-PROP_CompxlibSimPrimatives
-s
-prop_56_val
 "true"
 s
+prop_55_name
+PROP_CompxlibOverwriteLib
+s
+prop_55_val
+"Overwrite"
+s
+prop_56_name
+PROP_CompxlibOtherCompxlibOpts
+s
+prop_56_val
+""
+s
 prop_57_name
+<<<<<<< HEAD
 PROP_SimUseCustom_behav
+=======
+PROP_CompxlibSimPrimatives
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_57_val
 "false"
 s
 prop_58_name
+<<<<<<< HEAD
 PROP_SimUseCustom_postXlate
+=======
+PROP_ModelSimUseConfigName
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_58_val
 "false"
 s
 prop_59_name
+<<<<<<< HEAD
 PROP_SimUseCustom_postMap
 s
 prop_59_val
@@ -2079,6 +2734,15 @@ prop_59_val
 s
 prop_5_name
 PROP_SimUseCustom_postPar
+=======
+PROP_MSimSDFTimingToBeRead
+s
+prop_59_val
+"Setup Time"
+s
+prop_5_name
+PROP_SimUseCustom_postMap
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 s
 prop_5_val
 "false"

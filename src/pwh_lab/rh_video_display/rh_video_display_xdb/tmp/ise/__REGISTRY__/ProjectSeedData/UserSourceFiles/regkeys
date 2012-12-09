@@ -70,6 +70,15 @@ s
 user_file_3
 blob.v
 s
+<<<<<<< HEAD
+=======
+user_file_30
+vram_display.v
+s
+user_file_31
+lotr_song2.xco
+s
+>>>>>>> c7cb27c98b6363679c0d5a0905cdedbb6fa3cbad
 user_file_4
 cstringdisp.v
 s

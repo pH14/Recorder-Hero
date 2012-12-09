@@ -529,7 +529,8 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			
 	wire zbt_iw_newout;
 	wire [35:0] zbt_iw_output;
-	reg [35:0] zbt_iw_output_reg;
+	reg [35:0] zbt_iw_output_reg = 0;
+	
 	zbt_image_writer ziw1(.clk(clk),
 						  .reset(reset),
 						  .image_data(fifo_data_output),
@@ -563,6 +564,11 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			y_pixels <= 0;
 		end
 		
+		if (zbt_iw_newout) begin
+			vram_write_addr <= {0, y_pixels, x_pixels[9:2]-1'b1};
+			zbt_iw_output_reg <= zbt_iw_output;
+		end
+		
 		if (fifo_newout) begin
 			x_pixels <= x_pixels + 1;
 		end
@@ -571,15 +577,11 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 			x_pixels <= 0;
 			y_pixels <= y_pixels + 1;
 		end
-		
-		if (zbt_iw_newout) begin
-			vram_write_addr <= {0, y_pixels, x_pixels[9:2]};
-			zbt_iw_output_reg <= zbt_iw_output;
-		end
 	end
 	
 	musical_score_loader msl(.clk(clk), .reset(reset),
-								    .song_id(switch[7]), .next_notes_out(nn),
+								    .song_id({1'b0, switch[7]}), 
+									 .next_notes_out(nn),
 									 .tempo_out(tempo),
 									 .debug_out(msl_debug));
 	
@@ -600,8 +602,7 @@ module lab3   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
 	display_16hex hex_display(.reset(reset), 
 		.clock_27mhz(clk), 
-		.data({ dispdata,
-				  from_fifo,image_bits }),//fifo_state,
+		.data({ image_bits, vram_read_data }),//fifo_state,
 				  //3'b0,fifo_newout}),//{nn[63:31], 2'b00, dispdata}),
 		.disp_blank(disp_blank), 
 		.disp_clock(disp_clock), 
@@ -806,7 +807,7 @@ module rh_display (
 				 .ready(tempo_beat_move));
 	
 	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 639;
-	wire right_boundary_line = hcount == 1023 & vcount >= 128 & vcount <= 639;
+	wire right_boundary_line = hcount == 1022 & vcount >= 128 & vcount <= 639;
 	
 	reg [23:0] onscreen_notes[15:0];
 	integer n;
@@ -917,8 +918,8 @@ module rh_display (
 											.cstring({"NOTE: ", current_note_string}),
 											.cx(700),
 											.cy(30));
-	defparam csd_note.NCHAR = 7;
-	defparam csd_note.NCHAR_BITS = 3;
+	defparam csd_note.NCHAR = 8;
+	defparam csd_note.NCHAR_BITS = 4;
 
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
@@ -930,45 +931,45 @@ module rh_display (
 						 
 	wire [23:0] bono_pixel;
 	bono_picture_blob bpb_img(.pixel_clk(vclock),
-								     .x(1),
+								     .x(0),
 									  .hcount(hcount+2),
-									  .y(1),
+									  .y(0),
 									  .vcount(vcount+2),
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
 
-	wire [23:0] curr_note_alpha_blend_pixel;
+	reg [23:0] curr_note_color;
 	reg [9:0] curr_note_y;
 	reg [23:0] bmp_pixel_alpha;
-	
-//   blob #(.WIDTH(72), .HEIGHT(50))
-//		letter_alpha(.x(1),
-//			  .y(curr_note_y),
-//			  .hcount(hcount),
-//			  .vcount(vcount),
-//			  .color(24'hFF_FF_00),
-//			  .pixel(curr_note_alpha_blend_pixel));
 
 	always @(*) begin
 		case(current_note_string)
-			"B" : curr_note_y = 127;
-			"A#": curr_note_y = 127 + 1*NOTE_STEP;
-			"A" : curr_note_y = 127 + 1*NOTE_STEP;
-			"G#": curr_note_y = 127 + 2*NOTE_STEP;
-			"G" : curr_note_y = 127 + 2*NOTE_STEP;
-			"F#": curr_note_y = 127 + 3*NOTE_STEP;
-			"F" : curr_note_y = 127 + 3*NOTE_STEP;
-			"E" : curr_note_y = 127 + 4*NOTE_STEP;
-			"D#": curr_note_y = 127 + 5*NOTE_STEP;
-			"D" : curr_note_y = 127 + 5*NOTE_STEP;
-			"C#": curr_note_y = 127 + 6*NOTE_STEP;
-			"C" : curr_note_y = 127 + 6*NOTE_STEP;
+			"B " : curr_note_y = 127;
+			"A#" : curr_note_y = 127 + 1*NOTE_STEP;
+			"A " : curr_note_y = 127 + 1*NOTE_STEP;
+			"G#" : curr_note_y = 127 + 2*NOTE_STEP;
+			"G " : curr_note_y = 127 + 2*NOTE_STEP;
+			"F#" : curr_note_y = 127 + 3*NOTE_STEP;
+			"F " : curr_note_y = 127 + 3*NOTE_STEP;
+			"E " : curr_note_y = 127 + 4*NOTE_STEP;
+			"D#" : curr_note_y = 127 + 5*NOTE_STEP;
+			"D " : curr_note_y = 127 + 5*NOTE_STEP;
+			"C#" : curr_note_y = 127 + 6*NOTE_STEP;
+			"C " : curr_note_y = 127 + 6*NOTE_STEP;
 		endcase
 		
+		case(current_note_string)
+			"A#": curr_note_color = 24'h55_55_FF;
+			"G#": curr_note_color = 24'h55_55_FF;
+			"F#": curr_note_color = 24'h55_55_FF;
+			"D#": curr_note_color = 24'h55_55_FF;
+			"C#": curr_note_color = 24'h55_55_FF;
+			default: curr_note_color = 24'hFF_FF_00;
+		endcase
 		if (|bmp_pixel 
 		    && vcount >= curr_note_y 
 		    && vcount <= curr_note_y + NOTE_STEP) begin
-			bmp_pixel_alpha = bmp_pixel/2 + (24'hFF_FF_00 / 2);
+			bmp_pixel_alpha = bmp_pixel/4 + 3*(curr_note_color / 2);
 		end else begin
 			bmp_pixel_alpha = bmp_pixel;
 		end
@@ -983,7 +984,7 @@ module rh_display (
 											.vcount(vcount),
 											.pixel(song_title_1_pixel),
 											.cstring("Concerning Hobbits"),
-											.cx(18),
+											.cx(23),
 											.cy(285));
 	defparam csd_st1.NCHAR = 18;
 	defparam csd_st1.NCHAR_BITS = 5;
@@ -994,29 +995,62 @@ module rh_display (
 											.vcount(vcount),
 											.pixel(song_title_2_pixel),
 											.cstring("Practice Scale"),
-											.cx(18),
+											.cx(23),
 											.cy(315));
 	defparam csd_st2.NCHAR = 14;
 	defparam csd_st2.NCHAR_BITS = 4;
 	
-	wire [6:0] current_song_y;
-	assign current_song_y = (menu_state[1:0] == 2'b00) ? 285 : 315;
+	wire [2:0] song_title_3_pixel;
+	char_string_display csd_st3(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(song_title_3_pixel),
+											.cstring("Prelude in C"),
+											.cx(23),
+											.cy(345));
+	defparam csd_st3.NCHAR = 12;
+	defparam csd_st3.NCHAR_BITS = 4;
+	
+	reg [8:0] current_song_y;
+	always @(*) begin
+		case(menu_state[1:0])
+			2'b00: current_song_y = 9'd285;
+			2'b01: current_song_y = 9'd315;
+			2'b10: current_song_y = 9'd345;
+			default: current_song_y = 9'd285;
+		endcase
+	end
 	
 	wire [23:0] song_select_box_pixel;
    blob #(.WIDTH(10), .HEIGHT(10))
-		song_selector_box(.x(5),
-		  .y(current_song_y + 5),
+		song_selector_box(.x(8),
+		  .y(current_song_y + 6),
 		  .hcount(hcount),
 		  .vcount(vcount),
 		  .color(24'hFF_FF_FF),
-		  .pixel());
+		  .pixel(song_select_box_pixel));
+	
+	wire [23:0] vga_display_hack_pixel;
+	blob #(.WIDTH(16), .HEIGHT(768))
+		vga_display_hack(.x(0), .y(0),
+							  .hcount(hcount),
+							  .vcount(vcount),
+							  .color(24'h00_00_00),
+							  .pixel(vga_display_hack_pixel));
 	
 	reg [23:0] pixel_reg;
+	
+	// For some reason the image from the zbt shows a small sliver
+	// on the side. This hack at least covers it up on the main screen
+	wire [23:0] bono_pixel_fix;
+	assign bono_pixel_fix = (hcount < 16) ? 24'h00_00_00 : bono_pixel;
+	
 	always @(posedge vclock) begin
 		if (!menu_state[2]) begin
-			pixel_reg <= bono_pixel
+			pixel_reg <= bono_pixel_fix
 					  | {8{song_title_1_pixel}}
 					  | {8{song_title_2_pixel}}
+					  | {8{song_title_3_pixel}}
 					  | song_select_box_pixel;
 		end else begin
 			pixel_reg <= onscreen_notes[0]

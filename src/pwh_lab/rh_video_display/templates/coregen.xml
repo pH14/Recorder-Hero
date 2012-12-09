@@ -190,6 +190,20 @@ bono_pixels YourInstanceName (
 
  
 		</Template>
+		<Template label="lotr_song2" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+lotr_song2 YourInstanceName (
+    .clka(clka),
+    .addra(addra), // Bus [7 : 0] 
+    .douta(douta)); // Bus [3 : 0] 
+
+ 
+		</Template>
 	</Folder>
 	<Folder label="VHDL Component Instantiation" treetype="folder">
 		<Template label="font_rom" treetype="template">
@@ -534,6 +548,32 @@ end component;
 -- Substitute your own instance name and net names.
  
 your_instance_name : bono_pixels
+        port map (
+            clka =&gt; clka,
+            addra =&gt; addra,
+            douta =&gt; douta);
+ 
+		</Template>
+		<Template label="lotr_song2" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component lotr_song2
+    port (
+    clka: IN std_logic;
+    addra: IN std_logic_VECTOR(7 downto 0);
+    douta: OUT std_logic_VECTOR(3 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : lotr_song2
         port map (
             clka =&gt; clka,
             addra =&gt; addra,

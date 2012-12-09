@@ -11,32 +11,32 @@ Target Device  : xc2v6000
 Target Package : bf957
 Target Speed   : -4
 Mapper Version : virtex2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Fri Dec  7 17:49:38 2012
+Mapped Date    : Sat Dec  8 20:32:36 2012
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  428
+Number of warnings:  425
 Logic Utilization:
-  Number of Slice Flip Flops:           888 out of  67,584    1%
-  Number of 4 input LUTs:             2,143 out of  67,584    3%
+  Number of Slice Flip Flops:           881 out of  67,584    1%
+  Number of 4 input LUTs:             2,213 out of  67,584    3%
 Logic Distribution:
-  Number of occupied Slices:          1,392 out of  33,792    4%
-    Number of Slices containing only related logic:   1,392 out of   1,392 100%
-    Number of Slices containing unrelated logic:          0 out of   1,392   0%
+  Number of occupied Slices:          1,421 out of  33,792    4%
+    Number of Slices containing only related logic:   1,421 out of   1,421 100%
+    Number of Slices containing unrelated logic:          0 out of   1,421   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,393 out of  67,584    3%
-    Number used as logic:             2,104
-    Number used as a route-thru:        250
+  Total Number of 4 input LUTs:       2,465 out of  67,584    3%
+    Number used as logic:             2,174
+    Number used as a route-thru:        252
     Number used as Shift registers:      39
   Number of bonded IOBs:                577 out of     684   84%
     IOB Flip Flops:                       6
-  Number of RAMB16s:                     27 out of     144   18%
-  Number of MULT18X18s:                   5 out of     144    3%
+  Number of RAMB16s:                     28 out of     144   19%
+  Number of MULT18X18s:                   6 out of     144    4%
   Number of BUFGMUXs:                     4 out of      16   25%
   Number of DCMs:                         3 out of      12   25%
 
-Peak Memory Usage:  518 MB
+Peak Memory Usage:  524 MB
 Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   6 secs 
 
@@ -81,7 +81,7 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:LIT:243 - Logical network user3<28>_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 279
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 277
    more times for the following (max. 5 shown):
    user3<4>_IBUF,
    user3<29>_IBUF,
@@ -92,9 +92,6 @@ WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 279
 WARNING:LIT:162 - Only DFS outputs (CLKFX/FX180/CONCUR) of DCM symbol "vclk1"
    are routed, but CLKFB is not routed. Proper phase relationship of output
    clocks to CLKIN cannot be guaranteed.
-WARNING:Pack:266 - The function generator rh_disp/csd_st1/Madd_column_xor<4>137
-   failed to merge with F5 multiplexer rh_disp/csd_st1/_COND_95_f5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:PhysDesignRules:367 - The signal <rs232_cts_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <rs232_rxd_IBUF> is incomplete. The
@@ -474,10 +471,6 @@ WARNING:PhysDesignRules:367 - The signal <systemace_irq_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <tv_in_i2c_data_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <switch<2>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <switch<4>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <switch<5>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <flash_data<0>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
@@ -1101,7 +1094,7 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 Section 4 - Removed Logic Summary
 ---------------------------------
   12 block(s) removed
-  57 block(s) optimized away
+  59 block(s) optimized away
    1 signal(s) removed
 
 Section 5 - Removed Logic
@@ -1153,6 +1146,8 @@ GND 		rh_disp/csd_st1/f/GND
 VCC 		rh_disp/csd_st1/f/VCC
 GND 		rh_disp/csd_st2/f/GND
 VCC 		rh_disp/csd_st2/f/VCC
+GND 		rh_disp/csd_st3/f/GND
+VCC 		rh_disp/csd_st3/f/VCC
 GND 		rh_disp/pb/nl_rom/BU2/XST_GND
 VCC 		rh_disp/pb/nl_rom/BU2/XST_VCC
 
@@ -1423,10 +1418,10 @@ Section 6 - IOB Properties
 | ram0_data<29>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
 | ram0_data<30>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
 | ram0_data<31>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
-| ram0_data<32>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
-| ram0_data<33>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
-| ram0_data<34>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
-| ram0_data<35>                      | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
+| ram0_data<32>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<33>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<34>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
+| ram0_data<35>                      | IOB              | BIDIR     | LVDCI_33             |          |      |              |          |          |
 | ram0_oe_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram0_we_b                          | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
 | ram1_address<0>                    | IOB              | OUTPUT    | LVDCI_33             |          |      |              |          |          |
