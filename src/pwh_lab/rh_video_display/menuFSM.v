@@ -61,22 +61,22 @@ module menuFSM(
 	reg[47:0] highScoreReg = {6{8'b00110000}};
 	
 	always @(posedge clk) begin
-		case(state[1:0])
-			2'b00: highScoreReg <= asciiHighScore1;
-			2'b01: highScoreReg <= asciiHighScore2;
-			2'b10: highScoreReg <= asciiHighScore3;
-			2'b11: highScoreReg <= asciiHighScore4;
-		endcase
-		
 		if (reset) state <= songOne;
 		else if (enter && (state != inGame)) begin
+			case(state[1:0])
+				2'b00: highScoreReg <= asciiHighScore1;
+				2'b01: highScoreReg <= asciiHighScore2;
+				2'b10: highScoreReg <= asciiHighScore3;
+				2'b11: highScoreReg <= asciiHighScore4;
+				default:;
+			endcase
 			state <= inGame;
 			song_reg <= state[1:0];
 			reset_reg <= 1;
 		end
 		else begin
 			reset_reg <= 0;
-			if (state == inGame) begin
+			if (done &&(state == inGame)) begin
 				case(song_reg)
 					2'b00: begin
 						if (binaryIn > binaryHighScore1) begin

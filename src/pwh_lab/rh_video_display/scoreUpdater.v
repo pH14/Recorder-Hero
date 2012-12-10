@@ -42,6 +42,8 @@ module scoreUpdater(
 	parameter[3:0] A = 4'b1010;
 	parameter[3:0] As = 4'b1011;
 	parameter[3:0] B = 4'b1100;
+	parameter[3:0] Chigh = 4'b1101;
+	parameter[3:0] Dhigh = 4'b1110;
 
 	reg hitReg = 0;
 	reg scoreReg = 0;
@@ -75,6 +77,18 @@ module scoreUpdater(
 		else if ((currentNote - 4'd1) == correctNote) begin
 			hitReg <= 1;
 			scoreCount <= scoreCount + 1;
+		end
+		else if (correctNote == Chigh) begin
+			if (currentNote == Cs)begin
+				hitReg <= 1;
+				scoreCount <= scoreCount + 1;
+			end
+		end
+		else if (correctNote == Dhigh) begin
+			if (currentNote == Ds)begin
+				hitReg <= 1;
+				scoreCount <= scoreCount + 1;
+			end
 		end
 	end
 	

@@ -968,7 +968,6 @@ module rh_display (
 	input reset,
 	input up,
 	input down,
-	
 	input playing_correct,
 	input [2:0] menu_state,
 	input [15:0] current_note_string,
@@ -1012,12 +1011,14 @@ module rh_display (
 			  notes [7], notes[6], notes[5], notes[4],
 			  notes [3], notes[2], notes[1], notes[0] } = next_notes;
 
+	// Track y positions and colors for each note on screen
 	reg [9:0] note_y_pos[15:0];
 	reg [23:0] note_color[15:0];
 	
 	wire [23:0] note_line_pixels[7:0];
 	integer k;
 	
+	// Generate each note
 	genvar j;
 	generate
 		for(j=0; j<16; j=j+1) begin:generate_note_blobs
@@ -1047,11 +1048,10 @@ module rh_display (
 
 	reg load_tempo = 0;
 	
-	// Temporary tempo is 1/2 vclock, .5s per eighth note
-	//reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
+	// Default song tempo is 1/2s per 8th note
 	reg [25:0] song_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
-	wire tempo_beat;
-	wire tempo_beat_move;
+	wire tempo_beat;      // Indicates 1/8th note beat
+	wire tempo_beat_move; // Indicates 1/8th*1/64 to move the notes
 	
 	counter c(.clk(vclock),
 				 .reset(load_tempo),
@@ -1065,6 +1065,7 @@ module rh_display (
 				 .count_to(song_tempo/64),
 				 .ready(tempo_beat_move));
 	
+	// VISUAL BOUNDARY LINES
 	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 639;
 	wire right_boundary_line = hcount == 1022 & vcount >= 128 & vcount <= 639;
 	
@@ -1161,7 +1162,10 @@ module rh_display (
 			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
 		end
 	end
-
+	
+	///////////////////////////
+	// ONSCREEN TEXT DISPLAY //
+   ///////////////////////////
 	wire [2:0] score_pixel;
 	char_string_display csd_score(.vclock(vclock),
 								   .hcount(hcount),
@@ -1216,10 +1220,12 @@ module rh_display (
 									  .image_bits(bono_image_bits),
 									  .pixel(bono_pixel));
 
+	// Highlight the note currently being played
+	// on the scale on the left by alphablending
+	// the image
 	reg [23:0] curr_note_color;
 	reg [9:0] curr_note_y;
 	reg [23:0] bmp_pixel_alpha;
-
 	always @(*) begin
 		case(current_note_string)
 			"B " : curr_note_y = 127;
@@ -1242,7 +1248,7 @@ module rh_display (
 			"F#": curr_note_color = 24'h77_77_FF;
 			"D#": curr_note_color = 24'h77_77_FF;
 			"C#": curr_note_color = 24'h77_77_FF;
-			default: curr_note_color = 24'hFF_FF_00;
+			default: curr_note_color = 24'hDD_DD_00;
 		endcase
 		if (|bmp_pixel 
 		    && vcount >= curr_note_y 
@@ -1300,6 +1306,7 @@ module rh_display (
 	defparam csd_st4.NCHAR = 14;
 	defparam csd_st4.NCHAR_BITS = 4;
 	
+	// Create a block that indicates selected song
 	reg [8:0] current_song_y;
 	always @(*) begin
 		case(menu_state[1:0])
@@ -1319,7 +1326,93 @@ module rh_display (
 		  .vcount(vcount),
 		  .color(24'hFF_FF_FF),
 		  .pixel(song_select_box_pixel));
+		  
+	/////////////////////
+	/////// LEGEND //////
+	/////////////////////
+	wire [23:0] legend_sharp_pixel;
+	wire [23:0] legend_high_pixel;
+	wire [23:0] legend_hit_pixel;
+	wire [23:0] legend_miss_pixel;
+	wire [2:0] legend_sharp_text_pixel;
+	wire [2:0] legend_high_text_pixel;
+	wire [2:0] legend_hit_text_pixel;
+	wire [2:0] legend_miss_text_pixel;
 	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_sharp(.x(196),
+		  .y(640+17),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'h55_55_FF),
+		  .pixel(legend_sharp_pixel));
+		  
+	char_string_display csd_ls(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(legend_sharp_text_pixel),
+											.cstring("= Sharp"),
+											.cx(196+64+16),
+											.cy(640+17));
+	defparam csd_ls.NCHAR = 7;
+	defparam csd_ls.NCHAR_BITS = 3;
+	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_octave(.x(196),
+		  .y(640+17+24+24),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'h00_DD_00),
+		  .pixel(legend_high_pixel));
+		  
+	char_string_display csd_lh(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(legend_high_text_pixel),
+											.cstring("= Octave higher"),
+											.cx(196+64+16),
+											.cy(640+17+24+24));
+	defparam csd_lh.NCHAR = 15;
+	defparam csd_lh.NCHAR_BITS = 4;
+	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_hit_text(.x(580),
+		  .y(640+17),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'hFF_FF_00),
+		  .pixel(legend_hit_pixel));
+		  
+	char_string_display csd_lhittext(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(legend_hit_text_pixel),
+											.cstring("= Hit!"),
+											.cx(580+64+16),
+											.cy(640+17));
+	defparam csd_lhittext.NCHAR = 6;
+	defparam csd_lhittext.NCHAR_BITS = 3;
+	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_miss_text(.x(580),
+		  .y(640+17+24+24),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'hFF_45_00),
+		  .pixel(legend_miss_pixel));
+		  
+	char_string_display csd_lmisstext(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(legend_miss_text_pixel),
+											.cstring("= Miss!"),
+											.cx(580+64+16),
+											.cy(640+17+24+24));
+	defparam csd_lmisstext.NCHAR = 7;
+	defparam csd_lmisstext.NCHAR_BITS = 3;
+	
+	// For some reason the image from the zbt shows a small sliver
+	// on the side. This hack at least covers it up on the main screen
 	wire [23:0] vga_display_hack_pixel;
 	blob #(.WIDTH(16), .HEIGHT(768))
 		vga_display_hack(.x(0), .y(0),
@@ -1329,12 +1422,10 @@ module rh_display (
 							  .pixel(vga_display_hack_pixel));
 	
 	reg [23:0] pixel_reg;
-	
-	// For some reason the image from the zbt shows a small sliver
-	// on the side. This hack at least covers it up on the main screen
 	wire [23:0] bono_pixel_fix;
 	assign bono_pixel_fix = (hcount < 16) ? 24'h00_00_00 : bono_pixel;
 	
+	// Display output for menu / game
 	always @(posedge vclock) begin
 		if (!menu_state[2]) begin
 			pixel_reg <= bono_pixel_fix
@@ -1374,7 +1465,15 @@ module rh_display (
 						| {8{score_pixel}}
 						| {8{high_score_pixel}}
 						| {8{current_note_pixel}}
-						| bmp_pixel_alpha;
+						| bmp_pixel_alpha
+						| legend_sharp_pixel
+						| legend_high_pixel
+						| legend_hit_pixel
+						| legend_miss_pixel
+						| {8{legend_sharp_text_pixel}}
+						| {8{legend_high_text_pixel}}
+						| {8{legend_hit_text_pixel}}
+						| {8{legend_miss_text_pixel}};
 		end
 	end
 	
