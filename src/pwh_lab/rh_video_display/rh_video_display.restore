@@ -850,6 +850,7 @@ proc restore { { project_dir "" } } {
       "display_16hex.v" 
       "fft.v" 
       "font_rom.xco" 
+      "greensleeves.xco" 
       "hexToAscii.v" 
       "labkit.ucf" 
       "lotr_song.xco" 
@@ -870,6 +871,7 @@ proc restore { { project_dir "" } } {
       "song_scales.xco" 
       "usb_input.v" 
       "vram_display.v" 
+      "when_the_saints.xco" 
       "zbr_image_writer_tb.v" 
       "zbt_6111.v" 
       "zbt_image_writer.v"}
@@ -911,6 +913,13 @@ proc restore { { project_dir "" } } {
       "font_rom.edn" 
       "font_rom.mif" 
       "font_rom.v" 
+      "greensleeves.asy" 
+      "greensleeves.ngc" 
+      "greensleeves.sym" 
+      "greensleeves.v" 
+      "greensleeves.veo" 
+      "greensleeves.vhd" 
+      "greensleeves.vho" 
       "lab3_guide.ncd" 
       "lotr_song.asy" 
       "lotr_song.ngc" 
@@ -967,7 +976,14 @@ proc restore { { project_dir "" } } {
       "song_scales.v" 
       "song_scales.veo" 
       "song_scales.vhd" 
-      "song_scales.vho"}
+      "song_scales.vho" 
+      "when_the_saints.asy" 
+      "when_the_saints.ngc" 
+      "when_the_saints.sym" 
+      "when_the_saints.v" 
+      "when_the_saints.veo" 
+      "when_the_saints.vhd" 
+      "when_the_saints.vho"}
 
   set origination 2
 

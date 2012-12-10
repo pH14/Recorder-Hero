@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Sun Dec  9 16:53:45 2012">
+  <application stringID="Map" timeStamp="Sun Dec  9 20:01:54 2012">
     <task stringID="MAP_PACK_REPORT">
       <section stringID="MAP_DESIGN_INFORMATION">
         <item stringID="MAP_PART" value="2v6000bf957-4"/>
@@ -17,25 +17,25 @@
       <section stringID="MAP_DESIGN_SUMMARY">
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="438"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="670164"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="20 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="19 secs "/>
+        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="498"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="682264"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="21 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="20 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING"/>
       <section stringID="MAP_LOGIC_UTILIZATION">
-        <item dataType="int" stringID="MAP_NUM_SLICE_FF" value="6306"/>
+        <item dataType="int" stringID="MAP_NUM_SLICE_FF" value="6697"/>
         <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="10"/>
         <item dataType="int" stringID="MAP_NUM_SLICE" value="33792"/>
         <item dataType="int" stringID="MAP_FLOPS_PER_SLICE" value="2"/>
-        <item dataType="int" stringID="MAP_NUM_4_INPUT_LUT" value="7979"/>
-        <item dataType="int" stringID="MAP_NUM_LUT_RT" value="7979"/>
+        <item dataType="int" stringID="MAP_NUM_4_INPUT_LUT" value="8404"/>
+        <item dataType="int" stringID="MAP_NUM_LUT_RT" value="8404"/>
       </section>
       <section stringID="MAP_LOGIC_DISTRIBUTION">
-        <item dataType="int" stringID="MAP_AGG_SLICE" value="5879"/>
+        <item dataType="int" stringID="MAP_AGG_SLICE" value="6245"/>
         <item dataType="int" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_4_INPUT_LUT" value="8476"/>
-        <item dataType="int" stringID="MAP_NUM_LUT_RT" value="497"/>
+        <item dataType="int" stringID="MAP_NUM_4_INPUT_LUT" value="8902"/>
+        <item dataType="int" stringID="MAP_NUM_LUT_RT" value="498"/>
         <item dataType="int" stringID="MAP_NUM_DP_RAM" value="368"/>
         <item dataType="int" stringID="MAP_NUM_RAM32" value="0"/>
         <item dataType="int" stringID="MAP_NUM_RAM16" value="0"/>
@@ -50,7 +50,7 @@
       </section>
       <section stringID="MAP_HARD_IP_REPORTING">
         <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_JTAGPPC" value="0"/>
-        <item AVAILABLE="144" dataType="int" stringID="MAP_NUM_RAMB16" value="53"/>
+        <item AVAILABLE="144" dataType="int" stringID="MAP_NUM_RAMB16" value="64"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_ICAP" value="0"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_STARTUP" value="0"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_BSCAN" value="0"/>

@@ -1,5 +1,5 @@
 NUM_USER_FILES
-37
+39
 s
 user_file_1
 labkit.ucf
@@ -93,6 +93,12 @@ process_audio.v
 s
 user_file_37
 scoreUpdater.v
+s
+user_file_38
+when_the_saints.xco
+s
+user_file_39
+greensleeves.xco
 s
 user_file_4
 font_rom.xco

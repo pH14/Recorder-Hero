@@ -42,34 +42,41 @@ module menuFSM(
 	parameter[2:0] songOne = 3'b000;
 	parameter[2:0] songTwo = 3'b001;
 	parameter[2:0] songThree = 3'b010;
+	parameter[2:0] songFour = 3'b011;
 	parameter[3:0] inGame = 3'b111;
 	
 	reg[17:0] binaryHighScore1 = 0;
-	reg[47:0] asciiHighScore1 = {"000000"};
+	reg[47:0] asciiHighScore1 = {6{8'b00110000}};
 	
 	reg[17:0] binaryHighScore2 = 0;
-	reg[47:0] asciiHighScore2 = {"000000"};
+	reg[47:0] asciiHighScore2 = {6{8'b00110000}};
 	
 	reg[17:0] binaryHighScore3 = 0;
-	reg[47:0] asciiHighScore3 = {"000000"};
+	reg[47:0] asciiHighScore3 = {6{8'b00110000}};
 	
-	reg[47:0] highScoreReg = {"000000"};
+	reg[17:0] binaryHighScore4 = 0;
+	reg[47:0] asciiHighScore4 = {6{8'b00110000}};
+	
+	
+	reg[47:0] highScoreReg = {6{8'b00110000}};
 	
 	always @(posedge clk) begin
+		case(state[1:0])
+			2'b00: highScoreReg <= asciiHighScore1;
+			2'b01: highScoreReg <= asciiHighScore2;
+			2'b10: highScoreReg <= asciiHighScore3;
+			2'b11: highScoreReg <= asciiHighScore4;
+		endcase
+		
 		if (reset) state <= songOne;
-		else if (enter & (state != inGame)) begin
-			case(state[1:0])
-				2'b00: highScoreReg <= asciiHighScore1;
-				2'b01: highScoreReg <= asciiHighScore2;
-				2'b10: highScoreReg <= asciiHighScore3;
-			endcase
+		else if (enter && (state != inGame)) begin
 			state <= inGame;
 			song_reg <= state[1:0];
 			reset_reg <= 1;
 		end
 		else begin
 			reset_reg <= 0;
-			if (done) begin
+			if (state == inGame) begin
 				case(song_reg)
 					2'b00: begin
 						if (binaryIn > binaryHighScore1) begin
@@ -89,6 +96,12 @@ module menuFSM(
 							binaryHighScore3 <= binaryIn;
 						end
 					end
+					2'b11: begin
+						if (binaryIn > binaryHighScore4) begin
+							asciiHighScore4 <= asciiIn;
+							binaryHighScore4 <= binaryIn;
+						end
+					end					
 					default:;
 				endcase
 				state <= songOne;
@@ -97,7 +110,8 @@ module menuFSM(
 				case(state)
 					songOne: state <= down ? songTwo: songOne;
 					songTwo: state <=  up ? songOne: down? songThree: songTwo;
-					songThree: state <= up ? songTwo: songThree;
+					songThree: state <= up ? songTwo: down ? songFour: songThree;
+					songFour: state <= up ? songThree: songFour;
 					inGame: state <= done ? songOne: inGame;
 					default: state <= songOne;
 				endcase

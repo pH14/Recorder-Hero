@@ -1,0 +1,13 @@
+# Output products list for <when_the_saints>
+when_the_saints.asy
+when_the_saints.mif
+when_the_saints.ngc
+when_the_saints.sym
+when_the_saints.v
+when_the_saints.veo
+when_the_saints.vhd
+when_the_saints.vho
+when_the_saints.xco
+when_the_saints_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+when_the_saints_flist.txt
+when_the_saints_xmdf.tcl

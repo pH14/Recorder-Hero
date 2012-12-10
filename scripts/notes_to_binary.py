@@ -14,7 +14,8 @@ note_to_binary = {
   'A': "1010",
   'A#': "1011",
   'B': "1100",
-  'Ch': "1101"
+  'Ch': "1101",
+  'Dh': "1110"
 }
 
 for music_file in os.listdir('music'):

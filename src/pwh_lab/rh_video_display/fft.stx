@@ -5,16 +5,18 @@ Parameter TMPDIR set to ./xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "my_fft.v" in library work
-Compiling verilog file "./song_scales.v" in library work
+Compiling verilog file "./my_fft.v" in library work
+Compiling verilog file "when_the_saints.v" in library work
 Module <my_fft> compiled
+Compiling verilog file "./song_scales.v" in library work
+Module <when_the_saints> compiled
 Compiling verilog file "process_audio.v" in library work
 Module <song_scales> compiled
 Module <process_audio> compiled
@@ -52,10 +54,16 @@ Compiling verilog file "noteIdentification.v" in library work
 Module <picture_blob> compiled
 Compiling verilog file "musical_score_loader.v" in library work
 Module <noteIdentification> compiled
+ERROR:HDLCompilers:26 - "musical_score_loader.v" line 58 unexpected token: 'default'
+ERROR:HDLCompilers:26 - "musical_score_loader.v" line 58 expecting ';', found ':'
+ERROR:HDLCompilers:26 - "musical_score_loader.v" line 58 unexpected token: '='
+ERROR:HDLCompilers:26 - "musical_score_loader.v" line 58 expecting ':', found ';'
 Compiling verilog file "menuFSM.v" in library work
 Module <musical_score_loader> compiled
-Compiling verilog file "hexToAscii.v" in library work
+ERROR:HDLCompilers:26 - "menuFSM.v" line 78 expecting 'end', found 'else'
 Module <menuFSM> compiled
+ERROR:HDLCompilers:26 - "menuFSM.v" line 78 expecting 'endmodule', found 'begin'
+Compiling verilog file "hexToAscii.v" in library work
 Compiling verilog file "display_16hex.v" in library work
 Module <hexToAscii> compiled
 Compiling verilog file "cstringdisp.v" in library work
@@ -75,20 +83,13 @@ Module <ac97commands> compiled
 Module <fft> compiled
 Module <xvga> compiled
 Module <rh_display> compiled
-No errors in compilation
-Analysis of file <"fft.prj"> succeeded.
- 
-
-
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
- 
+Analysis of file <"fft.prj"> failed.
 --> 
 
 
-Total memory usage is 286220 kilobytes
+Total memory usage is 284324 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :    6 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

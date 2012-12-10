@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (lin64)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-eecs-digital-33::  Sun Dec 09 16:54:01 2012
+eecs-digital-33::  Sun Dec 09 20:02:10 2012
 
 par -w -intstyle ise -ol std -t 1 fft_map.ncd fft.ncd fft.pcf 
 
@@ -35,9 +35,9 @@ Device Utilization Summary:
    Number of External IOBs                 577 out of 684    84%
       Number of LOCed IOBs                 576 out of 577    99%
 
-   Number of MULT18X18s                     28 out of 144    19%
-   Number of RAMB16s                        53 out of 144    36%
-   Number of SLICEs                       5879 out of 33792  17%
+   Number of MULT18X18s                     29 out of 144    20%
+   Number of RAMB16s                        64 out of 144    44%
+   Number of SLICEs                       6245 out of 33792  18%
 
 
 Overall effort level (-ol):   Standard 
@@ -323,93 +323,93 @@ WARNING:Par:288 - The signal daughtercard<9>_IBUF has no load.  PAR will not att
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:2892baa) REAL time: 13 secs 
+Phase 1.1 (Checksum:2b00393) REAL time: 13 secs 
 
 Phase 2.7
 INFO:Place:834 - Only a subset of IOs are locked. Out of 577 IOs, 576 are locked and 1 are not locked. If you would like
    to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7 (Checksum:2892baa) REAL time: 13 secs 
+Phase 2.7 (Checksum:2b00393) REAL time: 14 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:2892baa) REAL time: 13 secs 
+Phase 3.31 (Checksum:2b00393) REAL time: 14 secs 
 
 Phase 4.2
 
 ......
 .....................
-Phase 4.2 (Checksum:28e576e) REAL time: 18 secs 
+Phase 4.2 (Checksum:2b52f57) REAL time: 19 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:28e576e) REAL time: 18 secs 
+Phase 5.30 (Checksum:2b52f57) REAL time: 19 secs 
 
 Phase 6.3
 
-Phase 6.3 (Checksum:28e5e65) REAL time: 18 secs 
+Phase 6.3 (Checksum:2b5364e) REAL time: 19 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:28e5e65) REAL time: 19 secs 
+Phase 7.5 (Checksum:2b5364e) REAL time: 20 secs 
 
 Phase 8.8
 ............................
-......
-..
-....................
-................
-............
-Phase 8.8 (Checksum:f75334f) REAL time: 1 mins 12 secs 
+........
+...
+.........................
+...............
+...............
+Phase 8.8 (Checksum:f05dd1a) REAL time: 1 mins 25 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:f75334f) REAL time: 1 mins 12 secs 
+Phase 9.5 (Checksum:f05dd1a) REAL time: 1 mins 25 secs 
 
 Phase 10.18
-Phase 10.18 (Checksum:f81da14) REAL time: 2 mins 33 secs 
+Phase 10.18 (Checksum:f0fe71a) REAL time: 2 mins 36 secs 
 
 Phase 11.5
-Phase 11.5 (Checksum:f81da14) REAL time: 2 mins 33 secs 
+Phase 11.5 (Checksum:f0fe71a) REAL time: 2 mins 37 secs 
 
 Phase 12.27
-Phase 12.27 (Checksum:f81da14) REAL time: 2 mins 34 secs 
+Phase 12.27 (Checksum:f0fe71a) REAL time: 2 mins 38 secs 
 
 Phase 13.24
-Phase 13.24 (Checksum:f81da14) REAL time: 2 mins 34 secs 
+Phase 13.24 (Checksum:f0fe71a) REAL time: 2 mins 38 secs 
 
-REAL time consumed by placer: 2 mins 35 secs 
-CPU  time consumed by placer: 2 mins 35 secs 
+REAL time consumed by placer: 2 mins 39 secs 
+CPU  time consumed by placer: 2 mins 39 secs 
 Writing design to file fft.ncd
 
 
-Total REAL time to Placer completion: 2 mins 37 secs 
-Total CPU time to Placer completion: 2 mins 36 secs 
+Total REAL time to Placer completion: 2 mins 40 secs 
+Total CPU time to Placer completion: 2 mins 40 secs 
 
 Starting Router
 
-Phase 1: 44526 unrouted;       REAL time: 2 mins 50 secs 
+Phase 1: 46792 unrouted;       REAL time: 2 mins 55 secs 
 
-Phase 2: 35410 unrouted;       REAL time: 2 mins 53 secs 
+Phase 2: 37258 unrouted;       REAL time: 2 mins 58 secs 
 
-Phase 3: 7425 unrouted;       REAL time: 2 mins 59 secs 
+Phase 3: 8002 unrouted;       REAL time: 3 mins 4 secs 
 
-Phase 4: 7425 unrouted; (1105892)      REAL time: 2 mins 59 secs 
+Phase 4: 8002 unrouted; (1975023)      REAL time: 3 mins 4 secs 
 
-Phase 5: 7515 unrouted; (4669)      REAL time: 3 mins 2 secs 
+Phase 5: 8046 unrouted; (2746)      REAL time: 3 mins 8 secs 
 
-Phase 6: 0 unrouted; (5079)      REAL time: 3 mins 8 secs 
+Phase 6: 0 unrouted; (4656)      REAL time: 3 mins 15 secs 
 
-Phase 7: 0 unrouted; (5079)      REAL time: 3 mins 14 secs 
+Phase 7: 0 unrouted; (4656)      REAL time: 3 mins 21 secs 
 
-Phase 8: 0 unrouted; (5079)      REAL time: 3 mins 14 secs 
+Phase 8: 0 unrouted; (4656)      REAL time: 3 mins 21 secs 
 
-Phase 9: 0 unrouted; (4619)      REAL time: 3 mins 18 secs 
+Phase 9: 0 unrouted; (4626)      REAL time: 3 mins 27 secs 
 
-Phase 10: 0 unrouted; (4619)      REAL time: 3 mins 23 secs 
+Phase 10: 0 unrouted; (4626)      REAL time: 3 mins 35 secs 
 
-Phase 11: 0 unrouted; (4619)      REAL time: 3 mins 23 secs 
+Phase 11: 0 unrouted; (4626)      REAL time: 3 mins 35 secs 
 
-Phase 12: 0 unrouted; (4619)      REAL time: 3 mins 28 secs 
+Phase 12: 0 unrouted; (4490)      REAL time: 3 mins 41 secs 
 
 
-Total REAL time to Router completion: 3 mins 29 secs 
-Total CPU time to Router completion: 3 mins 29 secs 
+Total REAL time to Router completion: 3 mins 43 secs 
+Total CPU time to Router completion: 3 mins 42 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -427,21 +427,21 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|   clock_27mhz_IBUFG |     BUFGMUX3P| No   | 3654 |  0.572     |  2.465      |
+|   clock_27mhz_IBUFG |     BUFGMUX3P| No   | 3652 |  0.562     |  2.480      |
 +---------------------+--------------+------+------+------------+-------------+
-|           hex/clock |     BUFGMUX2S| No   |   30 |  0.191     |  2.475      |
+|                 clk |     BUFGMUX1P| No   |  556 |  0.678     |  2.557      |
 +---------------------+--------------+------+------+------------+-------------+
-|         clock_65mhz |     BUFGMUX0S| No   |   55 |  0.123     |  2.410      |
+|         clock_65mhz |     BUFGMUX0S| No   |  232 |  0.264     |  2.312      |
 +---------------------+--------------+------+------+------------+-------------+
-|                 clk |     BUFGMUX1P| No   |  471 |  0.682     |  2.561      |
+|           hex/clock |     BUFGMUX2S| No   |   29 |  0.166     |  2.390      |
 +---------------------+--------------+------+------+------------+-------------+
 |ac97_bit_clock_BUFGP |              |      |      |            |             |
-|                     |     BUFGMUX7S| No   |   43 |  0.087     |  2.360      |
+|                     |     BUFGMUX7S| No   |   43 |  0.055     |  2.349      |
 +---------------------+--------------+------+------+------------+-------------+
 |        rc/ram_clock |     BUFGMUX4P| No   |    6 |  0.103     |  2.444      |
 +---------------------+--------------+------+------+------------+-------------+
 |rh_disp/old_curr_not |              |      |      |            |             |
-|      e_y_13_not0001 |         Local|      |   11 |  0.026     |  0.820      |
+|      e_y_11_not0001 |         Local|      |   11 |  0.015     |  1.665      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -460,20 +460,20 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP   |         N/A|    13.742ns|     N/A|           0
-  ck_27mhz_IBUFG                            | HOLD    |     0.905ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|    13.226ns|     N/A|           0
+  ck_27mhz_IBUFG                            | HOLD    |     0.847ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net hex | SETUP   |         N/A|    11.063ns|     N/A|           0
-  /clock                                    | HOLD    |     1.334ns|            |       0|           0
-------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP   |         N/A|     5.478ns|     N/A|           0
-  ck_65mhz                                  | HOLD    |     1.361ns|            |       0|           0
-------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP   |         N/A|    18.592ns|     N/A|           0
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|    17.995ns|     N/A|           0
                                             | HOLD    |     1.334ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net ac9 | SETUP   |         N/A|    13.144ns|     N/A|           0
-  7_bit_clock_BUFGP                         | HOLD    |     1.330ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|     7.814ns|     N/A|           0
+  ck_65mhz                                  | HOLD    |     1.251ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net hex | SETUP   |         N/A|    11.636ns|     N/A|           0
+  /clock                                    | HOLD    |     1.336ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net ac9 | SETUP   |         N/A|    12.036ns|     N/A|           0
+  7_bit_clock_BUFGP                         | HOLD    |     1.363ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -484,9 +484,9 @@ Derived Constraints for clock_65mhz
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|clock_65mhz                    |      6.025ns|      5.478ns|          N/A|            0|            0|          814|            0|
-| rc/ram_clk                    |      6.025ns|          N/A|          N/A|            0|            0|            0|            0|
-| rc/fpga_clk                   |      6.025ns|          N/A|          N/A|            0|            0|            0|            0|
+|clock_65mhz                    |      8.595ns|      7.814ns|          N/A|            0|            0|        14690|            0|
+| rc/ram_clk                    |      8.595ns|          N/A|          N/A|            0|            0|            0|            0|
+| rc/fpga_clk                   |      8.595ns|          N/A|          N/A|            0|            0|            0|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -500,10 +500,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 274 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 mins 48 secs 
-Total CPU time to PAR completion: 3 mins 45 secs 
+Total REAL time to PAR completion: 4 mins 3 secs 
+Total CPU time to PAR completion: 3 mins 59 secs 
 
-Peak Memory Usage:  1019 MB
+Peak Memory Usage:  1050 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

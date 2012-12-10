@@ -686,7 +686,7 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire songDone;
 	wire [2:0] menuState;
 	wire menuResetOut;
-	wire song;
+	wire [1:0] song;
 
 	wire[17:0] scoreBinary;
 	wire[47:0] asciiScore;
@@ -1118,6 +1118,8 @@ module rh_display (
 					4'd12: note_y_pos[k] <= FIRST_LETTER + 0*NOTE_STEP;
 					// C high
 					4'd13: note_y_pos[k] <= FIRST_LETTER + 6*NOTE_STEP;
+					// D high
+					4'd14: note_y_pos[k] <= FIRST_LETTER + 5*NOTE_STEP;
 					// EOF
 					4'd15: note_y_pos[k] <= FIRST_LETTER + 768;
 					default: note_y_pos[k] <= FIRST_LETTER;
@@ -1138,6 +1140,8 @@ module rh_display (
 					4'd11: note_color[k] <= 24'h55_55_FF;
 					// C high
 					4'd13: note_color[k] <= 24'h00_DD_00;
+					// D high
+					4'd14: note_color[k] <= 24'h00_DD_00;
 					default: note_color[k] <= 24'hFF_FF_FF;
 				endcase
 			end
@@ -1279,11 +1283,22 @@ module rh_display (
 											.hcount(hcount),
 											.vcount(vcount),
 											.pixel(song_title_3_pixel),
-											.cstring("Practice Scale"),
+											.cstring("Greensleeves"),
 											.cx(23),
 											.cy(345));
-	defparam csd_st3.NCHAR = 14;
+	defparam csd_st3.NCHAR = 12;
 	defparam csd_st3.NCHAR_BITS = 4;
+	
+	wire [2:0] song_title_4_pixel;
+	char_string_display csd_st4(.vclock(vclock),
+											.hcount(hcount),
+											.vcount(vcount),
+											.pixel(song_title_4_pixel),
+											.cstring("Practice Scale"),
+											.cx(23),
+											.cy(375));
+	defparam csd_st4.NCHAR = 14;
+	defparam csd_st4.NCHAR_BITS = 4;
 	
 	reg [8:0] current_song_y;
 	always @(*) begin
@@ -1291,6 +1306,7 @@ module rh_display (
 			2'b00: current_song_y = 9'd285;
 			2'b01: current_song_y = 9'd315;
 			2'b10: current_song_y = 9'd345;
+			2'b11: current_song_y = 9'd375;
 			default: current_song_y = 9'd285;
 		endcase
 	end
@@ -1325,6 +1341,7 @@ module rh_display (
 					  | {8{song_title_1_pixel}}
 					  | {8{song_title_2_pixel}}
 					  | {8{song_title_3_pixel}}
+					  | {8{song_title_4_pixel}}
 					  | {8{current_note_pixel}}
 					  | song_select_box_pixel;
 		end else begin

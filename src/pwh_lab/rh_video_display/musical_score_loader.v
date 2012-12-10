@@ -31,11 +31,15 @@ module musical_score_loader(
 	reg [3:0] next_notes[15:0];
 	wire [3:0] next_note_lotr;
 	wire [3:0] next_note_ss;
+	wire [3:0] next_note_saints;
+	wire [3:0] next_note_greensleeves;
 	
 	reg [25:0] tempo;
 	
 	song_scales ss(.clka(clk), .addra(read_addr), .douta(next_note_ss));
 	lotr_song lotr(.clka(clk), .addra(read_addr), .douta(next_note_lotr));
+	when_the_saints wts(.clka(clk), .addra(read_addr), .douta(next_note_saints));
+	greensleeves gs(.clka(clk), .addra(read_addr), . douta(next_note_greensleeves));
 	
 	wire tempo_beat;
 	reg song_has_ended = 1;
@@ -48,8 +52,9 @@ module musical_score_loader(
 	always @(*) begin
 		case(song_id)
 			2'b00: tempo = 26'b00_1111_0111_1111_0100_1001_0000;
-			2'b01: tempo = 26'b0_1111_0111_1111_0100_1001_0000_0;
+			2'b01: tempo = 26'b00_1111_0111_1111_0100_1001_0000;
 			2'b10: tempo = 26'b0_1111_0111_1111_0100_1001_0000_0;
+			2'b11: tempo = 26'b0_1111_0111_1111_0100_1001_0000_0;
 			default: tempo = 26'b0_1111_0111_1111_0100_1001_0000_0;
 		endcase
 	end
@@ -75,7 +80,9 @@ module musical_score_loader(
 			end else begin
 				case(song_id)
 					2'b00: next_notes[15] <= next_note_lotr;
-					2'b01: next_notes[15] <= next_note_ss;
+					2'b01: next_notes[15] <= next_note_saints;
+					2'b10: next_notes[15] <= next_note_greensleeves;
+					2'b11: next_notes[15] <= next_note_ss;
 					default: next_notes[15] <= 4'b0000;
 				endcase
 				
@@ -93,6 +100,6 @@ module musical_score_loader(
 									  next_notes[3], next_notes[2], next_notes[1],
 									  next_notes[0]};
 	
-	assign song_done = (next_notes[7] == 4'b1111);
+	assign song_done = (next_notes[0] == 4'b1111);
 	assign tempo_out = tempo;
 endmodule
