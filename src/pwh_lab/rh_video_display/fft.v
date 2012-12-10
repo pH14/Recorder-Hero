@@ -495,12 +495,6 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
    ////////////////////////////////////////////////////////////////////////////
    //
-   // I/O Assignments
-   //
-   ////////////////////////////////////////////////////////////////////////////
-   
-   ////////////////////////////////////////////////////////////////////////////
-   //
    // Reset Generation
    //
    // A shift register primitive is used to generate an active-high reset
@@ -673,8 +667,9 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire enter;
 	wire resetButton;
 	
+	//Set up signals from all the buttons used.
 	debounce bup(reset, clock_27mhz, ~button_up, up);
-   debounce bdown(reset, clock_27mhz, ~button_down, down);
+    debounce bdown(reset, clock_27mhz, ~button_down, down);
 	debounce benter(reset, clock_27mhz, ~button_enter, enter);
 	debounce breset(reset, clock_27mhz, ~button0, resetButton);
 	
@@ -692,9 +687,11 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire[47:0] asciiScore;
 	wire[47:0] highScore;
 
+	//Menu FSM instantiation, deals with menu states and keeping correct high scores
    menuFSM menu(up,down,enter,boardReset,songDone,clock_65mhz,scoreBinary,
 						asciiScore,menuState,menuResetOut,song,highScore);
 
+						
 	assign menuReset = (menuResetOut | boardReset);
 
    wire [15:0] from_ac97_data, to_ac97_data;
@@ -715,6 +712,7 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [15:0] analyzer1_out;
 	wire [15:0] analyzer2_out;
 	
+	//Note identification instatiation, takes in ac97 information and outputs the currentNote played.
 	noteIdentification a1(reset,clock_27mhz,ready,switch,from_ac97_data,currentNote,GuessAddr,readVal,analyzer1_out,analyzer2_out);
 	
 	assign analyzer3_data = analyzer2_out;
@@ -726,12 +724,15 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	
 	wire [63:0] nn;
 	
+	// Takes in a hex representation of a note from noteIdentification and a hex representation from the musical score loader and updates the score and if note was played correctly.
 	scoreUpdater updater(clock_65mhz,currentNote,nn[3:0],menuReset,hit,
 						score,notePlayed,scoreBinary);
 	
+	//Counts up in ASCII to our maximum score value
 	binaryCounterASCII counter(clock_65mhz,menuReset,score,asciiScore);
 
 	wire[15:0] asciiNote;
+	//Turns the hex representation of a note to a 2 byte ascii representation to be shown
 	hexToAscii hexy(notePlayed,clock_65mhz,asciiNote);
 
 	   ////////////////////////////////////////////////////////////////////////////

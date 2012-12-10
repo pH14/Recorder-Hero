@@ -29,6 +29,7 @@ module scoreUpdater(
 	 output [17:0] binaryOut
     );
 
+	// Hex representation of notes
 	parameter[3:0] Z = 4'b0000;
 	parameter[3:0] C = 4'b0001;
 	parameter[3:0] Cs = 4'b0010;
@@ -53,19 +54,25 @@ module scoreUpdater(
 	
 	
 	always @(posedge clk) begin
+		//Stop saying it was a hit if last clock was a hit
 		if (hitReg) begin 
 			hitReg <= 0;
 		end
+		//Stop saying to up the score in ascii if last clock said so
 		if (scoreReg) scoreReg <= 0;
+		//If the counter reached max value, output one on the score for ascii, add one to the binary representation for high score purposes
 		if (&scoreCount) begin
 			scoreReg <= 1;
 			binaryScoreReg <= binaryScoreReg + 1;
 		end
+		
 		if(reset) begin
 			scoreReg <= 0;
 			scoreCount <= 0 ;
 			binaryScoreReg <= 0;
 		end
+		
+		//Bug reproduced off by one hex values from note identification, this is the fix
 		notePlayedReg <= currentNote - 1;
 		if (currentNote == C) begin
 			notePlayedReg <= B;
@@ -78,6 +85,8 @@ module scoreUpdater(
 			hitReg <= 1;
 			scoreCount <= scoreCount + 1;
 		end
+		
+		//Seperately check Chigh and Dhigh, the higher octave versions
 		else if (correctNote == Chigh) begin
 			if (currentNote == Cs)begin
 				hitReg <= 1;

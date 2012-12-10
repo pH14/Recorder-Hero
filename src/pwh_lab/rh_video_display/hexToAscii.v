@@ -37,6 +37,7 @@ module hexToAscii(
 	
 	reg [15:0] ascii;
 	
+	//Takes hex representation of note and translates to ascii.
 	always @(posedge clk) begin
 		case (hex)
 			4'b0000: ascii <= {space,space};

@@ -61,7 +61,9 @@ module menuFSM(
 	reg[47:0] highScoreReg = {6{8'b00110000}};
 	
 	always @(posedge clk) begin
+		//Resetting
 		if (reset) state <= songOne;
+		//If you pressed enter from the menu, load the correct current high score
 		else if (enter && (state != inGame)) begin
 			case(state[1:0])
 				2'b00: highScoreReg <= asciiHighScore1;
@@ -70,12 +72,14 @@ module menuFSM(
 				2'b11: highScoreReg <= asciiHighScore4;
 				default:;
 			endcase
+			// Set the correct state as well as current song, and output a reset to the necessary components
 			state <= inGame;
 			song_reg <= state[1:0];
 			reset_reg <= 1;
 		end
 		else begin
 			reset_reg <= 0;
+			// Update the current high score for the song if it is higher than the previous one once the song is done
 			if (done &&(state == inGame)) begin
 				case(song_reg)
 					2'b00: begin
@@ -104,9 +108,12 @@ module menuFSM(
 					end					
 					default:;
 				endcase
+				//Also go back to the menu
 				state <= songOne;
 			end
+			//Make sure a button wasn't just pressed
 			if (!previous_button) begin
+				//Update the current state depending on the button pressed
 				case(state)
 					songOne: state <= down ? songTwo: songOne;
 					songTwo: state <=  up ? songOne: down? songThree: songTwo;
@@ -115,8 +122,10 @@ module menuFSM(
 					inGame: state <= done ? songOne: inGame;
 					default: state <= songOne;
 				endcase
+				//Stop it from reaching this case until both buttons are depressed
 				previous_button <= 1;
 			end
+			//Both buttons are depressed, allow it to change states again
 			if (!down & !up) previous_button <= 0;
 		end
 	end

@@ -68,6 +68,7 @@ module process_audio(clock_27mhz,reset,ready,from_ac97_data,haddr,hdata,hwe);
     else case (state)
      3'h0: if (ready) state <= 1;
      3'h1: begin
+		// Only look at bins that we care about
 			state <= 0;
 			if (xk_index == 12'b000000101010) begin
 				state <= 2;

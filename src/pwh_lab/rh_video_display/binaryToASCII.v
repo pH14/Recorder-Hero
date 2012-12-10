@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Andres Romero 
 // 
 // Create Date:    14:24:01 12/08/2012 
-// Design Name: 
+// Design Name:    
 // Module Name:    binaryToASCII 
 // Project Name: 
 // Target Devices: 
@@ -32,6 +32,7 @@ module binaryCounterASCII(
 	reg[4:0] tenthousands = 0;
 	reg[4:0] hundredthousands = 0;
 
+	//Counters for each digit up to the 6th digit, can count up to whatever ascii value desired.
 	always @(posedge clk)begin
 		if (reset) begin
 			ones <= 0;
@@ -66,7 +67,8 @@ module binaryCounterASCII(
 			end
 		end
 	end
-	
+
+	//Assign output
 	assign asciiScore = {8'b00110000 + hundredthousands,
 								 8'b00110000 + tenthousands,
 								 8'b00110000 + thousands,
