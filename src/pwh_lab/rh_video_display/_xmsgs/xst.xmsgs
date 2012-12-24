@@ -23,166 +23,214 @@
 <msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1065 </arg>Connection to input port &apos;<arg fmt="%s" index="2">count_to</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1171 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1175 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1172 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1176 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1182 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1186 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1183 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1187 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1204 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1208 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1206 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1210 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1212 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1216 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1213 </arg>Connection to input port &apos;<arg fmt="%s" index="2">hcount</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1217 </arg>Connection to input port &apos;<arg fmt="%s" index="2">hcount</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1214 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1218 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1215 </arg>Connection to input port &apos;<arg fmt="%s" index="2">vcount</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1219 </arg>Connection to input port &apos;<arg fmt="%s" index="2">vcount</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1265 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1271 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1266 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1272 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1276 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1282 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1277 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1283 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1287 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1293 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1288 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1294 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1298 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1304 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1299 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1305 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1316 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1323 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1317 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1324 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1325 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1343 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1325 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1344 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1355 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1356 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1361 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1362 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1373 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1374 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1379 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1380 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1391 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1392 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1397 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1398 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1409 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cx</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1410 </arg>Connection to input port &apos;<arg fmt="%s" index="2">cy</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1418 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1025 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1418 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1038 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1026 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1039 </arg>Connection to input port &apos;<arg fmt="%s" index="2">x</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 1040 </arg>Connection to input port &apos;<arg fmt="%s" index="2">y</arg>&apos; does not match port size
 </msg>
 
 <msg type="warning" file="Xst" num="2591" delta="unknown" ><arg fmt="%s" index="1">&quot;fft.v&quot; line 647:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">CLKFX_DIVIDE</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
@@ -425,6 +473,30 @@
 <msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">hoff&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">voff&lt;9:5&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">voff&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">hoff&lt;10:7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">hoff&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">voff&lt;9:5&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">voff&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">hoff&lt;10:7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">hoff&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">writevalz_rnm0</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
@@ -446,7 +518,7 @@
 <msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">curr_note_color</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">fft.v</arg>&quot; line <arg fmt="%d" index="2">1250</arg>: The result of a <arg fmt="%d" index="3">24</arg>x<arg fmt="%d" index="4">2</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">24</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">fft.v</arg>&quot; line <arg fmt="%d" index="2">1256</arg>: The result of a <arg fmt="%d" index="3">24</arg>x<arg fmt="%d" index="4">2</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">24</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">10</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">$old_curr_note_y_11</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -1271,8 +1343,20 @@
 <msg type="info" file="Xst" num="1767" delta="unknown" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="warning" file="Xst" num="524" delta="unknown" >All outputs of the instance &lt;<arg fmt="%s" index="1">vga_display_hack</arg>&gt; of the block &lt;<arg fmt="%s" index="2">blob_2</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;.
+<msg type="warning" file="Xst" num="524" delta="unknown" >All outputs of the instance &lt;<arg fmt="%s" index="1">vga_display_hack</arg>&gt; of the block &lt;<arg fmt="%s" index="2">blob_3</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">rh_display</arg>&gt;.
 This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="unknown" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_font_addr_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="unknown" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_font_addr_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="unknown" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_font_addr_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="unknown" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_font_addr_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
 </msg>
 
 <msg type="info" file="Xst" num="2385" delta="unknown" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_font_addr_mult0000</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
@@ -1793,6 +1877,24 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">GuessAddr_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">a1</arg>&gt;.
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_19&gt; &lt;rh_disp/onscreen_notes_0_21&gt; &lt;rh_disp/onscreen_notes_0_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_18&gt; &lt;rh_disp/onscreen_notes_0_20&gt; &lt;rh_disp/onscreen_notes_0_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_1&gt; &lt;rh_disp/onscreen_notes_0_2&gt; &lt;rh_disp/onscreen_notes_0_3&gt; &lt;rh_disp/onscreen_notes_0_4&gt; &lt;rh_disp/onscreen_notes_0_5&gt; &lt;rh_disp/onscreen_notes_0_6&gt; &lt;rh_disp/onscreen_notes_0_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_10&gt; &lt;rh_disp/onscreen_notes_0_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_13&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">l_right_data_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ac97</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;l_right_data_1&gt; &lt;l_right_data_2&gt; &lt;l_right_data_3&gt; </arg>
 </msg>
 
@@ -1802,16 +1904,16 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_3_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_1_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_3_rom00001</arg>&gt;
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_2_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_4_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_2_rom00001</arg>&gt;
+<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_2_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_6_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_2_rom00001</arg>&gt;
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_5_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_6_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_5_rom00001</arg>&gt;
+<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_4_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_5_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_4_rom00001</arg>&gt;
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_7_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_10_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_7_rom00001</arg>&gt;
+<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_9_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_7_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_9_rom00001</arg>&gt;
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_8_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_9_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_8_rom00001</arg>&gt;
+<msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_8_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_10_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_8_rom00001</arg>&gt;
 </msg>
 
 <msg type="info" file="Xst" num="2697" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">fft</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">rh_disp/Mrom_notes_11_rom0000</arg>&gt;, &lt;<arg fmt="%s" index="3">rh_disp/Mrom_notes_12_rom0000</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">rh_disp/Mrom_notes_11_rom00001</arg>&gt;
@@ -2330,12 +2432,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/asciiHighScore4_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/asciiHighScore4_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_10&gt; &lt;rh_disp/onscreen_notes_0_14&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_15&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/asciiHighScore4_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/asciiHighScore4_28&gt; </arg>
 </msg>
 
@@ -2352,9 +2448,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/asciiHighScore4_45</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/asciiHighScore4_44&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_13&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/asciiHighScore1_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/asciiHighScore1_28&gt; </arg>
@@ -2381,16 +2474,7 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/song_tempo_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;msl/c/goal_20&gt; &lt;msl/c/goal_12&gt; &lt;msl/c/goal_10&gt; &lt;msl/c/goal_7&gt; &lt;msl/c/goal_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_18&gt; &lt;rh_disp/onscreen_notes_0_20&gt; &lt;rh_disp/onscreen_notes_0_22&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/asciiHighScore2_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/asciiHighScore2_28&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_1&gt; &lt;rh_disp/onscreen_notes_0_2&gt; &lt;rh_disp/onscreen_notes_0_3&gt; &lt;rh_disp/onscreen_notes_0_4&gt; &lt;rh_disp/onscreen_notes_0_5&gt; &lt;rh_disp/onscreen_notes_0_6&gt; &lt;rh_disp/onscreen_notes_0_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">rh_disp/onscreen_notes_0_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rh_disp/onscreen_notes_0_19&gt; &lt;rh_disp/onscreen_notes_0_21&gt; &lt;rh_disp/onscreen_notes_0_23&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/asciiHighScore2_37</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/asciiHighScore2_36&gt; </arg>
@@ -2411,15 +2495,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">a/ac97/l_cmd_data_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;a/ac97/l_cmd_data_5&gt; &lt;a/ac97/l_cmd_data_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_12&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_20&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_28&gt; </arg>
 </msg>
 
@@ -2429,22 +2504,13 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_45</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_44&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000a4e</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">a1/audio/fft2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk00001266&gt; </arg>
+<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00003a8f</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">a1/audio/fft2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk00003ac1&gt; &lt;blk00003af3&gt; &lt;blk00003b25&gt; </arg>
+<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00003a90</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">a1/audio/fft2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk00003ac2&gt; &lt;blk00003af4&gt; &lt;blk00003b26&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_12&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_20&gt; </arg>
+<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;menu/highScoreReg_20&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_28&gt; </arg>
@@ -2456,16 +2522,22 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_45</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_44&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000a4e</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">a1/audio/fft2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk00001266&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00003a8f</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">a1/audio/fft2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk00003ac1&gt; &lt;blk00003af3&gt; &lt;blk00003b25&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00003a90</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">a1/audio/fft2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk00003ac2&gt; &lt;blk00003af4&gt; &lt;blk00003b26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">menu/highScoreReg_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fft</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;menu/highScoreReg_20&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_lh/f</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_score/f</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_st2/f</arg>.
@@ -2480,7 +2552,13 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_st4/f</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_score/f</arg>.
+<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_lmisstext/f</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_ls/f</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_lhittext/f</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">rh_disp/csd_hscore/f</arg>.

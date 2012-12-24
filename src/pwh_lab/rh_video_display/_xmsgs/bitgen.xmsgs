@@ -836,18 +836,6 @@
 <msg type="info" file="PhysDesignRules" num="772" delta="unknown" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">vclk1</arg>, consult the device Interactive Data Sheet.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003ac0.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003abd.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003abe.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003abf.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
 <msg type="warning" file="PhysDesignRules" num="812" delta="unknown" >Dangling pin &lt;<arg fmt="%s" index="1">DOB1</arg>&gt; on block:&lt;<arg fmt="%s" index="2">rh_disp/bpb_img/b_blue/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2_init.ram/spram.ram.B</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16_RAMB16B</arg>&gt;.
 </msg>
 
@@ -1466,34 +1454,46 @@
 <msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00000559.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
 </msg>
 
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003840.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003841.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003842.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk0000383f.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
 <msg type="warning" file="PhysDesignRules" num="1060" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000006d0.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use input parity pins. There are dangling output parity pins.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003b21.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037a9.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003b22.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037aa.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003b23.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037ab.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003b24.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037ac.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037db.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037dc.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037dd.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk000037de.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="812" delta="unknown" >Dangling pin &lt;<arg fmt="%s" index="1">DOB7</arg>&gt; on block:&lt;<arg fmt="%s" index="2">a1/audio/fft2/blk00000a0c.B</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16_RAMB16B</arg>&gt;.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003a8b.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003a8c.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003a8d.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="1063" delta="unknown" >Dangling pins on block:&lt;<arg fmt="%s" index="1">a1/audio/fft2/blk00003a8e.A</arg>&gt;:&lt;<arg fmt="%s" index="2">RAMB16_RAMB16A</arg>&gt;.  The block is configured to use an input parity pins. There is a dangling output parity pin.
 </msg>
 
 </messages>

@@ -29,6 +29,7 @@ module scoreUpdater(
 	 output [17:0] binaryOut
     );
 
+	// Hex representation of notes
 	parameter[3:0] Z = 4'b0000;
 	parameter[3:0] C = 4'b0001;
 	parameter[3:0] Cs = 4'b0010;
@@ -42,6 +43,8 @@ module scoreUpdater(
 	parameter[3:0] A = 4'b1010;
 	parameter[3:0] As = 4'b1011;
 	parameter[3:0] B = 4'b1100;
+	parameter[3:0] Chigh = 4'b1101;
+	parameter[3:0] Dhigh = 4'b1110;
 
 	reg hitReg = 0;
 	reg scoreReg = 0;
@@ -51,19 +54,25 @@ module scoreUpdater(
 	
 	
 	always @(posedge clk) begin
+		//Stop saying it was a hit if last clock was a hit
 		if (hitReg) begin 
 			hitReg <= 0;
 		end
+		//Stop saying to up the score in ascii if last clock said so
 		if (scoreReg) scoreReg <= 0;
+		//If the counter reached max value, output one on the score for ascii, add one to the binary representation for high score purposes
 		if (&scoreCount) begin
 			scoreReg <= 1;
 			binaryScoreReg <= binaryScoreReg + 1;
 		end
+		
 		if(reset) begin
 			scoreReg <= 0;
 			scoreCount <= 0 ;
 			binaryScoreReg <= 0;
 		end
+		
+		//Bug reproduced off by one hex values from note identification, this is the fix
 		notePlayedReg <= currentNote - 1;
 		if (currentNote == C) begin
 			notePlayedReg <= B;
@@ -75,6 +84,20 @@ module scoreUpdater(
 		else if ((currentNote - 4'd1) == correctNote) begin
 			hitReg <= 1;
 			scoreCount <= scoreCount + 1;
+		end
+		
+		//Seperately check Chigh and Dhigh, the higher octave versions
+		else if (correctNote == Chigh) begin
+			if (currentNote == Cs)begin
+				hitReg <= 1;
+				scoreCount <= scoreCount + 1;
+			end
+		end
+		else if (correctNote == Dhigh) begin
+			if (currentNote == Ds)begin
+				hitReg <= 1;
+				scoreCount <= scoreCount + 1;
+			end
 		end
 	end
 	

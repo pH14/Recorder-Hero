@@ -34,6 +34,7 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 	
 	assign threshold = {2'd0,switch[7:0]};
 
+    //Hex representation of each note
 	parameter[3:0] Z = 4'b0000;
 	parameter[3:0] C = 4'b0001;
 	parameter[3:0] Cs = 4'b0010;
@@ -48,6 +49,7 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 	parameter[3:0] As = 4'b1011;
 	parameter[3:0] B = 4'b1100;
 	
+	//Bin number for each note we sample (from 5 different octaves)
 	parameter[11:0] Btwo = 12'b000000101010;
 	parameter[11:0] GSfive = 12'b000100011011;
 	parameter[11:0] DSfive = 12'b000011010100;
@@ -116,7 +118,8 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 	wire [11:0] haddr;
 	wire [9:0] hdata;
 	wire hwe;
-
+	
+	//fft module, returns bin number and magnitude given ac97 signal
 	process_audio audio(clk,reset,ready,from_ac97_data,haddr,hdata,hwe);
 	
 	reg[5:0] writeaddr = 0;
@@ -131,10 +134,12 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 	assign writeaddrZ = writeaddr;
 	assign writeValZ = writeVal;
 	
-	
+	//Use a clock cycle to turn process audio outputs into a proper ram input
 	always @(posedge clk) begin
+		// If process_audio has a new value
 		if (hwe) begin
 		   writeNext <= 1;
+		   // From bin determine the ram address
 			if (haddr == Cone) writeaddr <= 6'd0;
 			if (haddr == CSone) writeaddr <= 6'd1;
 			if (haddr == Done) writeaddr <= 6'd2;
@@ -196,11 +201,12 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 			if (haddr == ASfive) writeaddr <= 6'd58;
 			if (haddr == Bfive) writeaddr <= 6'd59;
 
-		
+			//Now set the write value (note was detected if over a threshold)
 			if (hdata > threshold) writeVal <= 1;
 			else writeVal <= 0;
 		
 		end
+		//delay write one cycle to assure correct values
 		else begin
 			if (writeNext) begin
 				write <= 1;
@@ -215,17 +221,22 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 	reg[5:0] cycleAddr;
 	reg cycleVal;
 	
+	//Ram that holds the most current values for all 60 notes, and which we read to determine the lowest note played
 	cache fftcache(.addra(writeaddrZ),.dina(writeValZ),.wea(write),.clka(clk),
 						.addrb(readaddr),.clkb(clk),.doutb(readVal));
 
 	always @(posedge clk) begin
+		//reset, done on reset or every time a new value is placed in the ram
 		if (hwe | reset) begin
 			done <= 0;
 			currentAddr <= 0;
 			currentGuess <= 0;
 		end
+		//If I haven't found a note played this cycle
 		if (!done) begin
+			//If the value read is a one (note played)
 			if (readVal) begin
+				//Determine the note that was played
 				case(currentAddr)
 					6'd0: currentGuess <= C;
 					6'd1: currentGuess <= Cs;
@@ -289,9 +300,12 @@ module noteIdentification(reset,clk,ready,switch,from_ac97_data,note,GuessAddr,r
 					6'd59: currentGuess <= B ;
 					default:;
 				endcase
+				//Debugging purposes
 				GuessAddr <= currentAddr;
+				//Stop until next cycle
 				done <= 1;
 			end
+			//If found 0, try the next bin
 			else currentAddr <= currentAddr + 1;
 		end
 	end

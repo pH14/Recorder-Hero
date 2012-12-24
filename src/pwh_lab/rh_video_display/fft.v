@@ -1,4 +1,3 @@
-
 ///////////////////////////////////////////////////////////////////////////////
 // Sample fft.v    gph 10/2012
 //
@@ -495,12 +494,6 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 
    ////////////////////////////////////////////////////////////////////////////
    //
-   // I/O Assignments
-   //
-   ////////////////////////////////////////////////////////////////////////////
-   
-   ////////////////////////////////////////////////////////////////////////////
-   //
    // Reset Generation
    //
    // A shift register primitive is used to generate an active-high reset
@@ -673,8 +666,9 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire enter;
 	wire resetButton;
 	
+	//Set up signals from all the buttons used.
 	debounce bup(reset, clock_27mhz, ~button_up, up);
-   debounce bdown(reset, clock_27mhz, ~button_down, down);
+    debounce bdown(reset, clock_27mhz, ~button_down, down);
 	debounce benter(reset, clock_27mhz, ~button_enter, enter);
 	debounce breset(reset, clock_27mhz, ~button0, resetButton);
 	
@@ -692,9 +686,11 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire[47:0] asciiScore;
 	wire[47:0] highScore;
 
+	//Menu FSM instantiation, deals with menu states and keeping correct high scores
    menuFSM menu(up,down,enter,boardReset,songDone,clock_65mhz,scoreBinary,
 						asciiScore,menuState,menuResetOut,song,highScore);
 
+						
 	assign menuReset = (menuResetOut | boardReset);
 
    wire [15:0] from_ac97_data, to_ac97_data;
@@ -715,6 +711,7 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	wire [15:0] analyzer1_out;
 	wire [15:0] analyzer2_out;
 	
+	//Note identification instatiation, takes in ac97 information and outputs the currentNote played.
 	noteIdentification a1(reset,clock_27mhz,ready,switch,from_ac97_data,currentNote,GuessAddr,readVal,analyzer1_out,analyzer2_out);
 	
 	assign analyzer3_data = analyzer2_out;
@@ -726,65 +723,62 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	
 	wire [63:0] nn;
 	
+	// Takes in a hex representation of a note from noteIdentification and a hex representation from the musical score loader and updates the score and if note was played correctly.
 	scoreUpdater updater(clock_65mhz,currentNote,nn[3:0],menuReset,hit,
 						score,notePlayed,scoreBinary);
 	
+	//Counts up in ASCII to our maximum score value
 	binaryCounterASCII counter(clock_65mhz,menuReset,score,asciiScore);
 
 	wire[15:0] asciiNote;
+	//Turns the hex representation of a note to a 2 byte ascii representation to be shown
 	hexToAscii hexy(notePlayed,clock_65mhz,asciiNote);
-
-	   ////////////////////////////////////////////////////////////////////////////
+   
+   ////////////////////////////////////////////////////////////////////////////
    //
    // PAUL! A NOT SIMPLE PONG GAME
    //
    ////////////////////////////////////////////////////////////////////////////
 
-   // generate basic XVGA video signals
-   wire [10:0] hcount;
-   wire [9:0]  vcount;
-   wire hsync,vsync,blank;
-   xvga xvga1(.vclock(clk),.hcount(hcount),.vcount(vcount),
-              .hsync(hsync),.vsync(vsync),.blank(blank));
+	// generate basic XVGA video signals
+	wire [10:0] hcount;
+	wire [9:0]  vcount;
+	wire hsync,vsync,blank;
+	xvga xvga1(.vclock(clk),.hcount(hcount),.vcount(vcount),
+	      .hsync(hsync),.vsync(vsync),.blank(blank));
 
-   // feed XVGA signals to user's pong game
-   wire [23:0] pixel;
+	// feed XVGA signals to user's pong game
+	wire [23:0] pixel;
 	wire [63:0] dispdata;
-   wire phsync,pvsync,pblank;
+	wire phsync,pvsync,pblank;
 	
+	// Connections to rh_video_display
 	wire debug_rh_display = 0;
 	reg right_note = 1;
-	
 	reg [31:0] count = 0;
 	reg [3:0] notes[15:0];
-	
-//	wire [63:0] nn = {notes[15], notes[14], notes[13], notes[12], notes[11], notes[10],
-//							 notes[9], notes[8], notes[7], notes[6], notes[5], notes[4], notes[3],
-//							 notes[2], notes[1], notes[0]};
 	wire [25:0] tempo;
 	
+	/*** Wiring up USB FIFO to talk to user1 pins ***/
 	wire [7:0] fifo_data_input;
-	wire rd;
-	wire rxf;
 	wire [7:0] fifo_data_output;
-	reg [7:0] from_fifo;
-	wire fifo_newout;
-	wire fifo_hold;
 	wire [3:0] fifo_state;
+	wire rd, rxf, fifo_newout, fifo_hold;
+	reg [7:0] from_fifo;
 	
 	assign fifo_data_input = user1[9:2];
 	assign user1[1] = rd;
 	assign rxf = user1[0];
 	
 	usb_input usb_input_module(.clk(clk),
-										.reset(resetButton),
-										.data(fifo_data_input),
-										.rd(rd),
-										.rxf(rxf),
-										.out(fifo_data_output),
-										.newout(fifo_newout),
-										.hold(1'b0),
-										.state(fifo_state));
+				   .reset(resetButton),
+				   .data(fifo_data_input),
+				   .rd(rd),
+				   .rxf(rxf),
+				   .out(fifo_data_output),
+				   .newout(fifo_newout),
+				   .hold(1'b0),
+				   .state(fifo_state));
 										
 	always @(posedge clk) begin
 		if (fifo_newout) begin
@@ -792,50 +786,53 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 		end
 	end
 	
-   // wire up to ZBT ram
-   wire [35:0] vram_write_data;
-   wire [35:0] vram_read_data;
-   wire [18:0] vram_addr;
-   wire         vram_we;
+	/*** Wiring up ZBT RAM ***/
+	wire [35:0] vram_write_data;
+	wire [35:0] vram_read_data;
+	wire [18:0] vram_addr;
+	wire         vram_we;
 
-   wire ram0_clk_not_used;
-   zbt_6111 zbt1(clk, 1'b1, 
-			vram_we, 
-			vram_addr,
-		   vram_write_data, 
-			vram_read_data,
-		   ram0_clk_not_used,   //to get good timing, don't connect ram_clk to zbt_6111
-		   ram0_we_b, ram0_address, ram0_data, ram0_cen_b);
-			
+	wire ram0_clk_not_used;
+	zbt_6111 zbt1(clk, 1'b1, 
+		      vram_we, 
+		      vram_addr,
+		      vram_write_data, 
+		      vram_read_data,
+		      ram0_clk_not_used,   //to get good timing, don't connect ram_clk to zbt_6111
+		      ram0_we_b, ram0_address, ram0_data, ram0_cen_b);
+	
+	/*** Shift-register module to store 4 pixels in each row ***/
 	wire zbt_iw_newout;
 	wire [35:0] zbt_iw_output;
-	reg [35:0] zbt_iw_output_reg;
+	reg [35:0] zbt_iw_output_reg; // Required for write to be successful
 	zbt_image_writer ziw1(.clk(clk),
-						  .reset(resetButton),
-						  .image_data(fifo_data_output),
-						  .new_input(fifo_newout),
-						  .new_output(zbt_iw_newout),
-						  .image_data_zbt(zbt_iw_output));
+			      .reset(resetButton),
+			      .image_data(fifo_data_output),
+			      .new_input(fifo_newout),
+			      .new_output(zbt_iw_newout),
+			      .image_data_zbt(zbt_iw_output));
 	
 	wire [7:0] image_bits;
 	reg [18:0] vram_write_addr = 0;
 	wire [18:0] vram_read_addr;
 	
 	assign vram_we = zbt_iw_newout;
-	assign vram_addr = (zbt_iw_newout == 1) ? vram_write_addr 
-															: vram_read_addr;
+	assign vram_addr = (zbt_iw_newout == 1) ? vram_write_addr : vram_read_addr;
 	assign vram_write_data = zbt_iw_output_reg;
 	
+	/*** Grab background image pixels from vram_display ***/
 	vram_display vd1(.reset(resetButton),
-						  .clk(clk),
-						  .hcount(hcount),
-						  .vcount(vcount),
-						  .vr_pixel(image_bits),
-						  .vram_addr(vram_read_addr),
-						  .vram_read_data(vram_read_data));
+			 .clk(clk),
+			 .hcount(hcount),
+			 .vcount(vcount),
+			 .vr_pixel(image_bits),
+			 .vram_addr(vram_read_addr),
+		         .vram_read_data(vram_read_data));
+
 	reg [9:0] x_pixels = 0;
 	reg [9:0] y_pixels = 0;
 	
+	/*** Control when to write to ZBT based on zbt_image_writer's ready signal ***/
 	always @(posedge clk) begin
 		if (reset) begin
 			vram_write_addr <= 0;
@@ -859,29 +856,25 @@ module fft   (beep, audio_reset_b, ac97_sdata_out, ac97_sdata_in, ac97_synch,
 	end
 	
 	musical_score_loader msl(.clk(clk), .reset(menuReset),
-								    .song_id(song), .next_notes_out(nn),
-									 .tempo_out(tempo),
-									 .song_done(songDone));
+				 .song_id(song), .next_notes_out(nn),
+				 .tempo_out(tempo),
+				 .song_done(songDone));
 	
-   rh_display rh_disp(.vclock(clk),.reset(menuReset),
-		.up(up), .down(down),
-		.playing_correct(hit),
-		.menu_state(menuState),
-		.next_notes(nn),
-		.score_string({asciiScore,"00"}),
-		.high_score_string({highScore, "00"}),
-		.current_note_string(asciiNote),
-		.tempo(tempo),
-		.bono_image_bits(image_bits),
-		.hcount(hcount),.vcount(vcount),
-      .hsync(hsync),.vsync(vsync),
-		.blank(blank),.phsync(phsync),
-		.pvsync(pvsync),.pblank(pblank),
-		.pixel(pixel), .debug(dispdata));
-		
-	//{ 4'hF,1'b0,vram_read_addr,4'hF,
-//				  1'b0,vram_write_addr,
-//				  from_fifo,image_bits}
+   	rh_display rh_disp(.vclock(clk),.reset(menuReset),
+		  	   .up(up), .down(down),
+			   .playing_correct(hit),
+			   .menu_state(menuState),
+			   .next_notes(nn),
+			   .score_string({asciiScore,"00"}),
+			   .high_score_string({highScore, "00"}),
+			   .current_note_string(asciiNote),
+			   .tempo(tempo),
+			   .bono_image_bits(image_bits),
+			   .hcount(hcount),.vcount(vcount),
+	      		   .hsync(hsync),.vsync(vsync),
+			   .blank(blank),.phsync(phsync),
+			   .pvsync(pvsync),.pblank(pblank),
+			   .pixel(pixel), .debug(dispdata));
 
    // switch[1:0] selects which video generator to use:
    //  00: user's pong game
@@ -968,7 +961,6 @@ module rh_display (
 	input reset,
 	input up,
 	input down,
-	
 	input playing_correct,
 	input [2:0] menu_state,
 	input [15:0] current_note_string,
@@ -1000,34 +992,35 @@ module rh_display (
 	parameter FIRST_LETTER = 128 + 16;
 	parameter NOTE_STEP = 74;
 	parameter ACTION_LINE_X = 72;
+	parameter [23:0] COLOR = 24'hFF_FF_FF;
 	
 	wire [3:0] notes[15:0];
 	wire [23:0] note_pixels[15:0];
+	
+	// All notes positions are based on this one
 	reg [10:0] lead_note_x = 1023;
 	
-	parameter [23:0] COLOR = 24'hFF_FF_FF;
-	
 	assign {notes[15], notes[14], notes[13], notes[12],
-			  notes[11], notes[10], notes[9], notes[8],
-			  notes [7], notes[6], notes[5], notes[4],
-			  notes [3], notes[2], notes[1], notes[0] } = next_notes;
+	        notes[11], notes[10], notes[9], notes[8],
+		notes [7], notes[6], notes[5], notes[4],
+		notes [3], notes[2], notes[1], notes[0] } = next_notes;
 
+	// Track y positions and colors for each note on screen
 	reg [9:0] note_y_pos[15:0];
 	reg [23:0] note_color[15:0];
-	
 	wire [23:0] note_line_pixels[7:0];
-	integer k;
 	
+	/*** Generators for creating the notes and staff lines ***/
 	genvar j;
 	generate
 		for(j=0; j<16; j=j+1) begin:generate_note_blobs
 		  blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
 				note(.x(lead_note_x + NOTE_WIDTH * j),
-					  .y(note_y_pos[j]),
-					  .hcount(hcount),
-					  .vcount(vcount),
-					  .color(note_color[j]),
-					  .pixel(note_pixels[j]));
+				     .y(note_y_pos[j]),
+				     .hcount(hcount),
+				     .vcount(vcount),
+				     .color(note_color[j]),
+				     .pixel(note_pixels[j]));
 		end
 	endgenerate
 	
@@ -1036,41 +1029,46 @@ module rh_display (
 		for(w=0; w<8; w=w+1) begin:generate_note_lines
 		  blob #(.WIDTH(1023-72), .HEIGHT(1))
 				note_line(.x(ACTION_LINE_X),
-							  .y(128 + w*73),
-							  .hcount(hcount),
-							  .vcount(vcount),
-							  .color(24'hAA_AA_AA),
-							  .pixel(note_line_pixels[w]));
+				          .y(128 + w*73),
+					  .hcount(hcount),
+					  .vcount(vcount),
+					  .color(24'hAA_AA_AA),
+					  .pixel(note_line_pixels[w]));
 		end
 	endgenerate
-	
+		
+	/////////////////////////
+	///// TEMPO CONTROL /////
+	/////////////////////////
 
+	// Default song tempo is 1/2s per 8th note
 	reg load_tempo = 0;
-	
-	// Temporary tempo is 1/2 vclock, .5s per eighth note
-	//reg [25:0] temp_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
 	reg [25:0] song_tempo = 26'b1111_0111_1111_0100_1001_0000_0;
-	wire tempo_beat;
-	wire tempo_beat_move;
+	wire tempo_beat;      // Indicates 1/8th note beat
+	wire tempo_beat_move; // Indicates 1/8th*1/64 to move the notes
 	
 	counter c(.clk(vclock),
-				 .reset(load_tempo),
-				 .count_to(song_tempo),
-				 .ready(tempo_beat));
+		  .reset(load_tempo),
+		  .count_to(song_tempo),
+		  .ready(tempo_beat));
 	
 	// The width of one note is 64, break the tempo up by 64
 	// to know the interval we need to move the notes by 1px
 	counter c2(.clk(vclock),
-				 .reset(load_tempo),
-				 .count_to(song_tempo/64),
-				 .ready(tempo_beat_move));
+		   .reset(load_tempo),
+		   .count_to(song_tempo/64),
+	           .ready(tempo_beat_move));
 	
+	/***** VISUAL BOUNDARY LINES *****/
 	wire action_line = hcount == ACTION_LINE_X & vcount >= 128 & vcount <= 639;
 	wire right_boundary_line = hcount == 1022 & vcount >= 128 & vcount <= 639;
 	
+	///////////////////////////////////////////
+	/// CONTROLLING NOTE POSITIONS & COLORS ///
+	///////////////////////////////////////////
+
 	reg [23:0] onscreen_notes[15:0];
-	integer n;
-	
+	integer n, k;
 	always @(posedge vclock) begin
 		if (reset) begin
 			song_tempo <= tempo;
@@ -1161,26 +1159,29 @@ module rh_display (
 			onscreen_notes[n] <= (hcount > ACTION_LINE_X) ? note_pixels[n] : 0;
 		end
 	end
-
+	
+	///////////////////////////
+	// ONSCREEN TEXT DISPLAY //
+        ///////////////////////////
 	wire [2:0] score_pixel;
 	char_string_display csd_score(.vclock(vclock),
-								   .hcount(hcount),
-									.vcount(vcount),
-									.pixel(score_pixel),
-									.cstring({"SCORE: ", score_string}),
-									.cx(700),
-									.cy(10));
+				      .hcount(hcount),
+				      .vcount(vcount),
+				      .pixel(score_pixel),
+				      .cstring({"SCORE: ", score_string}),
+				      .cx(700),
+				      .cy(10));
 	defparam csd_score.NCHAR = 15;
 	defparam csd_score.NCHAR_BITS = 4;
 	
 	wire [2:0] high_score_pixel;
 	char_string_display csd_hscore(.vclock(vclock),
-								   .hcount(hcount),
-									.vcount(vcount),
-									.pixel(high_score_pixel),
-									.cstring({"HIGH SCORE: ", high_score_string}),
-									.cx(120),
-									.cy(10));
+				       .hcount(hcount),
+				       .vcount(vcount),
+				       .pixel(high_score_pixel),
+				       .cstring({"HIGH SCORE: ", high_score_string}),
+				       .cx(120),
+				       .cy(10));
 	defparam csd_hscore.NCHAR = 20;
 	defparam csd_hscore.NCHAR_BITS = 5;
 	
@@ -1190,36 +1191,41 @@ module rh_display (
 	assign current_note_x = (menu_state[2] == 1) ? 700 : 23;
 	assign current_note_y = (menu_state[2] == 1) ? 30 : 715;
 	char_string_display csd_note(.vclock(vclock),
-											.hcount(hcount),
-											.vcount(vcount),
-											.pixel(current_note_pixel),
-											.cstring({"NOTE: ", current_note_string}),
-											.cx(current_note_x),
-											.cy(current_note_y));
+				     .hcount(hcount),
+				     .vcount(vcount),
+				     .pixel(current_note_pixel),
+				     .cstring({"NOTE: ", current_note_string}),
+				     .cx(current_note_x),
+				     .cy(current_note_y));
 	defparam csd_note.NCHAR = 8;
 	defparam csd_note.NCHAR_BITS = 4;
 
+	//////////////////////////////
+	//// IMAGES FROM BROM/ZBT ////
+	//////////////////////////////
 	wire [23:0] bmp_pixel;
 	picture_blob pb(.pixel_clk(vclock),
-					    .x(4),
-						 .hcount(hcount),
-						 .y(128),
-						 .vcount(vcount),
-						 .pixel(bmp_pixel));
+		        .x(4),
+		        .hcount(hcount),
+		        .y(128),
+	                .vcount(vcount),
+		        .pixel(bmp_pixel));
 						 
 	wire [23:0] bono_pixel;
 	bono_picture_blob bpb_img(.pixel_clk(vclock),
-								     .x(0),
-									  .hcount(hcount+2),
-									  .y(0),
-									  .vcount(vcount+2),
-									  .image_bits(bono_image_bits),
-									  .pixel(bono_pixel));
+			          .x(0),
+			          .hcount(hcount+2),
+				  .y(0),
+				  .vcount(vcount+2),
+				  .image_bits(bono_image_bits),
+			          .pixel(bono_pixel));
 
+	// Highlight the note currently being played
+	// on the scale on the left by alphablending
+	// the image
 	reg [23:0] curr_note_color;
 	reg [9:0] curr_note_y;
 	reg [23:0] bmp_pixel_alpha;
-
 	always @(*) begin
 		case(current_note_string)
 			"B " : curr_note_y = 127;
@@ -1242,8 +1248,10 @@ module rh_display (
 			"F#": curr_note_color = 24'h77_77_FF;
 			"D#": curr_note_color = 24'h77_77_FF;
 			"C#": curr_note_color = 24'h77_77_FF;
-			default: curr_note_color = 24'hFF_FF_00;
+			default: curr_note_color = 24'hDD_DD_00;
 		endcase
+		
+		// Alphablend the currently-played note along the music staff
 		if (|bmp_pixel 
 		    && vcount >= curr_note_y 
 		    && vcount <= curr_note_y + NOTE_STEP) begin
@@ -1255,51 +1263,52 @@ module rh_display (
 	
 	///////////////////////
 	// MAIN MENU DISPLAY //
-   ///////////////////////
+        ///////////////////////
 	wire [2:0] song_title_1_pixel;
 	char_string_display csd_st1(.vclock(vclock),
-											.hcount(hcount),
-											.vcount(vcount),
-											.pixel(song_title_1_pixel),
-											.cstring("Concerning Hobbits"),
-											.cx(23),
-											.cy(285));
+				    .hcount(hcount),
+				    .vcount(vcount),
+				    .pixel(song_title_1_pixel),
+				    .cstring("Concerning Hobbits"),
+				    .cx(23),
+			            .cy(285));
 	defparam csd_st1.NCHAR = 18;
 	defparam csd_st1.NCHAR_BITS = 5;
 	
 	wire [2:0] song_title_2_pixel;
 	char_string_display csd_st2(.vclock(vclock),
-											.hcount(hcount),
-											.vcount(vcount),
-											.pixel(song_title_2_pixel),
-											.cstring("When the Saints..."),
-											.cx(23),
-											.cy(315));
+				    .hcount(hcount),
+				    .vcount(vcount),
+				    .pixel(song_title_2_pixel),
+				    .cstring("When the Saints..."),
+				    .cx(23),
+				    .cy(315));
 	defparam csd_st2.NCHAR = 18;
 	defparam csd_st2.NCHAR_BITS = 5;
 	
 	wire [2:0] song_title_3_pixel;
 	char_string_display csd_st3(.vclock(vclock),
-											.hcount(hcount),
-											.vcount(vcount),
-											.pixel(song_title_3_pixel),
-											.cstring("Greensleeves"),
-											.cx(23),
-											.cy(345));
+				    .hcount(hcount),
+				    .vcount(vcount),
+				    .pixel(song_title_3_pixel),
+				    .cstring("Greensleeves"),
+				    .cx(23),
+			            .cy(345));
 	defparam csd_st3.NCHAR = 12;
 	defparam csd_st3.NCHAR_BITS = 4;
 	
 	wire [2:0] song_title_4_pixel;
 	char_string_display csd_st4(.vclock(vclock),
-											.hcount(hcount),
-											.vcount(vcount),
-											.pixel(song_title_4_pixel),
-											.cstring("Practice Scale"),
-											.cx(23),
-											.cy(375));
+			            .hcount(hcount),
+				    .vcount(vcount),
+				    .pixel(song_title_4_pixel),
+				    .cstring("Practice Scale"),
+				    .cx(23),
+				    .cy(375));
 	defparam csd_st4.NCHAR = 14;
 	defparam csd_st4.NCHAR_BITS = 4;
 	
+	// Create a block that indicates selected song
 	reg [8:0] current_song_y;
 	always @(*) begin
 		case(menu_state[1:0])
@@ -1312,69 +1321,166 @@ module rh_display (
 	end
 	
 	wire [23:0] song_select_box_pixel;
-   blob #(.WIDTH(10), .HEIGHT(10))
+   	blob #(.WIDTH(10), .HEIGHT(10))
 		song_selector_box(.x(8),
 		  .y(current_song_y + 6),
 		  .hcount(hcount),
 		  .vcount(vcount),
 		  .color(24'hFF_FF_FF),
 		  .pixel(song_select_box_pixel));
+		  
+	/////////////////////
+	/////// LEGEND //////
+	/////////////////////
+	wire [23:0] legend_sharp_pixel;
+	wire [23:0] legend_high_pixel;
+	wire [23:0] legend_hit_pixel;
+	wire [23:0] legend_miss_pixel;
+	wire [2:0] legend_sharp_text_pixel;
+	wire [2:0] legend_high_text_pixel;
+	wire [2:0] legend_hit_text_pixel;
+	wire [2:0] legend_miss_text_pixel;
 	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_sharp(.x(196),
+		  .y(640+17),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'h55_55_FF),
+		  .pixel(legend_sharp_pixel));
+		  
+	char_string_display csd_ls(.vclock(vclock),
+				   .hcount(hcount),
+				   .vcount(vcount),
+				   .pixel(legend_sharp_text_pixel),
+			           .cstring("= Sharp"),
+				   .cx(196+64+16),
+				   .cy(640+17));
+	defparam csd_ls.NCHAR = 7;
+	defparam csd_ls.NCHAR_BITS = 3;
+	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_octave(.x(196),
+		  .y(640+17+24+24),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'h00_DD_00),
+		  .pixel(legend_high_pixel));
+		  
+	char_string_display csd_lh(.vclock(vclock),
+			           .hcount(hcount),
+				   .vcount(vcount),
+				   .pixel(legend_high_text_pixel),
+				   .cstring("= Octave higher"),
+				   .cx(196+64+16),
+				   .cy(640+17+24+24));
+	defparam csd_lh.NCHAR = 15;
+	defparam csd_lh.NCHAR_BITS = 4;
+	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_hit_text(.x(580),
+		  .y(640+17),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'hFF_FF_00),
+		  .pixel(legend_hit_pixel));
+		  
+	char_string_display csd_lhittext(.vclock(vclock),
+					 .hcount(hcount),
+					 .vcount(vcount),
+					 .pixel(legend_hit_text_pixel),
+					 .cstring("= Hit!"),
+					 .cx(580+64+16),
+					 .cy(640+17));
+	defparam csd_lhittext.NCHAR = 6;
+	defparam csd_lhittext.NCHAR_BITS = 3;
+	
+	blob #(.WIDTH(NOTE_WIDTH), .HEIGHT(NOTE_HEIGHT))
+		legend_miss_text(.x(580),
+		  .y(640+17+24+24),
+		  .hcount(hcount),
+		  .vcount(vcount),
+		  .color(24'hFF_45_00),
+		  .pixel(legend_miss_pixel));
+		  
+	char_string_display csd_lmisstext(.vclock(vclock),
+					  .hcount(hcount),
+					  .vcount(vcount),
+					  .pixel(legend_miss_text_pixel),
+					  .cstring("= Miss!"),
+					  .cx(580+64+16),
+					  .cy(640+17+24+24));
+	defparam csd_lmisstext.NCHAR = 7;
+	defparam csd_lmisstext.NCHAR_BITS = 3;
+	
+	///// BUG FIX
+	// For some reason the image from the zbt shows a small sliver
+	// on the side. This hack at least covers it up on the main screen
 	wire [23:0] vga_display_hack_pixel;
 	blob #(.WIDTH(16), .HEIGHT(768))
 		vga_display_hack(.x(0), .y(0),
-							  .hcount(hcount),
-							  .vcount(vcount),
-							  .color(24'h00_00_00),
-							  .pixel(vga_display_hack_pixel));
+				 .hcount(hcount),
+				 .vcount(vcount),
+				 .color(24'h00_00_00),
+				 .pixel(vga_display_hack_pixel));
 	
 	reg [23:0] pixel_reg;
-	
-	// For some reason the image from the zbt shows a small sliver
-	// on the side. This hack at least covers it up on the main screen
 	wire [23:0] bono_pixel_fix;
 	assign bono_pixel_fix = (hcount < 16) ? 24'h00_00_00 : bono_pixel;
 	
+	//////////////////////
+	//// FINAL OUTPUT ////
+	//////////////////////
+
+	// Display output for menu / game
 	always @(posedge vclock) begin
 		if (!menu_state[2]) begin
 			pixel_reg <= bono_pixel_fix
-					  | {8{song_title_1_pixel}}
-					  | {8{song_title_2_pixel}}
-					  | {8{song_title_3_pixel}}
-					  | {8{song_title_4_pixel}}
-					  | {8{current_note_pixel}}
-					  | song_select_box_pixel;
+				  | {8{song_title_1_pixel}}
+				  | {8{song_title_2_pixel}}
+				  | {8{song_title_3_pixel}}
+				  | {8{song_title_4_pixel}}
+				  | {8{current_note_pixel}}
+				  | song_select_box_pixel;
 		end else begin
 			pixel_reg <= onscreen_notes[0]
-						| onscreen_notes[1]
-						| onscreen_notes[2]
-						| onscreen_notes[3]
-						| onscreen_notes[4]
-						| onscreen_notes[5]
-						| onscreen_notes[6]
-						| onscreen_notes[7]
-						| onscreen_notes[8]
-						| onscreen_notes[9]
-						| onscreen_notes[10]
-						| onscreen_notes[11]
-						| onscreen_notes[12]
-						| onscreen_notes[13]
-						| onscreen_notes[14]
-						| onscreen_notes[15]
-						| note_line_pixels[0]
-						| note_line_pixels[1]
-						| note_line_pixels[2]
-						| note_line_pixels[3]
-						| note_line_pixels[4]
-						| note_line_pixels[5]
-						| note_line_pixels[6]
-						| note_line_pixels[7]
-						| {24{action_line}}
-						| {24{right_boundary_line}}
-						| {8{score_pixel}}
-						| {8{high_score_pixel}}
-						| {8{current_note_pixel}}
-						| bmp_pixel_alpha;
+			  	| onscreen_notes[1]
+				| onscreen_notes[2]
+				| onscreen_notes[3]
+				| onscreen_notes[4]
+				| onscreen_notes[5]
+				| onscreen_notes[6]
+				| onscreen_notes[7]
+				| onscreen_notes[8]
+				| onscreen_notes[9]
+				| onscreen_notes[10]
+				| onscreen_notes[11]
+				| onscreen_notes[12]
+				| onscreen_notes[13]
+				| onscreen_notes[14]
+				| onscreen_notes[15]
+				| note_line_pixels[0]
+				| note_line_pixels[1]
+				| note_line_pixels[2]
+				| note_line_pixels[3]
+				| note_line_pixels[4]
+				| note_line_pixels[5]
+				| note_line_pixels[6]
+				| note_line_pixels[7]
+				| {24{action_line}}
+				| {24{right_boundary_line}}
+				| {8{score_pixel}}
+				| {8{high_score_pixel}}
+				| {8{current_note_pixel}}
+				| bmp_pixel_alpha
+				| legend_sharp_pixel
+				| legend_high_pixel
+				| legend_hit_pixel
+				| legend_miss_pixel
+				| {8{legend_sharp_text_pixel}}
+				| {8{legend_high_text_pixel}}
+				| {8{legend_hit_text_pixel}}
+				| {8{legend_miss_text_pixel}};
 		end
 	end
 	

@@ -10,6 +10,9 @@ fft.ngd
 Reading NGO file
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/fft.ngc" ...
 Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/my_fft.ngc"..
+.
+Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/greensleeves.
 ngc"...
 Loading design module
@@ -21,13 +24,13 @@ Loading design module
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/song_scales.n
 gc"...
-Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/note_letters_
-bmp.ngc"...
 Reading module "font_rom.ngo" ( "font_rom.ngo" unchanged since last run )...
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/_ngo/font_rom
 .ngo"...
+Loading design module
+"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/note_letters_
+bmp.ngc"...
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_green.ng
 c"...
@@ -37,9 +40,6 @@ Loading design module
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/bono_blue.ngc
 "...
-Loading design module
-"/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/my_fft.ngc"..
-.
 Loading design module
 "/afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/cache.ngc"...
 Reading in constraint information from 'labkit.ucf'...
@@ -202,341 +202,217 @@ WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001721' has unconnected
    output pin
 WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000176e' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017f3' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000019a9' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017f6' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000019fa' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017f9' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001a4c' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017fc' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001a9e' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000017ff' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001b26' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001802' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ca9' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001805' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d01' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001808' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d05' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000180b' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d09' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000180e' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d0c' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001811' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d12' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001814' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d6a' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001817' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d6e' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000181a' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d72' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000181d' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001d75' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001820' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001da7' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001823' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001dfb' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001826' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e49' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001829' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e4b' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000182c' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e4d' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000182f' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e55' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001832' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e57' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001835' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e59' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001838' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e5b' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000183b' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e5d' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000183e' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001e5f' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001841' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001fbb' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001844' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002011' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001847' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002068' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000184a' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020bf' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001a02' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002404' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001a53' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002587' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001aa5' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002588' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001af7' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000258d' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001b7f' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002591' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f2c' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002595' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f84' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002596' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f88' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002597' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f8c' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002598' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f8f' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002599' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001f95' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025c7' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001fed' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025c8' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ff1' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025cd' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ff5' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025d1' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00001ff8' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025d5' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000202a' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025d6' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000207e' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025d7' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020cc' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025d8' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020ce' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000025d9' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020d0' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002604' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020d8' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002632' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020da' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002692' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020dc' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002696' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020de' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000269a' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020e0' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000269d' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000020e2' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000026a3' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000216d' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002703' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002170' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002707' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002173' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000270b' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002176' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000270e' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002179' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000274b' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000217c' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000027b0' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000217f' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002808' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002182' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002810' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002185' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002812' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002188' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002814' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000218b' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002816' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000218e' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002d31' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002191' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002ea3' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002194' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002f2d' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002197' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002fb8' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000219a' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002fec' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000219d' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003054' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a0' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003058' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a3' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000305c' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a6' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000305f' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021a9' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003065' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021ac' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000030cd' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021af' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000030d1' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021b2' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000030d5' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021b5' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000030d8' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021b8' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003119' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021bb' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003188' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021be' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000031ee' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021c1' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000031f0' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021c4' has unconnected
+WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000375b' has unconnected
    output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021c7' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000021ca' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000229d' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000022f3' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000234a' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000023a1' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000026e6' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002869' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000286a' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000286f' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002873' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002877' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002878' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002879' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000287a' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000287b' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028a9' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028aa' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028af' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b3' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b7' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b8' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028b9' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028ba' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028bb' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000028e6' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002914' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002974' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002978' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000297c' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000297f' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002985' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029e5' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029e9' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029ed' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000029f0' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002a2d' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002a92' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002aea' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af2' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af4' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af6' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00002af8' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003013' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003185' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000320f' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000329a' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000032ce' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003336' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000333a' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000333e' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003341' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003347' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033af' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033b3' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033b7' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033ba' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000033fb' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk0000346a' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000034d0' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk000034d2' has unconnected
-   output pin
-WARNING:NgdBuild:440 - FF primitive 'a1/audio/fft2/blk00003a3d' has unconnected
-   output pin
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig000039fa' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003765' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a25' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003790' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a26' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003791' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a27' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003792' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a28' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003793' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a29' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003794' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2a' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003795' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2b' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003796' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2c' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003797' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2d' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003798' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2e' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003799' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a2f' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig0000379a' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a30' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig0000379b' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a19' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003784' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1a' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003785' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1b' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003786' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1c' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003787' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1d' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003788' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003a1e' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig00003789' has
    no driver
-WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig000039ef' has
+WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/blk00000003/sig0000375a' has
    no driver
 WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000080' has no driver
 WARNING:NgdBuild:452 - logical net 'a1/audio/fft2/sig00000081' has no driver
@@ -784,9 +660,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 475
+  Number of warnings: 413
 
-Total memory usage is 313112 kilobytes
+Total memory usage is 310728 kilobytes
 
 Writing NGD file "fft.ngd" ...
 

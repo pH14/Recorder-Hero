@@ -109,9 +109,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "./my_fft.v" in library work
 Compiling verilog file "./when_the_saints.v" in library work
-Module <my_fft> compiled
 Compiling verilog file "./song_scales.v" in library work
 Module <when_the_saints> compiled
 Compiling verilog file "process_audio.v" in library work
@@ -121,7 +119,7 @@ Compiling verilog file "./note_letters_bmp.v" in library work
 Module <sqrt> compiled
 Compiling verilog file "lotr_song.v" in library work
 Module <note_letters_bmp> compiled
-Compiling verilog file "greensleeves.v" in library work
+Compiling verilog file "./greensleeves.v" in library work
 Module <lotr_song> compiled
 Compiling verilog file "font_rom.v" in library work
 Module <greensleeves> compiled
@@ -278,8 +276,10 @@ Analyzing hierarchy for module <scoreUpdater> in library <work> with parameters.
 	As = "1011"
 	B = "1100"
 	C = "0001"
+	Chigh = "1101"
 	Cs = "0010"
 	D = "0011"
+	Dhigh = "1110"
 	Ds = "0100"
 	E = "0101"
 	F = "0110"
@@ -384,12 +384,20 @@ Analyzing hierarchy for module <blob> in library <work> with parameters.
 	WIDTH = "00000000000000000000000000001010"
 
 Analyzing hierarchy for module <blob> in library <work> with parameters.
-	HEIGHT = "00000000000000000000001100000000"
-	WIDTH = "00000000000000000000000000010000"
-
-Analyzing hierarchy for module <blob> in library <work> with parameters.
 	HEIGHT = "00000000000000000000000000100011"
 	WIDTH = "00000000000000000000000001000000"
+
+Analyzing hierarchy for module <char_string_display> in library <work> with parameters.
+	NCHAR = "00000000000000000000000000000111"
+	NCHAR_BITS = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <char_string_display> in library <work> with parameters.
+	NCHAR = "00000000000000000000000000000110"
+	NCHAR_BITS = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <blob> in library <work> with parameters.
+	HEIGHT = "00000000000000000000001100000000"
+	WIDTH = "00000000000000000000000000010000"
 
 Analyzing hierarchy for module <blob> in library <work> with parameters.
 	HEIGHT = "00000000000000000000000000000001"
@@ -611,8 +619,10 @@ Analyzing module <scoreUpdater> in library <work>.
 	As = 4'b1011
 	B = 4'b1100
 	C = 4'b0001
+	Chigh = 4'b1101
 	Cs = 4'b0010
 	D = 4'b0011
+	Dhigh = 4'b1110
 	Ds = 4'b0100
 	E = 4'b0101
 	F = 4'b0110
@@ -735,13 +745,25 @@ Analyzing module <blob.1> in library <work>.
 Module <blob.1> is correct for synthesis.
  
 Analyzing module <blob.2> in library <work>.
-	HEIGHT = 32'sb00000000000000000000001100000000
-	WIDTH = 32'sb00000000000000000000000000010000
-Module <blob.2> is correct for synthesis.
- 
-Analyzing module <blob.3> in library <work>.
 	HEIGHT = 32'sb00000000000000000000000000100011
 	WIDTH = 32'sb00000000000000000000000001000000
+Module <blob.2> is correct for synthesis.
+ 
+Analyzing module <char_string_display.7> in library <work>.
+	NCHAR = 32'sb00000000000000000000000000000111
+	NCHAR_BITS = 32'sb00000000000000000000000000000011
+Module <char_string_display.7> is correct for synthesis.
+ 
+    Set user-defined property "FPGA_DONT_TOUCH =  true" for instance <f> in unit <char_string_display.7>.
+Analyzing module <char_string_display.8> in library <work>.
+	NCHAR = 32'sb00000000000000000000000000000110
+	NCHAR_BITS = 32'sb00000000000000000000000000000011
+Module <char_string_display.8> is correct for synthesis.
+ 
+    Set user-defined property "FPGA_DONT_TOUCH =  true" for instance <f> in unit <char_string_display.8>.
+Analyzing module <blob.3> in library <work>.
+	HEIGHT = 32'sb00000000000000000000001100000000
+	WIDTH = 32'sb00000000000000000000000000010000
 Module <blob.3> is correct for synthesis.
  
 Analyzing module <blob.4> in library <work>.
@@ -790,7 +812,7 @@ Synthesizing Unit <menuFSM>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
-    | Transitions        | 25                                             |
+    | Transitions        | 31                                             |
     | Inputs             | 5                                              |
     | Outputs            | 10                                             |
     | Clock              | clk (rising_edge)                              |
@@ -813,7 +835,7 @@ Synthesizing Unit <menuFSM>.
     Found 18-bit register for signal <binaryHighScore3>.
     Found 18-bit register for signal <binaryHighScore4>.
     Found 48-bit register for signal <highScoreReg>.
-    Found 48-bit 4-to-1 multiplexer for signal <highScoreReg$mux0000> created at line 64.
+    Found 48-bit 4-to-1 multiplexer for signal <highScoreReg$mux0000> created at line 66.
     Found 1-bit register for signal <previous_button>.
     Found 1-bit register for signal <reset_reg>.
     Found 2-bit register for signal <song_reg>.
@@ -829,10 +851,9 @@ Synthesizing Unit <scoreUpdater>.
     Related source file is "scoreUpdater.v".
     Found 18-bit up counter for signal <binaryScoreReg>.
     Found 1-bit register for signal <hitReg>.
-    Found 4-bit comparator equal for signal <hitReg$cmp_eq0001> created at line 75.
-    Found 4-bit comparator not equal for signal <hitReg$cmp_ne0001> created at line 75.
+    Found 4-bit comparator equal for signal <hitReg$cmp_eq0001> created at line 77.
     Found 4-bit register for signal <notePlayedReg>.
-    Found 4-bit subtractor for signal <notePlayedReg$sub0000> created at line 67.
+    Found 4-bit subtractor for signal <notePlayedReg$sub0000> created at line 69.
     Found 17-bit register for signal <scoreCount>.
     Found 17-bit adder for signal <scoreCount$share0000>.
     Found 1-bit register for signal <scoreReg>.
@@ -840,7 +861,7 @@ Synthesizing Unit <scoreUpdater>.
 	inferred   1 Counter(s).
 	inferred  23 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred   2 Comparator(s).
+	inferred   1 Comparator(s).
 Unit <scoreUpdater> synthesized.
 
 
@@ -1100,11 +1121,6 @@ Unit <blob_1> synthesized.
 
 Synthesizing Unit <blob_2>.
     Related source file is "blob.v".
-Unit <blob_2> synthesized.
-
-
-Synthesizing Unit <blob_3>.
-    Related source file is "blob.v".
     Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 16.
     Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 16.
     Found 11-bit comparator greatequal for signal <pixel$cmp_ge0000> created at line 16.
@@ -1114,6 +1130,11 @@ Synthesizing Unit <blob_3>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
+Unit <blob_2> synthesized.
+
+
+Synthesizing Unit <blob_3>.
+    Related source file is "blob.v".
 Unit <blob_3> synthesized.
 
 
@@ -1203,6 +1224,8 @@ WARNING:Xst:646 - Signal <voff<9:5>> is assigned but never used. This unconnecte
 WARNING:Xst:646 - Signal <voff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <hoff<10:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <hoff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 80.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 80.
     Found 4-bit adder for signal <column>.
     Found 1-bit xor2 for signal <cpixel$xor0000> created at line 79.
     Found 10-bit comparator greatequal for signal <dispflag$cmp_ge0000> created at line 80.
@@ -1215,7 +1238,7 @@ WARNING:Xst:646 - Signal <hoff<0>> is assigned but never used. This unconnected 
     Found 11-bit subtractor for signal <hoff$addsub0000> created at line 59.
     Found 10-bit subtractor for signal <voff>.
     Summary:
-	inferred   5 Adder/Subtractor(s).
+	inferred   7 Adder/Subtractor(s).
 	inferred   1 Multiplier(s).
 	inferred   4 Comparator(s).
 	inferred   9 Multiplexer(s).
@@ -1383,6 +1406,59 @@ WARNING:Xst:646 - Signal <hoff<0>> is assigned but never used. This unconnected 
 Unit <char_string_display_6> synthesized.
 
 
+Synthesizing Unit <char_string_display_7>.
+    Related source file is "cstringdisp.v".
+WARNING:Xst:646 - Signal <voff<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <voff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hoff<10:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hoff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 80.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 80.
+    Found 3-bit adder for signal <column>.
+    Found 1-bit xor2 for signal <cpixel$xor0000> created at line 79.
+    Found 10-bit comparator greatequal for signal <dispflag$cmp_ge0000> created at line 80.
+    Found 11-bit comparator greater for signal <dispflag$cmp_gt0000> created at line 80.
+    Found 12-bit comparator lessequal for signal <dispflag$cmp_le0000> created at line 80.
+    Found 11-bit comparator less for signal <dispflag$cmp_lt0000> created at line 80.
+    Found 11-bit adder for signal <font_addr>.
+    Found 7x4-bit multiplier for signal <font_addr$mult0000> created at line 74.
+    Found 11-bit subtractor for signal <hoff>.
+    Found 11-bit subtractor for signal <hoff$addsub0000> created at line 59.
+    Found 10-bit subtractor for signal <voff>.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <char_string_display_7> synthesized.
+
+
+Synthesizing Unit <char_string_display_8>.
+    Related source file is "cstringdisp.v".
+WARNING:Xst:646 - Signal <voff<9:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <voff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hoff<10:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hoff<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit adder carry out for signal <add0000$addsub0000> created at line 80.
+    Found 3-bit adder for signal <column>.
+    Found 1-bit xor2 for signal <cpixel$xor0000> created at line 79.
+    Found 10-bit comparator greatequal for signal <dispflag$cmp_ge0000> created at line 80.
+    Found 11-bit comparator greater for signal <dispflag$cmp_gt0000> created at line 80.
+    Found 12-bit comparator lessequal for signal <dispflag$cmp_le0000> created at line 80.
+    Found 11-bit comparator less for signal <dispflag$cmp_lt0000> created at line 80.
+    Found 11-bit adder for signal <font_addr>.
+    Found 7x4-bit multiplier for signal <font_addr$mult0000> created at line 74.
+    Found 11-bit subtractor for signal <hoff>.
+    Found 11-bit subtractor for signal <hoff$addsub0000> created at line 59.
+    Found 10-bit subtractor for signal <voff>.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <char_string_display_8> synthesized.
+
+
 Synthesizing Unit <noteIdentification>.
     Related source file is "noteIdentification.v".
 WARNING:Xst:1780 - Signal <writevalz_rnm0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -1411,9 +1487,9 @@ Synthesizing Unit <rh_display>.
 WARNING:Xst:646 - Signal <vga_display_hack_pixel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <curr_note_y> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <curr_note_color> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:643 - "fft.v" line 1250: The result of a 24x2-bit multiplication is partially used. Only the 24 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "fft.v" line 1256: The result of a 24x2-bit multiplication is partially used. Only the 24 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 4x9-bit ROM for signal <current_song_y>.
-    Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 1098.
+    Found 16x10-bit ROM for signal <note_y_pos_0$mux0000> created at line 1099.
     Found 16x34-bit ROM for signal <notes_1$rom0000>.
     Found 16x34-bit ROM for signal <notes_2$rom0000>.
     Found 16x34-bit ROM for signal <notes_3$rom0000>.
@@ -1431,23 +1507,23 @@ WARNING:Xst:643 - "fft.v" line 1250: The result of a 24x2-bit multiplication is 
     Found 16x34-bit ROM for signal <notes_15$rom0000>.
 WARNING:Xst:737 - Found 10-bit latch for signal <$old_curr_note_y_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 1068.
-    Found 10-bit comparator lessequal for signal <action_line$cmp_le0000> created at line 1068.
-    Found 9-bit adder carry out for signal <add0000$addsub0000> created at line 1316.
-    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 1247.
-    Found 24-bit adder for signal <bmp_pixel_alpha$addsub0000> created at line 1250.
-    Found 10-bit comparator greatequal for signal <bmp_pixel_alpha$cmp_ge0000> created at line 1247.
-    Found 11-bit comparator lessequal for signal <bmp_pixel_alpha$cmp_le0000> created at line 1247.
-    Found 24x2-bit multiplier for signal <bmp_pixel_alpha$mult0001> created at line 1250.
-    Found 11-bit comparator less for signal <bono_pixel_fix$cmp_lt0000> created at line 1336.
+    Found 10-bit comparator greatequal for signal <action_line$cmp_ge0000> created at line 1069.
+    Found 10-bit comparator lessequal for signal <action_line$cmp_le0000> created at line 1069.
+    Found 9-bit adder carry out for signal <add0000$addsub0000> created at line 1323.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 1253.
+    Found 24-bit adder for signal <bmp_pixel_alpha$addsub0000> created at line 1256.
+    Found 10-bit comparator greatequal for signal <bmp_pixel_alpha$cmp_ge0000> created at line 1253.
+    Found 11-bit comparator lessequal for signal <bmp_pixel_alpha$cmp_le0000> created at line 1253.
+    Found 24x2-bit multiplier for signal <bmp_pixel_alpha$mult0001> created at line 1256.
+    Found 11-bit comparator less for signal <bono_pixel_fix$cmp_lt0000> created at line 1426.
     Found 11-bit register for signal <lead_note_x>.
     Found 11-bit addsub for signal <lead_note_x$share0000>.
     Found 1-bit register for signal <load_tempo>.
     Found 384-bit register for signal <note_color>.
-    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 1154.
+    Found 4-bit comparator greater for signal <note_color_0$cmp_gt0000> created at line 1155.
     Found 160-bit register for signal <note_y_pos>.
     Found 384-bit register for signal <onscreen_notes>.
-    Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 1161.
+    Found 11-bit comparator greater for signal <onscreen_notes_0$cmp_gt0000> created at line 1162.
     Found 24-bit register for signal <pixel_reg>.
     Found 26-bit register for signal <song_tempo>.
 INFO:Xst:738 - HDL ADVISOR - 384 flip-flops were inferred for signal <note_color>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
@@ -1750,7 +1826,7 @@ WARNING:Xst:646 - Signal <GuessAddr> is assigned but never used. This unconnecte
 Unit <fft> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-WARNING:Xst:524 - All outputs of the instance <vga_display_hack> of the block <blob_2> are unconnected in block <rh_display>.
+WARNING:Xst:524 - All outputs of the instance <vga_display_hack> of the block <blob_3> are unconnected in block <rh_display>.
    This instance will be removed from the design along with all underlying logic
 
 =========================================================================
@@ -1764,26 +1840,27 @@ Macro Statistics
  16x40-bit ROM                                         : 1
  4x26-bit ROM                                          : 1
  4x9-bit ROM                                           : 1
-# Multipliers                                          : 12
+# Multipliers                                          : 16
  10x10-bit multiplier                                  : 3
  11x9-bit multiplier                                   : 1
  24x2-bit multiplier                                   : 1
- 7x4-bit multiplier                                    : 7
-# Adders/Subtractors                                   : 145
+ 7x4-bit multiplier                                    : 11
+# Adders/Subtractors                                   : 182
  10-bit adder                                          : 2
- 10-bit adder carry out                                : 29
+ 10-bit adder carry out                                : 37
  10-bit addsub                                         : 1
- 10-bit subtractor                                     : 7
- 11-bit adder                                          : 23
- 11-bit adder carry out                                : 27
+ 10-bit subtractor                                     : 11
+ 11-bit adder                                          : 27
+ 11-bit adder carry out                                : 36
  11-bit addsub                                         : 2
- 11-bit subtractor                                     : 15
+ 11-bit subtractor                                     : 23
  13-bit subtractor                                     : 1
  16-bit adder                                          : 1
  17-bit adder                                          : 1
  20-bit adder                                          : 1
  24-bit adder                                          : 1
- 4-bit adder                                           : 4
+ 3-bit adder                                           : 3
+ 4-bit adder                                           : 5
  4-bit subtractor                                      : 2
  5-bit adder                                           : 10
  5-bit adder carry out                                 : 5
@@ -1828,35 +1905,34 @@ Macro Statistics
  8-bit register                                        : 1
 # Latches                                              : 1
  10-bit latch                                          : 1
-# Comparators                                          : 173
- 10-bit comparator greatequal                          : 36
+# Comparators                                          : 204
+ 10-bit comparator greatequal                          : 44
  10-bit comparator greater                             : 1
  10-bit comparator lessequal                           : 1
- 11-bit comparator greatequal                          : 27
- 11-bit comparator greater                             : 8
- 11-bit comparator less                                : 35
+ 11-bit comparator greatequal                          : 31
+ 11-bit comparator greater                             : 12
+ 11-bit comparator less                                : 43
  11-bit comparator lessequal                           : 1
- 12-bit comparator less                                : 27
- 12-bit comparator lessequal                           : 7
+ 12-bit comparator less                                : 31
+ 12-bit comparator lessequal                           : 11
  18-bit comparator lessequal                           : 4
  20-bit comparator greater                             : 1
  27-bit comparator equal                               : 3
  4-bit comparator equal                                : 1
  4-bit comparator greater                              : 1
- 4-bit comparator not equal                            : 1
  8-bit comparator greatequal                           : 5
  8-bit comparator greater                              : 4
  8-bit comparator less                                 : 4
  8-bit comparator lessequal                            : 6
-# Multiplexers                                         : 54
- 1-bit 113-to-1 multiplexer                            : 1
- 1-bit 114-to-1 multiplexer                            : 1
- 1-bit 115-to-1 multiplexer                            : 1
- 1-bit 116-to-1 multiplexer                            : 1
- 1-bit 117-to-1 multiplexer                            : 1
- 1-bit 118-to-1 multiplexer                            : 1
- 1-bit 119-to-1 multiplexer                            : 1
- 1-bit 120-to-1 multiplexer                            : 1
+# Multiplexers                                         : 82
+ 1-bit 113-to-1 multiplexer                            : 2
+ 1-bit 114-to-1 multiplexer                            : 2
+ 1-bit 115-to-1 multiplexer                            : 2
+ 1-bit 116-to-1 multiplexer                            : 2
+ 1-bit 117-to-1 multiplexer                            : 2
+ 1-bit 118-to-1 multiplexer                            : 2
+ 1-bit 119-to-1 multiplexer                            : 2
+ 1-bit 120-to-1 multiplexer                            : 2
  1-bit 137-to-1 multiplexer                            : 2
  1-bit 138-to-1 multiplexer                            : 2
  1-bit 139-to-1 multiplexer                            : 2
@@ -1875,6 +1951,14 @@ Macro Statistics
  1-bit 160-to-1 multiplexer                            : 1
  1-bit 20-to-1 multiplexer                             : 3
  1-bit 40-to-1 multiplexer                             : 1
+ 1-bit 49-to-1 multiplexer                             : 2
+ 1-bit 50-to-1 multiplexer                             : 2
+ 1-bit 51-to-1 multiplexer                             : 2
+ 1-bit 52-to-1 multiplexer                             : 2
+ 1-bit 53-to-1 multiplexer                             : 2
+ 1-bit 54-to-1 multiplexer                             : 2
+ 1-bit 55-to-1 multiplexer                             : 2
+ 1-bit 56-to-1 multiplexer                             : 2
  1-bit 57-to-1 multiplexer                             : 1
  1-bit 58-to-1 multiplexer                             : 1
  1-bit 59-to-1 multiplexer                             : 1
@@ -1883,7 +1967,7 @@ Macro Statistics
  1-bit 62-to-1 multiplexer                             : 1
  1-bit 63-to-1 multiplexer                             : 1
  1-bit 64-to-1 multiplexer                             : 1
- 1-bit 8-to-1 multiplexer                              : 7
+ 1-bit 8-to-1 multiplexer                              : 11
  4-bit 16-to-1 multiplexer                             : 1
  48-bit 4-to-1 multiplexer                             : 1
  8-bit 4-to-1 multiplexer                              : 1
@@ -1891,8 +1975,8 @@ Macro Statistics
  32-bit shifter logical left                           : 1
 # Tristates                                            : 1
  36-bit tristate buffer                                : 1
-# Xors                                                 : 11
- 1-bit xor2                                            : 11
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
 
 =========================================================================
 
@@ -1944,7 +2028,6 @@ Reading core <song_scales.ngc>.
 Reading core <lotr_song.ngc>.
 Reading core <when_the_saints.ngc>.
 Reading core <greensleeves.ngc>.
-Reading core <my_fft.ngc>.
 Reading core <cache.ngc>.
 Loading core <font_rom> for timing and area information for instance <f>.
 Loading core <font_rom> for timing and area information for instance <f>.
@@ -1956,14 +2039,16 @@ Loading core <bono_green> for timing and area information for instance <b_green>
 Loading core <font_rom> for timing and area information for instance <f>.
 Loading core <font_rom> for timing and area information for instance <f>.
 Loading core <font_rom> for timing and area information for instance <f>.
+Loading core <font_rom> for timing and area information for instance <f>.
+Loading core <font_rom> for timing and area information for instance <f>.
 Loading core <song_scales> for timing and area information for instance <ss>.
 Loading core <lotr_song> for timing and area information for instance <lotr>.
 Loading core <when_the_saints> for timing and area information for instance <wts>.
 Loading core <greensleeves> for timing and area information for instance <gs>.
-Loading core <my_fft> for timing and area information for instance <fft2>.
 Loading core <cache> for timing and area information for instance <fftcache>.
 
 Synthesizing (advanced) Unit <char_string_display_1>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
 Unit <char_string_display_1> synthesized (advanced).
 
@@ -1987,6 +2072,15 @@ Unit <char_string_display_5> synthesized (advanced).
 Synthesizing (advanced) Unit <char_string_display_6>.
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
 Unit <char_string_display_6> synthesized (advanced).
+
+Synthesizing (advanced) Unit <char_string_display_7>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
+Unit <char_string_display_7> synthesized (advanced).
+
+Synthesizing (advanced) Unit <char_string_display_8>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_font_addr_mult0000 by adding 1 register level(s).
+Unit <char_string_display_8> synthesized (advanced).
 
 Synthesizing (advanced) Unit <fft>.
 INFO:Xst - The ROM <rh_disp/Mrom_notes_1_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <rh_disp/notes_1_rom0000>.
@@ -2410,17 +2504,17 @@ Macro Statistics
  16x40-bit ROM                                         : 1
  4x26-bit ROM                                          : 1
  4x9-bit ROM                                           : 1
-# Multipliers                                          : 12
+# Multipliers                                          : 16
  10x10-bit multiplier                                  : 3
  11x9-bit multiplier                                   : 1
  24x2-bit multiplier                                   : 1
- 7x4-bit multiplier                                    : 7
-# Adders/Subtractors                                   : 138
+ 7x4-bit multiplier                                    : 11
+# Adders/Subtractors                                   : 171
  10-bit adder                                          : 2
- 10-bit adder carry out                                : 29
+ 10-bit adder carry out                                : 37
  10-bit addsub                                         : 1
- 11-bit adder                                          : 23
- 11-bit adder carry out                                : 27
+ 11-bit adder                                          : 27
+ 11-bit adder carry out                                : 36
  11-bit addsub                                         : 2
  11-bit subtractor                                     : 1
  13-bit subtractor                                     : 1
@@ -2428,17 +2522,17 @@ Macro Statistics
  17-bit adder                                          : 1
  20-bit adder                                          : 1
  24-bit adder                                          : 1
- 3-bit adder                                           : 1
- 4-bit adder                                           : 3
+ 3-bit adder                                           : 4
+ 4-bit adder                                           : 4
  4-bit subtractor                                      : 2
  5-bit adder                                           : 13
  5-bit adder carry out                                 : 5
- 5-bit subtractor                                      : 8
+ 5-bit subtractor                                      : 12
  6-bit adder                                           : 1
  6-bit adder carry out                                 : 6
- 7-bit subtractor borrow in                            : 1
+ 7-bit subtractor borrow in                            : 4
  8-bit subtractor                                      : 1
- 8-bit subtractor borrow in                            : 3
+ 8-bit subtractor borrow in                            : 4
  9-bit adder carry out                                 : 1
  9-bit subtractor borrow in                            : 3
 # Counters                                             : 19
@@ -2456,35 +2550,34 @@ Macro Statistics
  Flip-Flops                                            : 1613
 # Latches                                              : 1
  10-bit latch                                          : 1
-# Comparators                                          : 173
- 10-bit comparator greatequal                          : 36
+# Comparators                                          : 204
+ 10-bit comparator greatequal                          : 44
  10-bit comparator greater                             : 1
  10-bit comparator lessequal                           : 1
- 11-bit comparator greatequal                          : 27
- 11-bit comparator greater                             : 8
- 11-bit comparator less                                : 35
+ 11-bit comparator greatequal                          : 31
+ 11-bit comparator greater                             : 12
+ 11-bit comparator less                                : 43
  11-bit comparator lessequal                           : 1
- 12-bit comparator less                                : 27
- 12-bit comparator lessequal                           : 7
+ 12-bit comparator less                                : 31
+ 12-bit comparator lessequal                           : 11
  18-bit comparator lessequal                           : 4
  20-bit comparator greater                             : 1
  27-bit comparator equal                               : 3
  4-bit comparator equal                                : 1
  4-bit comparator greater                              : 1
- 4-bit comparator not equal                            : 1
  8-bit comparator greatequal                           : 5
  8-bit comparator greater                              : 4
  8-bit comparator less                                 : 4
  8-bit comparator lessequal                            : 6
-# Multiplexers                                         : 54
- 1-bit 113-to-1 multiplexer                            : 1
- 1-bit 114-to-1 multiplexer                            : 1
- 1-bit 115-to-1 multiplexer                            : 1
- 1-bit 116-to-1 multiplexer                            : 1
- 1-bit 117-to-1 multiplexer                            : 1
- 1-bit 118-to-1 multiplexer                            : 1
- 1-bit 119-to-1 multiplexer                            : 1
- 1-bit 120-to-1 multiplexer                            : 1
+# Multiplexers                                         : 82
+ 1-bit 113-to-1 multiplexer                            : 2
+ 1-bit 114-to-1 multiplexer                            : 2
+ 1-bit 115-to-1 multiplexer                            : 2
+ 1-bit 116-to-1 multiplexer                            : 2
+ 1-bit 117-to-1 multiplexer                            : 2
+ 1-bit 118-to-1 multiplexer                            : 2
+ 1-bit 119-to-1 multiplexer                            : 2
+ 1-bit 120-to-1 multiplexer                            : 2
  1-bit 137-to-1 multiplexer                            : 2
  1-bit 138-to-1 multiplexer                            : 2
  1-bit 139-to-1 multiplexer                            : 2
@@ -2503,6 +2596,14 @@ Macro Statistics
  1-bit 160-to-1 multiplexer                            : 1
  1-bit 20-to-1 multiplexer                             : 3
  1-bit 40-to-1 multiplexer                             : 1
+ 1-bit 49-to-1 multiplexer                             : 2
+ 1-bit 50-to-1 multiplexer                             : 2
+ 1-bit 51-to-1 multiplexer                             : 2
+ 1-bit 52-to-1 multiplexer                             : 2
+ 1-bit 53-to-1 multiplexer                             : 2
+ 1-bit 54-to-1 multiplexer                             : 2
+ 1-bit 55-to-1 multiplexer                             : 2
+ 1-bit 56-to-1 multiplexer                             : 2
  1-bit 57-to-1 multiplexer                             : 1
  1-bit 58-to-1 multiplexer                             : 1
  1-bit 59-to-1 multiplexer                             : 1
@@ -2511,27 +2612,33 @@ Macro Statistics
  1-bit 62-to-1 multiplexer                             : 1
  1-bit 63-to-1 multiplexer                             : 1
  1-bit 64-to-1 multiplexer                             : 1
- 1-bit 8-to-1 multiplexer                              : 7
+ 1-bit 8-to-1 multiplexer                              : 11
  4-bit 16-to-1 multiplexer                             : 1
  48-bit 4-to-1 multiplexer                             : 1
  8-bit 4-to-1 multiplexer                              : 1
 # Logic shifters                                       : 1
  32-bit shifter logical left                           : 1
-# Xors                                                 : 11
- 1-bit xor2                                            : 11
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_17> in Unit <fft> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_19> <rh_disp/onscreen_notes_0_21> <rh_disp/onscreen_notes_0_23> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_16> in Unit <fft> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_18> <rh_disp/onscreen_notes_0_20> <rh_disp/onscreen_notes_0_22> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_0> in Unit <fft> is equivalent to the following 7 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_1> <rh_disp/onscreen_notes_0_2> <rh_disp/onscreen_notes_0_3> <rh_disp/onscreen_notes_0_4> <rh_disp/onscreen_notes_0_5> <rh_disp/onscreen_notes_0_6> <rh_disp/onscreen_notes_0_7> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_11> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_15> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_8> in Unit <fft> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_10> <rh_disp/onscreen_notes_0_14> 
+INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_9> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_13> 
 INFO:Xst:2261 - The FF/Latch <l_right_data_0> in Unit <ac97> is equivalent to the following 3 FFs/Latches, which will be removed : <l_right_data_1> <l_right_data_2> <l_right_data_3> 
 WARNING:Xst:1710 - FF/Latch <l_right_data_0> (without init value) has a constant value of 0 in block <ac97>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_3_rom0000>, <rh_disp/Mrom_notes_1_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_3_rom00001>
-INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_2_rom0000>, <rh_disp/Mrom_notes_4_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_2_rom00001>
-INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_5_rom0000>, <rh_disp/Mrom_notes_6_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_5_rom00001>
-INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_7_rom0000>, <rh_disp/Mrom_notes_10_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_7_rom00001>
-INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_8_rom0000>, <rh_disp/Mrom_notes_9_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_8_rom00001>
+INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_2_rom0000>, <rh_disp/Mrom_notes_6_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_2_rom00001>
+INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_4_rom0000>, <rh_disp/Mrom_notes_5_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_4_rom00001>
+INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_9_rom0000>, <rh_disp/Mrom_notes_7_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_9_rom00001>
+INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_8_rom0000>, <rh_disp/Mrom_notes_10_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_8_rom00001>
 INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_11_rom0000>, <rh_disp/Mrom_notes_12_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_11_rom00001>
 INFO:Xst:2697 - Unit <fft> : the RAMs <rh_disp/Mrom_notes_13_rom0000>, <rh_disp/Mrom_notes_14_rom0000> are packed into the single block RAM <rh_disp/Mrom_notes_13_rom00001>
 WARNING:Xst:1710 - FF/Latch <hexy/ascii_2> (without init value) has a constant value of 0 in block <fft>. This FF/Latch will be trimmed during the optimization process.
@@ -2590,10 +2697,6 @@ Optimizing unit <ac97commands> ...
 Optimizing unit <sqrt> ...
 
 Optimizing unit <counter> ...
-
-Optimizing unit <blob_3> ...
-
-Optimizing unit <char_string_display_1> ...
 
 Optimizing unit <char_string_display_2> ...
 
@@ -2749,15 +2852,12 @@ INFO:Xst:2261 - The FF/Latch <a/ac97/l_cmd_data_6> in Unit <fft> is equivalent t
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore4_13> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore4_12> 
 INFO:Xst:2261 - The FF/Latch <a/ac97/l_cmd_data_8> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <a/ac97/l_cmd_data_16> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore4_21> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore4_20> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_8> in Unit <fft> is equivalent to the following 2 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_10> <rh_disp/onscreen_notes_0_14> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_11> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_15> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore4_29> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore4_28> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore1_13> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore1_12> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore2_5> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore2_4> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore4_37> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore4_36> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore1_21> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore1_20> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore4_45> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore4_44> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_9> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <rh_disp/onscreen_notes_0_13> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore1_29> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore1_28> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore1_37> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore1_36> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore1_45> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore1_44> 
@@ -2766,36 +2866,27 @@ INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore2_13> in Unit <fft> is equivale
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore2_21> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore2_20> 
 INFO:Xst:2261 - The FF/Latch <a/cmds/command_0> in Unit <fft> is equivalent to the following 2 FFs/Latches, which will be removed : <a/cmds/command_1> <a/cmds/command_2> 
 INFO:Xst:2261 - The FF/Latch <rh_disp/song_tempo_4> in Unit <fft> is equivalent to the following 5 FFs/Latches, which will be removed : <msl/c/goal_20> <msl/c/goal_12> <msl/c/goal_10> <msl/c/goal_7> <msl/c/goal_4> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_16> in Unit <fft> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_18> <rh_disp/onscreen_notes_0_20> <rh_disp/onscreen_notes_0_22> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore2_29> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore2_28> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_0> in Unit <fft> is equivalent to the following 7 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_1> <rh_disp/onscreen_notes_0_2> <rh_disp/onscreen_notes_0_3> <rh_disp/onscreen_notes_0_4> <rh_disp/onscreen_notes_0_5> <rh_disp/onscreen_notes_0_6> <rh_disp/onscreen_notes_0_7> 
-INFO:Xst:2261 - The FF/Latch <rh_disp/onscreen_notes_0_17> in Unit <fft> is equivalent to the following 3 FFs/Latches, which will be removed : <rh_disp/onscreen_notes_0_19> <rh_disp/onscreen_notes_0_21> <rh_disp/onscreen_notes_0_23> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore2_37> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore2_36> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore2_45> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore2_44> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore4_5> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore4_4> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore3_13> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore3_12> 
 INFO:Xst:2261 - The FF/Latch <menu/asciiHighScore3_21> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/asciiHighScore3_20> 
 INFO:Xst:2261 - The FF/Latch <a/ac97/l_cmd_data_4> in Unit <fft> is equivalent to the following 2 FFs/Latches, which will be removed : <a/ac97/l_cmd_data_5> <a/ac97/l_cmd_data_6> 
-Found area constraint ratio of 100 (+ 5) on block fft, actual ratio is 17.
-INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_5> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_4> 
-INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_13> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_12> 
-INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_21> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_20> 
+Found area constraint ratio of 100 (+ 5) on block fft, actual ratio is 7.
 INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_29> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_28> 
 INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_37> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_36> 
 INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_45> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_44> 
-INFO:Xst:2260 - The FF/Latch <blk00000a4e> in Unit <a1/audio/fft2> is equivalent to the following FF/Latch : <blk00001266> 
-INFO:Xst:2260 - The FF/Latch <blk00003a8f> in Unit <a1/audio/fft2> is equivalent to the following 3 FFs/Latches : <blk00003ac1> <blk00003af3> <blk00003b25> 
-INFO:Xst:2260 - The FF/Latch <blk00003a90> in Unit <a1/audio/fft2> is equivalent to the following 3 FFs/Latches : <blk00003ac2> <blk00003af4> <blk00003b26> 
-INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_5> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_4> 
-INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_13> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_12> 
-INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_21> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_20> 
+INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_5> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_4> 
+INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_13> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_12> 
+INFO:Xst:2260 - The FF/Latch <menu/highScoreReg_21> in Unit <fft> is equivalent to the following FF/Latch : <menu/highScoreReg_20> 
 INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_29> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_28> 
 INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_37> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_36> 
 INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_45> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_44> 
-INFO:Xst:2260 - The FF/Latch <blk00000a4e> in Unit <a1/audio/fft2> is equivalent to the following FF/Latch : <blk00001266> 
-INFO:Xst:2260 - The FF/Latch <blk00003a8f> in Unit <a1/audio/fft2> is equivalent to the following 3 FFs/Latches : <blk00003ac1> <blk00003af3> <blk00003b25> 
-INFO:Xst:2260 - The FF/Latch <blk00003a90> in Unit <a1/audio/fft2> is equivalent to the following 3 FFs/Latches : <blk00003ac2> <blk00003af4> <blk00003b26> 
-FlipFlop xvga1/vcount_7 has been replicated 3 time(s)
+INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_5> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_4> 
+INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_13> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_12> 
+INFO:Xst:2261 - The FF/Latch <menu/highScoreReg_21> in Unit <fft> is equivalent to the following FF/Latch, which will be removed : <menu/highScoreReg_20> 
+FlipFlop xvga1/vcount_7 has been replicated 4 time(s)
 FlipFlop xvga1/vcount_8 has been replicated 4 time(s)
 FlipFlop xvga1/vcount_9 has been replicated 3 time(s)
 
@@ -2847,8 +2938,8 @@ Unit <fft> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1537
- Flip-Flops                                            : 1537
+# Registers                                            : 1538
+ Flip-Flops                                            : 1538
 # Shift Registers                                      : 39
  2-bit shift register                                  : 34
  4-bit shift register                                  : 1
@@ -2881,55 +2972,47 @@ Design Statistics
 # IOs                              : 576
 
 Cell Usage :
-# BELS                             : 14881
-#      BUF                         : 386
-#      GND                         : 31
-#      INV                         : 100
-#      LUT1                        : 309
-#      LUT2                        : 1434
-#      LUT2_D                      : 5
-#      LUT2_L                      : 1
-#      LUT3                        : 744
-#      LUT3_D                      : 47
-#      LUT3_L                      : 22
-#      LUT4                        : 5308
-#      LUT4_D                      : 56
-#      LUT4_L                      : 48
-#      MULT_AND                    : 473
-#      MUXCY                       : 2983
-#      MUXF5                       : 730
-#      MUXF6                       : 122
-#      MUXF7                       : 43
-#      MUXF8                       : 18
-#      VCC                         : 31
-#      XORCY                       : 1990
-# FlipFlops/Latches                : 7214
-#      FD                          : 118
-#      FDCE                        : 725
-#      FDE                         : 5192
+# BELS                             : 6543
+#      GND                         : 21
+#      INV                         : 104
+#      LUT1                        : 353
+#      LUT2                        : 1375
+#      LUT2_D                      : 8
+#      LUT2_L                      : 3
+#      LUT3                        : 618
+#      LUT3_D                      : 8
+#      LUT3_L                      : 29
+#      LUT4                        : 1593
+#      LUT4_D                      : 50
+#      LUT4_L                      : 46
+#      MULT_AND                    : 6
+#      MUXCY                       : 1529
+#      MUXF5                       : 249
+#      MUXF6                       : 36
+#      MUXF7                       : 7
+#      VCC                         : 21
+#      XORCY                       : 487
+# FlipFlops/Latches                : 1604
+#      FD                          : 85
+#      FDE                         : 637
 #      FDE_1                       : 17
-#      FDR                         : 512
-#      FDRE                        : 547
+#      FDR                         : 511
+#      FDRE                        : 272
 #      FDRS                        : 17
 #      FDRSE                       : 7
-#      FDS                         : 34
-#      FDSE                        : 32
+#      FDS                         : 32
+#      FDSE                        : 13
 #      LD                          : 10
 #      OFDDRRSE                    : 3
-# RAMS                             : 131
-#      RAM32X1D                    : 32
-#      RAM64X1D                    : 30
-#      RAMB16_S18_S18              : 1
+# RAMS                             : 45
 #      RAMB16_S1_S1                : 16
-#      RAMB16_S2_S2                : 4
 #      RAMB16_S36                  : 1
-#      RAMB16_S36_S36              : 18
+#      RAMB16_S36_S36              : 15
 #      RAMB16_S4_S4                : 2
-#      RAMB16_S9                   : 7
-#      RAMB16_S9_S9                : 20
-# Shift Registers                  : 973
+#      RAMB16_S9                   : 11
+# Shift Registers                  : 41
 #      SRL16                       : 36
-#      SRL16E                      : 936
+#      SRL16E                      : 4
 #      SRL16E_1                    : 1
 # Clock Buffers                    : 6
 #      BUFG                        : 5
@@ -2942,9 +3025,10 @@ Cell Usage :
 #      OBUFT                       : 4
 # DCMs                             : 3
 #      DCM                         : 3
-# MULTs                            : 29
-#      MULT18X18                   : 11
-#      MULT18X18S                  : 18
+# MULTs                            : 15
+#      MULT18X18                   : 15
+# Others                           : 1
+#      my_fft                      : 1
 =========================================================================
 
 Device utilization summary:
@@ -2952,16 +3036,15 @@ Device utilization summary:
 
 Selected Device : 2v6000bf957-4 
 
- Number of Slices:                     5788  out of  33792    17%  
- Number of Slice Flip Flops:           7214  out of  67584    10%  
- Number of 4 input LUTs:               9415  out of  67584    13%  
-    Number used as logic:              8074
-    Number used as Shift registers:     973
-    Number used as RAMs:                368
+ Number of Slices:                     2283  out of  33792     6%  
+ Number of Slice Flip Flops:           1604  out of  67584     2%  
+ Number of 4 input LUTs:               4228  out of  67584     6%  
+    Number used as logic:              4187
+    Number used as Shift registers:      41
  Number of IOs:                         576
  Number of bonded IOBs:                 302  out of    684    44%  
- Number of BRAMs:                        69  out of    144    47%  
- Number of MULT18X18s:                   29  out of    144    20%  
+ Number of BRAMs:                        45  out of    144    31%  
+ Number of MULT18X18s:                   15  out of    144    10%  
  Number of GCLKs:                         6  out of     16    37%  
  Number of DCMs:                          3  out of     12    25%  
 
@@ -2983,16 +3066,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
-Clock Signal                                                            | Clock buffer(FF name)                                                                                    | Load  |
-------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
-clock_27mhz                                                             | vclk1:CLKFX+rc/int_dcm:CLK0                                                                              | 1293  |
-rh_disp/old_curr_note_y_11_not0001(rh_disp/old_curr_note_y_11_not0001:O)| NONE(*)(rh_disp/_old_curr_note_y_11_0)                                                                   | 10    |
-clock_27mhz                                                             | IBUFG+BUFG                                                                                               | 6906  |
-rh_disp/pb/nl_rom/BU2/dbiterr                                           | NONE(rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram)| 18    |
-hex/clock1                                                              | BUFG                                                                                                     | 43    |
-ac97_bit_clock                                                          | BUFGP                                                                                                    | 79    |
-------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+---------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)                                                                                    | Load  |
+---------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+clock_27mhz                                                                | vclk1:CLKFX+rc/int_dcm:CLK0                                                                              | 1294  |
+rh_disp/old_curr_note_y_11_not0001(rh_disp/old_curr_note_y_11_mux0000<0>:O)| NONE(*)(rh_disp/_old_curr_note_y_11_0)                                                                   | 10    |
+clock_27mhz                                                                | IBUFG+BUFG                                                                                               | 255   |
+rh_disp/pb/nl_rom/BU2/dbiterr                                              | NONE(rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram)| 18    |
+hex/clock1                                                                 | BUFG                                                                                                     | 43    |
+ac97_bit_clock                                                             | BUFGP                                                                                                    | 79    |
+---------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -3000,25 +3083,15 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-------------------------------------------------------+--------------------------------+-------+
-Control Signal                                        | Buffer(FF name)                | Load  |
-------------------------------------------------------+--------------------------------+-------+
-a1/audio/fft2/sig00000001(a1/audio/fft2/blk00000002:G)| NONE(a1/audio/fft2/blk00000710)| 739   |
-a1/audio/fft2/ce_11(a1/audio/fft2/ce_11:O)            | NONE(a1/audio/fft2/blk0000324e)| 6     |
-a1/audio/fft2/ce_4(a1/audio/fft2/ce_4:O)              | NONE(a1/audio/fft2/blk00001396)| 3     |
-a1/audio/fft2/ce_7(a1/audio/fft2/ce_7:O)              | NONE(a1/audio/fft2/blk00001ece)| 3     |
-a1/audio/fft2/ce_9(a1/audio/fft2/ce_9:O)              | NONE(a1/audio/fft2/blk000028e7)| 3     |
-a1/audio/fft2/ce_3(a1/audio/fft2/ce_3:O)              | NONE(a1/audio/fft2/blk00000b56)| 2     |
-a1/audio/fft2/ce_2(a1/audio/fft2/ce_2:O)              | NONE(a1/audio/fft2/blk00000b2d)| 1     |
-------------------------------------------------------+--------------------------------+-------+
+No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 33.600ns (Maximum Frequency: 29.762MHz)
-   Minimum input arrival time before clock: 5.521ns
-   Maximum output required time after clock: 13.384ns
+   Minimum period: 33.208ns (Maximum Frequency: 30.114MHz)
+   Minimum input arrival time before clock: 17.311ns
+   Maximum output required time after clock: 13.404ns
    Maximum combinational path delay: 6.477ns
 
 Timing Detail:
@@ -3027,23 +3100,23 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_27mhz'
-  Clock period: 33.600ns (frequency: 29.762MHz)
-  Total number of paths / destination ports: 312347 / 18892
+  Clock period: 33.208ns (frequency: 30.114MHz)
+  Total number of paths / destination ports: 230445 / 3581
 -------------------------------------------------------------------------
-Delay:               14.000ns (Levels of Logic = 7)
-  Source:            xvga1/vcount_7_3 (FF)
+Delay:               13.837ns (Levels of Logic = 7)
+  Source:            xvga1/vcount_8_1 (FF)
   Destination:       rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram (RAM)
   Source Clock:      clock_27mhz rising 2.4X
   Destination Clock: clock_27mhz rising 2.4X
 
-  Data Path: xvga1/vcount_7_3 to rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram
+  Data Path: xvga1/vcount_8_1 to rh_disp/pb/nl_rom/BU2/U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            38   0.568   1.137  xvga1/vcount_7_3 (xvga1/vcount_7_3)
-     LUT3:I2->O            1   0.439   0.517  rh_disp/pb/pixel_not000140 (rh_disp/pb/pixel_not000140)
-     MULT18X18:A9->P14     1   6.009   0.726  rh_disp/pb/Mmult_image_addr_mult0001 (rh_disp/pb/image_addr_mult0001<14>)
-     LUT2:I1->O            1   0.439   0.000  rh_disp/pb/Madd_image_addr_lut<14> (rh_disp/pb/Madd_image_addr_lut<14>)
+     FDRE:C->Q             1   0.568   0.802  xvga1/vcount_8_1 (xvga1/vcount_8)
+     LUT3:I0->O            9   0.439   0.863  rh_disp/pb/pixel_not000151 (N457)
+     MULT18X18:A10->P14    1   6.009   0.551  rh_disp/pb/Mmult_image_addr_mult0001 (rh_disp/pb/image_addr_mult0001<14>)
+     LUT4:I2->O            1   0.439   0.000  rh_disp/pb/Madd_image_addr_lut<14> (rh_disp/pb/Madd_image_addr_lut<14>)
      MUXCY:S->O            0   0.298   0.000  rh_disp/pb/Madd_image_addr_cy<14> (rh_disp/pb/Madd_image_addr_cy<14>)
      XORCY:CI->O           4   1.274   0.955  rh_disp/pb/Madd_image_addr_xor<15> (rh_disp/pb/image_addr<15>)
      begin scope: 'rh_disp/pb/nl_rom'
@@ -3051,15 +3124,15 @@ Delay:               14.000ns (Levels of Logic = 7)
      LUT2:I1->O            8   0.439   0.840  U0/blk_mem_generator/valid.cstr/ram_ena01 (U0/blk_mem_generator/valid.cstr/ram_ena0)
      RAMB16_S1_S1:ENA          0.359          U0/blk_mem_generator/valid.cstr/ramloop[17].ram.r/v2_init.ram/dpram.dp1x1.ram
     ----------------------------------------
-    Total                     14.000ns (9.825ns logic, 4.175ns route)
-                                       (70.2% logic, 29.8% route)
+    Total                     13.837ns (9.825ns logic, 4.011ns route)
+                                       (71.0% logic, 29.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hex/clock1'
-  Clock period: 13.289ns (frequency: 75.248MHz)
+  Clock period: 13.369ns (frequency: 74.800MHz)
   Total number of paths / destination ports: 4976 / 74
 -------------------------------------------------------------------------
-Delay:               13.289ns (Levels of Logic = 15)
+Delay:               13.369ns (Levels of Logic = 15)
   Source:            hex/char_index_0 (FF)
   Destination:       hex/disp_data_out (FF)
   Source Clock:      hex/clock1 rising
@@ -3070,32 +3143,32 @@ Delay:               13.289ns (Levels of Logic = 15)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q             38   0.568   1.388  hex/char_index_0 (hex/char_index_0)
-     LUT3:I0->O            1   0.439   0.000  hex/Mmux_nibble_69 (hex/Mmux_nibble_69)
-     MUXF5:I0->O           1   0.436   0.000  hex/Mmux_nibble_4_f5_2 (hex/Mmux_nibble_4_f53)
-     MUXF6:I1->O           1   0.447   0.000  hex/Mmux_nibble_3_f6_2 (hex/Mmux_nibble_3_f63)
-     MUXF7:I1->O          28   0.447   1.362  hex/Mmux_nibble_2_f7_2 (hex/nibble<3>1)
+     LUT4:I0->O            1   0.439   0.000  hex/Mmux_nibble_51 (hex/Mmux_nibble_51)
+     MUXF5:I1->O           1   0.436   0.000  hex/Mmux_nibble_4_f5_0 (hex/Mmux_nibble_4_f51)
+     MUXF6:I1->O           1   0.447   0.000  hex/Mmux_nibble_3_f6_0 (hex/Mmux_nibble_3_f61)
+     MUXF7:I1->O          29   0.447   1.365  hex/Mmux_nibble_2_f7_0 (hex/nibble<1>)
      LUT4:I0->O            2   0.439   0.735  hex/Mrom_dots1311 (hex/Mrom_dots12)
      LUT3:I2->O            1   0.439   0.000  hex/Mmux__varindex0000_131 (hex/Mmux__varindex0000_131)
      MUXF5:I0->O           1   0.436   0.000  hex/Mmux__varindex0000_11_f5_0 (hex/Mmux__varindex0000_11_f51)
      MUXF6:I1->O           1   0.447   0.000  hex/Mmux__varindex0000_10_f6 (hex/Mmux__varindex0000_10_f6)
-     MUXF7:I0->O           1   0.447   0.803  hex/Mmux__varindex0000_8_f7 (hex/Mmux__varindex0000_8_f7)
+     MUXF7:I0->O           1   0.447   0.802  hex/Mmux__varindex0000_8_f7 (hex/Mmux__varindex0000_8_f7)
      LUT2:I0->O            1   0.439   0.000  hex/disp_data_out_mux0000782 (hex/disp_data_out_mux0000782)
      MUXF5:I0->O           1   0.436   0.552  hex/disp_data_out_mux000078_f5 (hex/disp_data_out_mux000078)
-     LUT3:I2->O            1   0.439   0.000  hex/disp_data_out_mux0000131_G (N881)
-     MUXF5:I1->O           2   0.436   0.910  hex/disp_data_out_mux0000131 (hex/disp_data_out_mux0000131)
-     LUT2:I1->O            1   0.439   0.000  hex/disp_data_out_mux00001692 (hex/disp_data_out_mux00001691)
-     MUXF5:I0->O           1   0.436   0.000  hex/disp_data_out_mux0000169_f5 (hex/disp_data_out_mux0000)
+     LUT3:I2->O            1   0.439   0.000  hex/disp_data_out_mux0000131_G (N934)
+     MUXF5:I1->O           2   0.436   0.987  hex/disp_data_out_mux0000131 (hex/disp_data_out_mux0000131)
+     LUT4:I0->O            1   0.439   0.000  hex/disp_data_out_mux00001691 (hex/disp_data_out_mux0000169)
+     MUXF5:I1->O           1   0.436   0.000  hex/disp_data_out_mux0000169_f5 (hex/disp_data_out_mux0000)
      FDE:D                     0.370          hex/disp_data_out
     ----------------------------------------
-    Total                     13.289ns (7.540ns logic, 5.749ns route)
-                                       (56.7% logic, 43.3% route)
+    Total                     13.369ns (7.540ns logic, 5.829ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ac97_bit_clock'
-  Clock period: 12.499ns (frequency: 80.006MHz)
+  Clock period: 12.835ns (frequency: 77.912MHz)
   Total number of paths / destination ports: 1828 / 119
 -------------------------------------------------------------------------
-Delay:               6.249ns (Levels of Logic = 3)
+Delay:               6.418ns (Levels of Logic = 3)
   Source:            a/ac97/bit_count_6 (FF)
   Destination:       a/ac97/Mshreg_left_in_data_4 (FF)
   Source Clock:      ac97_bit_clock rising
@@ -3106,43 +3179,47 @@ Delay:               6.249ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              15   0.568   1.274  a/ac97/bit_count_6 (a/ac97/bit_count_6)
-     LUT3:I0->O            3   0.439   0.724  a/ac97/l_left_data_not0001132 (a/ac97/N18)
-     MUXF5:S->O            1   0.699   0.558  a/ac97/left_in_data_and000013_f5 (a/ac97/left_in_data_and000013)
-     LUT4:I3->O           18   0.439   1.023  a/ac97/left_in_data_and000048 (a/ac97/left_in_data_and0000)
+     LUT3:I0->O            3   0.439   0.725  a/ac97/l_left_data_not0001132 (a/ac97/N18)
+     MUXF5:S->O            1   0.699   0.725  a/ac97/left_in_data_and000013_f5 (a/ac97/left_in_data_and000013)
+     LUT4:I1->O           18   0.439   1.023  a/ac97/left_in_data_and000048 (a/ac97/left_in_data_and0000)
      SRL16E_1:CE               0.525          a/ac97/Mshreg_left_in_data_4
     ----------------------------------------
-    Total                      6.249ns (2.670ns logic, 3.580ns route)
-                                       (42.7% logic, 57.3% route)
+    Total                      6.418ns (2.670ns logic, 3.748ns route)
+                                       (41.6% logic, 58.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 154 / 137
+  Total number of paths / destination ports: 15803 / 187
 -------------------------------------------------------------------------
-Offset:              5.521ns (Levels of Logic = 12)
-  Source:            switch<0> (PAD)
-  Destination:       a1/writeVal (FF)
+Offset:              17.311ns (Levels of Logic = 15)
+  Source:            a1/audio/fft2:xk_index<1> (PAD)
+  Destination:       a1/audio/haddr_0 (FF)
   Destination Clock: clock_27mhz rising
 
-  Data Path: switch<0> to a1/writeVal
+  Data Path: a1/audio/fft2:xk_index<1> to a1/audio/haddr_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.825   0.803  switch_0_IBUF (switch_0_IBUF)
-     LUT2:I0->O            1   0.439   0.000  a1/Mcompar_writeVal_cmp_gt0000_lut<0> (a1/Mcompar_writeVal_cmp_gt0000_lut<0>)
-     MUXCY:S->O            1   0.298   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<0> (a1/Mcompar_writeVal_cmp_gt0000_cy<0>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<1> (a1/Mcompar_writeVal_cmp_gt0000_cy<1>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<2> (a1/Mcompar_writeVal_cmp_gt0000_cy<2>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<3> (a1/Mcompar_writeVal_cmp_gt0000_cy<3>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<4> (a1/Mcompar_writeVal_cmp_gt0000_cy<4>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<5> (a1/Mcompar_writeVal_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<6> (a1/Mcompar_writeVal_cmp_gt0000_cy<6>)
-     MUXCY:CI->O           1   0.053   0.000  a1/Mcompar_writeVal_cmp_gt0000_cy<7> (a1/Mcompar_writeVal_cmp_gt0000_cy<7>)
-     MUXCY:CI->O           1   0.942   0.517  a1/Mcompar_writeVal_cmp_gt0000_cy<8> (a1/Mcompar_writeVal_cmp_gt0000_cy<8>)
-     INV:I->O              1   0.439   0.517  a1/Mcompar_writeVal_cmp_gt0000_cy<8>_inv_INV_0 (a1/writeVal_cmp_gt0000)
-     FDE:D                     0.370          a1/writeVal
+    my_fft:xk_index<1>    72   0.000   1.476  a1/audio/fft2 (a1/audio/xk_index<1>)
+     LUT2:I0->O           13   0.439   1.162  a1/audio/haddr_or000171 (a1/audio/N61)
+     LUT4:I1->O            3   0.439   1.010  a1/audio/haddr_or00011621 (a1/audio/N156)
+     LUT4:I0->O            1   0.439   0.000  a1/audio/haddr_or000180_G (N1022)
+     MUXF5:I1->O           1   0.436   0.802  a1/audio/haddr_or000180 (a1/audio/haddr_or000180)
+     LUT4:I0->O            1   0.439   0.000  a1/audio/haddr_or0001972 (a1/audio/haddr_or0001972)
+     MUXF5:I0->O           1   0.436   0.557  a1/audio/haddr_or000197_f5 (a1/audio/haddr_or000197)
+     LUT4:I3->O            1   0.439   0.552  a1/audio/haddr_or0001581_SW0 (N577)
+     LUT4:I2->O           16   0.439   1.040  a1/audio/haddr_or0001581 (a1/audio/haddr_or0001)
+     LUT4:I3->O            1   0.439   0.557  a1/audio/haddr_mux0000<7>1212 (a1/audio/haddr_mux0000<7>1212)
+     LUT4:I3->O            1   0.439   0.551  a1/audio/haddr_mux0000<7>1233_SW0_SW0 (N868)
+     LUT3:I2->O            1   0.439   0.557  a1/audio/haddr_mux0000<7>1233_SW0 (N573)
+     LUT4:I3->O            2   0.439   0.987  a1/audio/haddr_mux0000<7>1233 (a1/audio/N40)
+     LUT4:I0->O            1   0.439   0.551  a1/audio/haddr_mux0000<11>73_SW0 (N715)
+     LUT4:I2->O            1   0.439   0.558  a1/audio/haddr_mux0000<11>94_SW0 (N825)
+     LUT4:I3->O            1   0.439   0.000  a1/audio/haddr_mux0000<11>94 (a1/audio/haddr_mux0000<11>)
+     FDE:D                     0.370          a1/audio/haddr_0
     ----------------------------------------
-    Total                      5.521ns (3.684ns logic, 1.838ns route)
-                                       (66.7% logic, 33.3% route)
+    Total                     17.311ns (6.949ns logic, 10.362ns route)
+                                       (40.1% logic, 59.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ac97_bit_clock'
@@ -3165,9 +3242,9 @@ Offset:              1.712ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_27mhz'
-  Total number of paths / destination ports: 519 / 115
+  Total number of paths / destination ports: 523 / 117
 -------------------------------------------------------------------------
-Offset:              13.384ns (Levels of Logic = 7)
+Offset:              13.404ns (Levels of Logic = 7)
   Source:            xvga1/vcount_4 (FF)
   Destination:       ram0_address<17> (PAD)
   Source Clock:      clock_27mhz rising 2.4X
@@ -3176,17 +3253,17 @@ Offset:              13.384ns (Levels of Logic = 7)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            68   0.568   1.466  xvga1/vcount_4 (xvga1/vcount_4)
-     LUT4:I0->O            1   0.439   0.557  vd1/vcount_f_cmp_eq000030 (vd1/vcount_f_cmp_eq000030)
-     LUT4:I3->O            1   0.439   0.552  vd1/vcount_f_cmp_eq000032_SW0 (N546)
+     FDRE:C->Q            78   0.568   1.492  xvga1/vcount_4 (xvga1/vcount_4)
+     LUT4:I0->O            1   0.439   0.552  vd1/vcount_f_cmp_eq000030 (vd1/vcount_f_cmp_eq000030)
+     LUT4:I2->O            1   0.439   0.552  vd1/vcount_f_cmp_eq000032_SW0 (N544)
      LUT4:I2->O            8   0.439   1.048  vd1/vcount_f_cmp_eq000032 (vd1/vcount_f_cmp_eq0000)
      LUT2:I1->O            4   0.439   0.956  vd1/vcount_f<2>21 (vd1/N9)
      LUT4:I1->O            1   0.439   0.726  vram_addr<17>33 (vram_addr<17>33)
      LUT4:I1->O            1   0.439   0.517  vram_addr<17>61 (vram_addr<17>)
      OBUF:I->O                 4.361          ram0_address_17_OBUF (ram0_address<17>)
     ----------------------------------------
-    Total                     13.384ns (7.563ns logic, 5.821ns route)
-                                       (56.5% logic, 43.5% route)
+    Total                     13.404ns (7.563ns logic, 5.841ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'hex/clock1'
@@ -3209,7 +3286,7 @@ Offset:              5.630ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ac97_bit_clock'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
 Offset:              5.630ns (Levels of Logic = 1)
   Source:            a/ac97/ac97_synch (FF)
@@ -3228,7 +3305,7 @@ Offset:              5.630ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Delay:               6.477ns (Levels of Logic = 2)
   Source:            clock_27mhz (PAD)
@@ -3245,24 +3322,28 @@ Delay:               6.477ns (Levels of Logic = 2)
                                        (89.2% logic, 10.8% route)
 
 =========================================================================
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_lh/f.
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_score/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_st2/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_st1/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_st3/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_st4/f.
-WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_score/f.
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_lmisstext/f.
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_ls/f.
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_lhittext/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_hscore/f.
 WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to rh_disp/csd_note/f.
 
 
-Total REAL time to Xst completion: 285.00 secs
-Total CPU time to Xst completion: 283.08 secs
+Total REAL time to Xst completion: 173.00 secs
+Total CPU time to Xst completion: 171.16 secs
  
 --> 
 
 
-Total memory usage is 786528 kilobytes
+Total memory usage is 663904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  677 (   0 filtered)
-Number of infos    :  150 (   0 filtered)
+Number of warnings :  705 (   0 filtered)
+Number of infos    :  148 (   0 filtered)
 
