@@ -1,4 +1,0 @@
-verilog isim_temp "divider.v"
-verilog isim_temp "musical_score_load.v"
-verilog isim_temp "musical_score_load_tb.v"
-verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

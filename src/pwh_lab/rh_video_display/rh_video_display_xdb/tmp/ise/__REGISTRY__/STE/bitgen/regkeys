@@ -1,6 +1,0 @@
-CommandLine
-/afs/csail.mit.edu/proj/redsocs/Xilinx10.1/ISE/bin/lin64/unwrapped/bitgen -ise /afs/athena.mit.edu/user/p/w/pwh/rh2/src/pwh_lab/rh_video_display/rh_video_display.ise -intstyle ise -f fft.ut fft.ncd
-s
-FormatString
-bitgen [-d] [-j] [-b] [-w] [-l] [-m] [-t] [-n] [-u] [-a] [--p] [-r <bitFile>] [-intstyle ise|xflow|silent] [-ise <projectrepositoryfile>] {-bd <BRAM_data_file> [tag <tagname>]} {-g <setting_value>} <infile[.ncd]> [<outfile>] [<pcffile[.pcf]>]
-s

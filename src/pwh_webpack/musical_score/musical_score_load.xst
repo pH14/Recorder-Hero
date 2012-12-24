@@ -1,5 +1,0 @@
-set -tmpdir "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/xst/projnav.tmp"
-set -xsthdpdir "Z:/Dropbox/School/MIT 12-13/6.111/Recorder-Hero/src/pwh_webpack/musical_score/xst"
-elaborate
--ifn musical_score_load.prj
--ifmt mixed

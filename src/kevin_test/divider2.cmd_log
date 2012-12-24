@@ -1,2 +1,0 @@
-xst -ise "/afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/kevin_test/kevin_test.ise" -intstyle ise -ifn "/afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/kevin_test/divider2.xst" -ofn "/afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/kevin_test/divider2.syr"
-ngdbuild -ise "/afs/athena.mit.edu/user/a/n/andresr/6.111work/GitRecorder/Recorder-Hero/src/kevin_test/kevin_test.ise" -intstyle ise -dd _ngo  -aul -nt timestamp -i -p xc2v6000-bf957-6 "divider2.ngc" divider2.ngd
